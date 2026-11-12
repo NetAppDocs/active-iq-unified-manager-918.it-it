@@ -1,0 +1,19 @@
+---
+permalink: health-checker/concept_understand_node_root_volumes.html 
+sidebar: sidebar 
+keywords: understand, node, root, volumes 
+summary: 'Puoi monitorare il volume root utilizzando Unified Manager. La best practice prevede che il volume root abbia una capacità sufficiente a impedire l"arresto del nodo.' 
+---
+= Comprendi i volumi root dei nodi in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi monitorare il volume root utilizzando Unified Manager. La best practice prevede che il volume root abbia una capacità sufficiente a impedire l'arresto del nodo.
+
+Quando la capacità utilizzata del volume root del nodo supera l'80% della capacità totale del volume root del nodo, viene generato l'evento "Spazio del volume root del nodo quasi pieno". Puoi configurare un avviso per l'evento per ricevere una notifica. Puoi intraprendere le azioni appropriate per evitare che il nodo si arresti utilizzando ONTAP System Manager o ONTAP CLI.
+
+
+NOTE: La funzionalità di monitoraggio dei volumi root dei nodi non è disponibile se i cluster eseguono ONTAP 9.14.1 o una versione successiva.

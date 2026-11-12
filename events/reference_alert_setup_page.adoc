@@ -1,0 +1,129 @@
+---
+permalink: events/reference_alert_setup_page.html 
+sidebar: sidebar 
+keywords: alert, setup, page, command buttons, list view, details area 
+summary: 'La pagina Configurazione avvisi visualizza un elenco di avvisi e fornisce informazioni sul nome dell"avviso, lo stato, il metodo di notifica e la frequenza di notifica. Da questa pagina puoi anche aggiungere, modificare, rimuovere, abilitare o disabilitare gli avvisi.' 
+---
+= Scopri la pagina di configurazione degli avvisi in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La pagina Configurazione avvisi visualizza un elenco di avvisi e fornisce informazioni sul nome dell'avviso, lo stato, il metodo di notifica e la frequenza di notifica. Da questa pagina puoi anche aggiungere, modificare, rimuovere, abilitare o disabilitare gli avvisi.
+
+Devi disporre del ruolo di Amministratore dell'applicazione o di Amministratore dello storage.
+
+
+
+[[command-buttons]]
+== Pulsanti di comando
+
+* *Aggiungi*
++
+Visualizza la finestra di dialogo Aggiungi avviso, che consente di aggiungere nuovi avvisi.
+
+* *Modifica*
++
+Visualizza la finestra di dialogo Modifica avviso, che consente di modificare gli avvisi selezionati.
+
+* *Elimina*
++
+Elimina gli avvisi selezionati.
+
+* *Abilita*
++
+Consente agli avvisi selezionati di inviare notifiche.
+
+* *Disabilita*
++
+Disattiva gli avvisi selezionati quando vuoi interrompere temporaneamente l'invio delle notifiche.
+
+* *Test*
++
+Esegue dei test sugli avvisi selezionati per verificarne la configurazione dopo l'aggiunta o la modifica.
+
+* *Avvisi per eventi risolti e obsoleti*
++
+Ti consente di abilitare o disabilitare l'invio di avvisi quando gli eventi vengono spostati negli stati Risolto o Obsoleto. Questo può aiutarti a evitare di ricevere notifiche non necessarie.
+
+
+
+
+
+[[list-view]]
+== Visualizzazione elenco
+
+La vista elenco mostra, in formato tabellare, le informazioni sugli avvisi creati. Puoi usare i filtri delle colonne per personalizzare i dati visualizzati. Puoi anche selezionare un avviso per visualizzare altre informazioni nell'area dei dettagli.
+
+* *Stato*
++
+Specifica se un avviso è abilitato (image:../media/alert_status_enabled.gif[""]) o disabilitato (image:../media/alert_status_disabled.gif[""]).
+
+* *Avviso*
++
+Visualizza il nome dell'avviso.
+
+* *Descrizione*
++
+Visualizza una descrizione dell'avviso.
+
+* *Metodo di notifica*
++
+Visualizza il metodo di notifica selezionato per l'avviso. Puoi notificare gli utenti tramite e-mail o trap SNMP.
+
+* *Frequenza delle notifiche*
++
+Specifica la frequenza (in minuti) con cui il server di gestione continua a inviare notifiche finché non confermi o risolvi l'evento oppure lo sposti nello stato Obsolete.
+
+
+
+
+
+[[details-area]]
+== Area dettagli
+
+L'area dei dettagli fornisce maggiori informazioni sull'avviso selezionato.
+
+* *Nome dell'allerta*
++
+Visualizza il nome dell'avviso.
+
+* *Descrizione dell'avviso*
++
+Visualizza una descrizione dell'avviso.
+
+* *Eventi*
++
+Visualizza gli eventi per i quali vuoi attivare l'avviso.
+
+* *Risorse*
++
+Visualizza le risorse per le quali vuoi attivare l'avviso.
+
+* *Include*
++
+Visualizza il gruppo di risorse per cui vuoi attivare l'avviso.
+
+* *Esclusi*
++
+Visualizza il gruppo di risorse per cui non vuoi attivare l'avviso.
+
+* *Metodo di notifica*
++
+Visualizza il metodo di notifica per l'avviso.
+
+* *Frequenza delle notifiche*
++
+Visualizza la frequenza con cui il server di gestione continua a inviare notifiche di allerta finché l'evento non viene confermato, risolto o spostato nello stato Obsolete.
+
+* *Nome dello script*
++
+Visualizza il nome dello script associato all'avviso selezionato. Questo script viene eseguito quando viene generato un avviso.
+
+* *Destinatari dell'e-mail*
++
+Visualizza gli indirizzi email degli utenti che ricevono la notifica di avviso.
+
+

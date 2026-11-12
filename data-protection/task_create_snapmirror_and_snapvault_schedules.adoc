@@ -1,0 +1,44 @@
+---
+permalink: data-protection/task_create_snapmirror_and_snapvault_schedules.html 
+sidebar: sidebar 
+keywords: create, snapmirror, snapvault, schedules 
+summary: Puoi creare pianificazioni di base o avanzate di SnapMirror e SnapVault per abilitare i trasferimenti automatici di protezione dei dati su un volume di origine o primario, in modo che i trasferimenti avvengano con maggiore o minore frequenza, a seconda della frequenza con cui i dati cambiano sui tuoi volumi. 
+---
+= Crea pianificazioni di SnapMirror e SnapVault in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi creare pianificazioni di base o avanzate di SnapMirror e SnapVault per abilitare i trasferimenti automatici di protezione dei dati su un volume di origine o primario, in modo che i trasferimenti avvengano con maggiore o minore frequenza, a seconda della frequenza con cui i dati cambiano sui tuoi volumi.
+
+.Prima di iniziare
+* Devi disporre del ruolo di Amministratore dell'applicazione o di Amministratore dello storage.
+* Devi aver già completato l'area Informazioni sulla destinazione nella finestra di dialogo Configura protezione.
+* Per eseguire questa attività, devi aver configurato Workflow Automation.
+
+
+.Passaggi
+. Dalla scheda *SnapMirror* o dalla scheda *SnapVault* della finestra di dialogo *Configura protezione*, fai clic sul collegamento *Crea pianificazione* nell'area *Impostazioni relazione*.
++
+Si apre la finestra di dialogo Crea pianificazione.
+
+. Nel campo *Nome pianificazione*, digita il nome che desideri assegnare alla pianificazione.
+. Seleziona una delle seguenti:
++
+** *Di base*
++
+Seleziona questa opzione se vuoi creare una pianificazione di base a intervalli.
+
+** *Avanzato*
++
+Seleziona questa opzione se vuoi creare una pianificazione in stile cron.
+
+
+
+. Fai clic su *Create*.
++
+Il nuovo programma viene visualizzato nell'elenco a discesa Pianificazione di SnapMirror o Pianificazione di SnapVault.
+
+

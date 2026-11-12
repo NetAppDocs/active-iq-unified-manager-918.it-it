@@ -1,0 +1,62 @@
+---
+permalink: data-protection/task_view_storage_vms_based_on_protection_status.html 
+sidebar: sidebar 
+keywords: storage vm, view protection status 
+summary: 'Puoi usare la pagina Storage VMs dell"Inventario per visualizzare tutte le VM di storage in Active IQ Unified Manager e filtrarle in base al loro stato di protezione.' 
+---
+= Visualizza le macchine virtuali di archiviazione in base allo stato di protezione in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi usare la pagina Storage VMs dell'Inventario per visualizzare tutte le VM di storage in Active IQ Unified Manager e filtrarle in base al loro stato di protezione.
+
+.Prima di iniziare
+Devi disporre del ruolo di Amministratore dell'applicazione o di Amministratore dello storage.
+
+Alla vista delle VM di storage viene aggiunta una nuova colonna Protection Role che fornisce informazioni sul fatto che la VM di storage sia protetta o non protetta.
+
+[NOTE]
+====
+Se non aggiungi un cluster di origine ad Active IQ Unified Manager, tutte le informazioni relative a quel cluster non saranno disponibili nelle griglie.
+
+====
+.Passaggi
+. Nel riquadro di navigazione a sinistra, fai clic su *ARCHIVIAZIONE* > *VM di archiviazione*.
+. Dal menu *VISUALIZZA*, seleziona *Integrità* > *Tutte le VM di storage*.
++
+Viene visualizzato Health: All Storage VMs.
+
+. Fai clic su *Filter* per visualizzare una delle seguenti VM di storage.
++
+[cols="2*"]
+|===
+| Per visualizzare | Valore del filtro 
+
+
+ a| 
+*VM di storage protette*
+ a| 
+*Ruolo di protezione* è *Protetto*
+
+
+
+ a| 
+*VM di archiviazione non protette*
+ a| 
+Il *ruolo di protezione* è *non protetto*
+
+|===
++
+[NOTE]
+====
+Non puoi visualizzare contemporaneamente le VM di archiviazione protette e non protette. Devi rimuovere il filtro esistente per applicarne uno nuovo.
+
+====
+. Fai clic su *Applica filtro*.
++
+La vista Unsaved visualizza tutte le VM di storage che, in base alle selezioni del filtro, sono protette o non protette dal disaster recovery delle VM di storage.
+
+

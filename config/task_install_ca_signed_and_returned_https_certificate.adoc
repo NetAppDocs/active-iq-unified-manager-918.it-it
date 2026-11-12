@@ -1,0 +1,63 @@
+---
+permalink: config/task_install_ca_signed_and_returned_https_certificate.html 
+sidebar: sidebar 
+keywords: install, ca signed, returned, https, certificate 
+summary: 'Puoi caricare e installare un certificato di sicurezza dopo che un"Autorità di certificazione lo ha firmato e restituito. Il file che carichi e installi deve essere una versione firmata del certificato autofirmato esistente. Un certificato firmato da un"Autorità di certificazione contribuisce a prevenire gli attacchi man-in-the-middle e offre una protezione di sicurezza migliore rispetto a un certificato autofirmato.' 
+---
+= Installa un certificato HTTPS firmato da una CA in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi caricare e installare un certificato di sicurezza dopo che un'Autorità di certificazione lo ha firmato e restituito. Il file che carichi e installi deve essere una versione firmata del certificato autofirmato esistente. Un certificato firmato da un'Autorità di certificazione contribuisce a prevenire gli attacchi man-in-the-middle e offre una protezione di sicurezza migliore rispetto a un certificato autofirmato.
+
+*Cosa fare prima di iniziare
+
+Devi aver completato le seguenti azioni:
+
+* Hai scaricato il file di richiesta di firma del certificato e lo hai fatto firmare da un'autorità di certificazione
+* Catena di certificati salvata in formato PEM
+* Sono inclusi tutti i certificati nella catena, dal certificato del server Unified Manager al certificato di firma radice, compresi eventuali certificati intermedi presenti
+
+
+Devi avere il ruolo di Amministratore dell'applicazione.
+
+[NOTE]
+====
+Se la validità del certificato per il quale è stato creato un CSR è superiore a 397 giorni, l'autorità di certificazione (CA) la ridurrà a 397 giorni prima di firmare e restituire il certificato
+
+====
+.Passaggi
+. Nel riquadro di navigazione a sinistra, fai clic su *Generale* > *Certificato HTTPS*.
+. Fai clic su *Installa certificato HTTPS*.
+. Nella finestra di dialogo visualizzata, fai clic su *Scegli file...* per individuare il file da caricare.
+. Seleziona il file, quindi fai clic su *Installa* per installarlo.
++
+Per informazioni, vedi link:concept_install_https_certificate_generated_using_external_tools.html["Installazione di un certificato HTTPS generato utilizzando strumenti esterni"].
+
+
+
+
+
+[[example-certificate-chain]]
+== Esempio di catena di certificati
+
+L'esempio seguente mostra come potrebbe apparire il file della catena di certificati:
+
+[listing]
+----
+-----BEGIN CERTIFICATE-----
+<*Server certificate*>
+-----END CERTIFICATE-----
+-----BEGIN CERTIFICATE-----
+<*Intermediate certificate \#1 (if present)*>
+-----END CERTIFICATE-----
+-----BEGIN CERTIFICATE-----
+<*Intermediate certificate \#2 (if present)*>
+-----END CERTIFICATE-----
+-----BEGIN CERTIFICATE-----
+<*Root signing certificate*>
+-----END CERTIFICATE-----
+----

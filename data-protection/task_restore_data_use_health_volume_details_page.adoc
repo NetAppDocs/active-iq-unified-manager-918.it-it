@@ -1,0 +1,75 @@
+---
+permalink: data-protection/task_restore_data_use_health_volume_details_page.html 
+sidebar: sidebar 
+keywords: restore, data, volume, health details page, console 
+summary: Puoi ripristinare file, directory o un intero volume sovrascritti o eliminati da una copia Snapshot utilizzando la funzione di ripristino nella pagina dei dettagli Volume / Health. 
+---
+= Ripristina i dati utilizzando le pagine Dettagli Volume e Volume/Salute in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi ripristinare file, directory o un intero volume sovrascritti o eliminati da una copia Snapshot utilizzando la funzione di ripristino nelle pagine dei dettagli Volume e Volume / Health.
+
+.Prima di iniziare
+Devi disporre del ruolo di Amministratore dell'applicazione o di Amministratore dello storage.
+
+
+NOTE: Tieni presente i seguenti punti:
+
+* Non è possibile ripristinare una directory o un volume da uno snapshot in nessuno dei seguenti scenari:
++
+** L'opzione *Sì, conserva tutte le copie snapshot* è selezionata.
+** Stai utilizzando un account LDAP per monitorare il cluster.
+** Hai effettuato l'accesso come utente di dominio.
+** Il tuo account è configurato per l'autenticazione SAML.
+** Stai utilizzando il protocollo NDMP.
++
+Per maggiori dettagli, consultare l'articolo della Knowledge Base https://kb.netapp.com/on-prem/ontap/DP/NDMP/NDMP-KBs/How_to_configure_NDMP_authentication_in_the_SVM-scope_previously_known_as_Vserver-scope_mode["Come configurare l'autenticazione NDMP in modalità 'SVM-scope'"^].
+
+
+
+* Non è possibile ripristinare i flussi di file NTFS.
+* L'opzione di ripristino non è disponibile quando:
++
+** L'ID del volume è sconosciuto: ad esempio, quando hai una relazione intercluster e il cluster di destinazione non è ancora stato rilevato.
+** Il volume è configurato per la replica sincrona di SnapMirror.
+
+
+
+
+.Passaggi
+. Nel riquadro di navigazione a sinistra, vai su *Archiviazione > Volumi*.
+. Seleziona il volume e fai clic sul pulsante *Ripristina*. In alternativa, fai clic sul volume per andare a *Dettagli volume / integrità > Azioni > Ripristina*. Si apre la finestra di dialogo Ripristina. Per informazioni su questa pagina, consulta link:../data-protection/reference_restore_dialog_box.html["Finestra di dialogo Ripristina"].
+. Seleziona il volume e la copia Snapshot da cui desideri ripristinare i dati, se diversi da quelli predefiniti.
+. Seleziona gli elementi che vuoi ripristinare, ad esempio la LUN di origine.
++
+Puoi ripristinare l'intero volume oppure specificare le cartelle e i file che vuoi ripristinare.
+
+. Seleziona la posizione in cui vuoi ripristinare gli elementi selezionati: *Posizione originale* oppure *Posizione alternativa esistente*.
+. Se selezioni una posizione alternativa già esistente, esegui una delle seguenti operazioni:
++
+** Nel campo di testo Percorso di ripristino, digita il percorso della posizione in cui desideri ripristinare i dati e quindi fai clic su *Seleziona directory*.
+** Fai clic su *Sfoglia* per aprire la finestra di dialogo Sfoglia directory e completa i seguenti passaggi:
++
+... Seleziona il cluster di destinazione, la storage VM (SVM) e il volume in cui vuoi eseguire il ripristino.
+... Nella tabella Nome, seleziona il nome della directory da ripristinare.
+... Fai clic su *Select Directory*.
+
+
+
+
+. Fai clic su *Ripristina*.
++
+Il processo di ripristino ha inizio. Nel backend viene creato un processo per completare il ripristino.
+
+. Se vuoi visualizzare l'avanzamento del processo, dal riquadro di navigazione a sinistra vai a *Protection > Jobs* per visualizzare lo stato del processo di ripristino dall'elenco dei processi.
++
+[NOTE]
+====
+Se un'operazione di ripristino tra cluster HA di Cloud Volumes ONTAP non riesce a causa di un errore NDMP, potrebbe essere necessario aggiungere una route AWS esplicita nel cluster di destinazione in modo che la destinazione possa comunicare con la LIF di gestione del cluster del sistema di origine. Esegui questa fase di configurazione usando NetApp Console.
+
+====
+

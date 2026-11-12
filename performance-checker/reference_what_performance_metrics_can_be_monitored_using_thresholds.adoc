@@ -1,0 +1,244 @@
+---
+permalink: performance-checker/reference_what_performance_metrics_can_be_monitored_using_thresholds.html 
+sidebar: sidebar 
+keywords: performance, counters, tracked, thresholds 
+summary: Alcuni contatori delle prestazioni comuni, come IOPS e MB/s, possono avere soglie impostate per tutti gli oggetti di storage. Esistono altri contatori che possono avere soglie impostate solo per determinati oggetti di storage. 
+---
+= Capisci i contatori delle prestazioni monitorati tramite soglie in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Alcuni contatori delle prestazioni comuni, come IOPS e MB/s, possono avere soglie impostate per tutti gli oggetti di storage. Esistono altri contatori che possono avere soglie impostate solo per determinati oggetti di storage.
+
+
+
+[[available-performance-counters]]
+== Contatori di prestazioni disponibili
+
+|===
+| Oggetto di storage | contatore delle prestazioni | Descrizione 
+
+
+ a| 
+Cluster
+ a| 
+IOPS
+ a| 
+Numero medio di operazioni di input/output elaborate dal cluster al secondo.
+
+
+
+ a| 
+MB/s
+ a| 
+Numero medio di megabyte di dati trasferiti da e verso questo cluster al secondo.
+
+
+
+ a| 
+Nodo
+ a| 
+IOPS
+ a| 
+Numero medio di operazioni di input/output che il nodo elabora al secondo.
+
+
+
+ a| 
+MB/s
+ a| 
+Numero medio di megabyte di dati trasferiti da e verso questo nodo al secondo.
+
+
+
+ a| 
+Latenza
+ a| 
+Numero medio di millisecondi impiegati dal nodo per rispondere alle richieste dell'applicazione.
+
+
+
+ a| 
+Utilizzo
+ a| 
+Percentuale media di CPU e RAM del nodo in uso.
+
+
+
+ a| 
+Capacità delle prestazioni utilizzata
+ a| 
+Percentuale media della capacità delle prestazioni utilizzata dal nodo.
+
+
+
+ a| 
+Capacità prestazionale utilizzata - takeover
+ a| 
+Percentuale media della capacità prestazionale utilizzata dal nodo, più la capacità prestazionale del nodo partner.
+
+
+
+ a| 
+Aggregato
+ a| 
+IOPS
+ a| 
+Numero medio di operazioni di input/output che l'aggregato elabora al secondo.
+
+
+
+ a| 
+MB/s
+ a| 
+Numero medio di megabyte di dati trasferiti da e verso questo aggregato al secondo.
+
+
+
+ a| 
+Latenza
+ a| 
+Numero medio di millisecondi impiegati dall'aggregato per rispondere alle richieste dell'applicazione.
+
+
+
+ a| 
+Utilizzo
+ a| 
+Percentuale media dei dischi dell'aggregate in uso.
+
+
+
+ a| 
+Capacità delle prestazioni utilizzata
+ a| 
+Percentuale media della capacità prestazionale utilizzata dall'aggregato.
+
+
+
+ a| 
+VM di archiviazione
+ a| 
+IOPS
+ a| 
+Numero medio di operazioni di input/output che la SVM elabora al secondo.
+
+
+
+ a| 
+MB/s
+ a| 
+Numero medio di megabyte di dati trasferiti da e verso questa SVM al secondo.
+
+
+
+ a| 
+Latenza
+ a| 
+Numero medio di millisecondi impiegati dalla SVM per rispondere alle richieste dell'applicazione.
+
+
+
+ a| 
+Volume
+ a| 
+IOPS
+ a| 
+Numero medio di operazioni di input/output elaborate dal volume al secondo.
+
+
+
+ a| 
+MB/s
+ a| 
+Numero medio di megabyte di dati trasferiti da e verso questo volume al secondo.
+
+
+
+ a| 
+Latenza
+ a| 
+Numero medio di millisecondi impiegati dal volume per rispondere alle richieste dell'applicazione.
+
+
+
+ a| 
+Rapporto di cache miss
+ a| 
+Percentuale media di richieste di lettura provenienti da applicazioni client che vengono restituite dal volume anziché dalla cache.
+
+
+
+ a| 
+LUN
+ a| 
+IOPS
+ a| 
+Numero medio di operazioni di input/output che la LUN elabora al secondo.
+
+
+
+ a| 
+MB/s
+ a| 
+Numero medio di megabyte di dati trasferiti da e verso questa LUN al secondo.
+
+
+
+ a| 
+Latenza
+ a| 
+Numero medio di millisecondi impiegati dalla LUN per rispondere alle richieste delle applicazioni.
+
+
+
+ a| 
+Spazio dei nomi
+ a| 
+IOPS
+ a| 
+Numero medio di operazioni di input/output elaborate dal namespace al secondo.
+
+
+
+ a| 
+MB/s
+ a| 
+Numero medio di megabyte di dati trasferiti da e verso questo namespace al secondo.
+
+
+
+ a| 
+Latenza
+ a| 
+Numero medio di millisecondi che il namespace impiega per rispondere alle richieste dell'applicazione.
+
+
+
+ a| 
+Porta
+ a| 
+Utilizzo della larghezza di banda
+ a| 
+Percentuale media della larghezza di banda disponibile della porta che viene utilizzata.
+
+
+
+ a| 
+MB/s
+ a| 
+Numero medio di megabyte di dati trasferiti da e verso questa porta al secondo.
+
+
+
+ a| 
+Interfaccia di rete (LIF)
+ a| 
+MB/s
+ a| 
+Numero medio di megabyte di dati trasferiti da e verso questa LIF al secondo.
+
+|===

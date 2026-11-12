@@ -1,0 +1,45 @@
+---
+permalink: performance-checker/reference_performance_event_severity_types.html 
+sidebar: sidebar 
+keywords: performance, event, severity, types 
+summary: A ciascun evento relativo alle prestazioni è associato un tipo di severità che consente di dare priorità agli eventi che richiedono un intervento correttivo immediato. 
+---
+= Dai priorità agli eventi di performance in base alla gravità in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A ciascun evento relativo alle prestazioni è associato un tipo di severità che consente di dare priorità agli eventi che richiedono un intervento correttivo immediato.
+
+* *Critico*
++
+Si è verificato un evento relativo alle prestazioni che potrebbe causare un'interruzione del servizio se non si interviene immediatamente.
+
++
+Gli eventi critici vengono inviati solo al superamento di soglie definite dall'utente.
+
+* *Avvertimento*
++
+Un contatore delle prestazioni per un oggetto del cluster è al di fuori dell'intervallo normale e deve essere monitorato per assicurarti che non raggiunga il tipo di severità critico. Gli eventi di questo tipo di severità non causano interruzioni del servizio e potrebbero non richiedere un'azione correttiva immediata.
+
++
+Le soglie definite dall'utente, dal sistema o dinamiche inviano eventi di avviso.
+
+* *Informazioni*
++
+L'evento si verifica quando viene rilevato un nuovo oggetto o quando viene eseguita un'azione da parte dell'utente. Ad esempio, quando viene eliminato un qualsiasi oggetto di storage o quando vengono apportate modifiche alla configurazione, viene generato l'evento con tipo di severità Information.
+
++
+ONTAP invia direttamente gli eventi informativi quando rileva una modifica della configurazione.
+
+
+
+Per ulteriori informazioni, consulta i seguenti link:
+
+* link:../events/concept_what_happens_when_an_event_is_received.html["Cosa succede quando viene ricevuto un evento"]
+* link:../events/concept_what_information_is_contained_in_an_alert_email.html["Quali informazioni contiene un'e-mail di avviso"]
+* link:../events/task_add_alerts.html["Aggiungere avvisi"]
+* link:../events/task_add_alerts_for_performance_events.html["Aggiungere avvisi per eventi relativi alle prestazioni"]
+

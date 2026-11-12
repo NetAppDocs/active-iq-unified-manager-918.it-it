@@ -1,0 +1,228 @@
+---
+permalink: config/reference_unified_manager_roles_and_capabilities.html 
+sidebar: sidebar 
+keywords: unified manager, user, roles, capabilities 
+summary: In base al ruolo utente assegnato, puoi determinare quali operazioni puoi eseguire in Unified Manager. 
+---
+= Scopri i ruoli e le funzionalità degli utenti in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+In base al ruolo utente assegnato, puoi determinare quali operazioni puoi eseguire in Unified Manager.
+
+La tabella seguente mostra le funzioni che ciascun ruolo utente può svolgere:
+
+[cols="6*"]
+|===
+| Funzione | Operatore | Amministratore dello storage | Amministratore dell'applicazione | Schema di integrazione | Schema di report 
+
+
+ a| 
+Visualizza le informazioni del sistema storage
+ a| 
+•
+ a| 
+•
+ a| 
+•
+ a| 
+•
+ a| 
+•
+
+
+
+ a| 
+Visualizza altri dati, come cronologie e andamenti della capacità
+ a| 
+•
+ a| 
+•
+ a| 
+•
+ a| 
+•
+ a| 
+•
+
+
+
+ a| 
+Visualizza, assegna e risolvi gli eventi
+ a| 
+•
+ a| 
+•
+ a| 
+•
+ a| 
+ a| 
+
+
+
+ a| 
+Visualizza gli oggetti del servizio storage, come le associazioni SVM e i pool di risorse
+ a| 
+•
+ a| 
+•
+ a| 
+•
+ a| 
+ a| 
+
+
+
+ a| 
+Visualizza le politiche relative alle soglie
+ a| 
+•
+ a| 
+•
+ a| 
+•
+ a| 
+ a| 
+
+
+
+ a| 
+Gestisci gli oggetti del servizio storage, come le associazioni SVM e i pool di risorse
+ a| 
+ a| 
+•
+ a| 
+•
+ a| 
+ a| 
+
+
+
+ a| 
+Definisci gli avvisi
+ a| 
+ a| 
+•
+ a| 
+•
+ a| 
+ a| 
+
+
+
+ a| 
+Gestisci le opzioni di gestione dello storage
+ a| 
+ a| 
+•
+ a| 
+•
+ a| 
+ a| 
+
+
+
+ a| 
+Gestisci le policy di gestione dello storage
+ a| 
+ a| 
+•
+ a| 
+•
+ a| 
+ a| 
+
+
+
+ a| 
+Gestisci utenti
+ a| 
+ a| 
+ a| 
+•
+ a| 
+ a| 
+
+
+
+ a| 
+Gestisci le opzioni amministrative
+ a| 
+ a| 
+ a| 
+•
+ a| 
+ a| 
+
+
+
+ a| 
+Definire le politiche di soglia
+ a| 
+ a| 
+ a| 
+•
+ a| 
+ a| 
+
+
+
+ a| 
+Gestisci l'accesso al database
+ a| 
+ a| 
+ a| 
+•
+ a| 
+ a| 
+
+
+
+ a| 
+Gestisci l'integrazione con WFA e fornisci l'accesso alle viste del database
+ a| 
+ a| 
+ a| 
+ a| 
+•
+ a| 
+
+
+
+ a| 
+Pianifica e salva i report
+ a| 
+ a| 
+•
+ a| 
+•
+ a| 
+ a| 
+
+
+
+ a| 
+Esegui le operazioni "`Fix It`" da Management Actions
+ a| 
+ a| 
+•
+ a| 
+•
+ a| 
+ a| 
+
+
+
+ a| 
+Fornisci accesso in sola lettura alle viste del database
+ a| 
+ a| 
+ a| 
+ a| 
+ a| 
+•
+
+|===

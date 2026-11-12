@@ -1,0 +1,20 @@
+---
+permalink: performance-checker/concept_how_um_determines_performance_impact_for_incident.html 
+sidebar: sidebar 
+keywords: unified manager, determines, performance, impact, event 
+summary: 'Unified Manager utilizza la deviazione di attività, utilizzo, throughput di scrittura, utilizzo dei componenti del cluster o latenza di I/O (tempo di risposta) di un carico di lavoro per determinare il livello di impatto sulle prestazioni del carico di lavoro. Queste informazioni determinano il ruolo di ciascun carico di lavoro nell"evento e la relativa classificazione nella pagina dei dettagli dell"evento.' 
+---
+= Scopri come Active IQ Unified Manager determina l'impatto sulle prestazioni di un evento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager utilizza la deviazione di attività, utilizzo, throughput di scrittura, utilizzo dei componenti del cluster o latenza di I/O (tempo di risposta) di un carico di lavoro per determinare il livello di impatto sulle prestazioni del carico di lavoro. Queste informazioni determinano il ruolo di ciascun carico di lavoro nell'evento e la relativa classificazione nella pagina dei dettagli dell'evento.
+
+Unified Manager confronta gli ultimi valori analizzati per un carico di lavoro con l'intervallo previsto di valori (previsione di latenza). La differenza tra gli ultimi valori analizzati e l'intervallo di valori previsto identifica i carichi di lavoro le cui prestazioni sono state maggiormente influenzate dall'evento.
+
+Ad esempio, supponiamo che un cluster contenga due carichi di lavoro: Carico di lavoro A e Carico di lavoro B. La previsione della latenza per il Carico di lavoro A è di 5-10 millisecondi per operazione (ms/op) e la sua latenza effettiva è solitamente intorno a 7 ms/op. La previsione della latenza per il Carico di lavoro B è di 10-20 ms/op e la sua latenza effettiva è solitamente intorno a 15 ms/op. Entrambi i carichi di lavoro rientrano ampiamente nella rispettiva previsione della latenza. A causa della contesa sul cluster, la latenza di entrambi i carichi di lavoro aumenta fino a 40 ms/op, superando la soglia di prestazione dinamica, che rappresenta il limite superiore della previsione della latenza, e attivando eventi. La deviazione della latenza, dai valori previsti ai valori superiori alla soglia di prestazione, per il Carico di lavoro A è di circa 33 ms/op, mentre per il Carico di lavoro B è di circa 25 ms/op. La latenza di entrambi i carichi di lavoro raggiunge un picco di 40 ms/op, ma il Carico di lavoro A ha avuto l'impatto maggiore sulle prestazioni perché aveva la deviazione della latenza più elevata, pari a 33 ms/op.
+
+Nella pagina Dettagli evento, nella sezione Diagnosi del sistema, puoi ordinare i carichi di lavoro in base alla loro deviazione di attività, utilizzo o throughput per un componente del cluster. Puoi anche ordinare i carichi di lavoro in base alla latenza. Quando selezioni un'opzione di ordinamento, Unified Manager analizza la deviazione di attività, utilizzo, throughput o latenza dai valori previsti dal momento in cui l'evento è stato rilevato per determinare l'ordine di ordinamento dei carichi di lavoro. Per la latenza, i punti rossi (image:../media/opm_incident_icon_png.gif["icona di avviso di Performance Manager"]) indicano il superamento di una soglia delle prestazioni da parte di un carico di lavoro vittima e il conseguente impatto sulla latenza. Ogni punto rosso indica un livello più alto di deviazione della latenza, che ti aiuta a identificare i carichi di lavoro vittima la cui latenza è stata maggiormente influenzata da un evento.

@@ -1,0 +1,16 @@
+---
+permalink: install-vapp/concept_overview_of_deployment_process.html 
+sidebar: sidebar 
+keywords: overview, deployment, process 
+summary: Il flusso di lavoro di distribuzione descrive le attività che devi eseguire prima di poter utilizzare Unified Manager. 
+---
+= Scopri il processo di implementazione di Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Il flusso di lavoro di distribuzione descrive le attività che devi eseguire prima di poter utilizzare Unified Manager.
+
+image::../media/deployment_sequence_oc_6_0.gif[Un diagramma che mostra i prerequisiti per la distribuzione di Unified Manager, la distribuzione dell'appliance e i passaggi di configurazione iniziale]

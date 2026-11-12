@@ -1,0 +1,22 @@
+---
+permalink: health-checker/concept_what_group_is.html 
+sidebar: sidebar 
+keywords: group 
+summary: 'Un gruppo è una raccolta dinamica di oggetti di storage eterogeneo (cluster, SVM o volumi). Puoi creare gruppi in Unified Manager per gestire facilmente un insieme di oggetti di storage. I membri di un gruppo possono variare a seconda degli oggetti di storage monitorati da Unified Manager in un dato momento.' 
+---
+= Scopri i gruppi in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Un gruppo è una raccolta dinamica di oggetti di storage eterogeneo (cluster, SVM o volumi). Puoi creare gruppi in Unified Manager per gestire facilmente un insieme di oggetti di storage. I membri di un gruppo possono variare a seconda degli oggetti di storage monitorati da Unified Manager in un dato momento.
+
+* Ogni gruppo ha un nome univoco.
+* Devi configurare almeno una regola di gruppo per ciascun gruppo.
+* Puoi associare un gruppo a più di una regola di gruppo.
+* Ciascun gruppo può includere più tipi di oggetti di archiviazione, come cluster, SVM o volumi.
+* Gli oggetti di storage vengono aggiunti dinamicamente a un gruppo in base a quando viene creata una regola di gruppo o a quando Unified Manager completa un ciclo di monitoraggio.
+* Puoi applicare simultaneamente azioni a tutti gli oggetti di storage di un gruppo, ad esempio impostando soglie per i volumi.
+

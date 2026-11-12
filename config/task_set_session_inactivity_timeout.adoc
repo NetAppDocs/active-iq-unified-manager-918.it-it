@@ -1,0 +1,48 @@
+---
+permalink: config/task_set_session_inactivity_timeout.html 
+sidebar: sidebar 
+keywords: inactivity, timeout 
+summary: 'Puoi specificare il valore del timeout di inattività di Unified Manager in modo che la sessione si chiuda automaticamente dopo un determinato periodo di tempo. Per impostazione predefinita, il timeout è impostato su 4.320 minuti (72 ore).' 
+---
+= Imposta il timeout di inattività della sessione in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi specificare il valore del timeout di inattività per Unified Manager in modo che la sessione termini automaticamente dopo un determinato periodo di inattività. Per impostazione predefinita, il timeout è impostato su 4.320 minuti (72 ore).
+
+.Prima di iniziare
+Devi avere il ruolo di Amministratore dell'applicazione.
+
+Questa impostazione influisce su tutte le sessioni utente attualmente connesse.
+
+[NOTE]
+====
+Questa opzione non è disponibile se hai abilitato l'autenticazione Security Assertion Markup Language (SAML).
+
+====
+.Passaggi
+. Nel riquadro di navigazione a sinistra, fai clic su *Generale* > *Impostazioni funzionalità*.
+. Nella pagina *Impostazioni funzionalità*, specifica il timeout di inattività scegliendo una delle seguenti opzioni:
++
+[cols="2*"]
+|===
+| Se vuoi... | Poi fai così... 
+
+
+ a| 
+Non impostare alcun timeout in modo che la sessione non si chiuda mai automaticamente
+ a| 
+Nel pannello *Timeout di inattività*, sposta il cursore verso sinistra (disattivato) e fai clic su *Applica*.
+
+
+
+ a| 
+Imposta un numero specifico di minuti come valore di timeout
+ a| 
+Nel pannello *Timeout di inattività*, sposta il cursore verso destra (attivo), specifica il valore del timeout di inattività in minuti e fai clic su *Applica*.
+
+|===
+

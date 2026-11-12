@@ -1,0 +1,95 @@
+---
+permalink: reporting/task_create_report_to_view_capacity.html 
+sidebar: sidebar 
+keywords: create, report, show, aggregate, capacity, table, chart 
+summary: Puoi creare un report per analizzare la capacità in un file Excel utilizzando i totali sommati e il formato del grafico a colonne raggruppate. 
+---
+= Crea un report per visualizzare una tabella e un grafico della capacità aggregata in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi creare un report per analizzare la capacità in un file Excel utilizzando i totali sommati e il formato del grafico a colonne raggruppate.
+
+.Prima di iniziare
+* Devi disporre del ruolo di Amministratore dell'applicazione o di Amministratore dello storage.
+
+
+Segui questi passaggi per aprire una vista "Health: All Aggregates", scaricare la vista in Excel, creare un grafico della capacità disponibile, caricare il file Excel personalizzato e pianificare il report finale.
+
+.Passaggi
+. Nel riquadro di navigazione a sinistra, fai clic su *Storage* > *Aggregates*.
+. Seleziona *Reports* > *Download Excel*.
++
+image::../media/download_excel_menu.png[Uno screenshot UI che mostra come scaricare excel dai report.]
+
++
+A seconda del browser che usi, potresti dover fare clic su *OK* per salvare il file.
+
+. Se necessario, fai clic su *Abilita modifica*.
+. In Excel, apri il file scaricato.
+. Crea un nuovo foglio (image:../media/excel_new_sheet_icon.png[""]) dopo il foglio  `data` e chiamalo *Capacità dati totale*.
+. Aggiungi le seguenti colonne al nuovo foglio "Capacità dati totale":
++
+.. Capacità totale dei dati (GB)
+.. Capacità impegnata (GB)
+.. Capacità dati utilizzata (GB)
+.. Capacità dati disponibile (GB)
+
+
+. Nella prima riga di ciascuna colonna, inserisci la seguente formula, assicurandoti che faccia riferimento al foglio dati (data!) e che utilizzi gli identificatori di colonna e riga corretti per i dati acquisiti (Total Data Capacity recupera i dati dalla colonna E, righe da 2 a 20).
++
+.. =SUM(data!E$2:data!E$20)
+.. =SOMMA(data!F$2:data!F$50)
+.. =SOMMA(data!G$2:data!G$50)
+.. =SUM(data!H$2:data!H$50)
+
+
++
+La formula calcola il totale di ciascuna colonna in base ai dati correnti.
+
+
+
+image::../media/capacitysums.png[Uno screenshot dell'interfaccia utente di una scheda dati che mostra la capacità totale in base ai dati attuali.]
+
+. Nella scheda dati, seleziona le colonne *Capacità dati totale (GB)* e *Capacità impegnata (GB)*.
+. Seleziona *Grafici consigliati* dal menu *Inserisci* e scegli il grafico *Colonne raggruppate*.
+. Fai clic con il pulsante destro del mouse sul grafico e seleziona *Sposta grafico* per spostarlo nel `Total Data Capacity` foglio.
+. Utilizzando i menu *Design* e *Format*, disponibili quando il grafico è selezionato, puoi personalizzarne l'aspetto.
+. Quando sei soddisfatto, salva il file con le modifiche apportate. Non modificare il nome o la posizione del file.
++
+image::../media/cluster_column_chart_2.png[Una screenshot dell'interfaccia utente con un grafico che mostra i dati totali e la capacità impegnata.]
+
+. In Unified Manager, seleziona *Reports* > *Upload Excel*.
++
+[NOTE]
+====
+Assicurati di essere nella stessa visualizzazione da cui hai scaricato il file Excel.
+
+====
+. Seleziona il file Excel che hai modificato.
+. Fai clic su *Apri*.
+. Fai clic su *Submit*.
++
+Accanto alla voce di menu *Reports* > *Upload Excel* compare un segno di spunta.
+
++
+image::../media/upload_excel.png[Uno screenshot dell'interfaccia utente che mostra come caricare excel nei report.]
+
+. Fai clic su *Report programmati*.
+. Fai clic su *Aggiungi pianificazione* per aggiungere una nuova riga alla pagina Pianificazioni report, in modo da poter definire le caratteristiche della pianificazione per il nuovo report.
++
+[NOTE]
+====
+Seleziona il formato *XLSX* per il report.
+
+====
+. Inserisci un nome per la pianificazione del report e completa gli altri campi del report, quindi fai clic sul segno di spunta (image:../media/blue_check.gif[""]) alla fine della riga.
++
+Il report viene inviato immediatamente a scopo di test. Successivamente, il report viene generato e inviato via email ai destinatari indicati con la frequenza specificata.
+
+
+
+In base ai risultati mostrati nel report, potresti voler verificare come utilizzare al meglio la capacità disponibile nella tua rete.

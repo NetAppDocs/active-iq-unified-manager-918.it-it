@@ -1,0 +1,182 @@
+---
+permalink: config/reference_remote_authentication_page.html 
+sidebar: sidebar 
+keywords: remote authentication, page 
+summary: Puoi usare la pagina Autenticazione remota per configurare Unified Manager in modo che comunichi con il server di autenticazione per autenticare gli utenti remoti che tentano di accedere alla web UI di Unified Manager. 
+---
+= Usa la pagina di autenticazione remota in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi usare la pagina Autenticazione remota per configurare Unified Manager in modo che comunichi con il server di autenticazione per autenticare gli utenti remoti che tentano di accedere alla web UI di Unified Manager.
+
+Devi disporre del ruolo di Amministratore dell'applicazione o di Amministratore dello storage.
+
+Dopo aver selezionato la casella di controllo "Enable remote authentication", puoi abilitare l'autenticazione remota usando un server di autenticazione.
+
+* *Servizio di autenticazione*
++
+Ti consente di configurare il server di gestione per autenticare gli utenti nei provider di servizi directory, come Active Directory e OpenLDAP, oppure di specificare un tuo meccanismo di autenticazione. Puoi specificare un servizio di autenticazione solo se hai abilitato l'autenticazione remota.
+
++
+** *Active Directory*
++
+*** Nome dell'amministratore
++
+Specifica il nome dell'amministratore del server di autenticazione.
+
+*** Password
++
+Specifica la password per accedere al server di autenticazione.
+
+*** Nome distinto di base
++
+Specifica la posizione degli utenti remoti nel server di autenticazione. Ad esempio, se il domain name del server di autenticazione è +ou@domain.com+, il nome distinto di base è *cn=ou,dc=domain,dc=com*.
+
+*** Disabilita la ricerca di gruppi nidificati
++
+Specifica se abilitare o disabilitare l'opzione di ricerca dei gruppi nidificati. Per impostazione predefinita, questa opzione è disabilitata. Se usi Active Directory, puoi velocizzare l'autenticazione disabilitando il supporto per i gruppi nidificati.
+
+*** Usa una connessione sicura
++
+Specifica il servizio di autenticazione utilizzato per comunicare con i server di autenticazione.
+
+
+
+** *OpenLDAP*
++
+*** Distinguished Name di bind
++
+Specifica il nome distinto di bind utilizzato insieme al nome distinto di base per trovare gli utenti remoti nel server di autenticazione.
+
+*** Password di bind
++
+Specifica la password per accedere al server di autenticazione.
+
+*** Nome distinto di base
++
+Specifica la posizione degli utenti remoti nel server di autenticazione. Ad esempio, se il domain name del server di autenticazione è +ou@domain.com+, il nome distinto di base è *cn=ou,dc=domain,dc=com*.
+
+*** Usa una connessione sicura
++
+Specifica che Secure LDAP viene usato per comunicare con i server di autenticazione LDAP.
+
+
+
+** *Altri*
++
+*** Distinguished Name di bind
++
+Specifica il nome distinto di bind utilizzato insieme al nome distinto di base per trovare gli utenti remoti nel server di autenticazione che hai configurato.
+
+*** Password di bind
++
+Specifica la password per accedere al server di autenticazione.
+
+*** Nome distinto di base
++
+Specifica la posizione degli utenti remoti nel server di autenticazione. Ad esempio, se il domain name del server di autenticazione è +ou@domain.com+, il nome distinto di base è *cn=ou,dc=domain,dc=com*.
+
+*** Versione del protocollo
++
+Specifica la versione del protocollo LDAP (Lightweight Directory Access Protocol) supportata dal tuo server di autenticazione. Puoi specificare se la versione del protocollo deve essere rilevata automaticamente oppure impostarla su 2 o 3.
+
+*** Attributo nome utente
++
+Specifica il nome dell'attributo nel server di autenticazione che contiene i nomi di accesso degli utenti da autenticare nel server di gestione.
+
+*** Attributo di appartenenza al gruppo
++
+Specifica un valore che assegna l'appartenenza al gruppo del server di gestione agli utenti remoti in base a un attributo e a un valore specificati nel server di autenticazione dell'utente.
+
+*** UGID
++
+Se gli utenti remoti sono inclusi come membri di un oggetto GroupOfUniqueNames nel server di autenticazione, questa opzione ti consente di assegnare l'appartenenza al gruppo del server di gestione agli utenti remoti in base a un attributo specificato in tale oggetto GroupOfUniqueNames.
+
+*** Disabilita la ricerca di gruppi nidificati
++
+Specifica se abilitare o disabilitare l'opzione di ricerca dei gruppi nidificati. Per impostazione predefinita, questa opzione è disabilitata. Se usi Active Directory, puoi velocizzare l'autenticazione disabilitando il supporto per i gruppi nidificati.
+
+*** Membro
++
+Specifica il nome dell'attributo che il server di autenticazione utilizza per memorizzare le informazioni sui singoli membri di un gruppo.
+
+*** Classe oggetto utente
++
+Specifica la classe di oggetti di un utente nel server di autenticazione remoto.
+
+*** Classe oggetto di gruppo
++
+Specifica la classe di oggetti di tutti i gruppi nel server di autenticazione remoto.
+
++
+
+NOTE: I valori che inserisci per gli attributi _Member_, _User Object Class_ e _Group Object Class_ devono essere gli stessi di quelli aggiunti nelle configurazioni di Active Directory, OpenLDAP e LDAP. In caso contrario, l'autenticazione potrebbe non riuscire.
+
+*** Usa una connessione sicura
++
+Specifica il servizio di autenticazione utilizzato per comunicare con i server di autenticazione.
+
+
+
+
+
++
+[NOTE]
+====
+Se vuoi modificare il servizio di autenticazione, assicurati di eliminare tutti i server di autenticazione esistenti e di aggiungerne di nuovi.
+
+====
+
+
+
+
+[[authentication-servers-area]]
+== Area dei server di autenticazione
+
+L'area Server di autenticazione visualizza i server di autenticazione con cui il server di gestione comunica per individuare e autenticare gli utenti remoti. Le credenziali per gli utenti o i gruppi remoti vengono gestite dal server di autenticazione.
+
+* *Pulsanti di comando*
++
+Ti consente di aggiungere, modificare o eliminare i server di autenticazione.
+
++
+** Aggiungi
++
+Consente di aggiungere un server di autenticazione.
+
++
+Se il server di autenticazione che stai aggiungendo fa parte di una coppia ad alta disponibilità (che utilizza lo stesso database), puoi aggiungere anche il server di autenticazione partner. Questo consente al server di gestione di comunicare con il partner quando uno dei server di autenticazione non è raggiungibile.
+
+** Modifica
++
+Ti consente di modificare le impostazioni di un server di autenticazione selezionato.
+
+** Elimina
++
+Elimina i server di autenticazione selezionati.
+
+
+
+* *Nome o indirizzo IP*
++
+Visualizza l'host name o l'indirizzo IP del server di autenticazione utilizzato per autenticare l'utente sul server di gestione.
+
+* *Porta*
++
+Visualizza il numero della porta del server di autenticazione.
+
+* *Test di autenticazione*
++
+Questo pulsante convalida la configurazione del tuo server di autenticazione autenticando un utente o un gruppo remoto.
+
++
+Durante la fase di test, se specifichi solo il nome utente, il server di gestione cerca l'utente remoto nel server di autenticazione, ma non lo autentica. Se specifichi sia il nome utente che la password, il server di gestione cerca e autentica l'utente remoto.
+
++
+Non puoi testare l'autenticazione se l'autenticazione remota è disabilitata.
+
+

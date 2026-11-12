@@ -1,0 +1,16 @@
+---
+permalink: config/concept_manage_saml_authentication_settings_um.html 
+sidebar: sidebar 
+keywords: manage, saml, authentication, settings 
+summary: 'Dopo aver configurato le impostazioni di autenticazione remota, puoi abilitare l"autenticazione SAML (Security Assertion Markup Language) in modo che gli utenti remoti siano autenticati da un provider di identità (IdP) sicuro prima di poter accedere all"interfaccia utente web di Unified Manager.' 
+---
+= Abilita l'autenticazione SAML in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dopo aver configurato le impostazioni di autenticazione remota, puoi abilitare l'autenticazione SAML (Security Assertion Markup Language) in modo che gli utenti remoti siano autenticati da un provider di identità (IdP) sicuro prima di poter accedere all'interfaccia utente web di Unified Manager.
+
+Tieni presente che, dopo aver abilitato l'autenticazione SAML, solo gli utenti remoti avranno accesso all'interfaccia utente grafica di Unified Manager. Gli utenti locali e gli utenti Maintenance non potranno accedere alla UI. Questa configurazione non ha alcun impatto sugli utenti che accedono alla console di manutenzione.

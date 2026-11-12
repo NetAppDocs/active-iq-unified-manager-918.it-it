@@ -1,0 +1,36 @@
+---
+permalink: data-protection/task_resolve_protection_job_failure.html 
+sidebar: sidebar 
+keywords: resolve, protection, job failure 
+summary: Questo flusso di lavoro fornisce un esempio di come identificare e risolvere un errore in un processo di protezione dalla dashboard di Unified Manager. 
+---
+= Risolvi un errore relativo a un processo di protezione in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Questo flusso di lavoro fornisce un esempio di come identificare e risolvere un errore in un processo di protezione dalla dashboard di Unified Manager.
+
+.Prima di iniziare
+Poiché alcune attività di questo flusso di lavoro richiedono che tu acceda usando il ruolo di Administrator, devi conoscere bene i ruoli necessari per utilizzare le diverse funzionalità.
+
+In questo scenario, accedi alla pagina Dashboard per verificare se ci sono problemi con i tuoi job di protezione. Nell'area Incidenti di protezione, noti un incidente "Job Terminated" che mostra un errore "Protection Job Failed" su un volume. Indaghi su questo errore per determinarne la possibile causa e la potenziale soluzione.
+
+.Passaggi
+. Nel pannello Incidenti di protezione dell'area Incidenti e rischi irrisolti del dashboard, fai clic sull'evento *Processo di protezione non riuscito*.
++
+[TIP]
+====
+Il testo collegato all'evento è scritto nella forma `object_name:/object_name - Error Name`, ad esempio `cluster2_src_svm:/cluster2_src_vol2 - Protection Job Failed`.
+
+====
++
+Si apre la pagina dei dettagli dell'evento per il processo di protezione non riuscito.
+
+. Esamina il messaggio di errore nel campo Cause dell'area *Summary* per individuare il problema e valutare le possibili azioni correttive.
++
+Vedi link:task_identify_problem_for_failed_protection_job.html["Identificare il problema ed eseguire azioni correttive per un job di protezione non riuscito"].
+
+

@@ -1,0 +1,29 @@
+---
+permalink: health-checker/task_add_values_to_annotations.html 
+sidebar: sidebar 
+keywords: add, values, annotations 
+summary: 'Puoi aggiungere valori alle annotazioni e quindi associare gli oggetti di storage a una specifica coppia nome-valore dell"annotazione. L"aggiunta di valori alle annotazioni ti aiuta a gestire gli oggetti di storage in modo più efficace.' 
+---
+= Aggiungi valori alle annotazioni in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi aggiungere valori alle annotazioni e quindi associare gli oggetti di storage a una specifica coppia nome-valore dell'annotazione. L'aggiunta di valori alle annotazioni ti aiuta a gestire gli oggetti di storage in modo più efficace.
+
+.Prima di iniziare
+Devi disporre del ruolo di Amministratore dell'applicazione o di Amministratore dello storage.
+
+Non puoi aggiungere valori alle annotazioni predefinite.
+
+.Passaggi
+. Nel riquadro di navigazione a sinistra, fai clic su *Gestione archiviazione* > *Annotazioni*.
+. Nella pagina *Annotazioni*, seleziona l'annotazione a cui desideri aggiungere un valore e poi fai clic su *Aggiungi* nella sezione *Valori*.
+. Nella finestra di dialogo *Aggiungi valore di annotazione*, specifica un valore per l'annotazione.
++
+Il valore specificato deve essere univoco per l'annotazione selezionata.
+
+. Fai clic su *Add*.
+

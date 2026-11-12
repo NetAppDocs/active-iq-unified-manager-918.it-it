@@ -1,0 +1,20 @@
+---
+permalink: performance-checker/task_select_predefined_time_range.html 
+sidebar: sidebar 
+keywords: select, predefined, time, range 
+summary: 'Selezionare un intervallo di tempo predefinito è un modo rapido ed efficiente per personalizzare e concentrare l"output dei dati quando visualizzi i dati sulle prestazioni degli oggetti del cluster. Quando selezioni un intervallo di tempo predefinito, sono disponibili dati fino a 13 mesi.' 
+---
+= Seleziona un intervallo di tempo predefinito in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Selezionare un intervallo di tempo predefinito è un modo rapido ed efficiente per personalizzare e concentrare l'output dei dati quando visualizzi i dati sulle prestazioni degli oggetti del cluster. Quando selezioni un intervallo di tempo predefinito, sono disponibili dati fino a 13 mesi.
+
+.Passaggi
+. In alto a destra della pagina *Performance Explorer*, fai clic su *Time Range*.
+. Sul lato destro del pannello *Selezione intervallo di tempo*, seleziona un intervallo di tempo predefinito.
+. Fai clic su *Apply Range*.
+

@@ -1,0 +1,24 @@
+---
+permalink: events/task_view_alerts.html 
+sidebar: sidebar 
+keywords: view, alerts 
+summary: 'Dalla pagina di configurazione degli avvisi puoi visualizzare l"elenco degli avvisi creati per vari eventi. Puoi anche visualizzare le proprietà degli avvisi, come la descrizione dell"avviso, il metodo e la frequenza di notifica, gli eventi che attivano l"avviso, i destinatari e-mail degli avvisi e le risorse interessate, come cluster, aggregati e volumi.' 
+---
+= Visualizza gli avvisi in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dalla pagina di configurazione degli avvisi puoi visualizzare l'elenco degli avvisi creati per vari eventi. Puoi anche visualizzare le proprietà degli avvisi, come la descrizione dell'avviso, il metodo e la frequenza di notifica, gli eventi che attivano l'avviso, i destinatari e-mail degli avvisi e le risorse interessate, come cluster, aggregati e volumi.
+
+.Prima di iniziare
+Devi disporre del ruolo di Operatore, Amministratore di applicazioni o Amministratore di archiviazione.
+
+.Passaggio
+. Nel riquadro di navigazione a sinistra, fai clic su *Storage Management* > *Alert Setup*.
++
+La pagina di configurazione degli avvisi mostra l'elenco degli avvisi.
+
+

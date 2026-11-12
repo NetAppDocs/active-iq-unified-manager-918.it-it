@@ -1,0 +1,46 @@
+---
+permalink: performance-checker/task_respond_to_performance_incident_caused_by_ha_takeover.html 
+sidebar: sidebar 
+keywords: dynamic, performance, event, ha, takeover 
+summary: 'Puoi usare Unified Manager per analizzare un evento di prestazioni causato da un"elevata elaborazione dei dati su un nodo del cluster che fa parte di una coppia ad alta disponibilità (HA). Puoi anche usare Unified Manager per controllare lo stato di salute dei nodi e verificare se eventuali eventi di salute rilevati di recente sui nodi hanno contribuito all"evento di prestazioni.' 
+---
+= Rispondi a un evento di prestazioni causato dal takeover in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi usare Unified Manager per analizzare un evento di prestazioni causato da un'elevata elaborazione dei dati su un nodo del cluster che fa parte di una coppia ad alta disponibilità (HA). Puoi anche usare Unified Manager per controllare lo stato di salute dei nodi e verificare se eventuali eventi di salute rilevati di recente sui nodi hanno contribuito all'evento di prestazioni.
+
+.Prima di iniziare
+* Devi disporre del ruolo di Operatore, Amministratore di applicazioni o Amministratore di archiviazione.
+* Devono esserci eventi delle prestazioni nuovi, confermati o obsoleti.
+
+
+.Passaggi
+. Visualizza la pagina *Dettagli dell'evento* per vedere le informazioni sull'evento.
+. Leggi la *Descrizione*, che illustra i carichi di lavoro coinvolti nell'evento e il componente del cluster conteso.
++
+È presente un volume vittima la cui latenza è stata influenzata dal componente del cluster in conflitto. Il nodo Data Processing, che ha assunto tutti i carichi di lavoro dal nodo partner, è il componente del cluster in conflitto. In "Componente in conflitto", l'icona Data Processing è evidenziata in rosso e il nome del nodo che gestiva il data processing al momento dell'evento viene visualizzato tra parentesi.
+
+. Nella sezione *Descrizione*, clicca sul nome del volume.
++
+Viene visualizzata la pagina Volume Performance Explorer. Nella parte superiore della pagina, nella cronologia degli eventi, un'icona di evento di modifica (image:../media/opm_change_icon.gif["Cambia l'icona dell'evento"]) indica il momento in cui Unified Manager ha rilevato l'inizio dell'HA takeover.
+
+. Posiziona il cursore sull'icona dell'evento di modifica per l'HA takeover e visualizzerai i dettagli sull'HA takeover nel testo al passaggio del mouse.
++
+Nel grafico della latenza, un evento indica che il volume selezionato ha superato la soglia di prestazioni a causa dell'elevata latenza all'incirca nello stesso momento dell'HA takeover.
+
+. Fai clic su *Zoom View* per visualizzare il grafico della latenza in una nuova pagina.
+. Nel menu Visualizza, seleziona *Componenti del cluster* per visualizzare la latenza totale per componente del cluster.
+. Posiziona il cursore del mouse sull'icona dell'evento di modifica per l'inizio del takeover HA e confronta la latenza per l'elaborazione dei dati con la latenza totale.
++
+Al momento dell'HA takeover, si è verificato un picco nell'elaborazione dei dati dovuto all'aumento della domanda del carico di lavoro sul nodo di elaborazione dei dati. L'aumento dell'utilizzo della CPU ha incrementato la latenza e ha innescato l'evento.
+
+. Dopo aver riparato il nodo guasto, usa ONTAP System Manager per eseguire un HA giveback, che sposta i carichi di lavoro dal nodo partner al nodo riparato.
+. Dopo il completamento del giveback HA, al successivo rilevamento della configurazione in Unified Manager (circa 15 minuti), trova l'evento e il carico di lavoro attivati dal takeover HA nella pagina di inventario *Event Management*.
++
+L'evento attivato dal takeover HA ora ha uno stato obsoleto, che indica che l'evento è stato risolto. La latenza nel componente Data Processing è diminuita, riducendo la latenza totale. Il nodo che il volume selezionato sta ora utilizzando per Data Processing ha risolto l'evento.
+
+

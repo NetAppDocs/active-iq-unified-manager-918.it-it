@@ -1,0 +1,36 @@
+---
+permalink: reporting/task_create_report_to_view_failed_or_successful_volume_transfers.html 
+sidebar: sidebar 
+keywords: create, report, view, failed, successful, volume, transfer 
+summary: Puoi creare un report che visualizza lo stato dei trasferimenti di volume. In questo report puoi visualizzare sia i trasferimenti di volume non riusciti che quelli riusciti. 
+---
+= Crea un report per visualizzare i trasferimenti di volume non riusciti o riusciti in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi creare un report che visualizza lo stato dei trasferimenti di volume. In questo report puoi visualizzare sia i trasferimenti di volume non riusciti che quelli riusciti.
+
+.Prima di iniziare
+* Devi disporre del ruolo di Amministratore dell'applicazione o di Amministratore dello storage.
+
+
+Segui questi passaggi per creare una visualizzazione personalizzata che mostri quali trasferimenti non sono andati a buon fine e quali hanno avuto esito positivo, quindi pianifica la generazione di un report per tale visualizzazione.
+
+.Passaggi
+. Nel riquadro di navigazione a sinistra, fai clic su *Archiviazione* > *Volumi*.
+. Nel menu Visualizza, seleziona *Relazione* > *Stato del trasferimento dell'ultimo mese*.
+. Seleziona *Mostra/Nascondi* per rimuovere le colonne che non vuoi includere nel report.
+. Trascina la colonna "Risultato dell'operazione" vicino alla colonna "Stato".
+. Fai clic sulla parte superiore della colonna "`Operation Result`" per ordinare i volumi in base allo stato.
+. Salva la vista con un nome specifico che rifletta ciò che mostra, ad esempio "`Volumi per stato di trasferimento`".
+. Nella pagina dell'inventario, fai clic sul pulsante *Report programmati*.
+. Inserisci un nome per la pianificazione del report e completa gli altri campi del report, quindi fai clic sul segno di spunta (image:../media/blue_check.gif[""]) alla fine della riga.
++
+Il report viene inviato immediatamente a scopo di test. Successivamente, il report viene generato e inviato via email ai destinatari indicati con la frequenza specificata.
+
+
+
+In base ai risultati riportati nel report, puoi verificare lo stato del trasferimento.

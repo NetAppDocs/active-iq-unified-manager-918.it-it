@@ -1,0 +1,26 @@
+---
+permalink: performance-checker/concept_use_qos_policy_settings_to_prioritize_work_on_this_node.html 
+sidebar: sidebar 
+keywords: qos, policy, settings, prioritize, work, node 
+summary: Puoi impostare un limite su un gruppo di criteri QoS per controllare il limite di throughput IOPS o MBps per i carichi di lavoro che contiene. Se i carichi di lavoro si trovano in un gruppo di criteri senza un limite impostato, ad esempio il gruppo di criteri predefinito, o se il limite impostato non soddisfa le tue esigenze, puoi aumentarlo o spostare i carichi di lavoro in un gruppo di criteri nuovo o esistente con il limite desiderato. 
+---
+= Utilizza le impostazioni dei criteri QoS per dare priorità ai carichi di lavoro dei nodi in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi impostare un limite su un gruppo di criteri QoS per controllare il limite di throughput IOPS o MBps per i carichi di lavoro che contiene. Se i carichi di lavoro si trovano in un gruppo di criteri senza un limite impostato, ad esempio il gruppo di criteri predefinito, o se il limite impostato non soddisfa le tue esigenze, puoi aumentarlo o spostare i carichi di lavoro in un gruppo di criteri nuovo o esistente con il limite desiderato.
+
+Se un evento di prestazioni su un nodo è causato da carichi di lavoro che utilizzano eccessivamente le risorse del nodo, la descrizione dell'evento nella pagina Dettagli evento mostra un collegamento all'elenco dei volumi coinvolti. Nella pagina Prestazioni/Volumi, puoi ordinare i volumi interessati per IOPS e MBps per vedere quali carichi di lavoro presentano l'utilizzo più elevato e potrebbero aver contribuito all'evento.
+
+Assegnando i volumi che sovraccaricano le risorse del nodo a un gruppo di criteri con impostazioni più restrittive, il gruppo di criteri limita i carichi di lavoro per restringerne l'attività, riducendo così l'utilizzo delle risorse su quel nodo.
+
+Puoi usare ONTAP System Manager o i comandi ONTAP per gestire i gruppi di criteri, incluse le seguenti attività:
+
+* Creazione di un gruppo di policy
+* Aggiunta o rimozione di carichi di lavoro in un gruppo di criteri
+* Spostamento di un carico di lavoro tra gruppi di policy
+* Modifica del limite di throughput di un gruppo di criteri
+

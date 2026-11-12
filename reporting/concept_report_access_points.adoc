@@ -1,0 +1,25 @@
+---
+permalink: reporting/concept_report_access_points.html 
+sidebar: sidebar 
+keywords: access, points, generating, reports 
+summary: 'In Unified Manager puoi raccogliere informazioni sui cluster per creare report tramite l"interfaccia utente, query al database MySQL e API REST.' 
+---
+= Scopri tre modi per accedere alle funzionalità di reporting in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+In Unified Manager puoi raccogliere informazioni sui cluster per creare report tramite l'interfaccia utente, query al database MySQL e API REST.
+
+Queste sezioni descrivono la creazione di report e la pianificazione in Unified Manager tramite l'interfaccia utente.
+
+Esistono tre modi per accedere alle funzionalità di reporting offerte da Unified Manager:
+
+* Estrazione dei dati direttamente dalle pagine dell'inventario nella UI.
+* Utilizzo di Open Database Connectivity (ODBC) e degli strumenti ODBC per accedere a tutti gli oggetti disponibili.
+* Esegui le API REST di Unified Manager per ottenere le informazioni che desideri esaminare.
+
+
+Queste sezioni descrivono la creazione di report e la pianificazione in Unified Manager tramite l'interfaccia utente.

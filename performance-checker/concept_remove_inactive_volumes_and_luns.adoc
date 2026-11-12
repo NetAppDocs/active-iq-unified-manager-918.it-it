@@ -1,0 +1,34 @@
+---
+permalink: performance-checker/concept_remove_inactive_volumes_and_luns.html 
+sidebar: sidebar 
+keywords: remove, inactive, volumes, luns 
+summary: 'Quando lo spazio libero dell"aggregate è identificato come un problema, puoi cercare volumi e LUN non utilizzati ed eliminarli dall"aggregate. Questo può contribuire ad alleviare il problema dello spazio su disco insufficiente.' 
+---
+= Rimuovi volumi e LUN inattivi in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Quando lo spazio libero dell'aggregate è identificato come un problema, puoi cercare volumi e LUN non utilizzati ed eliminarli dall'aggregate. Questo può contribuire ad alleviare il problema dello spazio su disco insufficiente.
+
+Se un evento di prestazioni su un aggregato è causato da uno spazio su disco insufficiente, esistono diversi modi per determinare quali volumi e LUN non vengono più utilizzati.
+
+Per identificare i volumi non utilizzati:
+
+* Nella pagina dei dettagli dell'evento, il campo *Numero di oggetti interessati* fornisce un collegamento che visualizza l'elenco dei volumi interessati.
++
+Fai clic sul collegamento per visualizzare i volumi nella vista Performance: All Volumes. Da lì puoi ordinare i volumi interessati in base agli *IOPS* per vedere quali volumi non hanno avuto attività.
+
+
+
+Per identificare le LUN non utilizzate:
+
+. Dalla pagina dei dettagli dell'evento, annota il nome dell'aggregato su cui si è verificato l'evento.
+. Nel riquadro di navigazione a sinistra, fai clic su *Storage* > *LUNs* e seleziona *Performance* > *All LUNs* dal menu View.
+. Fai clic su *Filtering*, seleziona *Aggregate* dal menu a discesa a sinistra, digita il nome dell'aggregate nel campo di testo e quindi fai clic su *Apply Filter*.
+. Ordina l'elenco risultante delle LUN interessate in base agli *IOPS* per visualizzare le LUN non attive.
+
+
+Dopo aver identificato i volumi e le LUN non utilizzati, puoi utilizzare ONTAP System Manager o i comandi ONTAP per eliminare tali oggetti.

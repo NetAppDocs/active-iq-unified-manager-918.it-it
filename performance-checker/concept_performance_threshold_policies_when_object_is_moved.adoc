@@ -1,0 +1,53 @@
+---
+permalink: performance-checker/concept_performance_threshold_policies_when_object_is_moved.html 
+sidebar: sidebar 
+keywords: happens, performance, threshold, policies, object, moved 
+summary: 'Poiché le policy di soglia delle prestazioni vengono assegnate agli oggetti di archiviazione, se sposti un oggetto, tutte le policy di soglia assegnate rimangono associate all"oggetto anche dopo il completamento dello spostamento. Ad esempio, se sposti un volume o una LUN in un aggregate diverso, le policy di soglia rimangono attive per il volume o la LUN nel nuovo aggregate.' 
+---
+= Gestisci le politiche di soglia durante lo spostamento degli oggetti in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Poiché le policy di soglia delle prestazioni vengono assegnate agli oggetti di archiviazione, se sposti un oggetto, tutte le policy di soglia assegnate rimangono associate all'oggetto anche dopo il completamento dello spostamento. Ad esempio, se sposti un volume o una LUN in un aggregate diverso, le policy di soglia rimangono attive per il volume o la LUN nel nuovo aggregate.
+
+Se per la policy di soglia esiste una condizione del contatore secondaria (una policy combinata), ad esempio se a un aggregato o a un nodo è assegnata una condizione aggiuntiva, la condizione del contatore secondaria si applica al nuovo aggregato o nodo in cui è stato spostato il volume o la LUN.
+
+Se esistono nuovi eventi attivi per gli oggetti che utilizzano la policy di soglia modificata, gli eventi vengono contrassegnati come obsoleti e la policy di soglia inizia a monitorare il contatore come una policy di soglia appena definita.
+
+Un'operazione di spostamento di un volume fa sì che ONTAP invii un evento informativo di modifica. Nella timeline degli eventi nella pagina Performance Explorer e nella pagina Workload Analysis compare un'icona di evento di modifica per indicare il momento in cui l'operazione di spostamento è stata completata.
+
+[NOTE]
+====
+Se sposti un oggetto in un cluster diverso, la policy di soglia definita dall'utente viene rimossa dall'oggetto. Se necessario, devi assegnare una policy di soglia all'oggetto al termine dell'operazione di spostamento. Le policy di soglia dinamiche e definite dal sistema, invece, vengono applicate automaticamente a un oggetto dopo che è stato spostato in un nuovo cluster.
+
+====
+
+
+[[threshold-policy-functionality-during-ha-takeover-and-giveback]]
+== Funzionalità della policy di soglia durante il takeover e il giveback HA
+
+Quando si verifica un'operazione di takeover o giveback in una configurazione ad alta disponibilità (HA), gli oggetti spostati da un nodo all'altro mantengono le proprie policy di soglia nello stesso modo delle operazioni di spostamento manuale. Poiché Unified Manager verifica le modifiche alla configurazione del cluster ogni 15 minuti, l'impatto del passaggio al nuovo nodo non viene identificato fino al successivo controllo della configurazione del cluster.
+
+[NOTE]
+====
+Se sia un'operazione di takeover sia una di giveback si verificano entro il periodo di raccolta delle modifiche di configurazione di 15 minuti, potresti non vedere le statistiche delle prestazioni spostarsi da un nodo all'altro.
+
+====
+
+
+[[threshold-policy-functionality-during-aggregate-relocation]]
+== Funzionalità della policy di soglia durante la riallocazione dell'aggregato
+
+Se sposti un aggregato da un nodo a un altro nodo utilizzando il `aggregate relocation start` comando, sia le policy di soglia singole che quelle combinate vengono mantenute su tutti gli oggetti e la parte della policy di soglia relativa al nodo viene applicata al nuovo nodo.
+
+
+
+[[threshold-policy-functionality-during-metrocluster-switchover]]
+== Funzionalità della policy di soglia durante lo switchover di MetroCluster
+
+Gli oggetti che si spostano da un cluster a un altro cluster in una configurazione MetroCluster non mantengono le impostazioni della policy di soglia definita dall'utente. Se necessario, puoi applicare le policy di soglia ai volumi e alle LUN che sono stati spostati nel cluster partner. Dopo che un oggetto è tornato al cluster originale, la policy di soglia definita dall'utente viene riapplicata automaticamente.
+
+Per informazioni, vedi link:../storage-mgmt/concept_volume_behavior_during_switchover_and_switchback.html["Comportamento del volume durante switchover e switchback"].

@@ -1,0 +1,56 @@
+---
+permalink: events/reference_storage_shelf_events.html 
+sidebar: sidebar 
+keywords: storage, shelf, events, impact area, availability 
+summary: 'Gli eventi relativi agli shelf di storage ti informano se si verificano anomalie, consentendoti di monitorare potenziali problemi. Gli eventi sono raggruppati per area di impatto e includono il nome dell"evento e del trap, il livello di impatto, il tipo di origine e la gravità.' 
+---
+= Scopri gli eventi relativi agli shelf di storage in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Gli eventi relativi agli shelf di storage ti informano se si verificano anomalie, consentendoti di monitorare potenziali problemi. Gli eventi sono raggruppati per area di impatto e includono il nome dell'evento e del trap, il livello di impatto, il tipo di origine e la gravità.
+
+
+
+[[impact-area-availability]]
+== Area di impatto: disponibilità
+
+|===
+| Nome dell'evento (Nome della trap) | Livello di impatto | Tipo di origine | Gravità 
+
+
+ a| 
+Intervallo di tensione anomalo(ocumEvtShelfVoltageAbnormal)
+ a| 
+Rischio
+ a| 
+Shelf di storage
+ a| 
+Avvertimento
+
+
+
+ a| 
+Intervallo di corrente anomalo(ocumEvtShelfCurrentAbnormal)
+ a| 
+Rischio
+ a| 
+Shelf di storage
+ a| 
+Avvertimento
+
+
+
+ a| 
+Temperatura anomala(ocumEvtShelfTemperatureAbnormal)
+ a| 
+Rischio
+ a| 
+Shelf di storage
+ a| 
+Avvertimento
+
+|===

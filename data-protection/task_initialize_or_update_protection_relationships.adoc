@@ -1,0 +1,53 @@
+---
+permalink: data-protection/task_initialize_or_update_protection_relationships.html 
+sidebar: sidebar 
+keywords: initialize, update, protection, relationships, volume, page 
+summary: Dalla pagina Relazioni di volume, puoi eseguire un trasferimento baseline iniziale su una nuova relazione di protezione oppure aggiornare una relazione se è già inizializzata e vuoi eseguire immediatamente un aggiornamento incrementale manuale non pianificato. 
+---
+= Inizializza o aggiorna le relazioni di protezione dalla pagina Relazioni di volume in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dalla pagina Relazioni di volume, puoi eseguire un trasferimento baseline iniziale su una nuova relazione di protezione oppure aggiornare una relazione se è già inizializzata e vuoi eseguire immediatamente un aggiornamento incrementale manuale non pianificato.
+
+
+NOTE: Non è possibile inizializzare o aggiornare i volumi protetti da Consistency Groups.
+
+.Prima di iniziare
+* Devi disporre del ruolo di Amministratore dell'applicazione o di Amministratore dello storage.
+* Devi aver configurato OnCommand Workflow Automation.
+
+
+.Passaggi
+. Dalla pagina *Volume Relationships*, fai clic con il pulsante destro del mouse su un volume e seleziona uno o più volumi con relazioni che desideri aggiornare o inizializzare, quindi, sulla barra degli strumenti, fai clic su *Initialize/Update*.
++
+Si apre la finestra di dialogo *Inizializza/Aggiorna*.
+
+. Nella scheda *Opzioni di trasferimento*, seleziona una priorità di trasferimento e la velocità di trasferimento massima.
+. Fai clic su *Copie Snapshot di origine*; quindi, nella colonna *Copia Snapshot*, fai clic su *Default*.
++
+Viene visualizzata la finestra di dialogo Seleziona copia Snapshot di origine.
+
+. Se vuoi specificare una copia Snapshot esistente anziché trasferire la copia Snapshot predefinita, fai clic su *Existing Snapshot Copy* e seleziona una copia Snapshot dall'elenco.
+. Fai clic su *Submit*.
++
+Tornerai alla finestra di dialogo *Inizializza/Aggiorna*.
+
+. Se hai selezionato più di un'origine da inizializzare o aggiornare, fai clic su *Predefinito* per l'origine successiva per la quale desideri specificare una copia Snapshot esistente.
+. Fai clic su *Invia* per avviare il processo di inizializzazione o aggiornamento.
++
+Il processo di inizializzazione o aggiornamento si avvia, vieni reindirizzato alla pagina Relazioni volume e nella parte superiore della pagina compare un collegamento ai processi.
+
+. *Facoltativo:* Fai clic su *View Jobs* nella vista *Health: All Volumes* per monitorare lo stato di ciascun processo di inizializzazione o aggiornamento.
++
+Viene visualizzato un elenco filtrato di processi.
+
+. *Opzionale:* Clicca su ciascun job per visualizzarne i dettagli.
+. *Facoltativo:* Fai clic sulla freccia *Indietro* del tuo browser per tornare alla pagina *Relazioni di volume*.
++
+L'operazione di inizializzazione o di aggiornamento termina quando tutte le attività vengono completate con successo.
+
+

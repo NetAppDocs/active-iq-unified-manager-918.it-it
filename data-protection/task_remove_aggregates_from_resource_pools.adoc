@@ -1,0 +1,39 @@
+---
+permalink: data-protection/task_remove_aggregates_from_resource_pools.html 
+sidebar: sidebar 
+keywords: remove, aggregates, resource pools 
+summary: Rimuovi gli aggregati da un pool di risorse esistente, ad esempio quando vuoi utilizzare un aggregato per un altro scopo. 
+---
+= Rimuovi gli aggregati dai pool di risorse in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi rimuovere gli aggregati da un pool di risorse esistente: ad esempio, quando vuoi utilizzare un aggregato per un altro scopo.
+
+.Prima di iniziare
+Devi disporre del ruolo di Amministratore dell'applicazione o di Amministratore dello storage.
+
+I membri del pool di risorse vengono visualizzati solo quando viene selezionato un pool di risorse.
+
+.Passaggi
+. Nel riquadro di navigazione a sinistra, fai clic su *Protezione* > *Pool di risorse*.
+. Seleziona il pool di risorse da cui vuoi rimuovere gli aggregati membri.
++
+L'elenco degli aggregati membri viene visualizzato nel riquadro Members.
+
+. Seleziona uno o più aggregati.
++
+Il pulsante *Rimuovi* è abilitato.
+
+. Fai clic su *Rimuovi.*
++
+Compare una finestra di dialogo di avviso.
+
+. Fai clic su *Sì* per continuare.
++
+Gli aggregati selezionati vengono rimossi dal riquadro Members.
+
+

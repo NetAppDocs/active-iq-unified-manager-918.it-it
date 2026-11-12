@@ -1,0 +1,88 @@
+---
+permalink: data-protection/reference_advanced_secondary_setting_dialog_box.html 
+sidebar: sidebar 
+keywords: advanced, secondary, settings, dialog box 
+summary: Puoi utilizzare la finestra di dialogo Impostazioni secondarie avanzate per abilitare la replica flessibile in base alla versione, più copie di backup e le impostazioni relative allo spazio su un volume secondario. Puoi utilizzare la finestra di dialogo Impostazioni secondarie avanzate quando vuoi modificare, abilitare o disabilitare le impostazioni correnti. 
+---
+= Usa la finestra di dialogo Impostazioni secondarie avanzate in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi utilizzare la finestra di dialogo Impostazioni secondarie avanzate per abilitare la replica flessibile in base alla versione, più copie di backup e le impostazioni relative allo spazio su un volume secondario. Puoi utilizzare la finestra di dialogo Impostazioni secondarie avanzate quando vuoi modificare, abilitare o disabilitare le impostazioni correnti.
+
+Le impostazioni relative allo spazio massimizzano la quantità di dati archiviati, tra cui: deduplicazione, compressione dei dati, crescita automatica e garanzia di spazio.
+
+La finestra di dialogo include i seguenti campi:
+
+* *Abilita la replica flessibile in base alla versione*
++
+Consente SnapMirror con replica flessibile in base alla versione. La replica flessibile in base alla versione consente a SnapMirror di proteggere un volume di origine anche se il volume di destinazione utilizza una versione di ONTAP precedente a quella del volume di origine.
+
++
+** Abilita il backup
++
+Se la replica flessibile per la versione è abilitata, consente inoltre di trasferire e conservare più copie Snapshot dei dati della fonte di SnapMirror nella destinazione di SnapMirror.
+
+
+
+* *Abilita la deduplicazione*
++
+Abilita la deduplicazione sul volume secondario in una relazione di SnapVault in modo da eliminare i blocchi di dati duplicati e ottenere un risparmio di spazio. Puoi usare la deduplicazione quando il risparmio di spazio è di almeno il 10% e quando la frequenza di sovrascrittura dei dati non è elevata. La deduplicazione viene spesso utilizzata per ambienti virtualizzati, condivisioni di file e dati di backup. Questa impostazione è disabilitata per impostazione predefinita. Quando è abilitata, questa operazione viene avviata dopo ogni trasferimento.
+
++
+** Abilita la compressione
++
+Abilita la compressione trasparente dei dati. Puoi utilizzare la compressione quando il risparmio di spazio è almeno del 10%, quando il sovraccarico potenziale è accettabile e quando sono disponibili risorse di sistema sufficienti per completare la compressione durante le ore non di punta. In una relazione SnapVault, questa impostazione è disabilitata per impostazione predefinita. La compressione è disponibile solo quando è selezionata la deduplicazione.
+
+** Comprimi inline
++
+Consente un risparmio immediato di spazio comprimendo i dati prima di scriverli su disco. Puoi utilizzare la compressione inline quando il sistema non supera il 50% di utilizzo durante le ore di punta e quando può gestire nuove scritture e un maggiore utilizzo della CPU durante le ore di punta. Questa impostazione è disponibile solo quando è selezionata l'opzione "`Enable Compression`".
+
+
+
+* *Attiva Autogrow*
++
+Ti consente di aumentare automaticamente il volume di destinazione quando la percentuale di spazio libero è inferiore alla soglia specificata, a condizione che sia disponibile spazio sull'aggregato associato.
+
+* *Dimensioni massime*
++
+Imposta la percentuale massima fino a cui un volume può crescere. Il valore predefinito è del 20% superiore alla dimensione del volume di origine. Un volume non cresce automaticamente se la dimensione corrente è maggiore o uguale alla percentuale massima di crescita automatica. Questo campo è abilitato solo quando l'impostazione di crescita automatica è attiva.
+
+* *Dimensione dell'incremento*
++
+Specifica l'incremento percentuale con cui il volume aumenta automaticamente prima di raggiungere la percentuale massima del volume di origine.
+
+* *Garanzia di spazio*
++
+Garantisce che sul volume secondario venga allocato spazio sufficiente affinché i trasferimenti di dati abbiano sempre esito positivo. L'impostazione della garanzia di spazio può essere una delle seguenti:
+
++
+** File
+** Volume
+** None + Ad esempio, potresti avere un volume da 200 GB che contiene file per un totale di 50 GB; tuttavia, questi file contengono solo 10 GB di dati. La garanzia del volume alloca 200 GB al volume di destinazione, indipendentemente dal contenuto nell'origine. La garanzia dei file alloca 50 GB per assicurare che sia riservato spazio sufficiente per i file nell'origine; selezionando None in questo scenario, sulla destinazione vengono allocati solo 10 GB per lo spazio effettivamente utilizzato dai dati dei file nell'origine.
+
+
++
+La garanzia di spazio è impostata su Volume per impostazione predefinita.
+
+
+
+
+
+[[command-buttons]]
+== Pulsanti di comando
+
+I pulsanti di comando consentono di eseguire le seguenti operazioni:
+
+* *Applica*
++
+Salva le impostazioni di efficienza selezionate e le applica quando fai clic su *Apply* nella finestra di dialogo Configure Protection.
+
+* *Annulla*
++
+Annulla le selezioni e chiude la finestra di dialogo Advanced Destination Settings.
+
+

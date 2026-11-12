@@ -1,0 +1,27 @@
+---
+permalink: events/task_edit_alerts.html 
+sidebar: sidebar 
+keywords: edit, alerts 
+summary: 'Puoi modificare le proprietà dell"avviso, come la risorsa a cui è associato, gli eventi, i destinatari, le opzioni di notifica, la frequenza di notifica e gli script associati.' 
+---
+= Modifica gli avvisi in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi modificare le proprietà dell'avviso, come la risorsa a cui è associato, gli eventi, i destinatari, le opzioni di notifica, la frequenza di notifica e gli script associati.
+
+.Prima di iniziare
+Devi avere il ruolo di Amministratore dell'applicazione.
+
+.Passaggi
+. Nel riquadro di navigazione a sinistra, fai clic su *Storage Management* > *Alert Setup*.
+. Nella pagina *Alert Setup*, seleziona l'avviso che vuoi modificare e fai clic su *Edit*.
+. Nella finestra di dialogo *Modifica avviso*, modifica le sezioni relative a nome, risorse, eventi e azioni, secondo necessità.
++
+Puoi modificare o rimuovere lo script associato all'avviso.
+
+. Fare clic su *Save*.
+

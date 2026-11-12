@@ -1,0 +1,14 @@
+---
+permalink: reporting/concept_customize_svm_reports.html 
+sidebar: sidebar 
+keywords: customize, storage, vm reports 
+summary: Puoi creare report sulle VM di storage per analizzare le informazioni sui volumi e visualizzare lo stato generale e la disponibilità dello storage. Ad esempio, puoi creare report per visualizzare le SVM che raggiungono il numero massimo di volumi totali e per analizzare le SVM arrestate. 
+---
+= Personalizza i report delle VM di storage in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi creare report sulle VM di storage per analizzare le informazioni sui volumi e visualizzare lo stato generale e la disponibilità dello storage. Ad esempio, puoi creare report per visualizzare le SVM che raggiungono il numero massimo di volumi totali e per analizzare le SVM arrestate.

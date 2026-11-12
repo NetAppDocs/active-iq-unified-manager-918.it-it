@@ -1,0 +1,103 @@
+---
+permalink: events/reference_enclosures_events.html 
+sidebar: sidebar 
+keywords: enclosures, events, impact area, availability, configuration 
+summary: 'Gli eventi relativi agli alloggiamenti ti forniscono informazioni sullo stato degli alloggiamenti per dischi nel tuo data center, consentendoti di monitorare potenziali problemi. Gli eventi sono raggruppati per area di impatto e includono il nome dell"evento e della trap, il livello di impatto, il tipo di origine e la gravità.' 
+---
+= Scopri gli eventi relativi agli involucri in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Gli eventi relativi agli alloggiamenti ti forniscono informazioni sullo stato degli alloggiamenti per dischi nel tuo data center, consentendoti di monitorare potenziali problemi. Gli eventi sono raggruppati per area di impatto e includono il nome dell'evento e della trap, il livello di impatto, il tipo di origine e la gravità.
+
+
+
+[[impact-area-availability]]
+== Area di impatto: disponibilità
+
+|===
+| Nome dell'evento (Nome della trap) | Livello di impatto | Tipo di origine | Gravità 
+
+
+ a| 
+Le ventole del ripiano dischi si sono guastate(ocumEvtShelfFanFailed)
+ a| 
+Incidente
+ a| 
+Shelf di storage
+ a| 
+Critico
+
+
+
+ a| 
+Alimentatori del ripiano dischi guasti(ocumEvtShelfPowerSupplyFailed)
+ a| 
+Incidente
+ a| 
+Shelf di storage
+ a| 
+Critico
+
+
+
+ a| 
+Multipath per shelf di dischi non configurato(ocumDiskShelfConnectivityNotInMultiPath)
+
+Questo evento non si applica a:
+
+* Cluster che si trovano in una configurazione MetroCluster
+* Le seguenti piattaforme: FAS2554, FAS2552, FAS2520 e FAS2240
+
+ a| 
+Rischio
+ a| 
+Nodo
+ a| 
+Avvertimento
+
+
+
+ a| 
+Errore nel percorso del ripiano del disco(ocumDiskShelfConnectivityPathFailure)
+ a| 
+Rischio
+ a| 
+Shelf di storage
+ a| 
+Avvertimento
+
+|===
+
+
+[[impact-area-configuration]]
+== Area di impatto: configurazione
+
+|===
+| Nome dell'evento (Nome della trap) | Livello di impatto | Tipo di origine | Gravità 
+
+
+ a| 
+Rilevato alloggiamento disco(non applicabile)
+ a| 
+Evento
+ a| 
+Nodo
+ a| 
+Informazioni
+
+
+
+ a| 
+Shelf di dischi rimossi(non applicabile)
+ a| 
+Evento
+ a| 
+Nodo
+ a| 
+Informazioni
+
+|===

@@ -1,0 +1,88 @@
+---
+permalink: events/reference_event_details_page.html 
+sidebar: sidebar 
+keywords: event, details, page 
+summary: 'Dalla pagina Dettagli evento, puoi visualizzare i dettagli di un evento selezionato, come la gravità dell"evento, il livello di impatto, l"area di impatto e l"origine dell"evento. Puoi anche visualizzare ulteriori informazioni sulle possibili soluzioni per risolvere il problema.' 
+---
+= Scopri la pagina dei dettagli dell'evento in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dalla pagina Dettagli evento, puoi visualizzare i dettagli di un evento selezionato, come la gravità dell'evento, il livello di impatto, l'area di impatto e l'origine dell'evento. Puoi anche visualizzare ulteriori informazioni sulle possibili soluzioni per risolvere il problema.
+
+* *Nome evento*
++
+Il nome dell'evento e l'ora in cui l'evento è stato rilevato per l'ultima volta.
+
++
+Per gli eventi non relativi alle prestazioni, finché l'evento si trova nello stato Nuovo o Riconosciuto, le informazioni sull'ultimo rilevamento non sono note e pertanto sono nascoste.
+
+* *Descrizione dell'evento*
++
+Breve descrizione dell'evento.
+
++
+In alcuni casi la motivazione dell'attivazione dell'evento è indicata nella descrizione dell'evento stesso.
+
+* *Componente in contesa*
++
+Per gli eventi di prestazioni dinamiche, questa sezione visualizza icone che rappresentano i componenti logici e fisici del cluster. Se un componente è in contesa, la sua icona è cerchiata ed evidenziata in rosso.
+
++
+Per una descrizione dei componenti visualizzati qui, consulta la sezione _Componenti del cluster e perché possono entrare in contenzione_.
+
+
+
+Le sezioni Informazioni sull'evento, Diagnosi del sistema e Azioni suggerite sono descritte in altri argomenti.
+
+
+
+[[command-buttons]]
+== Pulsanti di comando
+
+I pulsanti di comando consentono di eseguire le seguenti operazioni:
+
+* *Icona delle note*
++
+Ti consente di aggiungere o aggiornare una nota sull'evento e di visualizzare tutte le note lasciate dagli altri utenti.
+
+
+
+*Menu Azioni*
+
+* *Assegnami*
++
+Ti assegna l'evento.
+
+* *Assegna ad altri*
++
+Apre la finestra di dialogo Assegna proprietario, che ti consente di assegnare o riassegnare l'evento ad altri utenti.
+
++
+Quando assegni un evento a un utente, il nome dell'utente e l'ora in cui l'evento è stato assegnato vengono aggiunti nell'elenco degli eventi per gli eventi selezionati.
+
++
+Puoi anche annullare l'assegnazione degli eventi lasciando vuoto il campo del proprietario.
+
+* *Riconosci*
++
+Conferma gli eventi selezionati in modo da non continuare a ricevere notifiche di avviso ripetute.
+
++
+Quando confermi un evento, il tuo nome utente e l'ora in cui hai confermato l'evento vengono aggiunti all'elenco degli eventi (Acknowledged By) per gli eventi selezionati. Quando confermi un evento, ti assumi la responsabilità della sua gestione.
+
+* *Segna come risolto*
++
+Ti consente di modificare lo stato dell'evento in Risolto.
+
++
+Quando risolvi un evento, il tuo nome utente e l'ora in cui hai risolto l'evento vengono aggiunti all'elenco degli eventi (Risolto da) per gli eventi selezionati. Dopo aver intrapreso un'azione correttiva per l'evento, devi contrassegnarlo come risolto.
+
+* *Aggiungi avviso*
++
+Visualizza la finestra di dialogo Aggiungi avviso, che consente di aggiungere un avviso per l'evento selezionato.
+
+

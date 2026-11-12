@@ -1,0 +1,26 @@
+---
+permalink: performance-checker/concept_how_cluster_operations_can_affect_workload_latency.html 
+sidebar: sidebar 
+keywords: cluster, operations, affect, workload, latency 
+summary: 'Le operazioni (IOPS) rappresentano l"attività di tutti i carichi di lavoro definiti dall"utente e dal sistema su un cluster. Le statistiche IOPS ti aiutano a determinare se i processi del cluster, come l"esecuzione di backup o la deduplicazione, influiscono sulla latenza (tempo di risposta) dei carichi di lavoro o potrebbero aver causato, o contribuito a, un evento di prestazioni.' 
+---
+= Valuta come le operazioni del cluster possono influire sulla latenza del carico di lavoro in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le operazioni (IOPS) rappresentano l'attività di tutti i carichi di lavoro definiti dall'utente e dal sistema su un cluster. Le statistiche IOPS ti aiutano a determinare se i processi del cluster, come l'esecuzione di backup o la deduplicazione, influiscono sulla latenza (tempo di risposta) dei carichi di lavoro o potrebbero aver causato, o contribuito a, un evento di prestazioni.
+
+Quando analizzi gli eventi di prestazioni, puoi usare le statistiche IOPS per determinare se un evento di prestazioni è stato causato da un problema sul cluster. Puoi identificare le attività specifiche del carico di lavoro che potrebbero aver contribuito in modo determinante all'evento di prestazioni. Gli IOPS vengono misurati in operazioni al secondo (ops/sec).
+
+image::../media/opm_ops_chart_png.png[Grafico IOPS di Unified Manager]
+
+Questo esempio mostra il grafico IOPS. Le statistiche effettive delle operazioni sono indicate da una linea blu e la previsione IOPS delle statistiche delle operazioni è indicata in verde.
+
+[NOTE]
+====
+In alcuni casi, quando un cluster è sovraccarico, Unified Manager potrebbe visualizzare il messaggio `Data collection is taking too long on Cluster _cluster_name_`. Ciò significa che non sono state raccolte abbastanza statistiche perché Unified Manager possa analizzarle. Devi ridurre le risorse utilizzate dal cluster in modo che sia possibile raccogliere le statistiche.
+
+====

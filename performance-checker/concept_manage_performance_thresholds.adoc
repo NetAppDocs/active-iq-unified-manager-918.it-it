@@ -1,0 +1,22 @@
+---
+permalink: performance-checker/concept_manage_performance_thresholds.html 
+sidebar: sidebar 
+keywords: manage, performance, thresholds 
+summary: 'Le policy di soglia delle prestazioni consentono di determinare il punto in cui Unified Manager genera un evento per informare gli amministratori di sistema di eventuali problemi che potrebbero influire sulle prestazioni del carico di lavoro. Queste policy di soglia sono note come soglie delle prestazioni definite dall"utente.' 
+---
+= Gestisci le soglie di prestazione in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le policy di soglia delle prestazioni consentono di determinare il punto in cui Unified Manager genera un evento per informare gli amministratori di sistema dei problemi che potrebbero influire sulle prestazioni del carico di lavoro. Queste policy di soglia sono note come soglie delle prestazioni _definite dall'utente_.
+
+Questa versione supporta soglie di prestazioni definite dall'utente, dal sistema e dinamiche. Con le soglie di prestazioni dinamiche e definite dal sistema, Unified Manager analizza l'attività del carico di lavoro per determinare il valore di soglia appropriato. Con le soglie definite dall'utente, puoi definire i limiti superiori delle prestazioni per numerosi contatori di prestazioni e per numerosi oggetti di storage.
+
+[NOTE]
+====
+Le soglie di prestazione predefinite del sistema e le soglie di prestazione dinamiche sono impostate da Unified Manager e non sono configurabili. Se ricevi eventi non necessari da una qualsiasi delle policy relative alle soglie di prestazione predefinite del sistema, puoi disabilitare le singole policy dalla pagina Configurazione eventi.
+
+====

@@ -1,0 +1,14 @@
+---
+permalink: performance-checker/reference_cluster_summary_page_opm.html 
+sidebar: sidebar 
+keywords: performance, cluster, summary page 
+summary: La pagina Riepilogo delle prestazioni del cluster fornisce un riepilogo degli eventi attivi, delle prestazioni IOPS e delle prestazioni MB/s per un cluster. Questa pagina include anche il numero totale di oggetti di archiviazione nel cluster. 
+---
+= Controlla la pagina Riepilogo cluster prestazioni in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La pagina Riepilogo delle prestazioni del cluster fornisce un riepilogo degli eventi attivi, delle prestazioni IOPS e delle prestazioni MB/s per un cluster. Questa pagina include anche il numero totale di oggetti di archiviazione nel cluster.

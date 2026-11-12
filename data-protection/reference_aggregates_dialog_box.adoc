@@ -1,0 +1,162 @@
+---
+permalink: data-protection/reference_aggregates_dialog_box.html 
+sidebar: sidebar 
+keywords: aggregates, dialog box 
+summary: Puoi utilizzare la finestra di dialogo Aggregates per selezionare gli aggregati che vuoi aggiungere al tuo pool di risorse. 
+---
+= Usa la finestra di dialogo Aggregati in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi utilizzare la finestra di dialogo Aggregates per selezionare gli aggregati che vuoi aggiungere al tuo pool di risorse.
+
+
+
+[[command-buttons]]
+== Pulsanti di comando
+
+I pulsanti di comando consentono di eseguire le seguenti operazioni:
+
+* *Aggiungi*
++
+Aggiunge gli aggregati selezionati al pool di risorse. Il pulsante Aggiungi non è abilitato finché non viene selezionato almeno un aggregato.
+
+* *Annulla*
++
+Annulla le modifiche e chiude la finestra di dialogo Aggregates.
+
+
+
+
+
+[[aggregates-list]]
+== Elenco degli aggregati
+
+L'elenco degli aggregati visualizza (in formato tabellare) i nomi e le proprietà degli aggregati monitorati.
+
+* *Stato*
++
+Visualizza lo stato corrente di un volume. Lo stato può essere Critico (image:../media/sev_critical_um60.png[""]), Errore (image:../media/sev_error_um60.png[""]), Avviso (image:../media/sev_warning_um60.png[""]) o Normale (image:../media/sev_normal_um60.png[""]).
+
++
+Puoi spostare il puntatore sullo stato per visualizzare ulteriori informazioni sull'evento o sugli eventi generati per il volume.
+
+* *Nome aggregato*
++
+Visualizza il nome dell'aggregato.
+
+* *Stato*
++
+Visualizza lo stato attuale dell'aggregato, che può essere uno dei seguenti:
+
++
+** Offline
++
+L'accesso in lettura o scrittura non è consentito.
+
+** Limitato
++
+Sono consentite solo operazioni limitate (come la ricostruzione della parità), ma l'accesso ai dati non è consentito.
+
+** Online
++
+L'accesso in lettura e scrittura ai volumi ospitati su questo aggregate è consentito.
+
+** Creazione
++
+L'aggregato è in fase di creazione.
+
+** Distruzione
++
+L'aggregato è in fase di eliminazione.
+
+** Fallito
++
+Non puoi portare online l'aggregato.
+
+** Bloccato
++
+L'aggregato (temporaneamente) non gestisce le richieste.
+
+** Incoerente
++
+L'aggregato è stato contrassegnato come danneggiato; contatta il supporto tecnico.
+
+** Ferro limitato
++
+Gli strumenti di diagnostica non possono essere eseguiti sull'aggregato.
+
+** Montaggio
++
+L'aggregato è in fase di montaggio.
+
+** Parziale
++
+È stato trovato almeno un disco per l'aggregato, ma mancano due o più dischi.
+
+** Sospensione in corso
++
+L'aggregato è in fase di quiescenza.
+
+** In pausa
++
+L'aggregato è inattivo.
+
+** Ripristinato
++
+Il ripristino di un aggregato è stato completato.
+
+** Non montato
++
+L'aggregato è offline.
+
+** Smontaggio
++
+L'aggregato viene portato offline.
+
+** Sconosciuto
++
+L'aggregato è stato rilevato, ma le informazioni sull'aggregato non sono ancora state recuperate dal server Unified Manager.
+
+
+
+* *cluster*
++
+Visualizza il nome del cluster su cui risiede l'aggregato.
+
+* *Nodo*
++
+Visualizza il nome dello storage controller che contiene l'aggregato.
+
+* *Capacità totale*
++
+Visualizza la dimensione totale dei dati (in MB, GB e così via) dell'aggregato. Per impostazione predefinita, questa colonna è nascosta.
+
+* *Capacità impegnata*
++
+Visualizza lo spazio totale (in MB, GB e così via) allocato per tutti i volumi nell'aggregato. Per impostazione predefinita, questa colonna è nascosta.
+
+* *Capacità utilizzata*
++
+Visualizza la quantità di spazio (in MB, GB e così via) utilizzata nell'aggregato.
+
+* *Capacità disponibile*
++
+Visualizza la quantità di spazio (in MB, GB e così via) disponibile per i dati nell'aggregato. Per impostazione predefinita, questa colonna è nascosta.
+
+* *Disponibile %*
++
+Visualizza la percentuale di spazio disponibile per i dati nell'aggregato. Per impostazione predefinita, questa colonna è nascosta.
+
+* *Utilizzato %*
++
+Visualizza la percentuale di spazio utilizzata dai dati nell'aggregato.
+
+* *Tipo RAID*
++
+Visualizza il tipo di RAID del volume selezionato. Il tipo di RAID può essere RAID0, RAID4, RAID-DP, RAID-TEC o RAID misto.
+
+

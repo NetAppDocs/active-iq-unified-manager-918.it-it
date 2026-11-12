@@ -1,0 +1,25 @@
+---
+permalink: performance-checker/task_view_volume_and_lun_latency_charts_to_verify_performance_guarantee.html 
+sidebar: sidebar 
+keywords: view, volume, lun, latency, charts, verify, performance, guarantee 
+summary: 'Puoi visualizzare i volumi e le LUN a cui hai aderito nel programma "Performance Guarantee" per verificare che la latenza non abbia superato il livello che ti è stato garantito.' 
+---
+= Visualizza i grafici di latenza del volume e del LUN per verificare la garanzia delle prestazioni in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi visualizzare i volumi e le LUN a cui hai aderito nel programma "`Performance Guarantee`" per verificare che la latenza non abbia superato il livello che ti è stato garantito.
+
+La garanzia delle prestazioni di latenza è un valore in millisecondi per operazione che non deve essere superato. Si basa su una media oraria, non sul periodo di raccolta dati predefinito di cinque minuti.
+
+.Passaggi
+. Nella vista *Prestazioni: Tutti i volumi* o *Prestazioni: Tutti i LUN*, seleziona il volume o il LUN che ti interessa.
+. Nella pagina *Performance Explorer* relativa al volume o alla LUN selezionati, scegli *Media oraria* dal selettore *Visualizza statistiche in*.
++
+La linea orizzontale nel grafico della latenza mostrerà un andamento più uniforme man mano che i dati raccolti ogni cinque minuti verranno sostituiti dalla media oraria.
+
+. Se hai altri volumi sullo stesso aggregate coperti dalla garanzia di prestazioni, puoi aggiungerli per visualizzare il loro valore di latenza nello stesso grafico.
+

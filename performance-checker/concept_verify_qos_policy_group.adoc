@@ -1,0 +1,26 @@
+---
+permalink: performance-checker/concept_verify_qos_policy_group.html 
+sidebar: sidebar 
+keywords: verify, volumes, qos, policy, group, unusually, high, activity 
+summary: 'Esamina i carichi di lavoro in un gruppo di policy Quality of Service (QoS) con la maggiore variazione di attività per determinare quale carico di lavoro ha causato l"evento.' 
+---
+= Analizza i volumi ad alta attività all'interno di un gruppo di criteri QoS in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi esaminare i carichi di lavoro nel gruppo di criteri Quality of Service (QoS) con la variazione di attività più elevata per determinare se l'evento è stato causato da più di un carico di lavoro. Puoi anche verificare se altri carichi di lavoro superano ancora il limite di throughput impostato o se sono rientrati nell'intervallo di attività previsto.
+
+Nella pagina Dettagli evento, nella sezione Diagnosi di sistema, puoi ordinare i carichi di lavoro in base alla deviazione di picco dell'attività per visualizzare in cima alla tabella i carichi di lavoro con la maggiore variazione di attività. Questi carichi di lavoro potrebbero essere i "`bullies`" la cui attività ha superato il limite impostato e che potrebbero aver causato l'evento.
+
+Puoi accedere alla pagina Workload Analysis per ciascun carico di lavoro del volume per esaminarne l'attività IOPS. Se il carico di lavoro presenta periodi di attività operativa molto elevata, potrebbe aver contribuito all'evento. Puoi modificare le impostazioni del gruppo di criteri per il carico di lavoro o spostarlo in un gruppo di criteri diverso.
+
+Puoi usare ONTAP System Manager o i comandi ONTAP CLI per gestire i gruppi di criteri, come segue:
+
+* Crea un gruppo di criteri.
+* Aggiungi o rimuovi i carichi di lavoro in un gruppo di criteri.
+* Sposta un carico di lavoro tra gruppi di policy.
+* Modifica il limite di throughput di un gruppo di criteri.
+

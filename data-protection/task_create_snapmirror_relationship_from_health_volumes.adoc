@@ -1,0 +1,65 @@
+---
+permalink: data-protection/task_create_snapmirror_relationship_from_health_volumes.html 
+sidebar: sidebar 
+keywords: create, snapmirror, protection, relationship, health, volumes view 
+summary: Utilizza la vista Tutti i volumi nella pagina Integrità per creare contemporaneamente diverse relazioni di protezione SnapMirror per i volumi sulla stessa VM di storage. 
+---
+= Crea una relazione di SnapMirror dalla vista Salute: Tutti i volumi in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Utilizzando la vista Integrità: Tutti i volumi, puoi creare contemporaneamente più relazioni di protezione SnapMirror selezionando più volumi sulla stessa macchina virtuale di storage.
+
+.Prima di iniziare
+* Devi disporre del ruolo di Amministratore dell'applicazione o di Amministratore dello storage.
+* Devi aver configurato Workflow Automation.
+
+
+Il menu *Proteggi* non compare nei seguenti casi:
+
+* Se le impostazioni RBAC non consentono questa azione: ad esempio, se hai solo privilegi di operatore
+* Quando l'ID del volume è sconosciuto: ad esempio, quando hai una relazione intercluster e il cluster di destinazione non è ancora stato individuato
+
+
+.Passaggi
+. Nella visualizzazione *Stato di salute: tutti i volumi*, seleziona il volume che desideri proteggere.
++
+In alternativa, per creare più relazioni di protezione sulla stessa SVM, seleziona uno o più volumi nella vista Integrità: Tutti i volumi e fai clic su *Proteggi* > *SnapMirror* sulla barra degli strumenti.
+
++
+Si apre la finestra di dialogo Configura protezione.
+
+. Fai clic su *SnapMirror* per visualizzare la scheda *SnapMirror* e configurare le informazioni sulla destinazione.
+. Fai clic su *Avanzate* per impostare la garanzia di spazio, se necessario, e poi fai clic su *Applica*.
+. Completa l'area *Informazioni sulla destinazione* e l'area *Impostazioni della relazione* nella scheda *SnapMirror*.
+. Fai clic su *Applica*.
++
+Vieni reindirizzato alla vista Health: All Volumes.
+
+. Fai clic sul collegamento del processo di configurazione della protezione nella parte superiore della vista *Health: All Volumes view*.
++
+Se crei una sola relazione di protezione, viene visualizzata la pagina Dettagli lavoro; se invece crei più relazioni di protezione, viene visualizzato un elenco di tutti i lavori associati all'operazione di protezione.
+
+. Esegui una delle seguenti operazioni:
++
+** Se hai un solo job, fai clic su *Aggiorna* per aggiornare l'elenco delle attività e i dettagli dell'attività associata al job di configurazione della protezione e per stabilire quando il job è completato.
+** Se hai più di un lavoro:
++
+... Fai clic su un processo nell'elenco dei processi.
+... Fai clic su *Refresh* per aggiornare l'elenco delle attività e i dettagli delle attività associati al processo di configurazione della protezione e per capire quando il processo è completo.
+... Usa il pulsante *Indietro* per tornare all'elenco filtrato e visualizzare un altro processo.
+
+
+
+
+
+
+A seconda della SVM di destinazione specificata durante la configurazione o delle opzioni che hai abilitato nelle impostazioni avanzate, la relazione di SnapMirror risultante potrebbe essere una delle seguenti varianti:
+
+* Se specifichi una SVM di destinazione che esegue la stessa versione o una versione più recente di ONTAP rispetto a quella del volume di origine, una relazione di SnapMirror basata sulla replica a blocchi è il risultato predefinito.
+* Se hai specificato una SVM di destinazione che esegue la stessa versione o una versione più recente di ONTAP rispetto a quella del volume di origine, ma hai abilitato la replica flessibile in base alla versione nelle impostazioni avanzate, il risultato è una relazione di SnapMirror con replica flessibile in base alla versione.
+* Se specifichi una SVM di destinazione che esegue una versione di ONTAP precedente a quella del volume di origine, e tale versione precedente supporta la replica flessibile in base alla versione, il risultato automatico è una relazione di SnapMirror con replica flessibile in base alla versione.
+

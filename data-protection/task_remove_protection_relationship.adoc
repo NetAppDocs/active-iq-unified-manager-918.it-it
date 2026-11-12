@@ -1,0 +1,30 @@
+---
+permalink: data-protection/task_remove_protection_relationship.html 
+sidebar: sidebar 
+keywords: remove, protection, relationship, volume, relationships page 
+summary: 'Dalla pagina Relazioni di volume, rimuovi definitivamente una relazione di protezione tra un"origine e una destinazione. Questa operazione non può essere annullata.' 
+---
+= Rimuovi una relazione di protezione dalla pagina Relazioni di volume in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dalla pagina Relazioni di volume, puoi rimuovere una relazione di protezione per eliminare definitivamente una relazione esistente tra l'origine e la destinazione selezionate: ad esempio, quando vuoi creare una relazione utilizzando una destinazione diversa. Questa operazione rimuove tutti i metadati e non può essere annullata.
+
+.Prima di iniziare
+* Devi disporre del ruolo di Amministratore dell'applicazione o di Amministratore dello storage.
+* Devi aver configurato Workflow Automation.
+
+
+.Passaggi
+. Dalla pagina *Relazioni tra volumi*, seleziona uno o più volumi con relazioni di protezione che vuoi rimuovere e, sulla barra degli strumenti, fai clic su *Rimuovi*.
++
+Viene visualizzata la finestra di dialogo Remove Relationship.
+
+. Fai clic su *Continua* per rimuovere la relazione.
++
+La relazione non viene più visualizzata nella pagina Relazioni di volume.
+
+

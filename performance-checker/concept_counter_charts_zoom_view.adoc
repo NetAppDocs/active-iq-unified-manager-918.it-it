@@ -1,0 +1,22 @@
+---
+permalink: performance-checker/concept_counter_charts_zoom_view.html 
+sidebar: sidebar 
+keywords: counter, charts, zoom, view 
+summary: I grafici dei contatori offrono una Vista Zoom che ti consente di ingrandire i dettagli delle prestazioni nel periodo di tempo specificato. In questo modo puoi visualizzare dettagli ed eventi delle prestazioni con una granularità molto maggiore, utile per risolvere i problemi di prestazioni. 
+---
+= Scopri la visualizzazione zoom nei grafici a contatore in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+I grafici dei contatori offrono una Vista Zoom che ti consente di ingrandire i dettagli delle prestazioni nel periodo di tempo specificato. In questo modo puoi visualizzare dettagli ed eventi delle prestazioni con una granularità molto maggiore, utile per risolvere i problemi di prestazioni.
+
+Quando vengono visualizzati in Zoom View, alcuni grafici di dettaglio forniscono informazioni aggiuntive rispetto a quelle visualizzate quando il grafico non è in Zoom View. Ad esempio, le pagine Zoom View dei grafici di dettaglio IOPS, IOPS/TB e MBps mostrano i valori dei criteri QoS per volumi e LUN, se sono stati impostati in ONTAP.
+
+[NOTE]
+====
+Per i criteri di soglia delle prestazioni definiti dal sistema, solo i criteri "`Node resources over-utilized`" e "`QoS throughput limit breached`" sono disponibili nell'elenco *Policies*. Gli altri criteri di soglia definiti dal sistema non sono disponibili al momento.
+
+====

@@ -1,0 +1,32 @@
+---
+permalink: events/reference_description_of_event_impact_levels.html 
+sidebar: sidebar 
+keywords: description, event, impact, levels 
+summary: 'Ciascun evento è associato a un livello di impatto (Incidente, Rischio, Evento o Aggiornamento) per aiutarti a dare priorità agli eventi che richiedono un"azione correttiva immediata.' 
+---
+= Scopri i livelli di impatto degli eventi in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Ciascun evento è associato a un livello di impatto (Incidente, Rischio, Evento o Aggiornamento) per aiutarti a dare priorità agli eventi che richiedono un'azione correttiva immediata.
+
+* *Incidente*
++
+Un incidente è un insieme di eventi che possono causare l'interruzione dell'erogazione dei dati al client da parte di un cluster e l'esaurimento dello spazio per l'archiviazione dei dati. Gli eventi con un livello di impatto pari a "Incident" sono i più gravi. Devi intervenire immediatamente con azioni correttive per evitare interruzioni del servizio.
+
+* *Rischio*
++
+Un rischio è un insieme di eventi che possono potenzialmente causare l'interruzione dell'erogazione dei dati al client da parte di un cluster e l'esaurimento dello spazio di archiviazione dei dati. Gli eventi con un livello di impatto pari a Rischio possono causare interruzioni del servizio. Potrebbero essere necessarie azioni correttive.
+
+* *Evento*
++
+Un evento è una modifica dello stato o dello stato degli oggetti di archiviazione e dei relativi attributi. Gli eventi con un livello di impatto Event sono informativi e non richiedono azioni correttive.
+
+* *Aggiornamento*
++
+Gli eventi di aggiornamento sono un tipo specifico di evento segnalato dalla piattaforma Active IQ. Questi eventi identificano problemi la cui risoluzione richiede l'aggiornamento del software ONTAP, del firmware del nodo o del software del sistema operativo (per gli avvisi di sicurezza). Per alcuni di questi problemi potresti voler intervenire immediatamente, mentre altri possono aspettare fino al prossimo intervento di manutenzione pianificata.
+
+

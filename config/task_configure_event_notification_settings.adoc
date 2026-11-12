@@ -1,0 +1,48 @@
+---
+permalink: config/task_configure_event_notification_settings.html 
+sidebar: sidebar 
+keywords: configure, event, notification, settings 
+summary: 'Puoi configurare Unified Manager per inviare notifiche di avviso quando viene generato un evento o quando un evento viene assegnato a un utente. Puoi configurare il server SMTP utilizzato per inviare l"avviso e impostare diversi meccanismi di notifica; ad esempio, le notifiche di avviso possono essere inviate tramite e-mail o trap SNMP.' 
+---
+= Configura le impostazioni di notifica degli eventi in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi configurare Unified Manager per inviare notifiche di avviso quando viene generato un evento o quando un evento viene assegnato a un utente. Puoi configurare il server SMTP utilizzato per inviare l'avviso e impostare diversi meccanismi di notifica; ad esempio, le notifiche di avviso possono essere inviate come email o trap SNMP.
+
+.Prima di iniziare
+Devi avere le seguenti informazioni:
+
+* Indirizzo e-mail da cui viene inviata la notifica di avviso
++
+L'indirizzo email compare nel campo "`From`" nelle notifiche di avviso inviate. Se l'email non può essere recapitata per qualsiasi motivo, questo indirizzo email viene utilizzato anche come destinatario della posta non recapitabile.
+
+* host name del server SMTP e nome utente e password per accedere al server
+* host name o indirizzo IP dell'host di destinazione del trap che riceverà il trap SNMP, insieme alla versione SNMP, alla porta del trap outbound, alla community e ad altri valori di configurazione SNMP richiesti
++
+Per specificare più destinazioni trap, separa ciascun host con una virgola. In questo caso, tutte le altre impostazioni SNMP, come la versione e la porta trap outbound, devono essere uguali per tutti gli host nell'elenco.
+
+
+
+Devi disporre del ruolo di Amministratore dell'applicazione o di Amministratore dello storage.
+
+.Passaggi
+. Nel riquadro di navigazione a sinistra, fai clic su *Generale* > *Notifiche*.
+. Nella pagina Notifiche, configura le impostazioni appropriate.
++
+*Note:*
+
++
+** Se il campo "Da" è precompilato con l'indirizzo "+ActiveIQUnifiedManager@localhost.com+", devi modificarlo con un indirizzo email reale e funzionante per assicurarti che tutte le notifiche email vengano recapitate correttamente.
+** Se non è possibile risolvere l'host name del server SMTP, puoi specificare l'indirizzo IP (IPv4 o IPv6) del server SMTP al posto dell'host name.
+
+
+. Fare clic su *Save*.
+. Se hai selezionato l'opzione *Usa STARTTLS* o *Usa SSL*, dopo aver cliccato sul pulsante *Salva* verrà visualizzata una pagina relativa al certificato. Verifica i dettagli del certificato e accettalo per salvare le impostazioni di notifica.
++
+Puoi fare clic sul pulsante *Visualizza dettagli certificato* per visualizzare i dettagli del certificato. Se il certificato esistente è scaduto, deseleziona la casella *Usa STARTTLS* o *Usa SSL*, salva le impostazioni di notifica e seleziona nuovamente la casella *Usa STARTTLS* o *Usa SSL* per visualizzare un nuovo certificato.
+
+

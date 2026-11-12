@@ -1,0 +1,23 @@
+---
+permalink: events/task_delete_alerts.html 
+sidebar: sidebar 
+keywords: delete, alerts 
+summary: Puoi eliminare un avviso quando non è più necessario. Ad esempio, puoi eliminare un avviso creato per una risorsa specifica quando tale risorsa non è più monitorata da Unified Manager. 
+---
+= Elimina gli avvisi in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi eliminare un avviso quando non è più necessario. Ad esempio, puoi eliminare un avviso creato per una risorsa specifica quando tale risorsa non è più monitorata da Unified Manager.
+
+.Prima di iniziare
+Devi avere il ruolo di Amministratore dell'applicazione.
+
+.Passaggi
+. Nel riquadro di navigazione a sinistra, fai clic su *Storage Management* > *Alert Setup*.
+. Nella pagina *Configurazione avvisi*, seleziona gli avvisi che desideri eliminare e fai clic su *Elimina*.
+. Fai clic su *Sì* per confermare la richiesta di eliminazione.
+

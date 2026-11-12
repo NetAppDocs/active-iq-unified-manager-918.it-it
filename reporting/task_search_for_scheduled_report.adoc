@@ -1,0 +1,52 @@
+---
+permalink: reporting/task_search_for_scheduled_report.html 
+sidebar: sidebar 
+keywords: search, schedule, report 
+summary: Puoi cercare i report pianificati per nome, nome della vista, tipo di oggetto o destinatari. 
+---
+= Cerca un report programmato in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi cercare i report pianificati per nome, nome della vista, tipo di oggetto o destinatari.
+
+. Nel riquadro di navigazione a sinistra, fai clic su *Gestione dello storage* > *Pianificazioni report*.
+. Usa il campo di testo *Cerca report programmati*.
++
+[cols="2*"]
+|===
+| Per trovare i report per ... | Prova ... 
+
+
+ a| 
+Nome della pianificazione
+ a| 
+Digita una parte del nome della pianificazione del report.
+
+
+
+ a| 
+Nome vista
+ a| 
+Digita parte del nome della vista del report. Le viste predefinite e le viste personalizzate vengono visualizzate nell'elenco delle viste.
+
+
+
+ a| 
+Destinatario
+ a| 
+Inserisci parte dell'indirizzo email.
+
+
+
+ a| 
+Tipo di file
+ a| 
+Digita "PDF", "CSV", o "XLSX".
+
+|===
+. Puoi fare clic sull'intestazione di una colonna per ordinare i report in ordine crescente o decrescente in base a quella colonna, ad esempio in base al nome della pianificazione o al formato.
+

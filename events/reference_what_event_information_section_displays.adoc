@@ -1,0 +1,168 @@
+---
+permalink: events/reference_what_event_information_section_displays.html 
+sidebar: sidebar 
+keywords: event, information, section, displays 
+summary: 'Nella pagina Dettagli evento, usi la sezione Informazioni sull"evento per visualizzare i dettagli di un evento selezionato, come la gravità dell"evento, il livello di impatto, l"area di impatto e l"origine dell"evento.' 
+---
+= Scopri la sezione Informazioni sull'evento in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Nella pagina Dettagli evento, usi la sezione Informazioni sull'evento per visualizzare i dettagli di un evento selezionato, come la gravità dell'evento, il livello di impatto, l'area di impatto e l'origine dell'evento.
+
+I campi non pertinenti al tipo di evento sono nascosti. Puoi visualizzare i seguenti dettagli dell'evento:
+
+* *Ora di attivazione dell'evento*
++
+L'ora in cui è stato generato l'evento.
+
+* *Stato*
++
+Lo stato dell'evento: Nuovo, Riconosciuto, Risolto o Obsoleto.
+
+* *Causa obsoleta*
++
+Le azioni che hanno reso obsoleto l'evento, ad esempio la correzione del problema.
+
+* *Durata dell'evento*
++
+Per gli eventi attivi (nuovi e riconosciuti), questo è il tempo intercorso tra il rilevamento e l'ultima analisi dell'evento. Per gli eventi obsoleti, questo è il tempo intercorso tra il rilevamento e la risoluzione dell'evento.
+
++
+Questo campo viene visualizzato per tutti gli eventi di performance, e per gli altri tipi di evento solo dopo che sono stati risolti o resi obsoleti.
+
+* *Ultimo accesso*
++
+La data e l'ora in cui l'evento è stato rilevato per l'ultima volta come attivo.
+
++
+Per gli eventi di prestazioni, questo valore potrebbe essere più recente dell'ora di attivazione dell'evento, poiché questo campo viene aggiornato dopo ogni nuova raccolta di dati sulle prestazioni finché l'evento è attivo. Per altri tipi di eventi, quando si trovano nello stato Nuovo o Confermato, questo contenuto non viene aggiornato e il campo è quindi nascosto.
+
+* *Gravità*
++
+La gravità dell'evento: Critico (image:../media/sev_critical_um60.png[""]), Errore (image:../media/sev_error_um60.png[""]), Avviso (image:../media/sev_warning_um60.png[""]), e Informazione (image:../media/sev_information_um60.gif[""]).
+
+* *Livello di impatto*
++
+Livello di impatto dell'evento: Incidente, Rischio, Evento o Aggiornamento.
+
+* *Area d'impatto*
++
+Area di impatto dell'evento: Disponibilità, Capacità, Prestazioni, Protezione, Configurazione o Sicurezza.
+
+* *Fonte*
++
+Il nome dell'oggetto su cui si è verificato l'evento.
+
++
+Quando visualizzi i dettagli di un evento di policy QoS condivisa, questo campo elenca fino a tre oggetti di workload che consumano il maggior numero di IOPS o MBps.
+
++
+Puoi fare clic sul collegamento del nome della sorgente per visualizzare la pagina dei dettagli sullo stato o sulle prestazioni di quell'oggetto.
+
+* *Annotazioni di origine*
++
+Visualizza il nome e il valore dell'annotazione per l'oggetto a cui è associato l'evento.
+
++
+Questo campo viene visualizzato solo per gli eventi di integrità su cluster, SVM e volumi.
+
+* *Gruppi di origine*
++
+Visualizza i nomi di tutti i gruppi di cui fa parte l'oggetto interessato.
+
++
+Questo campo viene visualizzato solo per gli eventi di integrità su cluster, SVM e volumi.
+
+* *Tipo di origine*
++
+Il tipo di oggetto (ad esempio, SVM, Volume o Qtree) a cui è associato l'evento.
+
+* *Sul cluster*
++
+Il nome del cluster su cui si è verificato l'evento.
+
++
+Puoi fare clic sul collegamento del nome del cluster per visualizzare la pagina dei dettagli sullo stato di salute o sulle prestazioni di quel cluster.
+
+* *Conteggio degli oggetti interessati*
++
+Il numero di oggetti interessati dall'evento.
+
++
+Puoi fare clic sul collegamento dell'oggetto per visualizzare la pagina dell'inventario contenente gli oggetti attualmente interessati da questo evento.
+
++
+Questo campo viene visualizzato solo per gli eventi relativi alle prestazioni.
+
+* *Volumi interessati*
++
+Il numero di volumi interessati da questo evento.
+
++
+Questo campo viene visualizzato solo per gli eventi relativi alle prestazioni su nodi o aggregati.
+
+* *Policy attivata*
++
+Il nome della policy di soglia che ha generato l'evento.
+
++
+Puoi posizionare il cursore sul nome del criterio per vedere i dettagli del criterio di soglia. Per i criteri QoS adattivi, vengono visualizzati anche il criterio definito, la dimensione del blocco e il tipo di allocazione (spazio allocato o spazio utilizzato).
+
++
+Questo campo viene visualizzato solo per gli eventi relativi alle prestazioni.
+
+* *ID regola*
++
+Per gli eventi della piattaforma Active IQ, questo è il numero della regola attivata per generare l'evento.
+
+* *Riconosciuto da*
++
+Il nome della persona che ha confermato l'evento e l'ora della conferma dell'evento.
+
+* *Risolto da*
++
+Il nome della persona che ha risolto l'evento e l'ora in cui l'evento è stato risolto.
+
+* *Assegnato a*
++
+Il nome della persona incaricata di lavorare all'evento.
+
+* *Impostazioni di avviso*
++
+Vedi le seguenti informazioni sugli avvisi:
+
++
+** Se non ci sono avvisi associati all'evento selezionato, viene visualizzato il link *Aggiungi avviso*.
++
+Puoi aprire la finestra di dialogo Aggiungi avviso facendo clic sul collegamento.
+
+** Se all'evento selezionato è associato un avviso, ne viene visualizzato il nome.
++
+Puoi aprire la finestra di dialogo Modifica avviso facendo clic sul collegamento.
+
+** Se all'evento selezionato è associato più di un avviso, il sistema mostra il numero di avvisi.
++
+Puoi aprire la pagina di configurazione degli avvisi facendo clic sul collegamento per visualizzare maggiori dettagli su questi avvisi.
+
+
+
++
+Gli avvisi disattivati non vengono visualizzati.
+
+* *Ultima notifica inviata*
++
+Data e ora di invio della notifica di avviso più recente.
+
+* *Invia entro*
++
+Il meccanismo utilizzato per inviare la notifica di allerta: email o trap SNMP.
+
+* *Esecuzione precedente dello script*
++
+Il nome dello script eseguito quando è stato generato l'avviso.
+
+

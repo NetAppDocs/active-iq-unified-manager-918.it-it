@@ -1,0 +1,25 @@
+---
+permalink: storage-mgmt/task_resolve_windows_log_rotation_issue.html 
+sidebar: sidebar 
+keywords: windows, log rotation issue, Netapp Manageability SDK 
+summary: Segui questi passaggi per risolvere il problema della rotazione dei log di Windows. 
+---
+= Risolvi un problema di rotazione dei log del NetApp Manageability SDK in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dopo aver aggiunto a Unified Manager, su un sistema operativo Windows, un cluster basato su API ONTAPI, la dimensione del file `nmsdk.log` aumenta e supera il limite di 10 MB.
+
+*Causa*
+
+Questo problema può verificarsi se la rotazione dei log non avviene.
+
+*Azione correttiva*
+
+. Arresta Unified Manager.
+. Quando installi Unified Manager su Windows, installa Logrotate versione 0.0.0.18. Per ulteriori informazioni, consulta link:https://www.netapp.com/pdf.html?item=/media/78941-tr-4945.pdf["Guida al rafforzamento della sicurezza per il rapporto tecnico di NetApp Manageability SDK"^].
+. Avvia Unified Manager.
+

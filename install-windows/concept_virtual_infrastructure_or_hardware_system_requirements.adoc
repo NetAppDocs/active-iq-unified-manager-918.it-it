@@ -1,0 +1,83 @@
+---
+permalink: install-windows/concept_virtual_infrastructure_or_hardware_system_requirements.html 
+sidebar: sidebar 
+keywords: virtual infrastructure, hardware, system, requirements, host, connectivity, backups 
+summary: 'L"installazione di Unified Manager su un"infrastruttura virtuale o su un sistema fisico deve soddisfare i requisiti minimi di memoria, CPU e spazio su disco.' 
+---
+= Comprendi i requisiti di infrastruttura virtuale e hardware per Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'installazione di Unified Manager su un'infrastruttura virtuale o su un sistema fisico deve soddisfare i requisiti minimi di memoria, CPU e spazio su disco.
+
+La tabella seguente mostra i valori consigliati per le risorse di memoria, CPU e spazio su disco. Questi valori sono stati convalidati affinché Unified Manager raggiunga livelli di prestazioni accettabili.
+
+[cols="2*"]
+|===
+| Configurazione hardware | Impostazioni consigliate 
+
+
+ a| 
+RAM
+ a| 
+12 GB
+
+
+
+ a| 
+Processori
+ a| 
+4 CPU
+
+
+
+ a| 
+capacità dei cicli della CPU
+ a| 
+9572 MHz totali (requisito minimo 9572 MHz)
+
+
+
+ a| 
+Spazio libero su disco
+ a| 
+150 GB, dove la capacità è allocata come segue:
+
+* 100 GB di spazio su disco per la directory di installazione
+* 50 GB di spazio su disco per la directory dei dati MySQL
+
+
+|===
+Unified Manager può essere installato su sistemi con una quantità limitata di memoria, ma i 12 GB di RAM consigliati garantiscono memoria sufficiente per prestazioni ottimali e consentono al sistema di supportare cluster e oggetti di storage aggiuntivi man mano che la configurazione cresce. Non dovresti impostare limiti di memoria sulla macchina virtuale in cui è distribuito Unified Manager e non dovresti abilitare funzionalità (ad esempio, il ballooning) che impediscono al software di utilizzare la memoria allocata sul sistema.
+
+Inoltre, esiste un limite al numero di nodi che una singola istanza di Unified Manager può monitorare prima che tu debba installare una seconda istanza di Unified Manager. Per i limiti dei nodi, CPU e raccomandazioni sulla memoria, vedi  https://www.netapp.com/pdf.html?item=/media/13504-tr4621.pdf["la Guida alle Best Practice di Unified Manager"^].
+
+Lo scambio di pagine di memoria ha un impatto negativo sulle prestazioni del sistema e dell'applicazione di gestione. La competizione per le risorse della CPU non disponibili a causa dell'utilizzo complessivo dell'host può ridurre le prestazioni.
+
+
+
+[[requirement-for-dedicated-use]]
+== Requisito per l'uso dedicato
+
+Il sistema fisico o virtuale su cui installi Unified Manager deve essere utilizzato esclusivamente per Unified Manager e non deve essere condiviso con altre applicazioni. Altre applicazioni potrebbero consumare risorse di sistema e ridurre drasticamente le prestazioni di Unified Manager.
+
+
+
+[[space-requirements-for-backups]]
+== Requisiti di spazio per i backup
+
+Se prevedi di utilizzare la funzionalità di backup e ripristino di Unified Manager, alloca capacità aggiuntiva in modo che la directory o il disco "`data`" abbia 150 GB di spazio. Puoi scrivere un backup in una destinazione locale o in una destinazione remota. La best practice consiste nell'identificare una posizione remota esterna al sistema host di Unified Manager con almeno 150 GB di spazio.
+
+
+
+[[requirements-for-host-connectivity]]
+== Requisiti per connettività host
+
+Il sistema fisico o virtuale su cui installi Unified Manager deve essere configurato in modo tale da consentirti di  `ping` correttamente l'host name dall'host stesso. In caso di configurazione IPv6, devi verificare che  `ping6` dell'host name riesca correttamente per garantire il corretto completamento dell'installazione di Unified Manager.
+
+Puoi utilizzare l'host name (o l'indirizzo IP dell'host) per accedere all'interfaccia utente web del prodotto. Se durante la distribuzione hai configurato un indirizzo IP statico per la rete, hai assegnato un nome all'host di rete. Se hai configurato la rete tramite DHCP, devi ottenere l'host name dal DNS.
+
+Se intendi consentire agli utenti di accedere a Unified Manager utilizzando il nome breve anziché il fully qualified domain name (FQDN) o l'indirizzo IP, la configurazione di rete deve essere in grado di risolvere questo nome breve in un FQDN valido.

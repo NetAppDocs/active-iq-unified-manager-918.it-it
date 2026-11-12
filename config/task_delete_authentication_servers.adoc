@@ -1,0 +1,28 @@
+---
+permalink: config/task_delete_authentication_servers.html 
+sidebar: sidebar 
+keywords: delete, authentication, servers 
+summary: Puoi eliminare un server di autenticazione se vuoi impedire al server Unified Manager di comunicare con il server di autenticazione. Ad esempio, se vuoi cambiare un server di autenticazione con cui comunica il server di gestione, puoi eliminare il server di autenticazione e aggiungerne uno nuovo. 
+---
+= Elimina i server di autenticazione in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi eliminare un server di autenticazione se vuoi impedire al server Unified Manager di comunicare con il server di autenticazione. Ad esempio, se vuoi cambiare un server di autenticazione con cui comunica il server di gestione, puoi eliminare il server di autenticazione e aggiungerne uno nuovo.
+
+.Prima di iniziare
+Devi avere il ruolo di Amministratore dell'applicazione.
+
+Quando elimini un server di autenticazione, gli utenti o i gruppi remoti di tale server non potranno più accedere a Unified Manager.
+
+.Passaggi
+. Nel riquadro di navigazione a sinistra, fai clic su *Generale* > *Autenticazione remota*.
+. Seleziona uno o più server di autenticazione che desideri eliminare, quindi fai clic su *Elimina*.
+. Fai clic su *Sì* per confermare la richiesta di eliminazione.
++
+Se l'opzione *Usa connessione sicura* è abilitata, i certificati associati al server di autenticazione vengono eliminati insieme al server di autenticazione.
+
+

@@ -1,0 +1,54 @@
+---
+permalink: health-checker/task_view_node_list_and_details.html 
+sidebar: sidebar 
+keywords: view, node list, details 
+summary: 'Utilizza la vista Tutti i nodi nella pagina Stato di salute per visualizzare l"elenco dei nodi nei tuoi cluster e la pagina dei dettagli di stato di salute del cluster per informazioni dettagliate sui singoli nodi.' 
+---
+= Visualizza l'elenco dei nodi e i dettagli in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi utilizzare la vista Stato di salute: Tutti i nodi per visualizzare l'elenco dei nodi nei cluster. Puoi utilizzare la pagina dei dettagli Cluster / Health per visualizzare informazioni dettagliate sui nodi che fanno parte del cluster monitorato.
+
+.Prima di iniziare
+Devi disporre del ruolo di Operatore, Amministratore di applicazioni o Amministratore di archiviazione.
+
+Puoi visualizzare dettagli quali lo stato del nodo, il cluster che contiene il nodo, i dettagli della capacità dell'aggregato (utilizzata e totale) e i dettagli della capacità raw (utilizzabile, di riserva e totale). Puoi anche ottenere informazioni sulle coppie HA, sugli shelf di dischi e sulle porte.
+
+.Passaggi
+. Nel riquadro di navigazione a sinistra, fai clic su *Storage* > *Nodes*.
+. Nella vista *Salute: Tutti i nodi*, fai clic sul nodo di cui vuoi visualizzare i dettagli.
++
+Le informazioni dettagliate per il nodo selezionato vengono visualizzate nella pagina Dettagli cluster/stato di salute. Il riquadro a sinistra mostra l'elenco delle coppie HA. Per impostazione predefinita, è aperta la pagina Dettagli HA, che visualizza i dettagli sullo stato HA e gli eventi relativi alla coppia HA selezionata.
+
+. Per visualizzare altri dettagli sul nodo, esegui l'azione appropriata:
++
+[cols="2*"]
+|===
+| Per visualizzare... | Fai clic... 
+
+
+ a| 
+Dettagli sugli shelf di dischi
+ a| 
+*Shelf di dischi*.
+
+
+
+ a| 
+Informazioni relative alla porta
+ a| 
+*Porte*.
+
+|===
+
+
+Per ulteriori informazioni, vedi:
+
+* link:../performance-checker/performance-view-all.html#performance-all-nodes-view["Prestazioni: visualizzazione di tutti i nodi"]
+* link:../performance-checker/concept_view_node_and_aggregate_available_iops_values.html["Visualizzazione dei valori IOPS disponibili per nodo e aggregato"]
+* link:../performance-checker/concept_view_node_and_aggregate_performance_capacity_used_values.html["Visualizzazione dei valori di utilizzo della capacità delle prestazioni di nodo e aggregato"]
+

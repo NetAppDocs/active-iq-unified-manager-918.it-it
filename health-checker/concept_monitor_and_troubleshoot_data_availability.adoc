@@ -1,0 +1,16 @@
+---
+permalink: health-checker/concept_monitor_and_troubleshoot_data_availability.html 
+sidebar: sidebar 
+keywords: monitor, troubleshoot, data availability 
+summary: 'Unified Manager monitora l"affidabilità con cui gli utenti autorizzati possono accedere ai dati archiviati, ti avvisa in caso di condizioni che bloccano o impediscono tale accesso e ti consente di diagnosticare tali condizioni, assegnarne la risoluzione e monitorarla.' 
+---
+= Monitora e risolvi i problemi di disponibilità dei dati in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager monitora l'affidabilità con cui gli utenti autorizzati possono accedere ai dati archiviati, ti avvisa in caso di condizioni che bloccano o impediscono tale accesso e ti consente di diagnosticare tali condizioni, assegnarne la risoluzione e monitorarla.
+
+In questa sezione, gli argomenti relativi al flusso di lavoro della disponibilità descrivono esempi di come un amministratore dello storage può utilizzare l'interfaccia utente web di Unified Manager per individuare, diagnosticare e assegnare per la risoluzione problemi hardware e software che influiscono negativamente sulla disponibilità dei dati.

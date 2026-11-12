@@ -1,0 +1,37 @@
+---
+permalink: data-protection/task_monitor_storage_vms_using_relationships_page.html 
+sidebar: sidebar 
+keywords: relationships page, monitor, storage, vm 
+summary: Puoi monitorare le relazioni di disaster recovery delle VM di storage dalla pagina Relationships nella sezione PROTECTION di INVENTORY. Per impostazione predefinita, la pagina Relationships elenca solo le relazioni di livello superiore, poiché è applicato il filtro delle relazioni costituenti. 
+---
+= Monitora le VM di storage utilizzando la pagina Relazioni in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi monitorare le relazioni di disaster recovery delle VM di storage dalla pagina Relationships nella sezione PROTECTION di INVENTORY. Per impostazione predefinita, la pagina Relationships elenca solo le relazioni di livello superiore, poiché è applicato il filtro delle relazioni costituenti.
+
+.Prima di iniziare
+Devi disporre del ruolo di Amministratore dell'applicazione o di Amministratore dello storage.
+
+Usi i filtri per visualizzare le relazioni di disaster recovery delle VM di storage.
+
+.Passaggi
+. Nel riquadro di navigazione a sinistra, fai clic su *PROTECTION* > *Relationships*.
++
+La pagina visualizza tutti i tipi di relazioni: relazioni tra volumi, gruppi di coerenza e macchine virtuali di storage.
+
+. Fai clic su *Filtro*, quindi seleziona *Tipo di oggetto relazione* e *Storage VM* per visualizzare solo le relazioni di disaster recovery delle Storage VM.
+. Fai clic su *Applica filtro*.
++
+[NOTE]
+====
+Devi cancellare il filtro delle relazioni dei costituenti per visualizzare tutte le relazioni di protezione.
+
+====
++
+La pagina visualizza solo le relazioni di disaster recovery delle VM di storage.
+
+

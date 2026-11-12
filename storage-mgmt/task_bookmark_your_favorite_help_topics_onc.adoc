@@ -1,0 +1,19 @@
+---
+permalink: storage-mgmt/task_bookmark_your_favorite_help_topics_onc.html 
+sidebar: sidebar 
+keywords: bookmark, favorite, help topics 
+summary: Nella scheda Preferiti della Guida, puoi aggiungere ai segnalibri gli argomenti della Guida che utilizzi più frequentemente. I segnalibri della Guida consentono un accesso rapido ai tuoi argomenti preferiti. 
+---
+= Aggiungi ai segnalibri gli argomenti della Guida che preferisci in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Nella scheda Preferiti della Guida, puoi aggiungere ai segnalibri gli argomenti della Guida che utilizzi più frequentemente. I segnalibri della Guida consentono un accesso rapido ai tuoi argomenti preferiti.
+
+.Passaggi
+. Vai all'argomento della Guida che vuoi aggiungere ai preferiti.
+. Fai clic su *Preferiti*, quindi fai clic su *Aggiungi*.
+

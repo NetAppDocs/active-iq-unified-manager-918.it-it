@@ -1,0 +1,26 @@
+---
+permalink: events/reference_add_script_dialog_box.html 
+sidebar: sidebar 
+keywords: add, script, dialog, box 
+summary: La finestra di dialogo Add Script ti consente di aggiungere script a Unified Manager. Puoi configurare gli avvisi con i tuoi script per risolvere automaticamente gli eventi generati per gli oggetti di storage. 
+---
+= Finestra di dialogo Aggiungi Script in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La finestra di dialogo Add Script ti consente di aggiungere script a Unified Manager. Puoi configurare gli avvisi con i tuoi script per risolvere automaticamente gli eventi generati per gli oggetti di storage.
+
+Devi disporre del ruolo di Amministratore dell'applicazione o di Amministratore dello storage.
+
+* *Seleziona il file dello script*
++
+Consente di selezionare uno script per l'avviso.
+
+* *Descrizione*
++
+Ti consente di specificare una descrizione per lo script.
+
+

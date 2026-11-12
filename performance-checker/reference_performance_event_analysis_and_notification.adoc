@@ -1,0 +1,90 @@
+---
+permalink: performance-checker/reference_performance_event_analysis_and_notification.html 
+sidebar: sidebar 
+keywords: performance, event, analysis, notification 
+summary: 'Gli eventi di prestazioni ti informano sui problemi di prestazioni I/O relativi a un carico di lavoro causati dalla contesa in un componente del cluster. Unified Manager analizza l"evento per identificare tutti i carichi di lavoro coinvolti, il componente in contesa e se l"evento è ancora un problema che potresti dover risolvere.' 
+---
+= Analizza gli eventi e le notifiche relativi alle prestazioni in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Gli eventi di prestazioni ti informano sui problemi di prestazioni I/O relativi a un carico di lavoro causati dalla contesa in un componente del cluster. Unified Manager analizza l'evento per identificare tutti i carichi di lavoro coinvolti, il componente in contesa e se l'evento è ancora un problema che potresti dover risolvere.
+
+Unified Manager monitora la latenza di I/O (tempo di risposta) e gli IOPS (operazioni) dei volumi su un cluster. Quando altri carichi di lavoro utilizzano eccessivamente un componente del cluster, ad esempio, il componente entra in contesa e non può funzionare a un livello ottimale per soddisfare le richieste del carico di lavoro. Le prestazioni di altri carichi di lavoro che utilizzano lo stesso componente potrebbero risentirne, causando un aumento delle loro latenze. Se la latenza supera la soglia dinamica delle prestazioni, Unified Manager attiva un evento di prestazioni per avvisarti.
+
+
+
+[[event-analysis]]
+== Analisi degli eventi
+
+Unified Manager esegue le seguenti analisi, utilizzando le statistiche sulle prestazioni dei 15 giorni precedenti, per identificare i carichi di lavoro vittima, i carichi di lavoro prevaricatori e il componente del cluster coinvolto in un evento:
+
+* Identifica i carichi di lavoro vittima la cui latenza ha superato la soglia dinamica delle prestazioni, che rappresenta il limite superiore della previsione della latenza:
++
+** Per i volumi su aggregati ibridi HDD o Flash Pool (livello locale), gli eventi si attivano solo quando la latenza è superiore a 5 millisecondi (ms) e gli IOPS sono superiori a 10 operazioni al secondo (ops/sec).
+** Per i volumi su aggregati interamente SSD o aggregati FabricPool (livello cloud), gli eventi vengono attivati solo quando la latenza è superiore a 1 ms e gli IOPS sono superiori a 100 operazioni/secondo.
+
+
+* Identifica il componente del cluster in contesa.
++
+[NOTE]
+====
+Se la latenza dei workload vittima nell'interconnessione del cluster è superiore a 1 ms, Unified Manager la considera significativa e attiva un evento per l'interconnessione del cluster.
+
+====
+* Identifica i carichi di lavoro aggressivi che stanno utilizzando eccessivamente il componente del cluster e causando contenzione.
+* Classifica i carichi di lavoro coinvolti in base alla loro deviazione nell'utilizzo o nell'attività di un componente del cluster, per determinare quali "bulli" presentano la maggiore variazione nell'utilizzo del componente del cluster e quali "vittime" sono le più colpite.
+
+
+Un evento può verificarsi solo per un breve istante e poi risolversi da solo quando il componente che sta utilizzando non è più in conflitto. Un evento continuo è un evento che si ripete per lo stesso componente del cluster entro un intervallo di cinque minuti e rimane nello stato attivo. Per gli eventi continui, Unified Manager attiva un avviso dopo aver rilevato lo stesso evento durante due intervalli di analisi consecutivi.
+
+Quando un evento viene risolto, rimane disponibile in Unified Manager come parte della cronologia dei problemi di prestazioni passati per un volume. Ogni evento ha un ID univoco che identifica il tipo di evento e i volumi, il cluster e i componenti del cluster coinvolti.
+
+[NOTE]
+====
+Un singolo volume può essere coinvolto in più di un evento contemporaneamente.
+
+====
+
+
+[[event-state]]
+== Stato dell'evento
+
+Gli eventi possono trovarsi in uno dei seguenti stati:
+
+* *Attivo*
++
+Indica che l'evento di prestazioni è attualmente attivo (nuovo o riconosciuto). Il problema che ha causato l'evento non si è risolto da solo o non è stato risolto. Il contatore delle prestazioni per l'oggetto di storage rimane al di sopra della soglia di prestazioni.
+
+* *Obsoleto*
++
+Indica che l'evento non è più attivo. Il problema che ha causato l'evento si è risolto da solo o è stato risolto. Il contatore delle prestazioni per l'oggetto di storage non è più al di sopra della soglia di prestazioni.
+
+
+
+
+
+[[event-notification]]
+== Notifica dell'evento
+
+Gli eventi sono visualizzati nella pagina Dashboard e in molte altre pagine dell'interfaccia utente, e gli avvisi per tali eventi vengono inviati agli indirizzi email specificati. Puoi visualizzare informazioni di analisi dettagliate su un evento e ottenere suggerimenti per risolverlo nella pagina Event details e nella pagina Workload Analysis.
+
+
+
+[[event-interaction]]
+== Interazione con l'evento
+
+Nella pagina Dettagli evento e nella pagina Analisi del carico di lavoro, puoi interagire con gli eventi nei seguenti modi:
+
+* Spostando il mouse su un evento, visualizzi un messaggio che mostra la data e l'ora in cui l'evento è stato rilevato.
++
+Se si verificano più eventi nello stesso periodo di tempo, il messaggio visualizza il numero di eventi.
+
+* Facendo clic su un singolo evento, visualizzi una finestra di dialogo che mostra informazioni più dettagliate sull'evento, inclusi i componenti del cluster coinvolti.
++
+Il componente in questione è cerchiato ed evidenziato in rosso. Puoi fare clic su *View full analysis* per visualizzare l'analisi completa nella pagina Event details. Se sono presenti più eventi per lo stesso periodo di tempo, la finestra di dialogo mostra i dettagli dei tre eventi più recenti. Puoi fare clic su un evento per visualizzare l'analisi dell'evento nella pagina Event details.
+
+

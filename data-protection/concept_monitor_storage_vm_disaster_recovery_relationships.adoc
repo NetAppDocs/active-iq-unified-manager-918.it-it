@@ -1,0 +1,18 @@
+---
+permalink: data-protection/concept_monitor_storage_vm_disaster_recovery_relationships.html 
+sidebar: sidebar 
+keywords: disaster recovery, monitor, storage vm protection, relationships 
+summary: Active IQ Unified Manager supporta il monitoraggio delle relazioni di disaster recovery delle VM di storage, fornendo il disaster recovery con granularità a livello di VM di storage. Il disaster recovery delle VM di storage consente il recupero dei dati presenti nei volumi costituenti della VM di storage e il ripristino della configurazione della VM di storage. 
+---
+= Scopri le relazioni di disaster recovery delle storage VM in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Active IQ Unified Manager supporta il monitoraggio delle relazioni di disaster recovery delle VM di storage, fornendo il disaster recovery con granularità a livello di VM di storage. Il disaster recovery delle VM di storage consente il recupero dei dati presenti nei volumi costituenti della VM di storage e il ripristino della configurazione della VM di storage.
+
+Viene creata una relazione di disaster recovery della VM di storage dalla VM di storage di origine alla VM di storage di destinazione per fornire il disaster recovery asincrono. Puoi scegliere di replicare tutta o una parte della configurazione della VM di storage (escluse la configurazione di rete e del protocollo) insieme ai volumi di dati, in base alla configurazione del cluster.
+
+Dopo aver configurato la relazione di disaster recovery della VM di storage, quando la VM di storage di origine diventa non disponibile a causa di un guasto hardware o di un disastro ambientale, la VM di storage di destinazione viene avviata e fornisce accesso ai dati con interruzioni minime. Analogamente, quando la VM di storage di origine torna disponibile, viene risincronizzata con la VM di storage di destinazione e quindi la VM di origine viene riavviata per fornire i dati. Puoi utilizzare i comandi di SnapMirror per configurare e gestire la relazione di disaster recovery della VM di storage.

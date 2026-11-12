@@ -1,0 +1,40 @@
+---
+permalink: events/task_exclude_disaster_recovery_destination_volumes_from_alerts.html 
+sidebar: sidebar 
+keywords: exclude, disaster, recovery, destination, volumes, generate, alerts 
+summary: Quando configuri gli avvisi relativi ai volumi, puoi specificare una stringa nella finestra di dialogo Avvisi che identifica un volume o un gruppo di volumi. Tuttavia, se hai configurato il ripristino di emergenza per gli SVM, i volumi di origine e di destinazione hanno lo stesso nome, quindi riceverai avvisi per entrambi i volumi. 
+---
+= Escludi i volumi di destinazione del ripristino di emergenza dalla generazione di avvisi in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Quando configuri gli avvisi relativi ai volumi, puoi specificare una stringa nella finestra di dialogo Avvisi che identifica un volume o un gruppo di volumi. Tuttavia, se hai configurato il ripristino di emergenza per gli SVM, i volumi di origine e di destinazione hanno lo stesso nome, quindi riceverai avvisi per entrambi i volumi.
+
+.Prima di iniziare
+Devi disporre del ruolo di Amministratore dell'applicazione o di Amministratore dello storage.
+
+Puoi disattivare gli avvisi per i volumi di destinazione del disaster recovery escludendo i volumi che hanno il nome della SVM di destinazione. Questo è possibile perché l'identificativo degli eventi del volume contiene sia il nome della SVM sia il nome del volume nel formato "<svm_name>:/<volume_name>".
+
+L'esempio seguente mostra come creare avvisi per il volume "vol1" sull'SVM primario "vs1", ma escludere la generazione dell'avviso su un volume con lo stesso nome sull'SVM "vs1-dr".
+
+Esegui i seguenti passaggi nella finestra di dialogo Aggiungi avviso:
+
+.Passaggi
+. Fai clic su *Nome* e inserisci un nome e una descrizione per l'avviso.
+. Fai clic su *Risorse*, quindi seleziona la scheda *Includi*.
++
+.. Seleziona *Volume* dall'elenco a discesa, quindi inserisci *`vol1`* nel campo *Name contains* per visualizzare i volumi il cui nome contiene "vol1".
+.. Seleziona *+<<All Volumes whose name contains 'vol1'>>+* dall'area *Risorse disponibili* e spostalo nell'area *Risorse selezionate*.
+
+
+. Seleziona la scheda *Escludi*, seleziona *Volume*, inserisci *`vs1-dr`* nel campo *Il nome contiene* e fai clic su *Aggiungi*.
++
+Ciò impedisce la generazione dell'avviso per il volume "vol1" sull'SVM "vs1-dr".
+
+. Fai clic su *Eventi* e seleziona l'evento o gli eventi che desideri applicare al volume o ai volumi.
+. Fai clic su *Azioni* e poi seleziona il nome dell'utente che riceverà l'e-mail di avviso nel campo *Avvisa questi utenti*.
+. Configura eventuali altre opzioni in questa pagina per l'invio di trap SNMP e l'esecuzione di uno script, quindi fai clic su *Save*.
+

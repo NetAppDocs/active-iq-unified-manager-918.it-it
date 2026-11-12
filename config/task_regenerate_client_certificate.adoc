@@ -1,0 +1,25 @@
+---
+permalink: config/task_regenerate_client_certificate.html 
+sidebar: sidebar 
+keywords: client certificate, regenerate, validity, maintenance console 
+summary: Puoi usare la console di manutenzione per rigenerare il certificato client di Unified Manager. 
+---
+= Rigenera il certificato client in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi usare la console di manutenzione per rigenerare il certificato client di Unified Manager. Il tuo certificato ha un periodo di validità esteso di cinque anni.
+
+.Passaggi
+. Accedi come utente di manutenzione.
+. Seleziona *Rigenera certificato client* e premi *Invio*.
+. Se il sistema richiede l'autenticazione, inserisci le credenziali richieste.
+. Seleziona *Confirm Regeneration* e premi *Enter*.
+. Dopo aver rigenerato il certificato, riavvia il servizio Unified Manager per applicare le modifiche.
+. Per verificare il certificato aggiornato accedi a ONTAP. Visualizza lo stato del certificato client e il suo stato di validità.
+
+
+*Informazioni correlate*  https://docs.netapp.com/us-en/ontap/authentication/manage-certificates-sm-task.html["Gestisci i certificati ONTAP con System Manager"^]

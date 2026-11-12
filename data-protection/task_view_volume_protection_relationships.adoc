@@ -1,0 +1,40 @@
+---
+permalink: data-protection/task_view_volume_protection_relationships.html 
+sidebar: sidebar 
+keywords: view, volume, protection relationships 
+summary: 'Visualizza lo stato delle relazioni del volume SnapMirror e SnapVault, inclusi lo stato del trasferimento e del ritardo, l"origine e la destinazione e i dettagli della pianificazione.' 
+---
+= Visualizza le relazioni di protezione del volume in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dalla vista Relazioni: Tutte le relazioni e dalla pagina Relazioni di volume, puoi visualizzare lo stato delle relazioni di volume SnapMirror e SnapVault esistenti. Puoi anche esaminare i dettagli delle relazioni di protezione, inclusi lo stato del trasferimento e del ritardo, i dettagli di origine e destinazione, le informazioni su pianificazione e criteri e così via.
+
+.Prima di iniziare
+Devi disporre del ruolo di Amministratore dell'applicazione o di Amministratore dello storage.
+
+Puoi anche avviare i comandi della relazione da questa pagina.
+
+.Passaggi
+. Nel riquadro di navigazione a sinistra, fai clic su *Archiviazione* > *Volumi*.
+. Dal menu Visualizza, seleziona *Relationship* > *Tutte le relazioni*.
++
+Compare la vista Relazioni: tutte le relazioni.
+
+. Scegli uno dei seguenti metodi per visualizzare i dettagli della protezione del volume:
++
+** Per visualizzare le informazioni aggiornate su tutte le relazioni di volume, rimani nella pagina predefinita *Tutte le relazioni*.
+** Per visualizzare informazioni dettagliate sulle tendenze di trasferimento del volume in un determinato periodo di tempo, nel menu View, seleziona la vista Relationship: Last 1 month Transfer Status.
+** Per visualizzare informazioni dettagliate sull'attività di trasferimento dei volumi su base giornaliera, nel menu Visualizza, seleziona la vista Relationship: Last 1 month Transfer Rate.
+
+
++
+[NOTE]
+====
+Le viste di trasferimento dei volumi mostrano informazioni solo per i volumi in relazioni asincrone: i volumi in relazioni sincrone non vengono visualizzati.
+
+====
+

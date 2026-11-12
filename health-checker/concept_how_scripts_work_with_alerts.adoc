@@ -1,0 +1,53 @@
+---
+permalink: health-checker/concept_how_scripts_work_with_alerts.html 
+sidebar: sidebar 
+keywords: scripts, work, alerts 
+summary: Puoi associare un avviso al tuo script in modo che lo script venga eseguito quando viene generato un avviso per un evento in Unified Manager. Puoi usare gli script per risolvere i problemi con gli oggetti di storage o per identificare quali oggetti di storage stanno generando gli eventi. 
+---
+= Capisci come funzionano gli script con gli avvisi in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi associare un avviso al tuo script in modo che lo script venga eseguito quando viene generato un avviso per un evento in Unified Manager. Puoi usare gli script per risolvere i problemi con gli oggetti di storage o per identificare quali oggetti di storage stanno generando gli eventi.
+
+Quando viene generato un avviso per un evento in Unified Manager, un'e-mail di avviso viene inviata ai destinatari specificati. Se hai associato un avviso a uno script, lo script viene eseguito. Puoi ottenere i dettagli degli argomenti passati allo script dall'e-mail di avviso.
+
+[NOTE]
+====
+Se hai creato uno script personalizzato e lo hai associato a un avviso per un tipo di evento specifico, le azioni vengono eseguite in base al tuo script personalizzato per quel tipo di evento e le azioni *Fix it* non sono disponibili per impostazione predefinita nella pagina Management Actions o nella dashboard di Unified Manager.
+
+====
+Lo script utilizza i seguenti argomenti per l'esecuzione:
+
+* `-eventID`
+* `-eventName`
+* `-eventSeverity`
+* `-eventSourceID`
+* `-eventSourceName`
+* `-eventSourceType`
+* `-eventState`
+* `-eventArgs`
+
+
+Puoi utilizzare gli argomenti nei tuoi script per raccogliere informazioni sugli eventi correlati o modificare gli oggetti di storage.
+
+
+
+[[example-for-obtaining-arguments-from-scripts]]
+== Esempio di come ottenere argomenti dagli script
+
+[listing]
+----
+print "$ARGV[0] : $ARGV[1]\n"
+print "$ARGV[7] : $ARGV[8]\n"
+----
+Quando viene generato un avviso, questo script viene eseguito e mostra l'output seguente:
+
+[listing]
+----
+-eventID : 290
+-eventSourceID : 4138
+----

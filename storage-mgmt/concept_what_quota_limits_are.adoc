@@ -1,0 +1,18 @@
+---
+permalink: storage-mgmt/concept_what_quota_limits_are.html 
+sidebar: sidebar 
+keywords: quota, limits 
+summary: I limiti della quota utente sono valori che il server Unified Manager utilizza per valutare se il consumo di spazio da parte di un utente si sta avvicinando al limite o ha raggiunto il limite impostato dalla quota utente. Se viene superato il limite soft o viene raggiunto il limite massimo, il server Unified Manager genera eventi di quota utente. 
+---
+= Scopri i limiti di quota in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+I limiti di quota utente sono valori che il server Unified Manager utilizza per valutare se il consumo di spazio da parte di un utente si stia avvicinando al limite o abbia raggiunto il limite impostato dalla quota dell'utente. Se viene superato il limite soft o viene raggiunto il limite massimo, il server Unified Manager genera eventi di quota utente.
+
+Per impostazione predefinita, il server Unified Manager invia un'e-mail di notifica agli utenti che hanno superato il limite soft della quota o hanno raggiunto il limite massimo della quota e per i quali sono configurati eventi di quota utente. Gli utenti con il ruolo di Application Administrator possono configurare avvisi che notificano ai destinatari specificati gli eventi di quota utente o quota di gruppo.
+
+Puoi specificare i limiti di quota utilizzando ONTAP System Manager o ONTAP CLI.

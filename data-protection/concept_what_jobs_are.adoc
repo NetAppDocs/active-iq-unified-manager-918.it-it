@@ -1,0 +1,18 @@
+---
+permalink: data-protection/concept_what_jobs_are.html 
+sidebar: sidebar 
+keywords: jobs 
+summary: Un job è una serie di attività che puoi monitorare tramite Unified Manager. Visualizzando i job e le relative attività, puoi verificare se sono stati completati con successo. 
+---
+= Scopri i job in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Un job è una serie di attività che puoi monitorare tramite Unified Manager. Visualizzando i job e le relative attività, puoi verificare se sono stati completati con successo.
+
+I processi vengono avviati quando crei relazioni SnapMirror e SnapVault, quando esegui qualsiasi operazione su una relazione (interruzione, modifica, sospensione, rimozione, ripresa, risincronizzazione e risincronizzazione inversa), quando esegui attività di ripristino dei dati, quando accedi a un cluster e così via.
+
+Quando avvii un lavoro, puoi utilizzare la pagina Lavori e la pagina Dettagli lavoro per monitorare il lavoro e l'avanzamento delle attività del lavoro associate.

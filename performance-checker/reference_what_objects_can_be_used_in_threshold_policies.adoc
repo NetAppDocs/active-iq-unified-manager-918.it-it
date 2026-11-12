@@ -1,0 +1,97 @@
+---
+permalink: performance-checker/reference_what_objects_can_be_used_in_threshold_policies.html 
+sidebar: sidebar 
+keywords: objects, counters, combination, threshold, policies 
+summary: Solo alcuni contatori delle prestazioni possono essere usati insieme nelle policy di combinazione. Quando specifichi contatori delle prestazioni primari e secondari, entrambi devono superare i rispettivi limiti massimi prima che venga generato un evento. 
+---
+= Capisci gli oggetti e i contatori delle policy di soglia combinate in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Solo alcuni contatori delle prestazioni possono essere usati insieme nelle policy di combinazione. Quando specifichi contatori delle prestazioni primari e secondari, entrambi devono superare i rispettivi limiti massimi prima che venga generato un evento.
+
+|===
+| Oggetto di storage primario e contatore | Oggetto e contatore dello storage secondario 
+
+
+ a| 
+Latenza del volume
+ a| 
+IOPS volume
+
+
+
+ a| 
+MB/s del volume
+
+
+
+ a| 
+Utilizzo aggregato
+
+
+
+ a| 
+Capacità delle prestazioni dell'aggregato utilizzata
+
+
+
+ a| 
+Utilizzo del nodo
+
+
+
+ a| 
+Capacità prestazionale del nodo utilizzata
+
+
+
+ a| 
+Capacità prestazionale del nodo utilizzata - takeover
+
+
+
+ a| 
+Latenza LUN
+ a| 
+IOPS della LUN
+
+
+
+ a| 
+MB/s LUN
+
+
+
+ a| 
+Utilizzo aggregato
+
+
+
+ a| 
+Capacità delle prestazioni dell'aggregato utilizzata
+
+
+
+ a| 
+Utilizzo del nodo
+
+
+
+ a| 
+Capacità prestazionale del nodo utilizzata
+
+
+
+ a| 
+Capacità prestazionale del nodo utilizzata - takeover
+
+|===
+[NOTE]
+====
+Quando una policy di combinazione di volumi viene applicata a un volume FlexGroup, anziché a un volume FlexVol, puoi selezionare come contatore secondario solo gli attributi "Volume IOPS" e "Volume MB/s". Se la policy di soglia contiene uno degli attributi del nodo o dell'aggregato, la policy non verrà applicata al volume FlexGroup e riceverai un messaggio di errore che descrive questo caso. Questo perché i volumi FlexGroup possono trovarsi su più di un nodo o aggregato.
+
+====

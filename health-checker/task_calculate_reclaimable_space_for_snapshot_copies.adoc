@@ -1,0 +1,39 @@
+---
+permalink: health-checker/task_calculate_reclaimable_space_for_snapshot_copies.html 
+sidebar: sidebar 
+keywords: calculate, reclaimable space, snapshot copies 
+summary: Puoi calcolare la quantità di spazio su disco che può essere recuperata eliminando una o più copie Snapshot. 
+---
+= Calcola lo spazio recuperabile per le copie Snapshot in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi calcolare la quantità di spazio su disco che può essere recuperata eliminando una o più copie Snapshot.
+
+.Prima di iniziare
+* Devi disporre del ruolo di Operatore, Amministratore di applicazioni o Amministratore di archiviazione.
+* Il volume deve essere online.
+* Il volume deve essere un volume FlexVol; questa funzionalità non è supportata con i volumi FlexGroup.
+
+
+.Passaggi
+. Nel riquadro di navigazione a sinistra, fai clic su *Archiviazione* > *Volumi*.
+. Nella vista *Stato di salute: Tutti i volumi*, seleziona il volume che contiene le copie Snapshot che desideri visualizzare.
++
+Viene visualizzato l'elenco delle copie Snapshot.
+
+. Nella pagina dei dettagli *Volume / Integrità*, fai clic sulla scheda *Capacità*.
+. Nel riquadro *Details* della scheda *Capacity*, nella sezione Other Details, fai clic sul collegamento accanto a *Snapshot Copies*.
++
+Il numero di copie Snapshot è un collegamento che visualizza l'elenco delle copie Snapshot.
+
+. Nella vista *Snapshot Copies*, seleziona le copie Snapshot per cui vuoi calcolare lo spazio recuperabile.
+. Fai clic su *Calculate*.
++
+Sul volume puoi vedere lo spazio recuperabile (in %, KB, MB, GB e così via).
+
+. Per ricalcolare lo spazio recuperabile, seleziona le copie Snapshot desiderate e fai clic su *Ricalcola*.
+

@@ -1,0 +1,48 @@
+---
+permalink: performance-checker/task_respond_to_performance_incident_caused_by_disk_failure.html 
+sidebar: sidebar 
+keywords: dynamic, performance, event, disk, failure 
+summary: 'Puoi utilizzare Unified Manager per analizzare un evento di prestazioni causato da carichi di lavoro che utilizzano eccessivamente un aggregate. Puoi anche utilizzare Unified Manager per verificare lo stato di salute dell"aggregate e vedere se i recenti eventi di integrità rilevati sull"aggregate hanno contribuito all"evento di prestazioni.' 
+---
+= Rispondi a un evento di prestazioni causato da un errore del disco in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi utilizzare Unified Manager per analizzare un evento di prestazioni causato da carichi di lavoro che utilizzano eccessivamente un aggregate. Puoi anche utilizzare Unified Manager per verificare lo stato di salute dell'aggregate e vedere se i recenti eventi di integrità rilevati sull'aggregate hanno contribuito all'evento di prestazioni.
+
+.Prima di iniziare
+* Devi disporre del ruolo di Operatore, Amministratore di applicazioni o Amministratore di archiviazione.
+* Devono esserci eventi delle prestazioni nuovi, confermati o obsoleti.
+
+
+.Passaggi
+. Visualizza la pagina *Dettagli dell'evento* per vedere le informazioni sull'evento.
+. Leggi la *Descrizione*, che illustra i carichi di lavoro coinvolti nell'evento e il componente del cluster conteso.
++
+Sono presenti più volumi vittima la cui latenza è stata influenzata dal componente del cluster in conflitto. L'aggregato, che si trova nel mezzo di una ricostruzione RAID per sostituire il disco guasto con un disco spare, è il componente del cluster in conflitto. In "Componente in conflitto", l'icona dell'aggregato è evidenziata in rosso e il nome dell'aggregato è visualizzato tra parentesi.
+
+. Nel grafico Utilizzo del carico di lavoro, seleziona *Bully Workloads*.
+. Passa il cursore sul grafico per visualizzare i principali carichi di lavoro aggressori che influiscono sul componente.
++
+Nella parte superiore del grafico sono visualizzati i carichi di lavoro con il picco di utilizzo più elevato da quando è stato rilevato l'evento. Uno dei carichi di lavoro principali è il carico di lavoro definito dal sistema Disk Health, che indica una ricostruzione RAID. Una ricostruzione è il processo interno coinvolto nella ricostruzione dell'aggregato con il disco spare. Il carico di lavoro Disk Health, insieme ad altri carichi di lavoro sull'aggregato, ha probabilmente causato la contesa sull'aggregato e l'evento associato.
+
+. Dopo aver confermato che l'attività del carico di lavoro Disk Health ha causato l'evento, attendi circa 30 minuti perché la ricostruzione termini e Unified Manager analizzi l'evento e rilevi se l'aggregato è ancora in contesa.
+. Aggiorna i *dettagli dell'evento*.
++
+Una volta completata la ricostruzione RAID, controlla che State sia obsolete, a indicare che l'evento è risolto.
+
+. Nel grafico Utilizzo del carico di lavoro, seleziona *Bully Workloads* per visualizzare i carichi di lavoro sull'aggregato in base al picco di utilizzo.
+. Nell'area *Azioni suggerite*, fai clic sul pulsante *Analizza carico di lavoro* per il carico di lavoro in alto.
+. Nella pagina *Analisi del carico di lavoro*, imposta l'intervallo di tempo in modo da visualizzare le ultime 24 ore (1 giorno) di dati per il volume selezionato.
++
+Nella cronologia degli eventi, un punto rosso (image:../media/opm_incident_icon_png.gif["icona dell'incidente di Performance Manager"]) indica quando si è verificato l'evento di guasto del disco.
+
+. Nel grafico Utilizzo nodo e aggregato, nascondi la linea delle statistiche del nodo in modo che rimanga visibile solo la linea dell'aggregato.
+. Confronta i dati di questo grafico con i dati relativi al momento dell'evento nel grafico *Latenza*.
++
+Al momento dell'evento, l'utilizzo dell'aggregato mostrava un'elevata attività di lettura e scrittura, causata dai processi di ricostruzione RAID, che hanno aumentato la latenza del volume selezionato. Poche ore dopo che si è verificato l'evento, sia le operazioni di lettura e scrittura sia la latenza sono diminuite, confermando che l'aggregato non è più in contenzione.
+
+

@@ -1,0 +1,53 @@
+---
+permalink: config/concept_security_dashboard.html 
+sidebar: sidebar 
+keywords: security compliance settings, security feature settings, ONTAP hardening guide, AutoSupport settings, authentication settings 
+summary: Puoi abilitare o disabilitare i parametri di sicurezza per il monitoraggio della conformità su Unified Manager. 
+---
+= Attiva e disattiva le impostazioni di sicurezza per la conformità in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Utilizzando il pulsante *Customize* nel pannello *Security Dashboard* della pagina *Features Settings*, puoi abilitare o disabilitare i parametri di sicurezza per il monitoraggio della conformità su Unified Manager.
+
+Le impostazioni abilitate o disabilitate in questa pagina regolano lo stato di conformità generale dei cluster e delle VM di storage su Unified Manager. In base alle selezioni effettuate, le colonne corrispondenti sono visibili nella vista *Sicurezza: Tutti i cluster* della pagina di inventario dei cluster e nella vista *Sicurezza: Tutte le VM di storage* della pagina di inventario delle VM di storage.
+
+[NOTE]
+====
+Solo gli utenti con il ruolo di amministratore possono modificare queste impostazioni.
+
+====
+I criteri di sicurezza per i tuoi cluster ONTAP, le VM di storage e i volumi vengono valutati in base alle raccomandazioni definite nel link:https://www.netapp.com/pdf.html?item=/media/10674-tr4569pdf.pdf["Guida al rafforzamento della sicurezza per NetApp ONTAP 9"]. Il pannello Security nella dashboard e la pagina Security mostrano lo stato predefinito di conformità della sicurezza dei tuoi cluster, delle VM di storage e dei volumi. Il sistema genera inoltre eventi di sicurezza e abilita azioni di gestione per i cluster e le VM di storage che presentano violazioni della sicurezza.
+
+
+
+[[customize-security-settings]]
+== Personalizza le impostazioni di sicurezza
+
+Per personalizzare le impostazioni di monitoraggio della conformità in base al tuo ambiente ONTAP, segui questi passaggi:
+
+.Passaggi
+. Fai clic su *Generale > Impostazioni funzionalità > Dashboard di sicurezza > Personalizza*. Compare la finestra a comparsa *Personalizza le impostazioni del dashboard di sicurezza*.
++
+[NOTE]
+====
+I parametri di conformità della sicurezza che abiliti o disabiliti possono influire direttamente sulle visualizzazioni di sicurezza predefinite, sui report e sui report pianificati nelle schermate Clusters e Storage VMs. Se avevi caricato un report excel da queste schermate prima di modificare i parametri di sicurezza, i report excel scaricati potrebbero essere errati.
+
+====
+. Per abilitare o disabilitare le impostazioni personalizzate per i tuoi cluster ONTAP, seleziona l'impostazione generale desiderata in *Cluster*. Per informazioni sulle opzioni per personalizzare la conformità del cluster, consulta link:../health-checker/reference_cluster_compliance_categories.html["Categorie di conformità del cluster"].
+. Per abilitare o disabilitare le impostazioni personalizzate per le VM di storage, seleziona l'impostazione generale richiesta in *Storage VM*. Per informazioni sulle opzioni per personalizzare la conformità delle VM di storage, consulta link:../health-checker/reference_svm_compliance_categories.html["Categorie di conformità delle Storage VM"].
+
+
+
+
+[[customize-autosupport-and-authentication-settings]]
+== Personalizza AutoSupport e le impostazioni di autenticazione
+
+Nella sezione *AutoSupport Impostazioni*, puoi specificare se usare il trasporto HTTPS per inviare messaggi AutoSupport da ONTAP.
+
+Dalla sezione *Impostazioni di autenticazione*, puoi abilitare la generazione di avvisi di Unified Manager per l'utente amministratore ONTAP predefinito.
+
+'''

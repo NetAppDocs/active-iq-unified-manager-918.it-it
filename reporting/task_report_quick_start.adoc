@@ -1,0 +1,91 @@
+---
+permalink: reporting/task_report_quick_start.html 
+sidebar: sidebar 
+keywords: reporting, quick, start 
+summary: Crea un report di esempio che individui i volumi da spostare nel tier cloud, personalizza la vista, salvalo come report e programmane la condivisione settimanale. 
+---
+= Inizia con la reportistica in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Crea un report personalizzato di esempio per fare pratica nell'esplorazione delle viste e nella pianificazione dei report. Questo report di avvio rapido trova un elenco di volumi che potresti voler spostare nel tier cloud perché contiene una discreta quantità di dati inattivi (cold). Aprirai la vista Performance: All Volumes, la personalizzerai usando filtri e colonne, salverai la vista personalizzata come report e pianificherai la condivisione del report una volta alla settimana.
+
+.Prima di iniziare
+* Devi disporre del ruolo di Amministratore dell'applicazione o di Amministratore dello storage.
+* Devi aver configurato gli aggregati FabricPool e avere volumi su tali aggregati.
+
+
+Segui i passaggi seguenti per:
+
+* Apri la visualizzazione predefinita
+* Personalizza le colonne filtrando e ordinando i dati
+* Salva la vista
+* Pianifica la generazione di un report per la vista personalizzata
+
+
+.Passaggi
+. Nel riquadro di navigazione a sinistra, fai clic su *Archiviazione* > *Volumi*.
+. Nel menu Visualizza, seleziona *Prestazioni* > *Tutti i volumi*.
+. Fai clic su *Mostra/Nascondi* per assicurarti che la colonna "`Disk Types`" venga visualizzata nella vista.
++
+image::../media/show_hide_3.png[Uno screenshot che mostra l'elenco a discesa del menu Mostra/Nascondi.]
+
++
+Aggiungi o rimuovi altre colonne per creare una visualizzazione che contenga i campi importanti per il tuo report.
+
+. Trascina la colonna "`Disk Types`" accanto alla colonna "`Cloud Recommendation`".
+. Fai clic sull'icona del filtro per aggiungere i tre filtri seguenti, quindi fai clic su *Apply Filter*:
++
+** I tipi di disco contengono FabricPool
+** Cloud Recommendation contiene il tier
+** Dati inattivi superiori a 10 GB image:../media/filter_cold_data_2.png["Uno screenshot che mostra come applicare un filtro tramite l'apposita opzione."]
+
+
++
+Tieni presente che ogni filtro è collegato con un operatore logico AND, in modo che tutti i volumi restituiti soddisfino tutti i criteri. Puoi aggiungere un massimo di cinque filtri.
+
+. Fai clic sulla parte superiore della colonna Dati freddi per ordinare i risultati in modo che i volumi con più dati freddi vengano visualizzati nella parte superiore della vista.
+. Quando personalizzi la vista, il nome della vista è Unsaved View. Assegna alla vista un nome che rispecchi ciò che mostra, ad esempio "`Vols change tiering policy`". Al termine, fai clic sul segno di spunta o premi *Invio* per salvare la vista con il nuovo nome.
++
+image::../media/report_vol_code_data_2.png[Uno screenshot dell'interfaccia utente che mostra la pagina di modifica della policy di tiering di Vols con le colonne richieste nell'ordine corretto.]
+
+. Scarica il report in formato *CSV*, *Excel* o *PDF* per visualizzarne l'output prima di programmarlo o condividerlo.
++
+Apri il file con un'applicazione installata, come Microsoft Excel (CSV o Excel) o Adobe Acrobat (PDF), oppure salva il file.
+
++
+[NOTE]
+====
+Puoi personalizzare ulteriormente il report utilizzando filtri complessi, ordinamenti, tabelle pivot o grafici scaricando la visualizzazione come file Excel. Dopo aver aperto il file in Excel, usa le funzionalità avanzate per personalizzare il report. Quando sei soddisfatto del risultato, carica il file Excel. Questo file, con le personalizzazioni apportate, viene applicato alla visualizzazione quando esegui il report.
+
+====
++
+Per ulteriori informazioni sulla personalizzazione dei report tramite Excel, consulta _Report di esempio di Microsoft Excel_.
+
+. Nella pagina dell'inventario, fai clic sul pulsante *Report programmati*. Nell'elenco compaiono tutti i report programmati relativi all'oggetto, in questo caso i volumi.
++
+image::../media/scheduled_reports_3.gif[Uno screenshot che mostra tutti i report pianificati relativi all'oggetto.]
+
+. Fai clic su *Aggiungi pianificazione* per aggiungere una nuova riga alla pagina Pianificazioni dei report, in modo da poter definire le caratteristiche della pianificazione per il nuovo report.
+. Inserisci un nome per il report e completa gli altri campi del report, quindi fai clic sul segno di spunta (image:../media/blue_check.gif[""]) alla fine della riga.
++
+Il report viene inviato immediatamente a scopo di test. Successivamente, il report viene generato e inviato via email ai destinatari indicati con la frequenza specificata.
+
++
+Il seguente report di esempio è in formato CSV:
+
++
+image::../media/csv_sample_report.gif[Uno screenshot dell'interfaccia utente che mostra un report di esempio in formato CSV.]
+
++
+Il seguente esempio di report è in formato PDF:
+
++
+image::../media/pdf_sample_report.gif[Uno screenshot dell'interfaccia utente che mostra un report di esempio in formato PDF.]
+
+
+
+In base ai risultati mostrati nel report, potresti voler usare ONTAP System Manager o ONTAP CLI per modificare la policy di tiering in "`auto`" o "`all`" per determinati volumi, in modo da spostare più dati inattivi sul livello cloud.

@@ -1,0 +1,68 @@
+---
+permalink: events/reference_dynamic_performance_event_chart_details.html 
+sidebar: sidebar 
+keywords: dynamic, performance, event, chart, details 
+summary: 'Per gli eventi di prestazioni dinamiche, la sezione Diagnosi di sistema della pagina Dettagli evento elenca i principali carichi di lavoro con la latenza o l"utilizzo più elevati del componente del cluster conteso. Le statistiche sulle prestazioni si basano sul periodo compreso tra il momento in cui l"evento di prestazioni è stato rilevato e l"ultima volta in cui l"evento è stato analizzato. I grafici mostrano anche le statistiche storiche sulle prestazioni per il componente del cluster conteso.' 
+---
+= Scopri gli eventi di performance dinamici in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Per gli eventi di prestazioni dinamiche, la sezione Diagnosi di sistema della pagina Dettagli evento elenca i carichi di lavoro principali con la latenza o l'utilizzo più elevati del componente del cluster conteso.
+
+Le statistiche sulle prestazioni si basano sul periodo che va da quando l'evento di prestazione è stato rilevato fino all'ultima volta in cui è stato analizzato. I grafici mostrano anche le statistiche storiche sulle prestazioni per il componente del cluster che è in contesa.
+
+Ad esempio, puoi identificare i carichi di lavoro con un elevato utilizzo di un componente per determinare quale carico di lavoro spostare su un componente meno utilizzato. Spostando il carico di lavoro ridurrai la quantità di lavoro sul componente corrente, portando potenzialmente il componente fuori dalla contesa. Nella parte superiore di questa sezione sono indicati l'ora e l'intervallo di date in cui un evento è stato rilevato e analizzato per l'ultima volta. Per gli eventi attivi (nuovi o confermati), si aggiorna l'ora dell'ultima analisi.
+
+I grafici di latenza e attività mostrano i nomi dei principali carichi di lavoro quando passi il cursore sul grafico. Facendo clic sul menu Tipo di carico di lavoro a destra del grafico, puoi ordinare i carichi di lavoro in base al loro ruolo nell'evento, inclusi _squali_, _bulli_ o _vittime_, e visualizzare i dettagli sulla loro latenza e sul loro utilizzo del componente del cluster conteso. Puoi confrontare il valore effettivo con il valore previsto per vedere quando il carico di lavoro era al di fuori dell'intervallo previsto di latenza o utilizzo. Per informazioni, vedi link:..//performance-checker/concept_types_of_workloads_monitored_by_unified_manager.html["Tipologie di carichi di lavoro monitorati da Unified Manager"].
+
+[NOTE]
+====
+Quando ordini in base alla deviazione massima della latenza, i carichi di lavoro definiti dal sistema non vengono visualizzati nella tabella, perché la latenza si applica solo ai carichi di lavoro definiti dall'utente. I carichi di lavoro con valori di latenza molto bassi non vengono visualizzati nella tabella.
+
+====
+Per ulteriori informazioni sulle soglie di prestazione dinamiche, vedi link:../performance-checker/concept_analyze_events_from_dynamic_performance_thresholds.html["Analisi degli eventi a partire da soglie di prestazione dinamiche"].
+
+Per informazioni su come Unified Manager classifica i carichi di lavoro e determina il criterio di ordinamento, consulta link:../performance-checker/concept_how_um_determines_performance_impact_for_incident.html["Come Unified Manager determina l'impatto sulle prestazioni di un evento"].
+
+I dati nei grafici mostrano 24 ore di statistiche sulle prestazioni precedenti all'ultima analisi dell'evento. I valori effettivi e i valori attesi per ciascun carico di lavoro si basano sul momento in cui il carico di lavoro è stato coinvolto nell'evento. Ad esempio, un carico di lavoro potrebbe essere coinvolto in un evento dopo che l'evento è stato rilevato, quindi le sue statistiche sulle prestazioni potrebbero non corrispondere ai valori del momento in cui l'evento è stato rilevato. Per impostazione predefinita, i carichi di lavoro sono ordinati in base al picco di deviazione più elevato della latenza.
+
+[NOTE]
+====
+Poiché Unified Manager conserva un massimo di 30 giorni di dati storici su prestazioni ed eventi a intervalli di 5 minuti, se l'evento risale a più di 30 giorni fa, i dati sulle prestazioni non vengono visualizzati.
+
+====
+* *Colonna ordinamento del carico di lavoro*
++
+** *Grafico della latenza*
++
+Mostra l'impatto dell'evento sulla latenza del carico di lavoro durante l'ultima analisi.
+
+** *Colonna Utilizzo dei componenti*
++
+Visualizza i dettagli sull'utilizzo del carico di lavoro del componente del cluster in contesa. Nei grafici, l'utilizzo effettivo è una linea blu. Una barra rossa evidenzia la durata dell'evento, dal momento del rilevamento fino all'ultimo momento analizzato. Per ulteriori informazioni, vedi link:../performance-checker/reference_workload_performance_measurement_values.html["Valori di misurazione delle prestazioni del carico di lavoro"].
+
++
+[NOTE]
+====
+Per quanto riguarda il componente di rete, poiché le statistiche delle prestazioni di rete provengono da attività al di fuori del cluster, questa colonna non viene visualizzata.
+
+====
+** *Utilizzo dei componenti*
++
+Visualizza la cronologia di utilizzo, in %, per i componenti di elaborazione di rete, elaborazione dei dati e aggregato, oppure la cronologia dell'attività, in %, per il componente del gruppo di criteri QoS. Il grafico non viene visualizzato per i componenti di rete o di interconnessione. Puoi posizionare il puntatore del mouse sulle statistiche per visualizzare le statistiche di utilizzo in un momento specifico.
+
+** *Cronologia totale di scrittura in MB/s*
++
+Solo per il componente Risorse di MetroCluster, mostra il throughput di scrittura totale, in megabyte al secondo (MBps), per tutti i carichi di lavoro dei volumi che vengono replicati nel cluster partner in una configurazione MetroCluster.
+
+** *Cronologia degli eventi*
++
+Visualizza linee ombreggiate in rosso per indicare gli eventi storici relativi al componente in questione. Per gli eventi obsoleti, il grafico mostra gli eventi verificatisi prima del rilevamento dell'evento selezionato e dopo la sua risoluzione.
+
+
+
+

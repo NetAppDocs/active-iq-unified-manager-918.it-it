@@ -1,0 +1,81 @@
+---
+permalink: storage-mgmt/concept_all_workloads.html 
+sidebar: sidebar 
+keywords: view, workloads, add, provision, storage, filter, analyze, performance, capacity, criteria 
+summary: 'La vista All Workloads mostra l"elenco di tutti i carichi di lavoro disponibili sui cluster in un data center.' 
+---
+= Visualizza i carichi di lavoro in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Quando aggiungi cluster a Unified Manager, i workload di storage su ciascun cluster vengono rilevati automaticamente e visualizzati nella pagina Workloads.
+
+Unified Manager inizia ad analizzare i carichi di lavoro per formulare raccomandazioni (PSL consigliati) solo dopo l'avvio delle operazioni di I/O sui workload di storage.
+
+I volumi FlexGroup e i relativi componenti sono esclusi.
+
+
+
+[[workloads-overview]]
+== Panoramica dei carichi di lavoro
+
+La pagina Panoramica dei carichi di lavoro mostra una panoramica dei carichi di lavoro nel data center e una panoramica dello spazio e delle prestazioni del data center.
+
+* Pannello *Workloads Overview*: visualizza il numero totale di carichi di lavoro e il numero di carichi di lavoro con o senza PSL assegnati. Viene inoltre visualizzata la ripartizione del numero di carichi di lavoro per ciascun PSL. Facendo clic sui conteggi, accedi alla vista *All Workloads* con i carichi di lavoro filtrati. Puoi anche visualizzare il numero di carichi di lavoro che non sono conformi alla raccomandazione del sistema e assegnare loro i PSL consigliati dal sistema facendo clic sul pulsante *Assign System-Recommended PSLs*.
+* Pannello *Panoramica del Data Center*: visualizza lo spazio disponibile e utilizzato (TiB) e le prestazioni (IOPS) del data center. Mostra inoltre una ripartizione dello spazio disponibile e utilizzato (TiB) e delle prestazioni (IOPS) di tutti i carichi di lavoro in ciascun PSL.
+
+
+
+
+[[all-workloads-view]]
+== Visualizzazione di tutti i carichi di lavoro
+
+La pagina *Storage > Workloads > All Workloads* elenca i carichi di lavoro di storage associati ai cluster ONTAP gestiti da Unified Manager.
+
+Per i carichi di lavoro di storage appena individuati sui quali non sono state eseguite operazioni di I/O, lo stato è "`Waiting for I/O`". Dopo l'inizio delle operazioni di I/O sui carichi di lavoro di storage, Unified Manager avvia l'analisi e lo stato del carico di lavoro cambia in "`Learning...`". Al termine dell'analisi (entro 24 ore dall'inizio delle operazioni di I/O), vengono visualizzati i PSL consigliati per i carichi di lavoro di storage.
+
+La pagina ti consente anche di assegnare criteri di efficienza dello storage (SEP) e livelli di servizio delle prestazioni (PSL) ai carichi di lavoro dello storage. Puoi eseguire più attività:
+
+* Aggiungi o esegui il provisioning dei carichi di lavoro dello storage
+* Visualizza e filtra l'elenco dei carichi di lavoro
+* Assegna i PSL ai workload di storage
+* Valuta i PSL consigliati dal sistema e assegnali ai carichi di lavoro
+* Assegna i SEP ai carichi di lavoro di storage
+
+
+
+
+[[adding-or-provisioning-storage-workloads]]
+=== Aggiunta o provisioning dei workload di storage
+
+Puoi aggiungere o eseguire il provisioning dei carichi di lavoro dello storage per LUN supportate (che supportano entrambi i protocolli iSCSI e FCP), condivisioni file NFS e condivisioni SMB.
+
+.Passaggi
+. Fai clic su *Storage > Workloads > All Workloads > Create*.
+. Crea carichi di lavoro. Per informazioni, consulta link:../storage-mgmt/concept_provision_and_manage_workloads.html["Provisioning e gestione dei workload"].
+
+
+
+
+[[viewing-and-filtering-workloads]]
+=== Visualizzazione e filtraggio dei carichi di lavoro
+
+Nella schermata Tutti i carichi di lavoro, puoi visualizzare tutti i carichi di lavoro nel tuo data center o cercare carichi di lavoro di storage specifici in base ai relativi PSL o nomi. Puoi usare l'icona del filtro per inserire condizioni specifiche per la tua ricerca. Puoi eseguire la ricerca in base a diverse condizioni di filtro, ad esempio per cluster host o VM di storage. L'opzione *Capacità totale* ti consente di filtrare in base alla capacità totale dei carichi di lavoro (in MB). Tuttavia, in questo caso, il numero di carichi di lavoro restituiti potrebbe variare, perché la capacità totale viene confrontata a livello di byte.
+
+Per ogni carico di lavoro vengono visualizzate informazioni quali il cluster host e la VM di storage, insieme al PSL e al SEP assegnati.
+
+La pagina ti consente anche di visualizzare i dettagli delle prestazioni di un workload. Puoi visualizzare informazioni dettagliate su IOPS, capacità e latenza del workload facendo clic sul pulsante *Choose / Order Columns* e selezionando colonne specifiche da visualizzare. La colonna Performance View mostra gli IOPS medi e di picco per un workload e puoi fare clic sull'icona workload analyser per visualizzare l'analisi dettagliata degli IOPS.
+
+
+
+[[analyzing-performance-and-capacity-criteria-for-a-workload]]
+=== Analisi dei criteri di prestazioni e capacità per un carico di lavoro
+
+Il pulsante *Analizza carico di lavoro* nel pop-up *Analisi IOPS* ti porta alla pagina Analisi del carico di lavoro, dove puoi selezionare un intervallo di tempo e visualizzare gli andamenti di latenza, throughput e capacità per il carico di lavoro selezionato. Per ulteriori informazioni sull'analizzatore del carico di lavoro, consulta link:..//performance-checker/concept_troubleshooting_workloads_using_workload_analyzer.html["Risoluzione dei problemi relativi ai carichi di lavoro tramite l'analizzatore di carichi di lavoro"].
+
+Puoi visualizzare le informazioni sulle prestazioni di un workload per facilitare la risoluzione dei problemi facendo clic sull'icona del grafico a barre nella colonna *Performance View*. Per visualizzare i grafici delle prestazioni e della capacità nella pagina Workload Analysis e analizzare l'oggetto, fai clic sul pulsante *Analyze Workload*.
+
+Per ulteriori informazioni, consulta link:../performance-checker/reference_what_data_does_workload_analyzer_display.html["Quali dati visualizza l'analizzatore del carico di lavoro"].

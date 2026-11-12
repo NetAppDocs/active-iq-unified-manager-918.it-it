@@ -1,0 +1,18 @@
+---
+permalink: config/concept_what_role_based_access_control_does.html 
+sidebar: sidebar 
+keywords: role-based, access, control 
+summary: 'Il controllo degli accessi basato sui ruoli (RBAC) ti consente di gestire gruppi di utenti definendo ruoli. Se devi limitare l"accesso a funzionalità specifiche per amministratori selezionati, devi configurare per loro account amministratore. Se vuoi limitare le informazioni che gli amministratori possono visualizzare e le operazioni che possono eseguire, devi applicare ruoli agli account amministratore che crei.' 
+---
+= Scopri il controllo degli accessi in base al ruolo in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+RBAC (in base al ruolo, role-based access control) offre la possibilità di controllare chi ha accesso a varie funzionalità e risorse nel server Active IQ Unified Manager. RBAC permette agli amministratori di gestire gruppi di utenti definendo i ruoli. Se hai bisogno di limitare l'accesso a specifiche funzionalità per determinati amministratori, devi creare account amministratore per loro. Se vuoi limitare le informazioni che gli amministratori possono visualizzare e le operazioni che possono eseguire, devi applicare ruoli agli account amministratore che crei.
+
+Il server di gestione utilizza il controllo degli accessi basato sui ruoli (RBAC) per l'accesso utente e le autorizzazioni del ruolo. Se non hai modificato le impostazioni predefinite del server di gestione per l'accesso dell'utente amministrativo, non devi accedere per visualizzarle.
+
+Quando avvii un'operazione che richiede privilegi specifici, il server di gestione ti chiede di accedere. Ad esempio, per creare account amministratore, devi accedere con un account con accesso Application Administrator.

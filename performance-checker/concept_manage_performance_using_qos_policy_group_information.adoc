@@ -1,0 +1,16 @@
+---
+permalink: performance-checker/concept_manage_performance_using_qos_policy_group_information.html 
+sidebar: sidebar 
+keywords: managing, performance, qos, policy, group, information 
+summary: 'Unified Manager ti consente di visualizzare i gruppi di criteri di qualità del servizio (QoS) disponibili su tutti i cluster che stai monitorando. I criteri potrebbero essere stati definiti utilizzando il software ONTAP (System Manager o ONTAP CLI) oppure dai criteri Performance Service Level di Unified Manager. Unified Manager visualizza anche quali volumi e LUN hanno assegnato un gruppo di criteri QoS.' 
+---
+= Gestisci le prestazioni utilizzando le informazioni del gruppo di criteri QoS in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager ti consente di visualizzare i gruppi di criteri di qualità del servizio (QoS) disponibili su tutti i cluster che stai monitorando. I criteri potrebbero essere stati definiti utilizzando il software ONTAP (System Manager o ONTAP CLI) oppure dai criteri Performance Service Level di Unified Manager. Unified Manager visualizza anche quali volumi e LUN hanno assegnato un gruppo di criteri QoS.
+
+Per ulteriori informazioni sulla regolazione delle impostazioni QoS, vedere https://docs.netapp.com/us-en/ontap/performance-admin/index.html["Panoramica della gestione delle prestazioni"]

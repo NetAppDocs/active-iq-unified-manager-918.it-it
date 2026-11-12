@@ -1,0 +1,59 @@
+---
+permalink: storage-mgmt/task_search_for_storage_objects.html 
+sidebar: sidebar 
+keywords: search, storage, objects 
+summary: Per accedere rapidamente a un oggetto specifico, puoi usare il campo Search all Storage Objects nella parte superiore della barra dei menu. Questo metodo di ricerca globale in tutti gli oggetti ti consente di individuare rapidamente oggetti specifici in base al tipo. I risultati della ricerca sono ordinati per tipo di oggetto di archiviazione e puoi filtrarli ulteriormente per oggetto usando il menu a discesa. 
+---
+= Cerca oggetti storage in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Per accedere rapidamente a un oggetto specifico, puoi utilizzare il campo *Cerca in tutti gli oggetti di archiviazione* nella parte superiore della barra dei menu. Questo metodo di ricerca globale su tutti gli oggetti ti consente di individuare rapidamente oggetti specifici in base al tipo. I risultati della ricerca sono ordinati per tipo di oggetto di archiviazione e puoi filtrarli ulteriormente per oggetto utilizzando il menu a discesa.
+
+.Prima di iniziare
+* Per eseguire questa attività, devi avere uno dei seguenti ruoli: Operator, Application Administrator o Storage Administrator.
+* Una ricerca valida deve contenere almeno tre caratteri.
+
+
+Quando usi il valore "All" nel menu a tendina, la ricerca globale visualizza il numero totale di risultati trovati in tutte le categorie di oggetti, con un massimo di 25 risultati di ricerca per ogni categoria di oggetti. Puoi selezionare un tipo di oggetto specifico dal menu a tendina per affinare la ricerca all'interno di un tipo di oggetto specifico. In questo caso, l'elenco restituito non è limitato ai primi 25 oggetti.
+
+I tipi di oggetto che puoi cercare includono:
+
+* Cluster
+* Nodi
+* VM di storage
+* Aggregati
+* Volumi
+* Qtree
+* Condivisioni SMB
+* Condivisioni NFS
+* Quote utente o di gruppo
+* LUN
+* Namespace NVMe
+* Gruppi di iniziatori
+* Iniziatori
+* Gruppo di coerenza
+
+
+Se inserisci il nome di un carico di lavoro, viene restituito l'elenco dei carichi di lavoro nella categoria appropriata Volumes o LUNs.
+
+Puoi fare clic su qualsiasi oggetto nei risultati della ricerca per accedere alla pagina dei dettagli dello stato di integrità di quell'oggetto. Se non esiste una pagina diretta dello stato di integrità per un oggetto, viene visualizzata la pagina dello stato di integrità dell'oggetto padre. Ad esempio, quando cerchi una LUN specifica, viene visualizzata la pagina dei dettagli della SVM su cui risiede la LUN.
+
+[NOTE]
+====
+Le porte e i LIF non sono ricercabili nella barra di ricerca globale.
+
+====
+.Passaggi
+. Seleziona un tipo di oggetto dal menu per affinare i risultati della ricerca e visualizzare solo quel tipo di oggetto.
+. Nel campo *Cerca tutti gli oggetti di archiviazione*, inserisci almeno tre caratteri del nome dell'oggetto.
++
+In questo esempio, nel menu a tendina è selezionato il tipo di oggetto Volumi. Digitando "vol1" nel campo *Cerca tutti gli oggetti di archiviazione*, visualizzi un elenco di tutti i volumi i cui nomi contengono questi caratteri.
+
++
+image::../media/opm_search_field_jpg.gif[Campo di ricerca in Unified Manager]
+
+

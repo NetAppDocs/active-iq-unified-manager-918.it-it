@@ -1,0 +1,78 @@
+---
+permalink: performance-checker/task_create_user_defined_performance_threshold_policies.html 
+sidebar: sidebar 
+keywords: create, user-defined, performance, threshold, policies 
+summary: 'Crei criteri di soglia delle prestazioni per gli oggetti di archiviazione in modo che vengano inviate notifiche quando un contatore delle prestazioni supera un valore specifico. La notifica dell"evento segnala che il cluster sta riscontrando un problema di prestazioni.' 
+---
+= Crea criteri di soglia delle prestazioni definiti dall'utente in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Crei criteri di soglia delle prestazioni per gli oggetti di archiviazione in modo che vengano inviate notifiche quando un contatore delle prestazioni supera un valore specifico. La notifica dell'evento segnala che il cluster sta riscontrando un problema di prestazioni.
+
+.Prima di iniziare
+Devi avere il ruolo di Amministratore dell'applicazione.
+
+Crei criteri di soglia delle prestazioni immettendo i valori di soglia nella pagina Crea criterio di soglia delle prestazioni. Puoi creare nuovi criteri definendo tutti i valori del criterio in questa pagina oppure puoi creare una copia di un criterio esistente e modificarne i valori nella copia (operazione denominata _clonazione_).
+
+I valori di soglia validi vanno da 0,001 a 10.000.000 per i numeri, da 0,001 a 100 per le percentuali e da 0,001 a 200 per le percentuali di Performance Capacity Used.
+
+[NOTE]
+====
+La versione attuale prevede soglie che inviano eventi quando il valore di un contatore supera la soglia impostata. Non è possibile impostare soglie che inviino eventi quando il valore di un contatore scende al di sotto della soglia impostata.
+
+====
+.Passaggi
+. Nel riquadro di navigazione a sinistra, seleziona *Soglie evento* > *Prestazioni*.
++
+Viene visualizzata la pagina Performance Thresholds.
+
+. Fai clic sul pulsante appropriato a seconda che tu voglia creare una nuova policy o clonare una policy simile e modificarne la versione clonata.
++
+|===
+| A... | Fai clic... 
+
+
+ a| 
+Crea una nuova policy
+ a| 
+*Crea*
+
+
+
+ a| 
+Clona una policy esistente
+ a| 
+Seleziona una policy esistente e fai clic su *Clone*
+
+|===
++
+Compare la pagina Crea criterio di soglia delle prestazioni oppure la pagina Clona criterio di soglia delle prestazioni.
+
+. Definisci la policy di soglia specificando i valori di soglia dei contatori delle prestazioni che vuoi impostare per specifici oggetti di storage:
++
+.. Seleziona il tipo di oggetto di storage e specifica un nome e una descrizione per la policy.
+.. Seleziona il contatore delle prestazioni da monitorare e specifica i valori limite che definiscono gli eventi di avviso e critici.
++
+Devi definire almeno un limite di avviso o un limite critico. Non è necessario definire entrambi i tipi di limiti.
+
+.. Seleziona un contatore di prestazioni secondario, se necessario, e specifica i valori limite per gli eventi di avviso e critico.
++
+L'inclusione di un contatore secondario richiede che entrambi i contatori superino i valori limite prima che la soglia venga violata e venga segnalato un evento. Solo determinati oggetti e contatori possono essere configurati tramite una policy di combinazione.
+
+.. Seleziona la durata per cui i valori limite devono essere superati per inviare un evento.
+
+
++
+Quando cloni una policy esistente, devi inserire un nuovo nome per la policy.
+
+. Fai clic su *Salva* per salvare la policy.
++
+Verrai reindirizzato alla pagina Soglie di prestazione. Un messaggio di conferma nella parte superiore della pagina indica che la policy di soglia è stata creata e fornisce un collegamento alla pagina Inventario per quel tipo di oggetto, in modo da poter applicare immediatamente la nuova policy agli oggetti di storage.
+
+
+
+Se vuoi applicare la nuova policy di soglia agli oggetti di archiviazione in questo momento, puoi fare clic sul collegamento *Vai a object_type ora* per accedere alla pagina Inventory.

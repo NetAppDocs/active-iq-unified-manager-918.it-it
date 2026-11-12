@@ -1,0 +1,76 @@
+---
+permalink: storage-mgmt/concept_workloads_dashboard.html 
+sidebar: sidebar 
+keywords: workloads, overview, data center, sections 
+summary: 'Un carico di lavoro rappresenta le operazioni di input/output (I/O) di un oggetto di storage, come un volume o una LUN. Il provisioning dello storage si basa sui requisiti previsti del carico di lavoro. Le statistiche del carico di lavoro vengono monitorate da Active IQ Unified Manager solo dopo che è presente traffico da e verso l"oggetto di storage. Ad esempio, i valori di IOPS e latenza del carico di lavoro sono disponibili dopo che gli utenti iniziano a utilizzare un database o un"applicazione di posta elettronica.' 
+---
+= Scopri la dashboard dei carichi di lavoro in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Un carico di lavoro rappresenta le operazioni di input/output (I/O) di un oggetto di storage, come un volume o una LUN. Il provisioning dello storage si basa sui requisiti previsti del carico di lavoro. Le statistiche del carico di lavoro vengono monitorate da Active IQ Unified Manager solo dopo che è presente traffico da e verso l'oggetto di storage. Ad esempio, i valori di IOPS e latenza del carico di lavoro sono disponibili dopo che gli utenti iniziano a utilizzare un database o un'applicazione di posta elettronica.
+
+La pagina Carichi di lavoro visualizza un riepilogo dei carichi di lavoro dello storage dei cluster ONTAP gestiti da Unified Manager. Ti fornisce informazioni cumulative immediate sui carichi di lavoro dello storage conformi al Performance Service Level, nonché sui carichi di lavoro dello storage non conformi. Ti consente inoltre di valutare la capacità totale, disponibile e utilizzata e le prestazioni (IOPS) dei cluster nell'intero data center.
+
+[NOTE]
+====
+Ti consigliamo di valutare il numero di workload di storage non conformi, non disponibili o non gestiti da alcun Performance Service Level e di intraprendere le azioni necessarie per garantirne conformità, utilizzo della capacità e IOPS.
+
+====
+La pagina Workloads è composta dalle seguenti due sezioni:
+
+* Panoramica dei carichi di lavoro: fornisce una panoramica del numero di carichi di lavoro dello storage sui cluster ONTAP gestiti da Unified Manager.
+* Panoramica del data center: fornisce una panoramica della capacità e degli IOPS dei carichi di lavoro di storage nel data center. I dati rilevanti vengono visualizzati a livello di data center e per singolo .
+
+
+
+
+[[workloads-overview-section]]
+== Sezione Panoramica dei carichi di lavoro
+
+La sezione panoramica dei workload fornisce informazioni cumulative a colpo d'occhio sui workload di storage. Lo stato dei workload di storage viene visualizzato in base ai Performance Service Levels assegnati e non assegnati.
+
+* *Assegnato*: Per i carichi di lavoro di storage a cui sono stati assegnati i Performance Service Levels, vengono riportati i seguenti stati:
++
+** *Conforme*: Le prestazioni dei carichi di lavoro dello storage si basano sui Performance Service Levels assegnati. Se i carichi di lavoro dello storage rientrano nella soglia di latenza definita nei Performance Service Levels associati, vengono contrassegnati come "`conformi`". I carichi di lavoro conformi sono contrassegnati in blu.
+** *Non conforme*: Durante il monitoraggio delle prestazioni, i workload di storage vengono contrassegnati come "`non-conforming`" se la latenza dei workload di storage supera la soglia di latenza definita nel Performance Service Level associato. I workload non conformi sono contrassegnati in arancione.
+** *Non disponibile*: i carichi di lavoro dello storage sono contrassegnati come "`unavailable`" se sono offline o se il cluster corrispondente non è raggiungibile. I carichi di lavoro non disponibili sono contrassegnati in rosso.
+
+
+* *Non assegnato*: i carichi di lavoro di archiviazione a cui non è stato assegnato un Performance Service Level sono riportati come "`unassigned`". Il numero è indicato dall'icona delle informazioni.
+
+
+Il numero totale di carichi di lavoro è la somma dei carichi di lavoro assegnati e non assegnati.
+
+Puoi fare clic sul numero totale di carichi di lavoro visualizzati in questa sezione e visualizzarli nella pagina Workloads.
+
+La sottosezione Conformità per livelli di servizio delle prestazioni visualizza il numero totale di carichi di lavoro dello storage disponibili:
+
+* Conforme a ogni tipo di livello di servizio delle prestazioni
+* Per i quali esiste una discrepanza tra i Performance Service Levels assegnati e quelli consigliati
+
+
+
+
+[[data-center-overview-section]]
+== Sezione panoramica del data center
+
+La sezione Panoramica del data center rappresenta graficamente la capacità disponibile e utilizzata, nonché gli IOPS per tutti i cluster del data center. Con questi dati, puoi gestire la capacità e gli IOPS dei carichi di lavoro di storage. La sezione visualizza inoltre le seguenti informazioni relative ai carichi di lavoro di storage su tutti i cluster:
+
+* La capacità totale, disponibile e utilizzata di tutti i cluster nel tuo data center
+* Il totale, gli IOPS disponibili e gli IOPS utilizzati per tutti i cluster del tuo data center
+* La capacità disponibile e quella utilizzata in base a ciascun livello di servizio delle prestazioni
+* IOPS disponibili e utilizzati in base a ciascun livello di servizio delle prestazioni
+* Lo spazio totale e gli IOPS utilizzati dai carichi di lavoro a cui non è assegnato alcun livello di servizio delle prestazioni
+
+
+*Come calcolare la capacità e le prestazioni del data center in base ai Performance Service Levels*
+
+La capacità utilizzata e gli IOPS sono calcolati in base alla capacità totale utilizzata e alle prestazioni di tutti i carichi di lavoro dello storage nei cluster.
+
+Il numero di IOPS disponibili viene calcolato in base alla latenza prevista e ai livelli di servizio delle prestazioni consigliati sui nodi. Include gli IOPS disponibili per tutti i livelli di servizio delle prestazioni la cui latenza prevista è inferiore o uguale alla propria latenza prevista.
+
+La capacità disponibile viene calcolata in base alla latenza prevista e ai Performance Service Levels consigliati sugli aggregati. Include la capacità disponibile per tutti i Performance Service Levels la cui latenza prevista è inferiore o uguale alla rispettiva latenza prevista.

@@ -1,0 +1,49 @@
+---
+permalink: performance-checker/concept_roles_of_workloads_involved_in_performance_incident.html 
+sidebar: sidebar 
+keywords: roles, workloads, involved, performance, event 
+summary: 'Unified Manager utilizza i ruoli per identificare il coinvolgimento di un carico di lavoro in un evento di prestazioni. I ruoli includono vittime, bulli e squali. Un carico di lavoro definito dall"utente può essere contemporaneamente vittima, bullo e squalo.' 
+---
+= Identifica i ruoli del carico di lavoro negli eventi di performance in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager utilizza i ruoli per identificare il coinvolgimento di un carico di lavoro in un evento di prestazioni. I ruoli includono vittime, bulli e squali. Un carico di lavoro definito dall'utente può essere contemporaneamente vittima, bullo e squalo.
+
+|===
+| Ruolo | Descrizione 
+
+
+ a| 
+Vittima
+ a| 
+Un carico di lavoro definito dall'utente le cui prestazioni sono diminuite a causa di altri carichi di lavoro, chiamati "bulli", che stanno utilizzando eccessivamente un componente del cluster. Solo i carichi di lavoro definiti dall'utente vengono identificati come vittime. Unified Manager identifica i carichi di lavoro vittime in base alla deviazione della loro latenza, per cui la latenza effettiva durante un evento è aumentata notevolmente rispetto alla latenza prevista (intervallo previsto).
+
+
+
+ a| 
+Bullo
+ a| 
+Un carico di lavoro definito dall'utente o dal sistema il cui eccessivo utilizzo di un componente del cluster ha causato un calo delle prestazioni di altri carichi di lavoro, chiamati "vittime". Unified Manager identifica i carichi di lavoro "bulli" in base alla deviazione nell'utilizzo di un componente del cluster, in cui l'utilizzo effettivo, durante un evento, è aumentato notevolmente rispetto all'intervallo di utilizzo previsto.
+
+
+
+ a| 
+Squalo
+ a| 
+Un carico di lavoro definito dall'utente con l'utilizzo più elevato di un componente del cluster rispetto a tutti i carichi di lavoro coinvolti in un evento. Unified Manager identifica i carichi di lavoro shark in base al loro utilizzo di un componente del cluster durante un evento.
+
+|===
+I carichi di lavoro su un cluster possono condividere molti dei componenti del cluster, come gli aggregati e la CPU per la rete e l'elaborazione dei dati. Quando un carico di lavoro, come un volume, aumenta l'utilizzo di un componente del cluster al punto che il componente non riesce più a soddisfare in modo efficiente le richieste del carico di lavoro, il componente è in contesa. Il carico di lavoro che usa eccessivamente un componente del cluster è un prepotente. Gli altri carichi di lavoro che condividono tali componenti e le cui prestazioni sono influenzate dal prepotente sono le vittime. Anche l'attività dei carichi di lavoro definiti dal sistema, come la deduplicazione o le copie Snapshot, può degenerare in "`prepotenza`".
+
+Quando Unified Manager rileva un evento, identifica tutti i carichi di lavoro e i componenti del cluster coinvolti, inclusi i carichi di lavoro aggressivi che hanno causato l'evento, il componente del cluster oggetto di contesa e i carichi di lavoro vittime, le cui prestazioni sono diminuite a causa dell'aumento dell'attività dei carichi di lavoro aggressivi.
+
+[NOTE]
+====
+Se Unified Manager non riesce a identificare i carichi di lavoro aggressivi, invia avvisi solo sui carichi di lavoro vittime e sul componente del cluster coinvolto.
+
+====
+Unified Manager può identificare i workload che sono vittime di workload aggressori e anche identificare quando quegli stessi workload diventano workload aggressori. Un workload può essere aggressore di se stesso. Ad esempio, un workload a prestazioni elevate limitato da un limite del gruppo di policy fa sì che tutti i workload nel gruppo di policy vengano limitati, incluso se stesso. Un workload che è aggressore o vittima in un evento di performance in corso potrebbe cambiare ruolo o non partecipare più all'evento.

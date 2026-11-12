@@ -1,0 +1,108 @@
+---
+permalink: storage-mgmt/task_monitor_metrocluster_configurations.html 
+sidebar: sidebar 
+keywords: monitor, metrocluster, configurations 
+summary: 'Puoi monitorare i problemi di connettività nella configurazione MetroCluster. I dettagli includono lo stato dei componenti e della connettività all"interno di un cluster, nonché lo stato della connettività tra i cluster nella configurazione MetroCluster.' 
+---
+= Monitora le configurazioni MetroCluster in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi monitorare i problemi di connettività nella configurazione MetroCluster. I dettagli includono lo stato dei componenti e della connettività all'interno di un cluster, nonché lo stato della connettività tra i cluster nella configurazione MetroCluster. Qui scoprirai come monitorare i problemi di connettività nei cluster protetti dalle configurazioni MetroCluster over FC e MetroCluster over IP.
+
+Puoi monitorare le configurazioni MetroCluster dalle seguenti viste nel riquadro di navigazione sinistro di Active IQ Unified Manager:
+
+* *Storage* > *Cluster* > *Protezione: MetroCluster* vista
+* *Protezione* > *Relazioni* > *Relazione: MetroCluster* vista
+
+
+Unified Manager utilizza avvisi sullo stato di salute del sistema per indicare lo stato dei componenti e la connettività nella configurazione MetroCluster.
+
+.Prima di iniziare
+* Sia i cluster locali che quelli remoti in una configurazione MetroCluster devono essere aggiunti ad Active IQ Unified Manager.
+* In una configurazione MetroCluster su IP, se vuoi supportare un Mediator, devi configurarlo e aggiungerlo al cluster tramite l'API corrispondente.
+* Devi disporre del ruolo di Operatore, Amministratore di applicazioni o Amministratore di archiviazione.
+
+
+
+
+[[monitor-connectivity-issues-in-metrocluster-over-fc-configuration]]
+== Monitora i problemi di connettività nella configurazione MetroCluster over FC
+
+Per i cluster in una configurazione MetroCluster over FC, i grafici di connettività sono visualizzati nella pagina dei dettagli *Cluster / Health*. Segui questi passaggi.
+
+.Passaggi
+. Nel riquadro di navigazione a sinistra, fai clic su *Archiviazione* > *Cluster*.
++
+Vedi un elenco di tutti i cluster monitorati.
+
+. Dalla vista *Protezione: MetroCluster*, fai clic sul nome del cluster per cui vuoi visualizzare i dettagli della configurazione MetroCluster over FC. In alternativa, puoi filtrare in base ai cluster in una configurazione MetroCluster.
+. Nella pagina dei dettagli *Cluster / Health*, fai clic sulla scheda *MetroCluster Connectivity*. La scheda *MetroCluster Connectivity* è disponibile solo per le configurazioni MetroCluster over FC.
++
+image::../media/opm_um_mcc_connectivity_tab_png.gif[Scheda Connettività di Unified Manager MetroCluster]
+
++
+La topologia della configurazione MetroCluster viene visualizzata nell'area dell'oggetto cluster corrispondente. Puoi utilizzare le informazioni visualizzate nella pagina Cluster / Health details per risolvere eventuali problemi di connettività. Ad esempio, se la connettività tra il nodo e lo switch in un cluster è interrotta, viene visualizzata la seguente icona:
+
+
+
+image::../media/node_switch_connectivity.gif[icona di connettività dello switch del nodo]
+
+Se sposti il puntatore sull'icona, puoi visualizzare informazioni dettagliate sull'evento generato.
+
+Se riscontri problemi di connettività nella tua configurazione MetroCluster, devi accedere a System Manager o utilizzare ONTAP CLI per risolverli.
+
+Per ulteriori informazioni su come determinare lo stato di salute del cluster, vedere link:../health-checker/task_check_health_of_clusters_in_metrocluster_configuration.html#determine-cluster-health-in-metrocluster-over-fc-configuration["Determina lo stato di salute del cluster nella configurazione MetroCluster su FC"].
+
+
+
+[[monitor-connectivity-issues-in-metrocluster-over-ip-configuration]]
+== Monitora i problemi di connettività nella configurazione MetroCluster over IP
+
+Per i cluster in una configurazione MetroCluster over IP, i diagrammi di connettività vengono visualizzati nella pagina *Clusters*. Segui questi passaggi.
+
+.Passaggi
+. Nel riquadro di navigazione a sinistra, fai clic su *Archiviazione* > *Cluster*.
++
+Vedi un elenco di tutti i cluster monitorati.
+
+. Dalla vista *Protezione: MetroClusters*, fai clic sul nome del cluster per cui vuoi visualizzare i dettagli della configurazione di MetroCluster over IP. In alternativa, puoi filtrare i cluster in una configurazione MetroCluster.
+. Espandi la riga facendo clic sull'icona `v` a forma di freccia. L'icona a forma di freccia viene visualizzata solo per un cluster protetto da MetroCluster over IP.
++
+Puoi visualizzare la topologia dei siti di origine e di mirroring, nonché il Mediator, se presente, utilizzato per la connessione. Puoi visualizzare le seguenti informazioni:
+
++
+** Connettività tra i siti
+** Eventuali problemi di stato e disponibilità su entrambi i siti
+** Problemi relativi a Mediator
+** Problemi relativi alla replica.
++
+
+NOTE: Sono riportati i seguenti stati: Critico (image:sev_critical_um60.png[""]), Errore (image:sev_error_um60.png[""]) o Normale (image:sev_normal_um60.png[""]). Puoi anche visualizzare nella stessa topologia lo stato aggregato della replica dei dati primari e dei dati mirrorati.
+
++
+Nel diagramma seguente, puoi vedere che la connettività tra i cluster di origine e di destinazione non è disponibile e che il Mediator tra di essi non è configurato.
+
++
+image:mcc-ip-conn-status.png["Uno screenshot che mostra la topologia dei siti source e mirror, nonché del Mediator."]
+
+
+
+. Fai clic sull'icona di stato. Viene visualizzato un messaggio con la definizione dell'errore. Se è stato generato un evento per il problema nella tua configurazione MetroCluster over IP, puoi fare clic sul pulsante *View Event* nel messaggio e visualizzare i dettagli dell'evento. Quando hai risolto il problema e l'evento, l'icona di stato in questa topologia torna normale (image:sev_normal_um60.png[""]).
+. Puoi visualizzare ulteriori dettagli di configurazione nelle sezioni *MetroCluster Panoramica* e *Protezione* nella scheda *Configurazione* della pagina dei dettagli *Cluster / Integrità*.
+
+
+
+NOTE: Solo per una configurazione MetroCluster su IP, puoi visualizzare la topologia del cluster nella pagina *Clusters*. Per i cluster in una configurazione MetroCluster su FC, la topologia viene visualizzata nella scheda *MetroCluster Connectivity* nella pagina dei dettagli *Cluster / Health*.
+
+*Informazioni correlate*
+
+* link:../health-checker/reference_health_cluster_details_page.html["Pagina dei dettagli del cluster / dello stato di salute"]
+* Per informazioni sulla vista *Relazione:MetroCluster*, vedi link:../storage-mgmt/task_monitor_metrocluster_configurations.html["Monitora le configurazioni MetroCluster"].
+* Per informazioni sulla vista *Relazione: Stato del trasferimento dell'ultimo mese*, consulta link:../data-protection/reference_relationship_last_1_month_transfer_status_view.html["Relazione: Visualizzazione dello stato dei trasferimenti dell'ultimo mese"].
+* Per informazioni sulla vista *Relazione: Tasso di trasferimento dell'ultimo mese*, consulta link:../data-protection/reference_relationship_last_1_month_transfer_rate_view.html["Relazione: Visualizzazione della velocità di trasferimento dell'ultimo mese"].
+* Per informazioni sulla vista *Relazione: Tutte le relazioni*, consulta link:../data-protection/reference_relationship_all_relationships_view.html["Relazione: visualizzazione Tutte le relazioni"].
+

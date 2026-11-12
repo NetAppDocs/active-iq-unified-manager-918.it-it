@@ -1,0 +1,27 @@
+---
+permalink: performance-checker/task_identify_bully_workloads_involved_in_performance_event.html 
+sidebar: sidebar 
+keywords: identify, bully workloads, dynamic, performance, event 
+summary: 'In Unified Manager, puoi identificare quali carichi di lavoro presentano la maggiore deviazione di utilizzo per un componente del cluster in contesa. Identificare questi carichi di lavoro ti aiuta a capire perché alcuni volumi sul cluster hanno tempi di risposta lenti (latenza).' 
+---
+= Identifica i carichi di lavoro problematici negli eventi di performance dinamica in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+In Unified Manager, puoi identificare quali carichi di lavoro presentano la maggiore deviazione di utilizzo per un componente del cluster in contesa. Identificare questi carichi di lavoro ti aiuta a capire perché alcuni volumi sul cluster hanno tempi di risposta lenti (latenza).
+
+.Prima di iniziare
+* Devi disporre del ruolo di Operatore, Amministratore di applicazioni o Amministratore di archiviazione.
+* Devono esserci eventi di performance dinamica nuovi, riconosciuti o obsoleti.
+
+
+La pagina Dettagli evento visualizza un elenco dei carichi di lavoro definiti dall'utente e dal sistema, classificati in base al maggiore utilizzo del componente o a quelli maggiormente interessati dall'evento. I valori si basano sui picchi che Unified Manager ha identificato quando ha rilevato e analizzato per l'ultima volta l'evento.
+
+.Passaggi
+. Visualizza la pagina dei dettagli dell'evento per consultare le informazioni relative all'evento.
+. Nei grafici Latenza del carico di lavoro e Attività del carico di lavoro, seleziona *Bully Workloads*.
+. Passa il cursore sui grafici per visualizzare i principali carichi di lavoro "bulli" definiti dall'utente che influiscono sul componente.
+

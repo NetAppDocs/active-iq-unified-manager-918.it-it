@@ -1,0 +1,28 @@
+---
+permalink: performance-checker/concept_view_node_and_aggregate_performance_capacity_used_values.html 
+sidebar: sidebar 
+keywords: view, node, aggregate, performance, capacity, used, values 
+summary: Puoi monitorare i valori della capacità prestazionale utilizzata per tutti i nodi o per tutti gli aggregati in un cluster, oppure visualizzare i dettagli di un singolo nodo o aggregato. 
+---
+= Visualizza i valori di capacità di prestazione utilizzata del nodo e dell'aggregato in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi monitorare i valori della capacità prestazionale utilizzata per tutti i nodi o per tutti gli aggregati in un cluster, oppure visualizzare i dettagli di un singolo nodo o aggregato.
+
+I valori di Performance Capacity Used vengono visualizzati nella Dashboard, nelle pagine Performance Inventory, nella pagina Top Performers, nella pagina Create Threshold Policy, nelle pagine Performance Explorer e nei grafici di dettaglio. Ad esempio, la pagina Performance: All Aggregates fornisce una colonna Performance Capacity Used per visualizzare il valore di Performance Capacity Used per tutti gli aggregati.
+
+image::../media/node_inventory_used_headroom.gif[Uno screenshot dell'interfaccia utente della pagina Prestazioni: Tutti gli aggregati]
+
+Monitorare il contatore della capacità prestazionale utilizzata ti consente di identificare quanto segue:
+
+* Se alcuni nodi o aggregati di qualsiasi cluster hanno un valore elevato di utilizzo della capacità prestazionale
+* Se eventuali nodi o aggregati su qualsiasi cluster presentano eventi attivi di capacità prestazionale utilizzata
+* I nodi e gli aggregati con il valore più alto e più basso di capacità delle prestazioni utilizzata in un cluster
+* Valori dei contatori di latenza e utilizzo in combinazione con nodi o aggregati con valori elevati di capacità prestazionale utilizzata
+* In che modo cambiano i valori di capacità prestazionale utilizzati per i nodi in una coppia HA se uno dei nodi si guasta
+* I volumi e i LUN più utilizzati su un aggregato con un valore elevato di capacità prestazionale utilizzata
+

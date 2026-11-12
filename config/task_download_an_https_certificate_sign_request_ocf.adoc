@@ -1,0 +1,25 @@
+---
+permalink: config/task_download_an_https_certificate_sign_request_ocf.html 
+sidebar: sidebar 
+keywords: download, https, certificate, signing, request 
+summary: 'Puoi scaricare una richiesta di firma del certificato per il certificato di sicurezza HTTPS corrente, così da poter fornire il file a una Certificate Authority (CA) per la firma. Un certificato firmato da una CA contribuisce a prevenire gli attacchi man-in-the-middle e offre una protezione di sicurezza migliore rispetto a un certificato autofirmato.' 
+---
+= Scarica una richiesta di firma del certificato HTTPS in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi scaricare una richiesta di firma del certificato per il certificato di sicurezza HTTPS corrente, così da poter fornire il file a una Certificate Authority (CA) per la firma. Un certificato firmato da una CA contribuisce a prevenire gli attacchi man-in-the-middle e offre una protezione di sicurezza migliore rispetto a un certificato autofirmato.
+
+.Prima di iniziare
+Devi avere il ruolo di Amministratore dell'applicazione.
+
+.Passaggi
+. Nel riquadro di navigazione a sinistra, fai clic su *Generale* > *Certificato HTTPS*.
+. Fai clic su *Scarica la richiesta di firma del certificato HTTPS*.
+. Salva il `<hostname>.csr` file.
+
+
+Puoi fornire il file a un'autorità di certificazione per la firma e quindi installare il certificato firmato.

@@ -1,0 +1,23 @@
+---
+permalink: reporting/task_customize_columns.html 
+sidebar: sidebar 
+keywords: customize, columns 
+summary: 'Utilizza la funzione Mostra/Nascondi per selezionare le colonne da includere nel report. Trascina le colonne nella pagina dell"inventario per riorganizzarle.' 
+---
+= Personalizza le colonne in un report in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Usa *Mostra/Nascondi* per scegliere le colonne che vuoi usare nel report. Trascina le colonne nella pagina dell'inventario per riorganizzarle.
+
+.Passaggi
+. Fai clic su *Mostra/Nascondi* per aggiungere o rimuovere colonne.
++
+image::../media/show_hide_3.png[Uno screenshot che mostra come aggiungere o rimuovere colonne.]
+
+. Nella pagina dell'inventario, trascina le colonne per riorganizzarle nell'ordine desiderato per il tuo report.
+. Assegna un nome alla vista non salvata per salvare le modifiche.
+

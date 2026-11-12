@@ -1,0 +1,25 @@
+---
+permalink: performance-checker/concept_manage_performance_using_perf_capacity_available_iops.html 
+sidebar: sidebar 
+keywords: managing, performance, performance, capacity, available, iops, information 
+summary: La capacità prestazionale indica quanto throughput puoi ottenere da una risorsa senza superare le prestazioni utili di tale risorsa. Se la visualizzi utilizzando i contatori delle prestazioni esistenti, la capacità prestazionale rappresenta il punto in cui ottieni il massimo utilizzo da un nodo o da un aggregato prima che la latenza diventi un problema. 
+---
+= Gestisci la capacità prestazionale e gli IOPS disponibili in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+_La capacità prestazionale_ indica quanto throughput puoi ottenere da una risorsa senza superare le prestazioni utili di tale risorsa. Se visualizzata utilizzando i contatori delle prestazioni esistenti, la capacità prestazionale è il punto in cui ottieni il massimo utilizzo da un nodo o da un aggregato prima che la latenza diventi un problema.
+
+Unified Manager raccoglie le statistiche sulla capacità delle performance dai nodi e dagli aggregati in ogni cluster. _Capacità delle performance utilizzata_ è la percentuale di capacità delle performance attualmente in uso, mentre _capacità delle performance libera_ è la percentuale di capacità delle performance ancora disponibile.
+
+Mentre la capacità di performance libera indica la percentuale della risorsa ancora disponibile, gli IOPS disponibili indicano il numero di IOPS che possono essere aggiunti alla risorsa prima di raggiungere la capacità di performance massima. Utilizzando questa metrica, puoi essere certo di poter aggiungere a una risorsa carichi di lavoro con un numero predeterminato di IOPS.
+
+Il monitoraggio delle informazioni sulla capacità prestazionale offre i seguenti vantaggi:
+
+* Aiuta con il provisioning e il bilanciamento del flusso di lavoro.
+* Ti aiuta a evitare il sovraccarico di un nodo o lo sfruttamento eccessivo delle sue risorse, riducendo così la necessità di risolvere i problemi.
+* Ti aiuta a determinare con maggiore precisione dove potrebbero essere necessarie ulteriori apparecchiature di storage.
+

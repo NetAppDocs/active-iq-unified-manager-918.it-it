@@ -1,0 +1,16 @@
+---
+permalink: config/concept_overview_of_configuration_sequence.html 
+sidebar: sidebar 
+keywords: overview, configuration, sequence 
+summary: Il flusso di configurazione descrive le attività che devi eseguire prima di poter utilizzare Unified Manager. 
+---
+= Scopri la sequenza di configurazione in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Il flusso di configurazione descrive le attività che devi eseguire prima di poter utilizzare Unified Manager.
+
+image::../media/post_install_flow.png[Un diagramma che mostra il workflow di configurazione iniziale di Unified Manager e le attività di impostazione amministrativa]

@@ -1,0 +1,49 @@
+---
+permalink: health-checker/concept_configure_destination_and_schedule_for_database_dump_backups.html 
+sidebar: sidebar 
+keywords: configure, destination, schedule, database dump, backups, snapshot copy, copies 
+summary: Puoi configurare le impostazioni di backup del dump del database di Unified Manager per impostare il percorso di backup del database, il numero di conservazioni e la pianificazione del backup. Puoi abilitare backup pianificati giornalieri o settimanali. Per impostazione predefinita, i backup pianificati sono disabilitati, ma dovresti impostare una pianificazione del backup. 
+---
+= Configura le impostazioni di backup del dump del database in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi configurare le impostazioni di backup del dump del database di Unified Manager per impostare il percorso di backup del database, il numero di conservazioni e la pianificazione del backup. Puoi abilitare backup pianificati giornalieri o settimanali. Per impostazione predefinita, i backup pianificati sono disabilitati, ma dovresti impostare una pianificazione del backup.
+
+.Prima di iniziare
+* Devi disporre del ruolo di Operatore, Amministratore di applicazioni o Amministratore di archiviazione.
+* Devi disporre di almeno 150 GB di spazio disponibile nella posizione che definisci come percorso di backup.
++
+Si consiglia di utilizzare una posizione remota esterna al sistema host di Unified Manager.
+
+* Quando installi Unified Manager su un sistema Linux e usi il backup MySQL, assicurati che sulla directory di backup siano impostate le seguenti autorizzazioni e proprietà.
++
+Permessi: 0750, Proprietà: jboss:maintenance
+
+* Quando Unified Manager è installato su un sistema Windows e utilizzi il backup MySQL, assicurati che solo l'amministratore abbia accesso alla directory di backup.
+
+
+Il primo backup richiede più tempo rispetto ai successivi, perché si tratta di un backup completo. Un backup completo può superare 1 GB e richiedere dalle tre alle quattro ore. I backup successivi sono incrementali e richiedono meno tempo.
+
+[NOTE]
+====
+* Se ritieni che il numero di file di backup incrementali sia troppo elevato rispetto allo spazio che hai allocato per i backup, puoi eseguire periodicamente un backup completo per sostituire il vecchio backup e i relativi file incrementali. In alternativa, puoi eseguire un backup utilizzando copie Snapshot.
+* I backup eseguiti durante i primi 15 giorni dall'aggiunta di un nuovo cluster potrebbero non essere sufficientemente accurati per ottenere i dati storici sulle prestazioni.
+
+
+====
+.Passaggi
+. Nel riquadro di navigazione a sinistra, fai clic su *Generale* > *Backup del database*.
+. Nella pagina *Backup del database*, fai clic su *Impostazioni di backup*.
+. Configura i valori appropriati per il percorso di backup, il numero di copie conservate e la pianificazione.
++
+Il valore predefinito per il numero di backup conservati è 10; puoi usare 0 per creare backup illimitati.
+
+. Seleziona il pulsante *Programmato giornalmente* o *Programmato settimanalmente*, quindi specifica i dettagli della programmazione.
+. Fai clic su *Applica*.
+
+
+I file di backup del database vengono creati in base alla pianificazione. Puoi visualizzare i file di backup disponibili nella pagina Backup del database.

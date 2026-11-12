@@ -1,0 +1,36 @@
+---
+permalink: performance-checker/concept_move_logical_interfaces.html 
+sidebar: sidebar 
+keywords: move, logical, interfaces, lifs 
+summary: 'Spostare le interfacce logiche (LIF) su una porta meno congestionata può contribuire a migliorare il bilanciamento del carico, agevolare le operazioni di manutenzione e l"ottimizzazione delle prestazioni, nonché a ridurre gli accessi indiretti.' 
+---
+= Sposta i LIF per migliorare le prestazioni in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Spostare le interfacce logiche (LIF) su una porta meno congestionata può contribuire a migliorare il bilanciamento del carico, agevolare le operazioni di manutenzione e l'ottimizzazione delle prestazioni, nonché a ridurre gli accessi indiretti.
+
+L'accesso indiretto può ridurre l'efficienza del sistema. Si verifica quando un carico di lavoro del volume utilizza nodi diversi per l'elaborazione di rete e l'elaborazione dei dati. Per ridurre l'accesso indiretto, puoi riorganizzare le LIF, ovvero spostarle in modo che utilizzino lo stesso nodo sia per l'elaborazione di rete che per l'elaborazione dei dati. Puoi configurare il bilanciamento del carico in modo che ONTAP sposti automaticamente le LIF occupate su una porta diversa, oppure puoi spostare una LIF manualmente.
+
+[cols="2*"]
+|===
+| *Vantaggi* | *Considerazioni* 
+
+
+ a| 
+* Migliora il bilanciamento del carico.
+* Riduci l'accesso indiretto.
+
+ a| 
+[NOTE]
+====
+Quando sposti una LIF connessa a condivisioni CIFS, i client che accedono alle condivisioni CIFS vengono disconnessi. Qualsiasi richiesta di lettura o scrittura alle condivisioni CIFS viene interrotta.
+
+====
+|===
+Usa i comandi ONTAP per configurare il bilanciamento del carico. Per ulteriori informazioni, consulta la documentazione di rete di ONTAP.
+
+Usi ONTAP System Manager e i comandi CLI di ONTAP per spostare manualmente i LIF.

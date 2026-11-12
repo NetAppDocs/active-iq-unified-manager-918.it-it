@@ -1,0 +1,29 @@
+---
+permalink: data-protection/task_monitor_jobs.html 
+sidebar: sidebar 
+keywords: monitor, jobs 
+summary: 'Puoi usare la pagina Lavori per monitorare lo stato dei processi e visualizzarne le proprietà, come il tipo di servizio di storage, lo stato, l"ora di invio e l"ora di completamento, per determinare se un processo è stato completato correttamente.' 
+---
+= Monitora i processi in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi usare la pagina Lavori per monitorare lo stato dei processi e visualizzarne le proprietà, come il tipo di servizio di storage, lo stato, l'ora di invio e l'ora di completamento, per determinare se un processo è stato completato correttamente.
+
+.Prima di iniziare
+Devi disporre del ruolo di Amministratore dell'applicazione o di Amministratore dello storage.
+
+.Passaggi
+. Nel riquadro di navigazione a sinistra, fai clic su *Protezione* > *Lavori*.
++
+Viene visualizzata la pagina Jobs.
+
+. Consulta la colonna *Stato* per determinare lo stato dei job attualmente in esecuzione.
+. Fai clic sul nome di un job per visualizzare i dettagli di quel particolare job.
++
+Viene visualizzata la pagina dei dettagli del job.
+
+

@@ -1,0 +1,14 @@
+---
+permalink: performance-checker/concept_monitor_cluster_performance_from_cluster_landing_page.html 
+sidebar: sidebar 
+keywords: monitor, cluster, performance, performance, cluster, landing, page 
+summary: 'La pagina di destinazione del cluster Performance visualizza lo stato delle prestazioni high-level di un cluster selezionato monitorato da un"istanza di Unified Manager. Questa pagina ti consente di valutare le prestazioni complessive di un cluster specifico e di annotare, individuare o assegnare rapidamente per la risoluzione eventuali eventi specifici del cluster identificati.' 
+---
+= Monitora le prestazioni del cluster dalla pagina iniziale Prestazioni del cluster in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La pagina di destinazione del cluster Performance visualizza lo stato delle prestazioni high-level di un cluster selezionato monitorato da un'istanza di Unified Manager. Questa pagina ti consente di valutare le prestazioni complessive di un cluster specifico e di annotare, individuare o assegnare rapidamente per la risoluzione eventuali eventi specifici del cluster identificati.

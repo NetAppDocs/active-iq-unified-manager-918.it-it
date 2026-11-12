@@ -1,0 +1,67 @@
+---
+permalink: events/reference_user_and_group_quota_events.html 
+sidebar: sidebar 
+keywords: user, group, quota, events, impact area, capacity 
+summary: 'Gli eventi relativi alle quote utente e di gruppo ti forniscono informazioni sulla capacità delle quote utente e dei gruppi di utenti, nonché sui limiti di file e disco, così puoi monitorare eventuali problemi. Gli eventi sono raggruppati per area di impatto e includono il nome dell"evento e della trap, il livello di impatto, il tipo di origine e la gravità.' 
+---
+= Scopri gli eventi relativi alle quote utente e di gruppo in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Gli eventi relativi alle quote utente e di gruppo ti forniscono informazioni sulla capacità delle quote utente e dei gruppi di utenti, nonché sui limiti di file e disco, così puoi monitorare eventuali problemi. Gli eventi sono raggruppati per area di impatto e includono il nome dell'evento e della trap, il livello di impatto, il tipo di origine e la gravità.
+
+
+
+[[impact-area-capacity]]
+== Area di impatto: capacità
+
+|===
+| Nome dell'evento (Nome della trap) | Livello di impatto | Tipo di origine | Gravità 
+
+
+ a| 
+Superamento del limite flessibile di spazio su disco della quota utente o di gruppo(ocumEvtUserOrGroupQuotaDiskSpaceSoftLimitBreached)
+ a| 
+Rischio
+ a| 
+quota utente o quota di gruppo
+ a| 
+Avvertimento
+
+
+
+ a| 
+Limite massimo di spazio su disco per la quota utente o di gruppo raggiunto(ocumEvtUserOrGroupQuotaDiskSpaceHardLimitReached)
+ a| 
+Incidente
+ a| 
+quota utente o quota di gruppo
+ a| 
+Critico
+
+
+
+ a| 
+Superato il limite soft del conteggio file per la quota utente o di gruppo(ocumEvtUserOrGroupQuotaFileCountSoftLimitBreached)
+ a| 
+Rischio
+ a| 
+quota utente o quota di gruppo
+ a| 
+Avvertimento
+
+
+
+ a| 
+Limite massimo del conteggio file per quota utente o di gruppo raggiunto(ocumEvtUserOrGroupQuotaFileCountHardLimitReached)
+ a| 
+Incidente
+ a| 
+quota utente o quota di gruppo
+ a| 
+Critico
+
+|===

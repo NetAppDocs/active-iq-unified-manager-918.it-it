@@ -1,0 +1,22 @@
+---
+permalink: performance-checker/concept_use_threshold_policy_with_node_failover_planning_page.html 
+sidebar: sidebar 
+keywords: threshold, policy, node, failover, planning page 
+summary: Puoi creare una policy di soglia per i nodi in modo da ricevere una notifica nella pagina Performance/Node Failover Planning quando un potenziale failover potrebbe degradare le prestazioni del nodo di takeover fino a un livello inaccettabile. 
+---
+= Crea criteri di soglia per la pianificazione del failover dei nodi in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi creare una policy di soglia per i nodi in modo da ricevere una notifica nella pagina Performance/Node Failover Planning quando un potenziale failover potrebbe degradare le prestazioni del nodo di takeover fino a un livello inaccettabile.
+
+La policy di soglia delle prestazioni definita dal sistema denominata "`Node HA pair over-utilized`" genera un evento di avviso se la soglia viene superata per sei periodi di raccolta consecutivi (30 minuti). La soglia si considera superata se la capacità delle prestazioni combinata utilizzata dai nodi in una coppia HA supera il 200%.
+
+L'evento della policy di soglia definita dal sistema ti avvisa che un failover farà aumentare la latenza del nodo di takeover fino a un livello inaccettabile. Quando visualizzi un evento generato da questa policy per un nodo specifico, puoi accedere alla pagina Prestazioni/Pianificazione failover nodo di quel nodo per visualizzare il valore di latenza previsto a seguito di un failover.
+
+Oltre a utilizzare questa policy di soglia definita dal sistema, puoi creare policy di soglia usando il contatore "`Performance Capacity Used - Takeover`" e poi applicare la policy ai nodi selezionati. Se specifichi una soglia inferiore al 200%, puoi ricevere un evento prima che venga superata la soglia della policy definita dal sistema. Puoi anche specificare un periodo di tempo minimo inferiore a 30 minuti durante il quale la soglia viene superata, se vuoi ricevere una notifica prima che venga generato l'evento della policy definita dal sistema.
+
+Ad esempio, puoi definire una policy di soglia per generare un evento di avviso se la capacità di prestazione combinata utilizzata dei nodi in una coppia HA supera il 175% per più di 10 minuti. Puoi applicare questa policy a Node1 e Node2, che formano una coppia HA. Dopo aver ricevuto una notifica di evento di avviso per Node1 o Node2, puoi visualizzare la pagina Prestazioni/Pianificazione failover nodo per quel nodo per valutare l'impatto stimato sulle prestazioni del nodo di takeover. Puoi intraprendere azioni correttive per evitare di sovraccaricare il nodo di takeover se si verifica un failover. Se intervieni quando la capacità di prestazione combinata utilizzata dei nodi è inferiore al 200%, la latenza del nodo di takeover non raggiunge un livello inaccettabile anche se si verifica un failover durante questo periodo.

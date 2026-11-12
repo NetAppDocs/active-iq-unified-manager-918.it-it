@@ -1,0 +1,33 @@
+---
+permalink: performance-checker/task_view_node_iops_based_on_workloads_on_local_node.html 
+sidebar: sidebar 
+keywords: view, node, iops, workloads, reside, only, local node 
+summary: 'Il grafico del contatore IOPS del nodo può evidenziare i casi in cui le operazioni passano solo attraverso il nodo locale utilizzando un LIF di rete per eseguire operazioni di lettura/scrittura su volumi in un nodo remoto. I grafici IOPS - "Total (Local)" e "Breakdown (Local)" mostrano gli IOPS per i dati che risiedono solo nei volumi locali sul nodo corrente.' 
+---
+= Visualizza gli IOPS dei nodi in base ai carichi di lavoro locali in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Il grafico del contatore IOPS del nodo può evidenziare i casi in cui le operazioni transitano solo attraverso il nodo locale utilizzando un LIF di rete per eseguire operazioni di lettura/scrittura su volumi in un nodo remoto. I grafici IOPS - "`Total (Local)`" e "`Breakdown (Local)`" mostrano gli IOPS per i dati che risiedono solo nei volumi locali del nodo corrente.
+
+Le versioni "`Local`" di questi grafici dei contatori sono simili ai grafici dei nodi per Performance Capacity e Utilization perché mostrano solo le statistiche dei dati che risiedono sui volumi locali.
+
+Confrontando le versioni "`Local`" di questi grafici dei contatori con le normali versioni Total di questi grafici dei contatori, puoi vedere se c'è molto traffico che passa attraverso il nodo locale per accedere ai volumi sul nodo remoto. Questa situazione potrebbe causare problemi di prestazioni, eventualmente indicati da un utilizzo elevato del nodo, se troppe operazioni passano attraverso il nodo locale per raggiungere un volume su un nodo remoto. In questi casi, potresti voler spostare un volume nel nodo locale o creare una LIF sul nodo remoto a cui possa connettersi il traffico degli host che accedono a quel volume.
+
+.Passaggi
+. Nella pagina *Performance/Node Explorer* per il nodo selezionato, dal grafico IOPS, seleziona *Total* dal menu a discesa.
++
+Vedi il grafico IOPS - Totale.
+
+. Fai clic su *Zoom View* per visualizzare una versione più grande del grafico in una nuova scheda del browser.
+. Tornando alla pagina *Performance/Node Explorer*, dal grafico IOPS, seleziona *Total (Local)* dal menu a discesa.
++
+Compare il grafico IOPS - Totale (Locale).
+
+. Fai clic su *Zoom View* per visualizzare una versione più grande del grafico in una nuova scheda del browser.
+. Visualizza entrambi i grafici uno accanto all'altro e individua le aree in cui i valori IOPS appaiono molto diversi.
+. Passa il cursore su queste aree per confrontare gli IOPS locali e totali per uno specifico momento nel tempo.
+

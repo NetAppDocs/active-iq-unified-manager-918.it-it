@@ -1,0 +1,26 @@
+---
+permalink: events/task_fix_issues_using_um_automatic_remediations.html 
+sidebar: sidebar 
+keywords: fix, issues, use, unified manager, automatic, remediations 
+summary: 'Esistono determinati eventi che Unified Manager può diagnosticare in modo approfondito e per i quali può fornire un"unica soluzione utilizzando il pulsante Fix It. Quando disponibili, queste soluzioni vengono visualizzate nella Dashboard, nella pagina dei dettagli dell"evento e nella selezione Analisi del carico di lavoro nel menu di navigazione a sinistra.' 
+---
+= Risolvi i problemi utilizzando la correzione automatica in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Esistono determinati eventi che Unified Manager può diagnosticare in modo approfondito e per i quali può fornire un'unica soluzione tramite il pulsante *Fix It*. Quando disponibili, queste soluzioni vengono visualizzate nella Dashboard, nella pagina dei dettagli dell'evento e nella sezione Analisi del carico di lavoro del menu di navigazione a sinistra.
+
+La maggior parte degli eventi presenta diverse possibili soluzioni, visualizzate nella pagina dei dettagli dell'evento, in modo da poter implementare la soluzione migliore utilizzando ONTAP System Manager o ONTAP CLI. L'azione *Fix It* è disponibile quando Unified Manager ha determinato che esiste un'unica soluzione per risolvere il problema e che questo può essere risolto utilizzando un comando ONTAP CLI.
+
+.Passaggi
+. Per visualizzare gli eventi che possono essere corretti dalla *Dashboard*, fai clic su *Dashboard*.
++
+image::../media/management_actions.png[Uno screenshot dell'interfaccia utente che mostra come visualizzare e correggere gli eventi dalla Dashboard.]
+
+. Per risolvere uno qualsiasi dei problemi che Unified Manager è in grado di correggere, fai clic sul pulsante *Correggi*. Per correggere un problema che interessa più oggetti, fai clic sul pulsante *Correggi tutto*.
+
+
+Per informazioni sui problemi che possono essere risolti tramite correzione automatica, consulta link:..//storage-mgmt/reference_what_ontap_issues_can_unified_manager_fix.html["Quali problemi può risolvere Unified Manager"].

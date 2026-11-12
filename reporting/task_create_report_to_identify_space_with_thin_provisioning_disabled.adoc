@@ -1,0 +1,38 @@
+---
+permalink: reporting/task_create_report_to_identify_space_with_thin_provisioning_disabled.html 
+sidebar: sidebar 
+keywords: volume, provision, disk, volume, thin-provisioning 
+summary: 'Quando un volume non è configurato con thin provisioning, occupa l"intero spazio su disco definito al momento della sua creazione. Identificare i volumi con thin provisioning disabilitato ti aiuta a decidere se vuoi abilitare il thin provisioning su determinati volumi.' 
+---
+= Identifica i volumi con thin provisioning disabilitato in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Quando un volume non è configurato con thin provisioning, occupa l'intero spazio su disco definito al momento della sua creazione. Identificare i volumi con thin provisioning disabilitato ti aiuta a decidere se vuoi abilitare il thin provisioning su determinati volumi.
+
+.Prima di iniziare
+* Devi disporre del ruolo di Amministratore dell'applicazione o di Amministratore dello storage.
+
+
+Segui i passaggi seguenti per creare una vista personalizzata che mostri le colonne richieste nell'ordine corretto, quindi pianifica la generazione di un report per tale vista.
+
+.Passaggi
+. Nel riquadro di navigazione a sinistra, fai clic su *Archiviazione* > *Volumi*.
+. Nel menu Visualizza, seleziona *Capacità* > *Tutti i volumi*.
+. Seleziona *Mostra/Nascondi* per rimuovere le colonne che non vuoi nel report.
+. Trascina e rilascia le colonne "`Used Data %`" e "`Thin Provisioned`" vicino alla colonna "`Available Data Capacity`".
+. Fai clic sull'icona del filtro, aggiungi il seguente filtro, *Thin provisioned* è *No* e poi fai clic su *Applica filtro*.
+. Fai clic sulla parte superiore della colonna "`Dati utilizzati %`" per ordinare i risultati in modo che i volumi con la percentuale più alta appaiano in cima all'elenco.
+. Salva la vista con un nome che ne rispecchi il contenuto, ad esempio "`Vols no thin provisioning`".
+. Nella pagina dell'inventario, fai clic sul pulsante *Report programmati*.
+. Fai clic su *Aggiungi pianificazione* per aggiungere una nuova riga alla pagina *Pianificazioni report* in modo da poter definire le caratteristiche della pianificazione per il nuovo report.
+. Inserisci un nome per la pianificazione del report e completa gli altri campi del report, quindi fai clic sul segno di spunta (image:../media/blue_check.gif[""]) alla fine della riga.
++
+Il report viene inviato immediatamente a scopo di test. Successivamente, il report viene generato e inviato via email ai destinatari indicati con la frequenza specificata.
+
+
+
+In base ai risultati riportati nel report, potresti voler abilitare thin provisioning su determinati volumi.

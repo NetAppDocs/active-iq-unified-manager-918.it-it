@@ -1,0 +1,41 @@
+---
+permalink: events/reference_description_of_event_severity_types.html 
+sidebar: sidebar 
+keywords: description, event, severity, types 
+summary: A ciascun evento è associato un tipo di severità per aiutarti a dare priorità agli eventi che richiedono un intervento correttivo immediato. 
+---
+= Scopri i tipi di gravità degli eventi in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A ciascun evento è associato un tipo di severità per aiutarti a dare priorità agli eventi che richiedono un intervento correttivo immediato.
+
+* *Critico*
++
+Si è verificato un problema che potrebbe causare un'interruzione del servizio se non si interviene immediatamente per risolverlo.
+
++
+Gli eventi critici relativi alle prestazioni vengono inviati solo da soglie definite dall'utente.
+
+* *Errore*
++
+L'origine dell'evento funziona ancora; tuttavia, è necessario intervenire per evitare interruzioni del servizio.
+
+* *Avvertimento*
++
+L'origine dell'evento ha registrato un'occorrenza di cui dovresti essere a conoscenza, oppure un contatore delle prestazioni per un oggetto cluster è fuori dall'intervallo normale e dovrebbe essere monitorato per assicurarti che non raggiunga il livello di severità critico. Gli eventi di questo livello di severità non causano interruzioni del servizio e potrebbero non richiedere un'azione correttiva immediata.
+
++
+Gli eventi di avviso sulle prestazioni vengono inviati in base a soglie definite dall'utente, dal sistema o dinamiche.
+
+* *Informazioni*
++
+L'evento si verifica quando viene rilevato un nuovo oggetto o quando viene eseguita un'azione da parte dell'utente. Ad esempio, quando viene eliminato un qualsiasi oggetto di storage o quando vengono apportate modifiche alla configurazione, viene generato l'evento con tipo di severità Information.
+
++
+ONTAP invia direttamente gli eventi informativi quando rileva una modifica della configurazione.
+
+

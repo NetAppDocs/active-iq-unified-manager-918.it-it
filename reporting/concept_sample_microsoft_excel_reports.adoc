@@ -1,0 +1,22 @@
+---
+permalink: reporting/concept_sample_microsoft_excel_reports.html 
+sidebar: sidebar 
+keywords: sample, microsoft, excel, reports 
+summary: Questi esempi di report di Microsoft Excel hanno lo scopo di illustrare le opzioni di reporting disponibili utilizzando le funzionalità avanzate di Excel. 
+---
+= Comprendi i report di esempio di Microsoft Excel in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Questi esempi di report di Microsoft Excel hanno lo scopo di illustrare le opzioni di reporting disponibili utilizzando le funzionalità avanzate di Excel.
+
+Le funzionalità avanzate di Excel ti consentono di creare un'ampia gamma di report specifici per le tue esigenze. Per informazioni complete su come usare Excel, consulta la documentazione del prodotto.
+
+[NOTE]
+====
+Devi avere il ruolo Application Administrator o Storage Administrator per gestire i report.
+
+====

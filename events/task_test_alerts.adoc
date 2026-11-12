@@ -1,0 +1,31 @@
+---
+permalink: events/task_test_alerts.html 
+sidebar: sidebar 
+keywords: test, alerts 
+summary: 'Puoi testare un avviso per verificare di averlo configurato correttamente. Quando viene attivato un evento, viene generato un avviso e viene inviata un"e-mail di notifica ai destinatari configurati. Puoi verificare se la notifica viene inviata e se lo script viene eseguito utilizzando l"avviso di prova.' 
+---
+= Verifica gli avvisi in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi testare un avviso per verificare di averlo configurato correttamente. Quando viene attivato un evento, viene generato un avviso e viene inviata un'e-mail di notifica ai destinatari configurati. Puoi verificare se la notifica viene inviata e se lo script viene eseguito utilizzando l'avviso di prova.
+
+.Prima di iniziare
+* Devi aver configurato le impostazioni di notifica, come l'indirizzo email dei destinatari, il server SMTP e le trap SNMP.
++
+Il server Unified Manager può utilizzare queste impostazioni per inviare notifiche agli utenti quando si genera un evento.
+
+* Devi aver assegnato uno script e averlo configurato per l'esecuzione quando viene generato l'avviso.
+* Devi avere il ruolo di Amministratore dell'applicazione.
+
+
+.Passaggi
+. Nel riquadro di navigazione a sinistra, fai clic su *Storage Management* > *Alert Setup*.
+. Nella pagina *Configurazione avvisi*, seleziona l'avviso che desideri testare e poi fai clic su *Test*.
++
+Un'e-mail di avviso di prova viene inviata agli indirizzi e-mail che hai specificato durante la creazione dell'avviso.
+
+

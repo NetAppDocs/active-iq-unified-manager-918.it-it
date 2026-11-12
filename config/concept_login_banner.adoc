@@ -1,0 +1,16 @@
+---
+permalink: config/concept_login_banner.html 
+sidebar: sidebar 
+keywords: login banner, feature settings 
+summary: 'Questa funzionalità consente alla tua organizzazione di visualizzare informazioni quali, ad esempio, chi è autorizzato ad accedere al sistema e i termini e le condizioni d"uso durante l"accesso e la disconnessione.' 
+---
+= Aggiungi un banner di accesso in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Aggiungendo un banner di accesso, la tua organizzazione può visualizzare informazioni come chi è autorizzato ad accedere al sistema e i termini e le condizioni d'uso durante l'accesso e il logout.
+
+Qualsiasi utente, come gli operatori dello storage o gli amministratori, può visualizzare questo banner popup di accesso durante il login, il logout e il timeout della sessione.

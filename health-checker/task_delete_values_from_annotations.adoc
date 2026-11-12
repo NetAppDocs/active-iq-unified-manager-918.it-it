@@ -1,0 +1,31 @@
+---
+permalink: health-checker/task_delete_values_from_annotations.html 
+sidebar: sidebar 
+keywords: delete, values, annotations 
+summary: 'Puoi eliminare i valori associati alle annotazioni personalizzate quando tali valori non sono più applicabili all"annotazione.' 
+---
+= Elimina i valori dalle annotazioni in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi eliminare i valori associati alle annotazioni personalizzate quando tali valori non sono più applicabili all'annotazione.
+
+.Prima di iniziare
+* Devi disporre del ruolo di Amministratore dell'applicazione o di Amministratore dello storage.
+* Il valore dell'annotazione non deve essere associato ad alcuna regola di annotazione o regola di gruppo.
+
+
+Non puoi eliminare i valori dalle annotazioni predefinite.
+
+.Passaggi
+. Nel riquadro di navigazione a sinistra, fai clic su *Gestione archiviazione* > *Annotazioni*.
+. Nell'elenco delle annotazioni nella scheda *Annotazioni*, seleziona l'annotazione da cui vuoi eliminare un valore.
+. Nella sezione *Valori* della scheda *Annotazioni*, seleziona il valore che vuoi eliminare, quindi fai clic su *Elimina*.
+. Nella finestra di dialogo *Avviso*, fai clic su *Sì*.
++
+Il valore viene eliminato e non compare più nell'elenco dei valori per l'annotazione selezionata.
+
+

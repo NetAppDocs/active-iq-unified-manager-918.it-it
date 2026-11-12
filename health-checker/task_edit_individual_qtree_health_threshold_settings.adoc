@@ -1,0 +1,31 @@
+---
+permalink: health-checker/task_edit_individual_qtree_health_threshold_settings.html 
+sidebar: sidebar 
+keywords: edit, individual, qtree, health, threshold, settings 
+summary: 'Puoi modificare le impostazioni della soglia di integrità per la capacità del qtree per uno o più qtree. Quando una soglia viene superata, vengono generati avvisi e ricevi notifiche. Queste notifiche ti aiutano ad adottare misure preventive in base all"evento generato.' 
+---
+= Modifica le impostazioni della soglia di salute dei singoli qtree in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi modificare le impostazioni della soglia di integrità per la capacità del qtree per uno o più qtree. Quando una soglia viene superata, vengono generati avvisi e ricevi notifiche. Queste notifiche ti aiutano ad adottare misure preventive in base all'evento generato.
+
+.Prima di iniziare
+Devi disporre del ruolo di Amministratore dell'applicazione o di Amministratore dello storage.
+
+In base alle modifiche dei valori di soglia, nel ciclo di monitoraggio successivo gli eventi vengono generati o contrassegnati come obsoleti.
+
+.Passaggi
+. Nel riquadro di navigazione a sinistra, fai clic su *Archiviazione* > *Qtrees*.
+. Nella vista *Capacità: tutti i qtree*, seleziona uno o più qtree e poi fai clic su *Modifica soglie*.
+. Nella finestra di dialogo *Edit Qtree Thresholds*, cambia le soglie di capacità per il qtree o i qtree selezionati e fai clic su *Save*.
++
+[NOTE]
+====
+Puoi anche impostare singole soglie dei qtree dalla scheda Qtrees nella pagina dei dettagli Storage VM / Health.
+
+====
+

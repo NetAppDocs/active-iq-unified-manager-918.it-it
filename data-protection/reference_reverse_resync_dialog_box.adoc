@@ -1,0 +1,67 @@
+---
+permalink: data-protection/reference_reverse_resync_dialog_box.html 
+sidebar: sidebar 
+keywords: reverse, resync, dialog box 
+summary: 'Quando hai una relazione di protezione che è interrotta perché il volume di origine è disabilitato e la destinazione è configurata come volume di lettura/scrittura, la risincronizzazione inversa ti consente di invertire la direzione della relazione in modo che la destinazione diventi la nuova origine e l"origine diventi la nuova destinazione.' 
+---
+= Risincronizzazione inversa in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Quando hai una relazione di protezione che è interrotta perché il volume di origine è disabilitato e la destinazione è configurata come volume di lettura/scrittura, la risincronizzazione inversa ti consente di invertire la direzione della relazione in modo che la destinazione diventi la nuova origine e l'origine diventi la nuova destinazione.
+
+Quando un evento disastroso disabilita il volume di origine nella relazione di protezione, puoi usare il volume di destinazione per servire i dati convertendolo in lettura/scrittura, mentre ripari o sostituisci l'origine, aggiorni l'origine e ristabilisci la relazione. Quando esegui un'operazione di risincronizzazione inversa, i dati sull'origine più recenti dei dati nella copia Snapshot comune vengono eliminati.
+
+
+
+[[before-reverse-resync]]
+== Prima della risincronizzazione inversa
+
+Visualizza l'origine e la destinazione di una relazione prima di un'operazione di risincronizzazione inversa.
+
+* *Volume di origine*
++
+Il nome e la posizione del volume sorgente prima di un'operazione di risincronizzazione inversa.
+
+* *Volume di destinazione*
++
+Il nome e la posizione del volume di destinazione prima di un'operazione di risincronizzazione inversa.
+
+
+
+
+
+[[after-reverse-resync]]
+== Dopo la risincronizzazione inversa
+
+Mostra l'origine e la destinazione di una relazione dopo un'operazione di risincronizzazione delle riserve.
+
+* *Volume di origine*
++
+Nome e posizione del volume sorgente dopo un'operazione di risincronizzazione inversa.
+
+* *Volume di destinazione*
++
+Nome e posizione del volume di destinazione dopo un'operazione di risincronizzazione inversa.
+
+
+
+
+
+[[command-buttons]]
+== Pulsanti di comando
+
+I pulsanti di comando consentono di eseguire le seguenti azioni:
+
+* *Invia*
++
+Avvia il processo di risincronizzazione inversa.
+
+* *Annulla*
++
+Chiude la finestra di dialogo Risincronizzazione inversa senza avviare un'operazione di risincronizzazione inversa.
+
+

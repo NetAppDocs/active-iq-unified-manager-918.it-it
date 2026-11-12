@@ -1,0 +1,99 @@
+---
+permalink: reporting/task_create_report_to_view_aggregate_capacity_charts.html 
+sidebar: sidebar 
+keywords: create, report, show, aggregate, total, available, capacity, charts 
+summary: Puoi creare un report per analizzare la capacità totale e la capacità impegnata dello storage in un formato di grafico Excel. 
+---
+= Visualizza i grafici della capacità totale aggregata rispetto alla capacità disponibile in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi creare un report per analizzare la capacità totale e la capacità impegnata dello storage in un formato di grafico Excel.
+
+.Prima di iniziare
+* Devi disporre del ruolo di Amministratore dell'applicazione o di Amministratore dello storage.
+
+
+Segui questi passaggi per aprire una vista Health: All Aggregates, scaricare la vista in Excel, creare un grafico della capacità totale e impegnata, caricare il file Excel personalizzato e pianificare il report finale.
+
+.Passaggi
+. Nel riquadro di navigazione a sinistra, fai clic su *Storage* > *Aggregates*.
+. Seleziona *Reports* > *Download Excel*.
++
+image::../media/download_excel_menu.png[Uno screenshot UI che mostra come scaricare excel dai report.]
+
++
+A seconda del browser che usi, potresti dover fare clic su *OK* per salvare il file.
+
+. In Excel, apri il file scaricato.
+. Se necessario, fai clic su *Abilita modifica*.
+. Nella scheda dati, fai clic con il pulsante destro del mouse sulla colonna Tipo e seleziona *Ordina* > *Ordina dalla A alla Z*.
++
+image::../media/sort_01.png[Una screenshot che mostra come selezionare l'ordinamento nella colonna Type.]
+
++
+In questo modo i tuoi dati saranno organizzati per tipo di storage, ad esempio:
+
++
+** HDD
+** Ibrido
+** SSD
+** SSD (FabricPool)
+
+
+. Seleziona le colonne  `Type, Total Data Capacity,` e  `Available Data Capacity`.
+. Nel menu *Inserisci*, seleziona un `3-D column` grafico.
++
+Il grafico compare sulla scheda tecnica.
+
++
+image::../media/3d_column_01.png[Una screenshot dell'interfaccia utente che mostra il grafico a colonne 3D.]
+
+. Fai clic con il pulsante destro del mouse sul grafico e seleziona *Sposta grafico*.
+. Seleziona *Nuovo foglio* e assegna al foglio il nome *Total Storage Charts*.
++
+[NOTE]
+====
+Assicurati che il nuovo foglio appaia dopo i fogli informativi e di dati.
+
+====
+. Assegna al grafico il titolo *Capacità totale rispetto alla capacità disponibile*.
+. Usando i menu *Progettazione* e *Formato*, disponibili quando selezioni il grafico, puoi personalizzarne l'aspetto.
+. Quando sei soddisfatto, salva il file con le modifiche apportate. Non modificare il nome o la posizione del file.
++
+image::../media/total_vs_available_capacity.png[Uno screenshot dell'interfaccia utente che mostra un grafico della capacità totale rispetto a quella disponibile.]
+
+. In Unified Manager, seleziona *Reports* > *Upload Excel*.
++
+[NOTE]
+====
+Assicurati di essere nella stessa visualizzazione da cui hai scaricato il file Excel.
+
+====
+. Seleziona il file Excel che hai modificato.
+. Fai clic su *Apri*.
+. Fai clic su *Submit*.
++
+Accanto alla voce di menu *Reports* > *Upload Excel* compare un segno di spunta.
+
++
+image::../media/upload_excel.png[Uno screenshot dell'interfaccia utente che mostra come caricare excel nei report.]
+
+. Fai clic su *Report programmati*.
+. Fai clic su *Aggiungi pianificazione* per aggiungere una nuova riga alla pagina *Pianificazioni report* in modo da poter definire le caratteristiche della pianificazione per il nuovo report.
++
+[NOTE]
+====
+Seleziona il formato *XLSX* per il report.
+
+====
+. Inserisci un nome per la pianificazione del report e completa gli altri campi del report, quindi fai clic sul segno di spunta (image:../media/blue_check.gif[""]) alla fine della riga.
++
+Il report viene inviato immediatamente a scopo di test. Successivamente, il report viene generato e inviato via email ai destinatari indicati con la frequenza specificata.
+
+
+
+In base ai risultati riportati nel report, potresti voler bilanciare il carico sugli aggregati.

@@ -1,0 +1,37 @@
+---
+permalink: data-protection/reference_relationship_last_1_month_transfer_rate_view.html 
+sidebar: sidebar 
+keywords: relationship, 1 month, transfer rate, view 
+summary: 'La vista "Tasso di trasferimento dell"ultimo mese" nella pagina "Relazione" mostra il volume giornaliero di trasferimento dei dati e il tempo di trasferimento per i volumi nelle relazioni asincrone.' 
+---
+= Visualizza la relazione: vista Tasso di trasferimento dell'ultimo mese in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La vista "Relationship: Last 1 month Transfer Rate" consente di analizzare la quantità di dati trasferiti giorno per giorno per i volumi nelle relazioni asincrone. Questa pagina fornisce anche dettagli sui trasferimenti giornalieri e sul tempo necessario per completare l'operazione di trasferimento per i volumi e le Storage VMs.
+
+I controlli nella parte superiore della pagina ti consentono di eseguire ricerche per individuare oggetti specifici, creare e applicare filtri per restringere l'elenco dei dati visualizzati, aggiungere/rimuovere/riordinare le colonne nella pagina ed esportare i dati della pagina in un file .csv, .pdf o .xlsx. Dopo aver personalizzato la pagina, puoi salvare i risultati come vista personalizzata e quindi pianificare la generazione e l'invio periodico tramite e-mail di un report di questi dati. Ad esempio, se vuoi visualizzare le relazioni dei volumi, puoi accedere al menu *Storage* > *Volumes* > *Relationship: Last 1 Month Transfer Rate* oppure al menu *Protection* > *Relationships* > *Relationships:Last 1 Month Transfer Rate* e usare *Filter* per visualizzare solo i dati dei volumi.
+
+* *Dimensione totale del trasferimento*
++
+Visualizza la dimensione totale del trasferimento del volume in gigabyte.
+
+* *Giorno*
++
+Visualizza il giorno in cui hai avviato il trasferimento del volume.
+
+* *Ora di fine*
++
+Visualizza l'ora di fine del trasferimento del volume con la data.
+
+
+
+*Informazioni correlate*
+
+* Per informazioni sulla vista *Relazione:MetroCluster*, consulta link:../storage-mgmt/task_monitor_metrocluster_configurations.html["Monitoraggio delle configurazioni MetroCluster"].
+* Per informazioni sulla vista *Relazione: Stato del trasferimento dell'ultimo mese*, consulta link:../data-protection/reference_relationship_last_1_month_transfer_status_view.html["Relazione: Visualizzazione dello stato dei trasferimenti dell'ultimo mese"].
+* Per informazioni sulla vista *Relazione: Tutte le relazioni*, vedi link:../data-protection/reference_relationship_last_1_month_transfer_rate_view.html["Relazione: Visualizzazione della velocità di trasferimento dell'ultimo mese"]
+

@@ -1,0 +1,44 @@
+---
+permalink: health-checker/task_perform_suggested_remedial_actions_for_full_volume.html 
+sidebar: sidebar 
+keywords: perform, suggested, remedial actions, volume 
+summary: 'Dopo aver ricevuto un evento di errore "Volume Space Full", esamini le azioni correttive suggerite nella pagina dei dettagli dell"evento e decidi di eseguirne una.' 
+---
+= Esegui le azioni correttive suggerite per un volume completo in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dopo aver ricevuto un evento di errore "`Volume Space Full`", esamini le azioni correttive suggerite nella pagina Dettagli evento e decidi di eseguirne una.
+
+.Prima di iniziare
+Devi disporre del ruolo di Amministratore dell'applicazione o di Amministratore dello storage.
+
+Un utente con qualsiasi ruolo può eseguire tutte le attività di questo flusso di lavoro che utilizzano Unified Manager.
+
+In questo esempio, hai visto un evento di errore "Volume Space Full" nella pagina dell'inventario di gestione Unified ManagerEvent e hai fatto clic sul nome dell'evento.
+
+Tra le possibili azioni correttive che potresti intraprendere per un volume completo figurano le seguenti:
+
+* Abilitazione della crescita automatica, della deduplicazione o della compressione sul volume
+* Ridimensionare o spostare il volume
+* Eliminazione o spostamento dei dati dal volume
+
+
+Sebbene tutte queste operazioni debbano essere eseguite da ONTAP System Manager o dalla ONTAP CLI, puoi usare Unified Manager per trovare le informazioni di cui potresti aver bisogno per determinare quali azioni intraprendere.
+
+.Passaggi
+. Dalla pagina dei dettagli di *Event*, fai clic sul nome del volume nel campo Origine per visualizzare i dettagli del volume interessato.
+. Nella pagina dei dettagli *Volume/Stato*, fai clic su *Configurazione* e vedi che la deduplicazione e la compressione sono già abilitate sul volume.
++
+Decidi di ridimensionare il volume.
+
+. Nel riquadro *Dispositivi correlati*, fai clic sul nome dell'aggregato che lo ospita per verificare se l'aggregato può contenere un volume più grande.
+. Nella pagina dei dettagli *Aggregate / Health*, vedi che l'aggregato che ospita il volume pieno dispone di capacità non impegnata sufficiente, quindi usi ONTAP System Manager per ridimensionare il volume e assegnargli più capacità.
+
+
+*Informazioni correlate*
+
+link:../events/reference_event_details_page.html["Pagina dei dettagli dell'evento"]

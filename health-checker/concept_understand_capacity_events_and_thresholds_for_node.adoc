@@ -1,0 +1,21 @@
+---
+permalink: health-checker/concept_understand_capacity_events_and_thresholds_for_node.html 
+sidebar: sidebar 
+keywords: understand, events, thresholds, node, root, aggregates 
+summary: 'Puoi monitorare l"aggregato root del nodo utilizzando Unified Manager. Come best practice, esegui il thick provisioning del volume root nell"aggregato root per evitare che il nodo si arresti.' 
+---
+= Comprendi gli eventi e le soglie per gli aggregati root dei nodi in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi monitorare l'aggregato root del nodo utilizzando Unified Manager. Come best practice, esegui il thick provisioning del volume root nell'aggregato root per evitare che il nodo si arresti.
+
+Per impostazione predefinita, gli eventi relativi a capacità e prestazioni non vengono generati per gli aggregati root. Inoltre, i valori di soglia utilizzati da Unified Manager non sono applicabili agli aggregati root dei nodi. Solo un rappresentante del supporto tecnico può modificare le impostazioni per generare questi eventi. Quando le impostazioni vengono modificate da un rappresentante del supporto tecnico, i valori di soglia della capacità vengono applicati all'aggregato root del nodo.
+
+Puoi adottare le misure appropriate per impedire l'arresto del nodo utilizzando ONTAP System Manager o ONTAP CLI.
+
+
+NOTE: La funzionalità di monitoraggio degli aggregati root dei nodi non è disponibile se i cluster eseguono ONTAP versione 9.14.1 o successiva.

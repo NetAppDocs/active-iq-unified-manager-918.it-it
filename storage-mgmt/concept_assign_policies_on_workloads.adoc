@@ -1,0 +1,70 @@
+---
+permalink: storage-mgmt/concept_assign_policies_on_workloads.html 
+sidebar: sidebar 
+keywords: assign, policies, workloads, single, multiple, storage, system-recommended, psls 
+summary: 'Dalla pagina Tutti i carichi di lavoro, puoi assegnare criteri di efficienza dello storage (SEP) e livelli di servizio delle prestazioni (PSL) ai carichi di lavoro dello storage utilizzando le diverse opzioni di navigazione.' 
+---
+= Assegna criteri ai carichi di lavoro in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dalla pagina Tutti i carichi di lavoro, puoi assegnare criteri di efficienza dello storage (SEP) e livelli di servizio delle prestazioni (PSL) ai carichi di lavoro dello storage utilizzando le diverse opzioni di navigazione.
+
+
+
+[[assign-policies-to-a-single-workload]]
+== Assegna le policy a un singolo carico di lavoro
+
+Puoi assegnare un PSL, un SEP o entrambi a un singolo carico di lavoro. Segui questi passaggi:
+
+. Seleziona il carico di lavoro.
+. Fai clic sull'icona di modifica accanto alla riga, quindi fai clic su *Modifica*.
++
+I campi *Livello di servizio di prestazioni assegnato* e *Criterio di efficienza dello storage* sono abilitati.
+
+. Seleziona il PSL o il SEP richiesto, oppure entrambi.
+. Fai clic sull'icona di spunta per applicare le modifiche.
+
+
+[NOTE]
+====
+Puoi anche selezionare un carico di lavoro e fare clic su *Altre azioni* per assegnare i criteri.
+
+====
+
+
+[[assign-policies-to-multiple-storage-workloads]]
+== Assegna criteri a più carichi di lavoro di storage
+
+Puoi assegnare un PSL o un SEP a più carichi di lavoro dello storage contemporaneamente. Segui questi passaggi:
+
+. Seleziona le caselle di controllo corrispondenti ai carichi di lavoro a cui desideri assegnare la policy oppure seleziona tutti i carichi di lavoro presenti nel tuo data center.
+. Fai clic su *Altre azioni*.
+. Per assegnare un PSL, seleziona *Assign Performance Service Level*. Per assegnare un SEP, seleziona *Assign Storage Efficiency Policy*. Viene visualizzata una finestra a comparsa per consentirti di selezionare il criterio.
+. Seleziona la policy appropriata e fai clic su *Applica*. Vedi il numero di workload a cui sono assegnate le policy. Sono elencati anche i workload a cui le policy non sono assegnate, con la relativa causa.
++
+[NOTE]
+====
+L'applicazione delle policy ai carichi di lavoro in blocco potrebbe richiedere del tempo, a seconda del numero di carichi di lavoro selezionati. Puoi fare clic sul pulsante *Esegui in background* e continuare con altre attività mentre l'operazione viene eseguita in background. Quando l'assegnazione in blocco è completa, puoi visualizzarne lo stato di completamento. Se applichi una PSL a più carichi di lavoro, non puoi avviare un'altra richiesta mentre è in esecuzione il precedente processo di assegnazione in blocco.
+
+====
+
+
+
+
+[[assign-system-recommended-psls-to-workloads]]
+== Assegna ai carichi di lavoro i PSLs consigliati dal sistema
+
+Puoi assegnare i PSL consigliati dal sistema a quei carichi di lavoro dello storage in un data center a cui non è stato assegnato alcun PSL o i cui PSL assegnati non corrispondono ai consigli del sistema. Per usare questa funzionalità, fai clic sul pulsante *Assign System Recommended PSLs*. Non devi selezionare carichi di lavoro specifici.
+
+La raccomandazione è determinata internamente dall'analisi di sistema ed è ignorata per quei carichi di lavoro i cui IOPS e altri parametri non coincidono con le definizioni di alcun PSL disponibile. Sono esclusi anche i carichi di lavoro dello storage con stato  `Waiting for I/O` e Learning.
+
+[NOTE]
+====
+Esistono parole chiave specifiche che Unified Manager cerca nel nome del carico di lavoro per ignorare l'analisi del sistema e consigliare un PSL diverso per il carico di lavoro. Quando il nome del carico di lavoro contiene le lettere "`ora`", viene consigliato il PSL **Extreme Performance**. E quando il nome del carico di lavoro contiene le lettere "`vm`", viene consigliato il PSL **Performance**.
+
+====
+Vedi anche l'articolo della knowledge base (KB) https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/Active_IQ_Unified_Manager/Performance_Service_Level'_is_not_adaptive_to_a_highly_variable_workload["La funzionalità "Assign System Recommended Performance Service Level" di ActiveIQ Unified Manager non si adatta a un carico di lavoro altamente variabile"]

@@ -1,0 +1,69 @@
+---
+permalink: performance-checker/concept_understand_events_from_adaptive_qos_policies.html 
+sidebar: sidebar 
+keywords: understand, events, adaptive, qos, policies, defined, block, size 
+summary: I gruppi di criteri Adaptive QoS scalano automaticamente un limite massimo o minimo di throughput in base alle dimensioni del volume, mantenendo il rapporto tra IOPS e TB al variare delle dimensioni del volume. A partire da ONTAP 9.5 puoi specificare la dimensione del blocco nel criterio QoS per applicare contemporaneamente una soglia in MB/s. 
+---
+= Comprendi gli eventi QoS adattivi con una dimensione di blocco definita in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+I gruppi di criteri Adaptive QoS scalano automaticamente un limite massimo o minimo di throughput in base alle dimensioni del volume, mantenendo il rapporto tra IOPS e TB al variare delle dimensioni del volume. A partire da ONTAP 9.5 puoi specificare la dimensione del blocco nel criterio QoS per applicare contemporaneamente una soglia in MB/s.
+
+L'assegnazione di una soglia IOPS in una policy QoS adattiva pone un limite solo al numero di operazioni che si verificano in ciascun carico di lavoro. A seconda della dimensione del blocco impostata sul client che genera i carichi di lavoro, alcuni valori di IOPS includono molti più dati e quindi gravano maggiormente sui nodi che elaborano le operazioni.
+
+Il valore in MB/s per un carico di lavoro si ottiene con la seguente formula:
+
+[listing]
+----
+MB/s = (IOPS * Block Size) / 1000
+----
+Se un carico di lavoro ha una media di 3.000 IOPS e la dimensione del blocco sul client è impostata su 32 KB, il valore effettivo in MB/s per questo carico di lavoro è 96. Se questo stesso carico di lavoro ha una media di 3.000 IOPS e la dimensione del blocco sul client è impostata su 48 KB, il valore effettivo in MB/s per questo carico di lavoro è 144. Puoi vedere che il nodo elabora il 50% di dati in più quando la dimensione del blocco è maggiore.
+
+Diamo un'occhiata alla seguente policy QoS adattiva con una dimensione di blocco definita e a come si attivano gli eventi in base alla dimensione del blocco impostata sul client.
+
+Crea una policy e imposta il picco di throughput a 2.500 IOPS/TB con una dimensione del blocco di 32 KB. Questo imposta di fatto la soglia MB/s a 80 MB/s ((2.500 IOPS * 32 KB) / 1.000) per un volume con una capacità utilizzata di 1 TB. Tieni presente che Unified Manager genera un evento di avviso quando il valore del throughput è inferiore del 10% rispetto alla soglia definita. Gli eventi vengono generati nelle seguenti situazioni:
+
+|===
+| Capacità utilizzata 2+| L'evento viene generato quando il throughput supera questo numero di ... 
+
+
+|  | IOPS | MB/s 
+
+
+ a| 
+1 TB
+ a| 
+2.250 IOPS
+ a| 
+72 MB/s
+
+
+
+ a| 
+2 TB
+ a| 
+4.500 IOPS
+ a| 
+144 MB/s
+
+
+
+ a| 
+5 TB
+ a| 
+11.250 IOPS
+ a| 
+360 MB/s
+
+|===
+Se il volume utilizza 2 TB dello spazio disponibile, gli IOPS sono 4.000 e la dimensione del blocco QoS è impostata su 32 KB nel client, allora il throughput è 128 MB/s ((4.000 IOPS * 32 KB) / 1000). In questo scenario non viene generato alcun evento perché sia 4.000 IOPS sia 128 MB/s sono al di sotto della soglia per un volume che utilizza 2 TB di spazio.
+
+Se il volume utilizza 2 TB dello spazio disponibile, gli IOPS sono 4.000 e la dimensione del blocco QoS è impostata a 64 KB sul client, allora il throughput è di 256 MB/s ((4.000 IOPS * 64 KB) / 1000). In questo caso i 4.000 IOPS non generano un evento, ma il valore di 256 MB/s è superiore alla soglia di 144 MB/s e viene generato un evento.
+
+Per questo motivo, quando viene attivato un evento in base a una violazione di MB/s per una policy QoS adattiva che include la dimensione del blocco, nella sezione Diagnosi di sistema della pagina Dettagli evento viene visualizzato un grafico di MB/s. Se l'evento viene attivato in base a una violazione di IOPS per la policy QoS adattiva, nella sezione Diagnosi di sistema viene visualizzato un grafico di IOPS. Se si verifica una violazione sia per IOPS che per MB/s, riceverai due eventi.
+
+Per ulteriori informazioni sulla regolazione delle impostazioni QoS, consulta https://docs.netapp.com/us-en/ontap/performance-admin/index.html["Panoramica della gestione delle prestazioni"].

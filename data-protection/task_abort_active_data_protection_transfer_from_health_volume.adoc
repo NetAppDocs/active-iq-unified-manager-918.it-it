@@ -1,0 +1,50 @@
+---
+permalink: data-protection/task_abort_active_data_protection_transfer_from_health_volume.html 
+sidebar: sidebar 
+keywords: abort, active, data protection, transfer, volume health details page 
+summary: 'Puoi annullare un trasferimento di protezione dei dati attivo quando vuoi interrompere una replicazione SnapMirror in corso. Puoi anche cancellare il checkpoint di riavvio di un trasferimento se non si tratta di un trasferimento baseline. Potresti dover annullare un trasferimento quando è in conflitto con un"altra operazione, ad esempio uno spostamento di volume.' 
+---
+= Annulla un trasferimento dalla pagina Dettagli volume/salute in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi annullare un trasferimento di protezione dei dati attivo quando vuoi interrompere una replicazione SnapMirror in corso. Puoi anche cancellare il checkpoint di riavvio di un trasferimento se non si tratta di un trasferimento baseline. Potresti dover annullare un trasferimento quando è in conflitto con un'altra operazione, ad esempio uno spostamento di volume.
+
+[NOTE]
+====
+Non puoi interrompere le relazioni dei volumi protette da Consistency Group.
+
+====
+.Prima di iniziare
+* Devi disporre del ruolo di Amministratore dell'applicazione o di Amministratore dello storage.
+* Devi aver configurato Workflow Automation.
+
+
+L'azione di annullamento non viene visualizzata nei seguenti casi:
+
+* Se le impostazioni RBAC non consentono questa azione: ad esempio, se hai solo privilegi di operatore
+* Quando l'ID del volume è sconosciuto: ad esempio, quando hai una relazione intercluster e il cluster di destinazione non è ancora stato individuato
+
+
+Non puoi cancellare il checkpoint di riavvio per un trasferimento baseline.
+
+.Passaggi
+. Nella scheda *Protezione* della pagina dei dettagli *Volume / Integrità*, fai clic con il pulsante destro del mouse sulla relazione nella vista della topologia per il trasferimento dei dati che desideri interrompere e seleziona *Interrompi*.
++
+Viene visualizzata la finestra di dialogo Annulla trasferimento.
+
+. Se vuoi cancellare il checkpoint di riavvio per un trasferimento che non è un trasferimento baseline, seleziona *Cancella checkpoint*.
+. Fai clic su *Continua*.
++
+La finestra di dialogo Abort Transfer si chiude e lo stato dell'operazione di annullamento viene visualizzato nella parte superiore della pagina Volume / Health details insieme a un collegamento ai dettagli del processo.
+
+. *Facoltativo:* Fai clic sul collegamento *Visualizza dettagli* per andare alla pagina dei dettagli del *Job* e visualizzare ulteriori dettagli e l'avanzamento del job.
+. Fai clic su ciascuna attività per visualizzarne i dettagli.
+. Fai clic sulla freccia Indietro del browser per tornare alla pagina dei dettagli *Volume / Stato*.
++
+L'operazione di annullamento si conclude quando tutte le attività del job vengono completate con successo.
+
+

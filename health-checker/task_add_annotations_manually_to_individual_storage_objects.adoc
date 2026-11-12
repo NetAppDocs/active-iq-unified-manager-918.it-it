@@ -1,0 +1,55 @@
+---
+permalink: health-checker/task_add_annotations_manually_to_individual_storage_objects.html 
+sidebar: sidebar 
+keywords: add, annotations, manually, individual, storage objects 
+summary: 'Puoi annotare manualmente volumi, cluster e SVM selezionati senza usare regole di annotazione. Puoi annotare un singolo oggetto di storage o più oggetti di storage e specificare la combinazione di coppie nome-valore richiesta per l"annotazione.' 
+---
+= Aggiungi annotazioni manualmente ai singoli oggetti di storage in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi annotare manualmente volumi, cluster e SVM selezionati senza usare regole di annotazione. Puoi annotare un singolo oggetto di storage o più oggetti di storage e specificare la combinazione di coppie nome-valore richiesta per l'annotazione.
+
+.Prima di iniziare
+Devi disporre del ruolo di Amministratore dell'applicazione o di Amministratore dello storage.
+
+.Passaggi
+. Accedi agli oggetti di archiviazione che desideri annotare:
++
+[cols="2*"]
+|===
+| Per aggiungere un'annotazione a... | Fai così... 
+
+
+ a| 
+Cluster
+ a| 
+.. Fai clic su *Archiviazione* > *Cluster*.
+.. Seleziona uno o più cluster.
+
+
+
+
+ a| 
+Volumi
+ a| 
+.. Fai clic su *Archiviazione* > *Volumi*.
+.. Seleziona uno o più volumi.
+
+
+
+
+ a| 
+SVM
+ a| 
+.. Fai clic su *Storage* > *SVMs*.
+.. Seleziona una o più SVM.
+
+
+|===
+. Fai clic su *Annota* e seleziona una coppia nome-valore.
+. Fai clic su *Applica*.
+

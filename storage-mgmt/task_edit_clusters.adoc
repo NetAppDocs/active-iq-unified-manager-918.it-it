@@ -1,0 +1,37 @@
+---
+permalink: storage-mgmt/task_edit_clusters.html 
+sidebar: sidebar 
+keywords: edit, clusters 
+summary: 'Puoi modificare le impostazioni di un cluster esistente, come l"host name o l"indirizzo IP, il nome utente, la password e la porta, utilizzando la finestra di dialogo Edit Cluster.' 
+---
+= Modifica le impostazioni del cluster in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi modificare le impostazioni di un cluster esistente, come l'host name o l'indirizzo IP, il nome utente, la password e la porta, utilizzando la finestra di dialogo Edit Cluster.
+
+.Prima di iniziare
+Devi disporre del ruolo di Amministratore dell'applicazione o del ruolo di Amministratore dello storage.
+
+[NOTE]
+====
+Con Unified Manager 9.7, puoi aggiungere i cluster solo tramite HTTPS.
+
+====
+.Passaggi
+. Nel riquadro di navigazione a sinistra, fai clic su *Gestione dello storage* > *Configurazione del cluster*.
+. Nella pagina *Configurazione cluster*, seleziona il cluster che desideri modificare e quindi fai clic su *Modifica*.
+. Nella finestra di dialogo *Modifica cluster*, modifica i valori secondo necessità. + Se hai modificato i dettagli di un cluster aggiunto a Unified Manager, puoi visualizzare i dettagli del certificato per la comunicazione TLS reciproca, in base alla versione di ONTAP. Per ulteriori informazioni sulla versione di ONTAP, vedi link:../storage-mgmt/task_add_clusters.html["Certificati per la comunicazione TLS reciproca"]. + Puoi visualizzare i dettagli del certificato facendo clic su *Dettagli certificato*. Se il certificato è scaduto, fai clic sul pulsante *Rigenera* per incorporare il nuovo certificato.
+. Fai clic su *Submit*.
+. Nella finestra di dialogo Authorize Host, fai clic su *View Certificate* per visualizzare le informazioni sul certificato del cluster.
+. Fai clic su *Yes*.
+
+
+*Informazioni correlate*
+
+link:../config/task_add_users.html["Aggiunta di utenti"]
+
+link:../health-checker/task_view_cluster_list_and_details.html["Visualizzazione dell'elenco e dei dettagli del cluster"]

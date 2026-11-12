@@ -1,0 +1,33 @@
+---
+permalink: performance-checker/task_change_counter_charts_focus_to_smaller_period_of_time.html 
+sidebar: sidebar 
+keywords: change, counter, charts, focus, shorter, period, time 
+summary: 'Puoi usare il mouse per ridurre l"intervallo di tempo e concentrarti su un periodo di tempo specifico nel riquadro Counter Chart o nella finestra Counter Charts Zoom View. In questo modo puoi vedere una vista più granulare e dettagliata di qualsiasi parte della sequenza temporale dei dati sulle prestazioni, degli eventi e delle soglie.' 
+---
+= Cambia il focus dei grafici contatore su un periodo più breve in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi usare il mouse per ridurre l'intervallo di tempo e concentrarti su un periodo di tempo specifico nel riquadro Counter Chart o nella finestra Counter Charts Zoom View. In questo modo puoi vedere una vista più granulare e dettagliata di qualsiasi parte della sequenza temporale dei dati sulle prestazioni, degli eventi e delle soglie.
+
+.Prima di iniziare
+Il cursore deve essersi trasformato in una lente d'ingrandimento per indicare che questa funzionalità è attiva.
+
+[NOTE]
+====
+Quando utilizzi questa funzionalità, che modifica la linea temporale per visualizzare valori corrispondenti alla visualizzazione più dettagliata, l'intervallo di tempo e date nel selettore *Intervallo di tempo* non cambia rispetto ai valori originali del grafico.
+
+====
+.Passaggi
+. Per ingrandire un periodo di tempo specifico, fai clic con la lente d'ingrandimento e trascina il mouse per evidenziare l'area che desideri visualizzare in dettaglio.
++
+I valori del contatore per il periodo di tempo selezionato riempiono il grafico del contatore.
+
+. Per tornare al periodo di tempo originale impostato nel selettore *Intervallo di tempo*, clicca sul pulsante *Ripristina zoom grafico*.
++
+Il grafico del contatore viene visualizzato nel suo stato originale.
+
+

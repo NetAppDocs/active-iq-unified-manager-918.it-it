@@ -1,0 +1,36 @@
+---
+permalink: performance-checker/task_search_on_object_inventory_performance_pages.html 
+sidebar: sidebar 
+keywords: object, inventory, performance, pages 
+summary: 'Puoi cercare stringhe nelle pagine Prestazioni dell"inventario degli oggetti. Usa il campo di ricerca situato in alto a destra della pagina per individuare rapidamente i dati in base al nome dell"oggetto o al nome della policy. In questo modo puoi individuare rapidamente oggetti specifici e i dati associati oppure individuare rapidamente le policy e visualizzare i dati degli oggetti delle policy associati.' 
+---
+= Cerca nelle pagine delle prestazioni dell'inventario degli oggetti in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi cercare stringhe nelle pagine Prestazioni dell'inventario degli oggetti. Usa il campo *Cerca* situato in alto a destra della pagina per individuare rapidamente i dati in base al nome dell'oggetto o al nome della policy. In questo modo puoi individuare rapidamente oggetti specifici e i dati associati, oppure individuare rapidamente le policy e visualizzare i dati associati degli oggetti della policy.
+
+.Passaggio
+. Esegui una delle seguenti operazioni, in base ai requisiti di ricerca:
++
+|===
+| Per individuare questo... | Digita questo... 
+
+
+ a| 
+Un oggetto specifico
+ a| 
+Inserisci il nome dell'oggetto nel campo *Cerca* e fai clic su *Cerca*. Vedi l'oggetto che hai cercato e i relativi dati.
+
+
+
+ a| 
+Un criterio di soglia delle prestazioni definito dall'utente
+ a| 
+Inserisci il nome della policy, in tutto o in parte, nel campo *Cerca* e fai clic su *Cerca*. Vengono visualizzati gli oggetti assegnati alla policy che hai cercato.
+
+|===
+

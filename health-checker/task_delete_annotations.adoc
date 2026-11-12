@@ -1,0 +1,29 @@
+---
+permalink: health-checker/task_delete_annotations.html 
+sidebar: sidebar 
+keywords: delete, annotations 
+summary: Puoi eliminare le annotazioni personalizzate e i relativi valori quando non sono più necessari. 
+---
+= Elimina le annotazioni in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi eliminare le annotazioni personalizzate e i relativi valori quando non sono più necessari.
+
+.Prima di iniziare
+* Devi disporre del ruolo di Amministratore dell'applicazione o di Amministratore dello storage.
+* I valori di annotazione non devono essere utilizzati in altre annotazioni o regole di gruppo.
+
+
+.Passaggi
+. Nel riquadro di navigazione a sinistra, fai clic su *Gestione archiviazione* > *Annotazioni*.
+. Nella scheda *Annotazioni*, seleziona l'annotazione che desideri eliminare.
++
+Visualizzi i dettagli dell'annotazione selezionata.
+
+. Fai clic su *Azioni* > *Elimina* per eliminare l'annotazione selezionata e il relativo valore.
+. Nella finestra di dialogo di avviso, fai clic su *Yes* per confermare l'eliminazione.
+

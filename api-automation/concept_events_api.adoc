@@ -1,0 +1,140 @@
+---
+permalink: api-automation/concept_events_api.html 
+sidebar: sidebar 
+keywords: view, events, system, details 
+summary: 'L"API degli eventi consente di recuperare gli eventi generati per i cluster monitorati nel data center.' 
+---
+= Gestisci eventi e avvisi tramite API in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le  `events`,  `alerts` e  `scripts` API della categoria  `management-server` ti consentono di gestire gli eventi, gli avvisi e gli script associati agli avvisi nel tuo ambiente Active IQ Unified Manager.
+
+
+
+[[view-and-modify-events]]
+== Visualizza e modifica gli eventi
+
+Unified Manager riceve gli eventi generati su ONTAP per i cluster monitorati e gestiti da Unified Manager. Utilizzando queste API, puoi visualizzare gli eventi generati per i tuoi cluster, risolverli e aggiornarli.
+
+Eseguendo il `GET` metodo per l' `/management-server/events` API, puoi interrogare gli eventi nel tuo data center, inclusi i dati storici. Usa i filtri integrati, come nome, livello di impatto, area di impatto, gravità, stato, nome della risorsa e tipo di risorsa, per visualizzare eventi specifici. I parametri tipo di risorsa e area restituiscono informazioni sull'oggetto di storage su cui si è verificato l'evento, mentre l'area di impatto restituisce informazioni sul problema per cui viene generato l'evento, come disponibilità, capacità, configurazione, sicurezza, protezione e prestazioni.
+
+Eseguendo l'operazione PATCH per questa API, puoi abilitare il flusso di lavoro di risoluzione per l'evento. Puoi assegnare un evento a te stesso o a un altro utente e confermarne la ricezione. Dopo aver eseguito i passaggi sulle risorse per risolvere il problema che ha generato l'evento, puoi utilizzare questa API per contrassegnare l'evento come risolto.
+
+Per maggiori informazioni sugli eventi, consulta link:../events/concept_what_active_iq_platform_events_are.html["Scopri gli eventi della piattaforma Active IQ"].
+
+[cols="4*"]
+|===
+| Categoria | Verbo HTTP | Percorso | Descrizione 
+
+
+ a| 
+server di gestione
+ a| 
+GET
+ a| 
+`/management-server/events`
+`/management-server/events/{key}`
+ a| 
+Quando esegui il metodo Get ALL, il corpo della risposta contiene i dettagli di tutti gli eventi nel tuo data center. Quando recuperi i dettagli dell'evento tramite una chiave specifica, puoi visualizzare i dettagli di un evento specifico ed eseguire il set successivo di operazioni sulle risorse. Il corpo della risposta contiene i dettagli di quell'evento.
+
+
+
+ a| 
+server di gestione
+ a| 
+PATCH
+ a| 
+`management-server/events/{key}`
+ a| 
+Esegui questa API per assegnare un evento o modificarne lo stato in "riconosciuto" o "risolto". Puoi anche utilizzare questo metodo per assegnare l'evento a te stesso o a un altro utente. Si tratta di un'operazione sincrona.
+
+|===
+
+
+[[manage-alerts]]
+== Gestisci gli avvisi
+
+Gli eventi vengono generati automaticamente e in modo continuo. Unified Manager genera un avviso solo quando un evento soddisfa determinati criteri di filtro. Puoi selezionare gli eventi per i quali devono essere generati gli avvisi. Usando l' `/management-server/alerts`API, puoi configurare gli avvisi in modo che inviino automaticamente notifiche quando si verificano eventi specifici o eventi di determinati livelli di gravità.
+
+Per ulteriori informazioni sugli avvisi, consulta link:../events/concept_what_alerts_are.html["Scopri gli avvisi"].
+
+[cols="4*"]
+|===
+| Categoria | Verbo HTTP | Percorso | Descrizione 
+
+
+ a| 
+server di gestione
+ a| 
+GET
+ a| 
+`/management-server/alerts`
+`/management-server/alerts/{key}`
+ a| 
+Puoi interrogare tutti gli avvisi esistenti nel tuo ambiente o un avviso specifico utilizzando la chiave dell'avviso. Puoi visualizzare le informazioni sugli avvisi generati nel tuo ambiente, come la descrizione dell'avviso, l'azione, l'indirizzo email a cui viene inviata la notifica, l'evento e la gravità.
+
+
+
+ a| 
+server di gestione
+ a| 
+POST
+ a| 
+`/management-server/alerts`
+ a| 
+Questo metodo ti consente di aggiungere avvisi per eventi specifici. Devi aggiungere il nome dell'avviso, la risorsa fisica o logica oppure l'evento a cui si applica l'avviso, se l'avviso è abilitato e se stai emettendo trap SNMP. Puoi aggiungere ulteriori dettagli per cui vuoi generare l'avviso, come l'azione, l'indirizzo e-mail di notifica, i dettagli dello script, nel caso in cui tu stia aggiungendo uno script di avviso, e così via.
+
+
+
+ a| 
+server di gestione
+ a| 
+PATCH e DELETE
+ a| 
+`management-server/events/{key}`
+ a| 
+Puoi usare questi metodi per modificare ed eliminare avvisi specifici. Puoi modificare diversi attributi, come la descrizione, il nome e l'abilitazione o la disabilitazione dell'avviso. Puoi eliminare un avviso quando non è più necessario.
+
+|===
+
+NOTE: Quando selezioni una risorsa per aggiungere un avviso, tieni presente che la selezione di un cluster come risorsa non seleziona automaticamente gli oggetti di storage all'interno di quel cluster. Ad esempio, se crei un avviso per tutti gli eventi critici di tutti i cluster, riceverai avvisi solo per gli eventi critici del cluster. Non riceverai avvisi per gli eventi critici su nodi, aggregati e così via.
+
+
+
+[[manage-scripts]]
+== Gestisci gli script
+
+Utilizzando l' `/management-server/scripts` API, puoi anche associare un avviso a uno script che viene eseguito quando viene attivato un avviso. Puoi utilizzare gli script per modificare o aggiornare automaticamente più oggetti di storage in Unified Manager. Lo script è associato a un avviso. Quando un evento attiva un avviso, lo script viene eseguito. Puoi caricare script personalizzati e testarne l'esecuzione quando viene generato un avviso. Puoi associare un avviso al tuo script in modo che venga eseguito quando viene generato un avviso per un evento in Unified Manager.
+
+Per ulteriori informazioni sugli script, consulta link:../events/concept_manage_scripts.html["Gestisci gli script"].
+
+[cols="4*"]
+|===
+| Categoria | Verbo HTTP | Percorso | Descrizione 
+
+
+ a| 
+server di gestione
+ a| 
+GET
+ a| 
+`/management-server/scripts`
+ a| 
+Utilizza questa API per interrogare tutti gli script esistenti nel tuo ambiente. Utilizza i filtri standard e le operazioni di ordinamento per visualizzare solo script specifici.
+
+
+
+ a| 
+server di gestione
+ a| 
+POST
+ a| 
+`/management-server/scripts`
+ a| 
+Utilizza questa API per aggiungere una descrizione allo script e caricare il file dello script associato a un avviso.
+
+|===

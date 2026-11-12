@@ -1,0 +1,29 @@
+---
+permalink: api-automation/reference_recommendations_to_use_um_apis.html 
+sidebar: sidebar 
+keywords: recommendations, apis, active iq, unified, manager 
+summary: Quando usi le API in Active IQ Unified Manager, dovresti seguire alcune procedure consigliate. 
+---
+= Segui le procedure consigliate per l'utilizzo delle API di Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Quando usi le API in Active IQ Unified Manager, dovresti seguire alcune procedure consigliate.
+
+* Tutti i tipi di contenuto delle risposte devono essere nel seguente formato per un'esecuzione valida:
++
+[listing]
+----
+application/json
+----
+* Il numero di versione dell'API non è correlato al numero di versione del prodotto. Dovresti usare la versione più recente dell'API disponibile per la tua istanza di Unified Manager. Per ulteriori informazioni sulle versioni dell'API di Unified Manager, consulta la sezione "`REST API versioning in Active IQ Unified Manager`".
+* Quando aggiorni i valori di un array tramite un'API di Unified Manager, devi aggiornare l'intera stringa di valori. Non puoi aggiungere valori a un array. Puoi solo sostituire un array esistente.
+* Puoi utilizzare operatori di filtro, come la barra verticale (|) e il carattere jolly (+*+), per tutti i parametri di query, ad eccezione dei valori double, ad esempio IOPS e performance nelle API delle metriche.
+* Evita di interrogare gli oggetti utilizzando una combinazione degli operatori di filtro carattere jolly (+*+) e pipe (|). Potrebbe recuperare un numero errato di oggetti.
+* Quando utilizzi valori per il filtro, assicurati che il valore non contenga alcun `?` carattere. Così riduci i rischi di SQL injection.
+* Tieni presente che la richiesta  `GET`(all) per qualsiasi API restituisce al massimo 1000 record. Anche se esegui la query impostando il parametro  `max_records`su un valore superiore a 1000, vengono restituiti solo 1000 record.
+* Per svolgere le funzioni amministrative, ti consigliamo di utilizzare la UI di Unified Manager.
+

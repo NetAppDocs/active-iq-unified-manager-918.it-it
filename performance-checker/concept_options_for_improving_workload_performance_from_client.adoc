@@ -1,0 +1,20 @@
+---
+permalink: performance-checker/concept_options_for_improving_workload_performance_from_client.html 
+sidebar: sidebar 
+keywords: options, improving, workload, performance, client-side 
+summary: Puoi verificare i carichi di lavoro dei client, come applicazioni o database, che inviano operazioni di I/O ai volumi coinvolti in un evento di prestazioni per determinare se una modifica lato client potrebbe risolvere il problema. 
+---
+= Migliora le prestazioni del carico di lavoro regolando le impostazioni lato client in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi verificare i carichi di lavoro dei client, come applicazioni o database, che inviano operazioni di I/O ai volumi coinvolti in un evento di prestazioni per determinare se una modifica lato client potrebbe risolvere il problema.
+
+Quando i client connessi ai volumi di un cluster aumentano le loro richieste di I/O, il cluster deve lavorare di più per soddisfare la domanda. Se sai quali client hanno un numero elevato di richieste di I/O verso un particolare volume del cluster, puoi migliorare le prestazioni del cluster regolando il numero di client che accedono al volume o riducendo la quantità di I/O verso il volume. Puoi anche applicare o aumentare un limite al gruppo di criteri QoS di cui il volume fa parte.
+
+Puoi analizzare i client e le relative applicazioni per determinare se i client stanno inviando più I/O del normale, cosa che potrebbe causare contesa su un componente del cluster. Nella pagina Dettagli evento, la sezione Diagnosi di sistema visualizza i principali carichi di lavoro dei volumi che utilizzano il componente in contesa. Se conosci quale client sta accedendo a un determinato volume, puoi passare al client per determinare se l'hardware del client o un'applicazione non funzionano come previsto o stanno eseguendo più lavoro del normale.
+
+In una configurazione MetroCluster, le richieste di scrittura a un volume su un cluster locale vengono replicate su un volume nel cluster remoto. Mantenere sincronizzato il volume di origine sul cluster locale con il volume di destinazione sul cluster remoto può anche aumentare il carico su entrambi i cluster nella configurazione MetroCluster. Riducendo le richieste di scrittura a questi volumi replicati, i cluster possono eseguire meno operazioni di sincronizzazione, riducendo così l'impatto sulle prestazioni di altri carichi di lavoro.

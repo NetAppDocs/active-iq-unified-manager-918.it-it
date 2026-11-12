@@ -1,0 +1,71 @@
+---
+permalink: config/task_add_authentication_servers.html 
+sidebar: sidebar 
+keywords: add, authentication servers 
+summary: 'Puoi aggiungere server di autenticazione e abilitare l"autenticazione remota sul server di gestione in modo che gli utenti remoti all"interno del server di autenticazione possano accedere a Unified Manager.' 
+---
+= Aggiungi i server di autenticazione ad Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi aggiungere server di autenticazione e abilitare l'autenticazione remota sul server di gestione in modo che gli utenti remoti all'interno del server di autenticazione possano accedere a Unified Manager.
+
+.Prima di iniziare
+* Devono essere disponibili le seguenti informazioni:
++
+** host name o indirizzo IP del server di autenticazione
+** Numero di porta del server di autenticazione
+
+
+* Devi aver abilitato l'autenticazione remota e configurato il servizio di autenticazione in modo che il server di gestione possa autenticare utenti o gruppi remoti nel server di autenticazione.
+* Devi avere il ruolo di Amministratore dell'applicazione.
+
+
+Se il server di autenticazione che stai aggiungendo fa parte di una coppia ad alta disponibilità (HA) (che utilizza lo stesso database), puoi aggiungere anche il server di autenticazione partner. Ciò consente al server di gestione di comunicare con il partner quando uno dei server di autenticazione non è raggiungibile.
+
+.Passaggi
+. Nel riquadro di navigazione a sinistra, fai clic su *Generale* > *Autenticazione remota*.
+. Attiva o disattiva l'opzione *Utilizza connessione sicura*:
++
+[cols="2*"]
+|===
+| Se vuoi... | Poi fai così... 
+
+
+ a| 
+Abilitalo
+ a| 
+.. Seleziona l'opzione *Usa connessione sicura*.
+.. Nell'area Server di autenticazione, fai clic su *Aggiungi*.
+.. Nella finestra di dialogo Aggiungi server di autenticazione, immetti il nome di autenticazione o l'indirizzo IP (IPv4 o IPv6) del server.
+.. Nella finestra di dialogo Autorizza host, fai clic su Visualizza certificato.
+.. Nella finestra di dialogo Visualizza certificato, verifica le informazioni del certificato e poi fai clic su *Chiudi*.
+.. Nella finestra di dialogo Autorizza host, fai clic su *Sì*.
++
+[NOTE]
+====
+Quando abiliti l'opzione *Utilizza l'autenticazione tramite connessione sicura*, Unified Manager comunica con il server di autenticazione e visualizza il certificato. Unified Manager utilizza la porta 636 come porta predefinita per la comunicazione sicura e la porta 389 per la comunicazione non sicura.
+
+====
+
+
+
+
+ a| 
+Disabilitalo
+ a| 
+.. Deseleziona l'opzione *Use Secure Connection*.
+.. Nell'area Server di autenticazione, fai clic su *Aggiungi*.
+.. Nella finestra di dialogo Aggiungi server di autenticazione, specifica l'host name o l'indirizzo IP (IPv4 o IPv6) del server e i dettagli della porta.
+.. Fai clic su *Add*.
+
+
+|===
++
+Il server di autenticazione che hai aggiunto viene visualizzato nell'area Servers.
+
+. Esegui un'autenticazione di prova per verificare di poter autenticare gli utenti nel server di autenticazione che hai aggiunto.
+

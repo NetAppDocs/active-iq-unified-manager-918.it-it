@@ -1,0 +1,36 @@
+---
+permalink: data-protection/task_add_resource_pool_members.html 
+sidebar: sidebar 
+keywords: add, resource, pool, members 
+summary: Un pool di risorse è costituito da un certo numero di aggregati membri. Puoi aggiungere aggregati ai pool di risorse esistenti per aumentare la quantità di spazio disponibile per il provisioning dei volumi secondari. 
+---
+= Aggiungi membri del pool di risorse in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Un pool di risorse è costituito da un certo numero di aggregati membri. Puoi aggiungere aggregati ai pool di risorse esistenti per aumentare la quantità di spazio disponibile per il provisioning dei volumi secondari.
+
+.Prima di iniziare
+Devi disporre del ruolo di Amministratore dell'applicazione o di Amministratore dello storage.
+
+Puoi aggiungere non più di 200 aggregati a un pool di risorse alla volta. Gli aggregati visualizzati nella finestra di dialogo Aggregates non appartengono ad altri pool di risorse.
+
+.Passaggi
+. Nel riquadro di navigazione a sinistra, fai clic su *Protezione* > *Pool di risorse*.
+. Seleziona un pool di risorse dall'elenco *Pool di risorse*.
++
+I membri del pool di risorse vengono visualizzati nell'area sotto l'elenco dei pool di risorse.
+
+. Nell'area dei membri del pool di risorse, fai clic su *Aggiungi*.
++
+Viene visualizzata la finestra di dialogo Aggregates.
+
+. Seleziona uno o più aggregati.
+. Fai clic su *Add*.
++
+La finestra di dialogo si chiude e gli aggregati vengono visualizzati nell'elenco dei membri per il pool di risorse selezionato.
+
+

@@ -1,0 +1,69 @@
+---
+permalink: health-checker/concept_cluster_components_and_why_they_can_be_in_contention.html 
+sidebar: sidebar 
+keywords: cluster, components, contention 
+summary: 'Puoi identificare i problemi di prestazioni del cluster quando un componente del cluster entra in contenzione. Le prestazioni dei carichi di lavoro che utilizzano il componente rallentano e il loro tempo di risposta (latenza) per le richieste dei client aumenta, attivando un evento in Unified Manager.' 
+---
+= Comprendi la contesa dei componenti del cluster in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi identificare i problemi di prestazioni del cluster quando un componente del cluster entra in contenzione. Le prestazioni dei carichi di lavoro che utilizzano il componente rallentano e il loro tempo di risposta (latenza) per le richieste dei client aumenta, attivando un evento in Unified Manager.
+
+Un componente in contesa non può funzionare a un livello ottimale. Le sue prestazioni sono diminuite e le prestazioni di altri componenti del cluster e carichi di lavoro, chiamati _vittime_, potrebbero avere una latenza maggiore. Per far uscire un componente dalla contesa, devi ridurne il carico di lavoro o aumentarne la capacità di gestire più lavoro, in modo che le prestazioni possano tornare a livelli normali. Poiché Unified Manager raccoglie e analizza le prestazioni dei carichi di lavoro a intervalli di cinque minuti, rileva solo quando un componente del cluster viene sovrautilizzato in modo costante. I picchi transitori di sovrautilizzo che durano solo per un breve periodo all'interno dell'intervallo di cinque minuti non vengono rilevati.
+
+Ad esempio, un aggregato di storage potrebbe essere soggetto a contesa perché uno o più carichi di lavoro su di esso competono per vedere soddisfatte le proprie richieste di I/O. Altri carichi di lavoro sull'aggregato possono risentirne, causando un calo delle prestazioni. Per ridurre la quantità di attività sull'aggregato, puoi adottare diverse misure, ad esempio spostare uno o più carichi di lavoro su un aggregato o un nodo meno occupato, per ridurre la domanda complessiva di carico di lavoro sull'aggregato corrente. Per un gruppo di criteri QoS, puoi regolare il limite di throughput oppure spostare i carichi di lavoro in un gruppo di criteri diverso, in modo che i carichi di lavoro non siano più limitati.
+
+Unified Manager monitora i seguenti componenti del cluster per avvisarti quando sono in conflitto:
+
+* *Rete*
++
+Rappresenta il tempo di attesa delle richieste di I/O da parte dei protocolli di rete esterni sul cluster. Il tempo di attesa è il tempo impiegato per attendere il completamento delle transazioni "`transfer ready`" prima che il cluster possa rispondere a una richiesta di I/O. Se il componente di rete è in contesa, significa che un tempo di attesa elevato a livello di protocollo sta influenzando la latenza di uno o più carichi di lavoro.
+
+* *Elaborazione di rete*
++
+Rappresenta il componente software nel cluster coinvolto nell'elaborazione I/O tra il livello di protocollo e il cluster. Il nodo che gestisce l'elaborazione di rete potrebbe essere cambiato da quando è stato rilevato l'evento. Se il componente di elaborazione di rete è in contenzione, significa che un elevato utilizzo del nodo di elaborazione di rete sta influenzando la latenza di uno o più carichi di lavoro.
+
++
+Quando utilizzi un cluster All SAN Array in una configurazione active-active, il valore della latenza di elaborazione di rete viene visualizzato per entrambi i nodi, così puoi verificare che i nodi condividano il carico in modo uniforme.
+
+* *Limite massimo di QoS*
++
+Rappresenta l'impostazione massima (di picco) del throughput del gruppo di criteri Quality of Service (QoS) dello storage assegnato al carico di lavoro. Se il componente del gruppo di criteri è in contesa, significa che tutti i carichi di lavoro nel gruppo di criteri vengono limitati dal limite di throughput impostato, con un impatto sulla latenza di uno o più di tali carichi di lavoro.
+
+* *Limite minimo di QoS*
++
+Rappresenta la latenza di un carico di lavoro causata dall'impostazione QoS del throughput minimo (previsto) assegnata ad altri carichi di lavoro. Se il minimo QoS impostato su determinati carichi di lavoro utilizza la maggior parte della larghezza di banda per garantire il throughput promesso, altri carichi di lavoro verranno limitati e presenteranno una latenza maggiore.
+
+* *Interconnessione cluster*
++
+Rappresenta i cavi e gli adattatori con cui i nodi del cluster sono fisicamente collegati. Se il componente di interconnessione del cluster è in contesa, significa che un tempo di attesa elevato per le richieste di I/O a livello dell'interconnessione del cluster sta influenzando la latenza di uno o più carichi di lavoro.
+
+* *Data Processing*
++
+Rappresenta il componente software nel cluster coinvolto nell'elaborazione I/O tra il cluster e l'aggregato di storage che contiene il carico di lavoro. Il nodo che gestisce l'elaborazione dei dati potrebbe essere cambiato da quando è stato rilevato l'evento. Se il componente di elaborazione dati è in contesa, significa che un elevato utilizzo del nodo di elaborazione dati sta influenzando la latenza di uno o più carichi di lavoro.
+
+* *Attivazione del volume*
++
+Rappresenta il processo che tiene traccia dell'utilizzo di tutti i volumi attivi. In ambienti di grandi dimensioni con più di 1000 volumi attivi, questo processo monitora quanti volumi critici devono accedere contemporaneamente alle risorse tramite il nodo. Quando il numero di volumi attivi simultaneamente supera la soglia massima consigliata, alcuni volumi non critici potrebbero presentare latenza, come indicato qui.
+
+* *MetroCluster Risorse*
++
+Rappresenta le risorse MetroCluster, inclusi NVRAM e i collegamenti interswitch (ISL), utilizzate per i dati mirrorati tra cluster in una configurazione MetroCluster. Se il componente MetroCluster è in contesa, significa che un throughput di scrittura elevato dai carichi di lavoro sul cluster locale o un problema di integrità del collegamento sta influenzando la latenza di uno o più carichi di lavoro sul cluster locale. Se il cluster non è in una configurazione MetroCluster, questa icona non viene visualizzata.
+
+* *Operazioni sugli aggregate o sugli aggregate SSD*
++
+Rappresenta l'aggregato di storage su cui sono in esecuzione i carichi di lavoro. Se il componente aggregato è in contesa, significa che l'elevato utilizzo dell'aggregato influisce sulla latenza di uno o più carichi di lavoro. Un aggregato è costituito interamente da HDD, oppure da una combinazione di HDD e SSD (un aggregato Flash Pool), oppure da una combinazione di HDD e un tier cloud (un aggregato FabricPool). Un "`SSD Aggregate`" è costituito interamente da SSD (un aggregato all-flash), oppure da una combinazione di SSD e un tier cloud (un aggregato FabricPool).
+
+* *Latenza del cloud*
++
+Rappresenta il componente software nel cluster coinvolto nell'elaborazione I/O tra il cluster e il livello cloud su cui sono archiviati i dati utente. Se il componente di latenza cloud è conteso, significa che un numero elevato di letture da volumi ospitati sul livello cloud influisce sulla latenza di uno o più carichi di lavoro.
+
+* *Sincronizzazione SnapMirror*
++
+Rappresenta il componente software nel cluster coinvolto nella replica dei dati utente dal volume primario al volume secondario in una relazione sincrona SnapMirror. Se il componente di sincronizzazione SnapMirror è in contesa, significa che l'attività delle operazioni sincrone SnapMirror sta influenzando la latenza di uno o più carichi di lavoro.
+
+

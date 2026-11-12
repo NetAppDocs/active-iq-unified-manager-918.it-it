@@ -1,0 +1,46 @@
+---
+permalink: performance-checker/concept_what_data_continuity_collection_cycle_is.html 
+sidebar: sidebar 
+keywords: data, continuity, collection, cycle 
+summary: Un ciclo di raccolta per la continuità dei dati recupera i dati sulle prestazioni al di fuori del ciclo real-time di raccolta delle prestazioni del cluster, che viene eseguito per impostazione predefinita ogni cinque minuti. Le raccolte per la continuità dei dati consentono a Unified Manager di colmare le lacune nei dati statistici che si verificano quando non è stato possibile raccogliere dati real-time. 
+---
+= Comprendi i cicli di raccolta della continuità dei dati in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Un ciclo di raccolta per la continuità dei dati recupera i dati sulle prestazioni al di fuori del ciclo real-time di raccolta delle prestazioni del cluster, che viene eseguito per impostazione predefinita ogni cinque minuti. Le raccolte per la continuità dei dati consentono a Unified Manager di colmare le lacune nei dati statistici che si verificano quando non è stato possibile raccogliere dati real-time.
+
+Unified Manager esegue verifiche periodiche della raccolta per la continuità dei dati storici sulle prestazioni quando si verificano i seguenti eventi:
+
+* Inizialmente, un cluster viene aggiunto a Unified Manager.
++
+Unified Manager raccoglie i dati storici sulle prestazioni dei 15 giorni precedenti. Questo ti consente di visualizzare due settimane di informazioni storiche sulle prestazioni per un cluster poche ore dopo la sua aggiunta.
+
++
+Inoltre, gli eventi di soglia definiti dal sistema vengono segnalati per il periodo precedente, se presenti.
+
+* L'attuale ciclo di raccolta di dati sulle prestazioni non si conclude nei tempi previsti.
++
+Se il sondaggio delle prestazioni real-time supera il periodo di raccolta di cinque minuti, viene avviato un ciclo di raccolta per la continuità dei dati per raccogliere le informazioni mancanti. Senza la raccolta per la continuità dei dati, il periodo di raccolta successivo viene saltato.
+
+* Unified Manager è risultato inaccessibile per un certo periodo di tempo e poi è tornato online, come nelle seguenti situazioni:
++
+** È stato riavviato.
+** È stato arrestato durante un aggiornamento software o durante la creazione di un file di backup.
+** Si risolve un'interruzione di rete.
+
+
+* Un cluster è rimasto inaccessibile per un certo periodo di tempo e poi è tornato online, come nelle seguenti situazioni:
++
+** Si risolve un'interruzione di rete.
+** Una connessione WAN lenta ha ritardato la normale raccolta dei dati sulle prestazioni.
+
+
+
+
+Un ciclo di raccolta per la continuità dei dati può raccogliere un massimo di 24 ore di dati storici. Se Unified Manager rimane inattivo per più di 24 ore, nelle pagine dell'interfaccia utente compare un'interruzione nei dati sulle prestazioni.
+
+Un ciclo di raccolta di dati di continuità e un ciclo di raccolta di dati real-time non possono essere eseguiti contemporaneamente. Il ciclo di raccolta di dati di continuità deve terminare prima che venga avviata la raccolta di dati sulle prestazioni real-time. Quando per la raccolta di dati di continuità è necessario raccogliere più di un'ora di dati storici, nella parte superiore del riquadro Notifiche viene visualizzato un messaggio banner per quel cluster.

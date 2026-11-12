@@ -1,0 +1,31 @@
+---
+permalink: config/task_access_unified_manager_web_ui.html 
+sidebar: sidebar 
+keywords: access, unified manager, web ui 
+summary: 'Dopo aver installato Unified Manager, puoi accedere all"interfaccia web per configurare Unified Manager e iniziare a monitorare i tuoi sistemi ONTAP.' 
+---
+= Accedi all'interfaccia utente web in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dopo aver installato Unified Manager, puoi accedere all'interfaccia web per configurare Unified Manager e iniziare a monitorare i tuoi sistemi ONTAP.
+
+.Prima di iniziare
+* Se è la prima volta che accedi all'interfaccia utente web, devi accedere come utente di manutenzione (o come utente umadmin per le installazioni Linux).
+* Se intendi consentire agli utenti di accedere a Unified Manager utilizzando il nome breve anziché il fully qualified domain name (FQDN) o l'indirizzo IP, la configurazione di rete deve risolvere questo nome breve in un FQDN valido.
+* Se il server utilizza un certificato digitale autofirmato, il browser potrebbe visualizzare un avviso che indica che il certificato non è attendibile. Puoi accettare il rischio per continuare l'accesso oppure installare un certificato digitale firmato da un'Autorità di Certificazione (CA) per l'autenticazione del server.
+
+
+.Passaggi
+. Avvia l'interfaccia utente web di Unified Manager dal browser utilizzando l'URL visualizzato al termine dell'installazione. L'URL corrisponde all'indirizzo IP o al fully qualified domain name (FQDN) del server Unified Manager.
++
+Il collegamento è nel seguente formato: `\https://URL`.
+
+. Accedi all'interfaccia utente web di Unified Manager utilizzando le credenziali del tuo utente di manutenzione.
+
+
+
+NOTE: Se effettui tre tentativi consecutivi di accesso all'interfaccia web senza successo entro un'ora, verrai bloccato fuori dal sistema e dovrai contattare il tuo system administrator. Questa procedura si applica solo agli utenti locali.

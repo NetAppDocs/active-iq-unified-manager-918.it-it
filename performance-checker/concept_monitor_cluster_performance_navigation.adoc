@@ -1,0 +1,28 @@
+---
+permalink: performance-checker/concept_monitor_cluster_performance_navigation.html 
+sidebar: sidebar 
+keywords: monitor, cluster, performance, navigation 
+summary: Puoi monitorare le prestazioni di tutti i cluster gestiti da Unified Manager. Monitorare i tuoi cluster ti offre una panoramica delle prestazioni del cluster e degli oggetti e include il monitoraggio degli eventi relativi alle prestazioni. Puoi visualizzare prestazioni ed eventi a un livello high-level oppure approfondire qualsiasi dettaglio delle prestazioni del cluster e degli oggetti e degli eventi relativi alle prestazioni. 
+---
+= Naviga nelle prestazioni del cluster in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi monitorare le prestazioni di tutti i cluster gestiti da Unified Manager. Monitorare i tuoi cluster ti offre una panoramica delle prestazioni del cluster e degli oggetti e include il monitoraggio degli eventi relativi alle prestazioni. Puoi visualizzare prestazioni ed eventi a un livello high-level oppure approfondire qualsiasi dettaglio delle prestazioni del cluster e degli oggetti e degli eventi relativi alle prestazioni.
+
+Questo è un esempio dei numerosi possibili percorsi di navigazione delle prestazioni del cluster:
+
+. Nel riquadro di navigazione a sinistra, fai clic su *Storage* > *Aggregates*.
+. Per visualizzare le informazioni sulle prestazioni in tali aggregati, seleziona la vista Prestazioni: Tutti gli aggregati.
+. Individua l'aggregato che vuoi analizzare e fai clic sul nome dell'aggregato per accedere alla pagina Aggregate / Performance Explorer.
+. Facoltativamente, seleziona altri oggetti da confrontare con questo aggregato nel menu Visualizza e confronta, quindi aggiungi uno degli oggetti al riquadro di confronto.
++
+Le statistiche relative a entrambi gli oggetti appariranno nei grafici dei contatori per consentirne il confronto.
+
+. Nel riquadro di confronto a destra nella pagina Explorer, fai clic su *Zoom View* in uno dei grafici dei contatori per visualizzare i dettagli della cronologia delle prestazioni per quell'aggregato.
+
+
+image::../media/monitor_cluster_performance.png[Uno screenshot che mostra come puoi analizzare un particolare aggregato.]

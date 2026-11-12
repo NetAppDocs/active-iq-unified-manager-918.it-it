@@ -1,0 +1,16 @@
+---
+permalink: health-checker/concept_understand_cluster_monitoring.html 
+sidebar: sidebar 
+keywords: understand, cluster, monitor 
+summary: 'Puoi aggiungere cluster al database di Unified Manager per monitorarne la disponibilità, la capacità e altri dettagli, come l"utilizzo della CPU, le statistiche delle interfacce, lo spazio su disco disponibile, l"utilizzo dei qtree e le condizioni ambientali del chassis.' 
+---
+= Comprendi il monitoraggio dei cluster in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi aggiungere cluster al database di Unified Manager per monitorarne la disponibilità, la capacità e altri dettagli, come l'utilizzo della CPU, le statistiche delle interfacce, lo spazio su disco disponibile, l'utilizzo dei qtree e le condizioni ambientali del chassis.
+
+Gli eventi vengono generati se lo stato è anomalo o quando viene superata una soglia predefinita. Se configurato in tal senso, Unified Manager invia una notifica a un destinatario specificato quando un evento attiva un avviso.

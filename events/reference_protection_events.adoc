@@ -1,0 +1,45 @@
+---
+permalink: events/reference_protection_events.html 
+sidebar: sidebar 
+keywords: protection, events, impact area, protection 
+summary: 'Gli eventi di protezione ti informano se un"attività non è riuscita o è stata interrotta, consentendoti di monitorare eventuali problemi. Gli eventi sono raggruppati per area di impatto e includono il nome dell"evento e della trap, il livello di impatto, il tipo di origine e la gravità.' 
+---
+= Scopri gli eventi di protezione in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Gli eventi di protezione ti informano se un'attività non è riuscita o è stata interrotta, consentendoti di monitorare eventuali problemi. Gli eventi sono raggruppati per area di impatto e includono il nome dell'evento e della trap, il livello di impatto, il tipo di origine e la gravità.
+
+
+
+[[impact-area-protection]]
+== Area di impatto: protezione
+
+|===
+| Nome dell'evento (Nome della trap) | Livello di impatto | Tipo di origine | Gravità 
+
+
+ a| 
+Processo di protezione non riuscito(ocumEvtProtectionJobTaskFailed)
+ a| 
+Incidente
+ a| 
+Volume o servizio di storage
+ a| 
+Critico
+
+
+
+ a| 
+Processo di protezione interrotto(ocumEvtProtectionJobAborted)
+ a| 
+Rischio
+ a| 
+Volume o servizio di storage
+ a| 
+Avvertimento
+
+|===

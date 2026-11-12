@@ -1,0 +1,23 @@
+---
+permalink: storage-mgmt/concept_add_disk_space_to_um_database_directory.html 
+sidebar: sidebar 
+keywords: add, disk, space, unified manager, database, directory 
+summary: La directory del database di Unified Manager contiene tutti i dati relativi allo stato e alle prestazioni raccolti dai sistemi ONTAP. In alcuni casi potrebbe essere necessario aumentare le dimensioni della directory del database. 
+---
+= Aggiungi spazio su disco alla directory del database in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La directory del database di Unified Manager contiene tutti i dati relativi allo stato e alle prestazioni raccolti dai sistemi ONTAP. In alcuni casi potrebbe essere necessario aumentare le dimensioni della directory del database.
+
+Ad esempio, la directory del database potrebbe riempirsi se Unified Manager sta raccogliendo dati da un numero elevato di cluster, ciascuno con molti nodi. Riceverai un evento di avviso quando la directory del database è piena al 90% e un evento critico quando la directory è piena al 95%.
+
+[NOTE]
+====
+Non vengono raccolti altri dati dai cluster dopo che la directory raggiunge il 95% di capacità.
+
+====
+I passaggi necessari per aggiungere capacità alla directory dei dati variano a seconda che Unified Manager sia in esecuzione su un server VMware ESXi, su un server Red Hat Linux o su un server Microsoft Windows.

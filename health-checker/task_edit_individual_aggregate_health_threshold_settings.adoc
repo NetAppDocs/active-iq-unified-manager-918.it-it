@@ -1,0 +1,32 @@
+---
+permalink: health-checker/task_edit_individual_aggregate_health_threshold_settings.html 
+sidebar: sidebar 
+keywords: edit, individual, aggregate, health, threshold, settings 
+summary: 'Puoi modificare le impostazioni delle soglie di integrità per la capacità, la crescita e le copie Snapshot di uno o più aggregati. Quando viene superata una soglia, vengono generati avvisi e ricevi notifiche. Queste notifiche ti aiutano ad adottare misure preventive in base all"evento generato.' 
+---
+= Modifica le impostazioni individuali delle soglie di integrità degli aggregate in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi modificare le impostazioni delle soglie di integrità per la capacità, la crescita e le copie Snapshot di uno o più aggregati. Quando viene superata una soglia, vengono generati avvisi e ricevi notifiche. Queste notifiche ti aiutano ad adottare misure preventive in base all'evento generato.
+
+.Prima di iniziare
+Devi disporre del ruolo di Amministratore dell'applicazione o di Amministratore dello storage.
+
+In base alle modifiche dei valori di soglia, nel ciclo di monitoraggio successivo gli eventi vengono generati o contrassegnati come obsoleti.
+
+Quando Autogrow è abilitato sui volumi che risiedono sull'aggregate, le soglie di capacità dell'aggregate si considerano superate in base alla dimensione massima del volume impostata da Autogrow, non in base alla dimensione originale del volume.
+
+.Passaggi
+. Nel riquadro di navigazione a sinistra, fai clic su *Storage* > *Aggregates*.
+. Nella vista *Health: All Aggregates*, seleziona uno o più aggregati e quindi fai clic su *Edit Thresholds*.
+. Nella finestra di dialogo *Modifica soglie aggregate*, modifica le impostazioni di soglia di uno dei seguenti elementi: capacità, crescita o copie Snapshot, selezionando l'apposita check box e quindi modificando le impostazioni.
+. Fare clic su *Save*.
+
+
+*Informazioni correlate*
+
+link:../config/task_add_users.html["Aggiunta di utenti"]

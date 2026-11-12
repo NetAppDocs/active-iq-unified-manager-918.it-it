@@ -1,0 +1,26 @@
+---
+permalink: health-checker/task_reorder_group_actions.html 
+sidebar: sidebar 
+keywords: reorder, group actions 
+summary: 'Puoi modificare l"ordine delle azioni di gruppo da applicare agli oggetti di storage in un gruppo. Le azioni di gruppo vengono applicate agli oggetti di storage in sequenza in base alla loro priorità. La priorità più bassa viene assegnata all"azione di gruppo che hai configurato per ultima. Puoi modificare la priorità dell"azione di gruppo in base alle tue esigenze.' 
+---
+= Riordina le azioni di gruppo in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi modificare l'ordine delle azioni di gruppo da applicare agli oggetti di storage in un gruppo. Le azioni di gruppo vengono applicate agli oggetti di storage in sequenza in base alla loro priorità. La priorità più bassa viene assegnata all'azione di gruppo che hai configurato per ultima. Puoi modificare la priorità dell'azione di gruppo in base alle tue esigenze.
+
+.Prima di iniziare
+Devi disporre del ruolo di Amministratore dell'applicazione o di Amministratore dello storage.
+
+Puoi selezionare una singola riga o più righe, quindi eseguire più operazioni di drag-and-drop per modificare la priorità delle azioni di gruppo. Tuttavia, devi salvare le modifiche perché la nuova priorità venga visualizzata nella griglia delle azioni di gruppo.
+
+.Passaggi
+. Nel riquadro di navigazione a sinistra, fai clic su *Gestione dello storage* > *Gruppi*.
+. Nella scheda *Azioni di gruppo*, fai clic su *Riordina*.
+. Nella finestra di dialogo *Riordina azioni di gruppo*, trascina e rilascia le righe per riorganizzare la sequenza delle azioni di gruppo secondo necessità.
+. Fare clic su *Save*.
+

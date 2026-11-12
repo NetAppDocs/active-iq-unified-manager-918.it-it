@@ -1,0 +1,22 @@
+---
+permalink: events/concept_what_information_is_contained_in_an_alert_email.html 
+sidebar: sidebar 
+keywords: information, contained, alert, email 
+summary: 'Le email di avviso di Unified Manager forniscono il tipo di evento, la gravità dell"evento, il nome della policy o della soglia violata che ha causato l"evento e una descrizione dell"evento. Il messaggio email contiene anche un hyperlink per ogni evento che ti consente di visualizzare la pagina dei dettagli dell"evento nell"UI.' 
+---
+= Informazioni contenute in un'email di avviso di Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le email di avviso di Unified Manager forniscono il tipo di evento, la gravità dell'evento, il nome della policy o della soglia violata che ha causato l'evento e una descrizione dell'evento. Il messaggio email contiene anche un hyperlink per ogni evento che ti consente di visualizzare la pagina dei dettagli dell'evento nell'UI.
+
+Le email di avviso vengono inviate a tutti gli utenti che si sono iscritti per ricevere gli avvisi.
+
+Se un contatore delle prestazioni o un valore di capacità subisce una variazione significativa durante un periodo di raccolta, ciò potrebbe causare l'attivazione simultanea di un evento critico e di un evento di avviso per la stessa policy di soglia. In questo caso, potresti ricevere un'e-mail per l'evento di avviso e una per l'evento critico. Questo perché Unified Manager ti consente di iscriverti separatamente per ricevere avvisi relativi al superamento delle soglie di avviso e di quelle critiche.
+
+Di seguito trovi un esempio di email di avviso:
+
+image::../media/um_email_alert.gif[Uno screenshot dell'interfaccia utente che mostra un esempio di email di avviso.]

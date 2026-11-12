@@ -1,0 +1,61 @@
+---
+permalink: reporting/task_manage_report_schedules.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Puoi gestire la pianificazione dei report dalla pagina "Programmazione report". Puoi visualizzare, modificare o eliminare le pianificazioni esistenti.' 
+---
+= Gestisci la pianificazione dei report in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi gestire la pianificazione dei report dalla pagina "Programmazione report". Puoi visualizzare, modificare o eliminare le pianificazioni esistenti.
+
+[NOTE]
+.Prima di iniziare
+====
+Non puoi pianificare nuovi report dalla pagina "Report Schedules". Puoi aggiungere report pianificati solo dalle pagine dell'inventario degli oggetti.
+
+====
+* Devi disporre del ruolo di Amministratore dell'applicazione o di Amministratore dello storage.
+
+
+.Passaggi
+. Nel riquadro di navigazione a sinistra, fai clic su *Gestione dello storage* > *Pianificazioni report*.
+. Nella pagina Programmi dei report:
++
+[cols="2*"]
+|===
+| Se vuoi... | Poi... 
+
+
+ a| 
+Visualizza una pianificazione esistente
+ a| 
+Scorri l'elenco dei report esistenti utilizzando le barre di scorrimento e i controlli di pagina.
+
+
+
+ a| 
+Modifica una pianificazione esistente
+ a| 
+.. Fai clic sull'icona Altro image:../media/more_icon.gif[""] per la pianificazione che desideri utilizzare.
+.. Fai clic su *Modifica*.
+.. Apporta le modifiche necessarie.
+.. Fai clic sul segno di spunta per salvare le modifiche.
+
+
+
+
+ a| 
+Elimina una pianificazione esistente
+ a| 
+.. Fai clic sull'icona Altro image:../media/more_icon.gif[""] per la pianificazione che desideri utilizzare.
+.. Fai clic su *Delete*.
+.. Conferma la tua decisione.
+
+
+|===
+

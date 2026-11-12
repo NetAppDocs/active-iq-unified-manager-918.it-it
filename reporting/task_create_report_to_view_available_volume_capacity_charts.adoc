@@ -1,0 +1,88 @@
+---
+permalink: reporting/task_create_report_to_view_available_volume_capacity_charts.html 
+sidebar: sidebar 
+keywords: create, report, view, available, volume, capacity, charts 
+summary: Puoi creare un report per analizzare la capacità disponibile del volume in un grafico Excel. 
+---
+= Crea un report per visualizzare i grafici della capacità di volume disponibile in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi creare un report per analizzare la capacità disponibile del volume in un grafico Excel.
+
+.Prima di iniziare
+* Devi disporre del ruolo di Amministratore dell'applicazione o di Amministratore dello storage.
+
+
+Segui questi passaggi per aprire una vista "Health: All Volumes", scaricare la vista in Excel, creare un grafico della capacità disponibile, caricare il file Excel personalizzato e pianificare il report finale.
+
+.Passaggi
+. Nel riquadro di navigazione a sinistra, fai clic su *Archiviazione* > *Volumi*.
+. Seleziona *Reports* > *Download Excel*.
++
+image::../media/download_excel_menu.png[Uno screenshot UI che mostra come scaricare excel dai report.]
+
++
+A seconda del browser che usi, potresti dover fare clic su *OK* per salvare il file.
+
+. Se necessario, fai clic su *Abilita modifica*.
+. In Excel, apri il file scaricato.
+. Nel foglio `data`, seleziona i dati che desideri utilizzare nelle colonne `Volume` e `Available Data` %.
+. Nel menu *Inserisci*, seleziona un `3-D piechart.`
++
+Il grafico mostra quali volumi hanno lo spazio disponibile maggiore. Il grafico è presente nella scheda tecnica.
+
++
+[NOTE]
+====
+A seconda della configurazione di rete, selezionare tutte le colonne o troppe righe di dati potrebbe rendere il grafico a torta illeggibile. Questo esempio utilizza un grafico a torta 3D, ma puoi usare qualsiasi tipo di grafico. Usa il grafico che visualizza meglio i dati che vuoi rappresentare.
+
+====
+. Assegna al grafico il titolo *Capacità disponibile*.
+. Fai clic con il pulsante destro del mouse sul grafico e seleziona *Sposta grafico*.
+. Seleziona *Nuovo foglio* e assegna al foglio il nome *Grafici del volume di storage*.
++
+[NOTE]
+====
+Assicurati che il nuovo foglio appaia dopo i fogli informativi e di dati.
+
+====
++
+image::../media/move_chart.png[Una screenshot che mostra come assegnare un nome a un nuovo foglio.]
+
+. Usando i menu *Progettazione* e *Formato*, disponibili quando selezioni il grafico, puoi personalizzarne l'aspetto.
+. Quando sei soddisfatto, salva il file con le modifiche.
+. In Unified Manager, seleziona *Reports* > *Upload Excel*.
++
+[NOTE]
+====
+Assicurati di essere nella stessa visualizzazione da cui hai scaricato il file Excel.
+
+====
+. Seleziona il file Excel che hai modificato.
+. Fai clic su *Apri*.
+. Fai clic su *Submit*.
++
+Accanto alla voce di menu *Reports* > *Upload Excel* compare un segno di spunta.
+
++
+image::../media/upload_excel.png[Uno screenshot dell'interfaccia utente che mostra come caricare excel nei report.]
+
+. Fai clic su *Report programmati*.
+. Fai clic su *Aggiungi pianificazione* per aggiungere una nuova riga alla pagina *Pianificazioni report* in modo da poter definire le caratteristiche della pianificazione per il nuovo report.
+. Inserisci un nome per la pianificazione del report e completa gli altri campi del report, quindi fai clic sul segno di spunta (image:../media/blue_check.gif[""]) alla fine della riga.
++
+[NOTE]
+====
+Seleziona il formato *XLSX* per il report.
+
+====
++
+Il report viene inviato immediatamente a scopo di test. Successivamente, il report viene generato e inviato via email ai destinatari indicati con la frequenza specificata.
+
+
+
+In base ai risultati riportati nel report, potresti voler bilanciare il carico sui volumi.

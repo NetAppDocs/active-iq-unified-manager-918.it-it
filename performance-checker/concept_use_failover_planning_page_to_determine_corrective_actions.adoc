@@ -1,0 +1,16 @@
+---
+permalink: performance-checker/concept_use_failover_planning_page_to_determine_corrective_actions.html 
+sidebar: sidebar 
+keywords: node, failover, planning page, determine, corrective, actions 
+summary: In base alle informazioni visualizzate nella pagina Pianificazione del failover prestazioni/nodo, puoi intraprendere azioni per garantire che un failover non provochi un calo delle prestazioni di una coppia HA al di sotto di un livello accettabile. 
+---
+= Determina le azioni correttive dalla pagina Performance/Node Failover Planning in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+In base alle informazioni visualizzate nella pagina Pianificazione del failover prestazioni/nodo, puoi intraprendere azioni per garantire che un failover non provochi un calo delle prestazioni di una coppia HA al di sotto di un livello accettabile.
+
+Ad esempio, per ridurre l'impatto stimato di un failover sulle prestazioni, puoi spostare alcuni volumi o LUN da un nodo della coppia HA ad altri nodi del cluster. In questo modo, garantisci che il nodo primario possa continuare a fornire prestazioni accettabili anche dopo un failover.

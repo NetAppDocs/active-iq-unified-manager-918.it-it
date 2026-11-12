@@ -1,0 +1,107 @@
+---
+permalink: api-automation/concept_manage_sep.html 
+sidebar: sidebar 
+keywords: manage, storage, efficiency, policy 
+summary: Puoi visualizzare, creare, modificare ed eliminare i criteri di efficienza dello storage utilizzando le API del provider di storage. 
+---
+= Gestisci le policy di efficienza dello storage tramite API in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi visualizzare, creare, modificare ed eliminare i criteri di efficienza dello storage utilizzando le API del provider di storage.
+
+[NOTE]
+====
+Tieni presente i seguenti punti:
+
+* Non è obbligatorio assegnare una Storage Efficiency Policy durante la creazione di un carico di lavoro su Unified Manager.
+* Non puoi rimuovere un criterio di efficienza dello storage da un carico di lavoro dopo che gli è stato assegnato un criterio.
+* Se un workload ha alcune impostazioni di storage specificate sui volumi ONTAP, come deduplicazione e compressione, tali impostazioni possono essere sovrascritte dalle impostazioni specificate nella Storage Efficiency Policy che applichi quando aggiungi i workload di storage in Unified Manager.
+
+
+====
+
+
+[[view-storage-efficiency-policies]]
+== Visualizza le policy di efficienza dello storage
+
+Puoi utilizzare il seguente metodo per visualizzare i criteri di efficienza dello storage prima di assegnarli ai workload di storage. Questa API elenca tutti i criteri di efficienza dello storage definiti dal sistema e creati dall'utente e recupera gli attributi di tutti i criteri di efficienza dello storage. Se vuoi interrogare un criterio di efficienza dello storage specifico, devi immettere l'ID univoco del criterio per recuperarne i dettagli.
+
+[cols="3*"]
+|===
+| Categoria | Verbo HTTP | Percorso 
+
+
+ a| 
+storage-provider
+ a| 
+GET
+ a| 
+`/storage-provider/storage-efficiency-policies`
+
+`/storage-provider/storage-efficiency-policies/\{key}`
+
+|===
+
+
+[[add-storage-efficiency-policies]]
+== Aggiungi criteri di efficienza dello storage
+
+Puoi utilizzare il metodo seguente per creare criteri di efficienza dello storage personalizzati e assegnarli ai tuoi workload di storage se i criteri definiti dal sistema non soddisfano i requisiti di provisioning per i tuoi workload di storage. Inserisci i dettagli del criterio di efficienza dello storage che vuoi creare come parametri di input.
+
+[cols="3*"]
+|===
+| Categoria | Verbo HTTP | Percorso 
+
+
+ a| 
+storage-provider
+ a| 
+POST
+ a| 
+`/storage-provider/storage-efficiency-policies`
+
+|===
+
+
+[[delete-storage-efficiency-policies]]
+== Elimina i criteri di efficienza dello storage
+
+Puoi usare il metodo seguente per eliminare uno specifico criterio di efficienza dello storage. Non puoi eliminare un criterio di efficienza dello storage se è assegnato a un carico di lavoro o se è l'unico criterio di efficienza dello storage disponibile. Per eliminare un determinato criterio di efficienza dello storage, devi fornire come parametro di input l'ID univoco del criterio di efficienza dello storage.
+
+[cols="3*"]
+|===
+| Categoria | Verbo HTTP | Percorso 
+
+
+ a| 
+storage-provider
+ a| 
+ELIMINA
+ a| 
+`/storage-provider/storage-efficiency-policies/\{key}`
+
+|===
+
+
+[[modify-storage-efficiency-policies]]
+== Modificare i criteri di efficienza dello storage
+
+Puoi utilizzare il metodo seguente per modificare una Storage Efficiency Policy e aggiornarne le proprietà. Non puoi modificare una Storage Efficiency Policy definita dal sistema o assegnata a un workload. Per modificare una Storage Efficiency Policy specifica, devi fornire l'ID univoco della Storage Efficiency Policy. Inoltre, devi specificare la proprietà che vuoi aggiornare, insieme al relativo valore.
+
+[cols="3*"]
+|===
+| Categoria | Verbo HTTP | Percorso 
+
+
+ a| 
+storage-provider
+ a| 
+PATCH
+ a| 
+`/storage-provider/storage-efficiency-policies/\{key}`
+
+|===

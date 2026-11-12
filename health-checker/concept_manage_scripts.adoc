@@ -1,0 +1,16 @@
+---
+permalink: health-checker/concept_manage_scripts.html 
+sidebar: sidebar 
+keywords: manage, scripts 
+summary: 'Puoi utilizzare gli script per modificare o aggiornare automaticamente più oggetti di storage in Unified Manager. Lo script è associato a un avviso. Quando un evento attiva un avviso, lo script viene eseguito. Puoi caricare script personalizzati e testarne l"esecuzione quando viene generato un avviso.' 
+---
+= Gestisci gli script in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi utilizzare gli script per modificare o aggiornare automaticamente più oggetti di storage in Unified Manager. Lo script è associato a un avviso. Quando un evento attiva un avviso, lo script viene eseguito. Puoi caricare script personalizzati e testarne l'esecuzione quando viene generato un avviso.
+
+La possibilità di caricare script su Unified Manager ed eseguirli è abilitata per impostazione predefinita. Se la tua organizzazione non desidera consentire questa funzionalità per motivi di sicurezza, puoi disabilitarla da *Gestione dello storage* > *Impostazioni funzionalità*.

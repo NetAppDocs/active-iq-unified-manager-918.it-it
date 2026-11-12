@@ -1,0 +1,51 @@
+---
+permalink: performance-checker/task_respond_to_user_defined_performance_threshold_events.html 
+sidebar: sidebar 
+keywords: user-defined, performance, threshold, events 
+summary: 'Puoi usare Unified Manager per analizzare gli eventi delle prestazioni causati dal superamento, da parte di un contatore delle prestazioni, di una soglia di avviso o critica definita dall"utente. Puoi anche usare Unified Manager per controllare lo stato di salute del componente del cluster e vedere se recenti eventi di integrità rilevati sul componente hanno contribuito all"evento delle prestazioni.' 
+---
+= Rispondi agli eventi di soglia delle prestazioni definiti dall'utente in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi usare Unified Manager per analizzare gli eventi delle prestazioni causati dal superamento, da parte di un contatore delle prestazioni, di una soglia di avviso o critica definita dall'utente. Puoi anche usare Unified Manager per controllare lo stato di salute del componente del cluster e vedere se recenti eventi di integrità rilevati sul componente hanno contribuito all'evento delle prestazioni.
+
+.Prima di iniziare
+* Devi disporre del ruolo di Operatore, Amministratore di applicazioni o Amministratore di archiviazione.
+* Devono esserci eventi relativi alle prestazioni nuovi o obsoleti.
+
+
+.Passaggi
+. Visualizza la pagina *Dettagli dell'evento* per vedere le informazioni sull'evento.
+. Esamina la *Descrizione*, che illustra il superamento della soglia che ha causato l'evento.
++
+Ad esempio, il messaggio "`Il valore di latenza di 456 ms/op ha attivato un evento WARNING in base all'impostazione della soglia di 400 ms/op`" indica che per l'oggetto si è verificato un evento di avviso relativo alla latenza.
+
+. Passa il cursore sul nome del criterio per visualizzare i dettagli relativi al criterio di soglia che ha attivato l'evento.
++
+Ciò include il nome della policy, il contatore delle prestazioni in fase di valutazione, il valore del contatore che deve essere superato per essere considerato un evento critico o di avviso e la durata per la quale il contatore deve superare tale valore.
+
+. Annota l'ora di attivazione dell'evento, così puoi verificare se nello stesso momento si sono verificati altri eventi che potrebbero aver contribuito a questo evento.
+. Segui una delle opzioni seguenti per analizzare ulteriormente l'evento e determinare se è necessario intraprendere azioni per risolvere il problema di prestazioni:
++
+|===
+| Opzione | Possibili azioni di indagine 
+
+
+ a| 
+Fai clic sul nome dell'oggetto di origine per visualizzare la pagina Explorer relativa a tale oggetto.
+ a| 
+In questa pagina puoi visualizzare i dettagli dell'oggetto e confrontarlo con altri oggetti di storage simili per verificare se altri oggetti di storage presentano problemi di prestazioni nello stesso momento. Ad esempio, per verificare se anche altri volumi sullo stesso aggregate presentano problemi di prestazioni.
+
+
+
+ a| 
+Fai clic sul nome del cluster per visualizzare la pagina Riepilogo del cluster.
+ a| 
+In questa pagina puoi visualizzare i dettagli del cluster su cui risiede questo oggetto per verificare se si sono verificati altri problemi di prestazioni nello stesso periodo.
+
+|===
+

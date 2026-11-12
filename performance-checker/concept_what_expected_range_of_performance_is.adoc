@@ -1,0 +1,33 @@
+---
+permalink: performance-checker/concept_what_expected_range_of_performance_is.html 
+sidebar: sidebar 
+keywords: expected, range, performance, latency, forecast, formed 
+summary: La previsione della latenza è una stima dei valori di prestazione massimi e minimi previsti in un determinato momento. Per la latenza del workload, i valori massimi costituiscono la soglia di prestazione. Quando il valore effettivo supera la soglia di prestazione, Unified Manager attiva un evento di prestazione dinamico. 
+---
+= Capisci come Active IQ Unified Manager calcola l'intervallo di prestazioni previsto
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La previsione della latenza è una stima dei valori di prestazione massimi e minimi previsti in un determinato momento. Per la latenza del workload, i valori massimi costituiscono la soglia di prestazione. Quando il valore effettivo supera la soglia di prestazione, Unified Manager attiva un evento di prestazione dinamico.
+
+Ad esempio, durante il normale orario lavorativo, tra le 9:00 e le 17:00, la maggior parte dei dipendenti potrebbe controllare la propria posta elettronica tra le 9:00 e le 10:30. L'aumento della domanda sui server di posta elettronica comporta un incremento del carico di lavoro sui sistemi di archiviazione back-end durante questo intervallo di tempo. I dipendenti potrebbero quindi notare tempi di risposta più lenti da parte dei propri client di posta elettronica.
+
+Durante la pausa pranzo, tra le 12:00 e le 13:00, e al termine della giornata lavorativa, dopo le 17:00, è probabile che la maggior parte dei dipendenti sia lontana dal computer. La domanda sui server di posta elettronica in genere diminuisce, riducendo anche la domanda sullo storage back-end. In alternativa, potrebbero esserci operazioni di carico di lavoro pianificate, come backup dello storage o scansioni antivirus, che iniziano dopo le 17:00 e aumentano l'attività sullo storage back-end.
+
+Nel corso di diversi giorni, l'aumento e la diminuzione dell'attività del carico di lavoro determinano l'intervallo previsto dell'attività (previsione della latenza), con limiti superiori e inferiori per un carico di lavoro. Quando l'attività effettiva del carico di lavoro per un oggetto è al di fuori dei limiti superiori o inferiori e vi rimane per un periodo di tempo, questo potrebbe indicare che l'oggetto è sovrautilizzato o sottoutilizzato.
+
+
+
+[[how-the-latency-forecast-is-formed]]
+== Come viene generata la previsione della latenza
+
+Unified Manager deve raccogliere un minimo di 3 giorni di attività del carico di lavoro prima di poter iniziare l'analisi e prima che la previsione della latenza per il tempo di risposta I/O possa essere visualizzata nella GUI. La raccolta minima di dati richiesta non tiene conto di tutte le variazioni che si verificano nell'attività del carico di lavoro. Dopo aver raccolto i dati dei primi 3 giorni di attività, Unified Manager aggiorna la previsione della latenza ogni 24 ore alle 12:00 a.m. per riflettere le variazioni dell'attività del carico di lavoro e stabilire una soglia di prestazioni dinamica più accurata.
+
+[NOTE]
+====
+L'ora legale modifica l'ora di sistema, alterando la previsione della latenza nelle statistiche delle prestazioni per i carichi di lavoro monitorati. Unified Manager inizia immediatamente a correggere la previsione della latenza, un'operazione che richiede circa 15 giorni per essere completata. Durante questo periodo puoi continuare a utilizzare Unified Manager, ma, poiché Unified Manager usa la previsione della latenza per rilevare eventi dinamici, alcuni eventi potrebbero non essere accurati. Gli eventi rilevati prima del cambio dell'ora non sono interessati.
+
+====

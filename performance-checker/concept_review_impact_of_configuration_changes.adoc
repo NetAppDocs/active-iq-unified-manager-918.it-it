@@ -1,0 +1,18 @@
+---
+permalink: performance-checker/concept_review_impact_of_configuration_changes.html 
+sidebar: sidebar 
+keywords: review, impact, configuration, changes, workload, performance 
+summary: Le modifiche alla configurazione del cluster, come ad esempio un disco guasto, un failover HA o lo spostamento di un volume, potrebbero influire negativamente sulle prestazioni del volume e causare un aumento della latenza. 
+---
+= Valuta come le modifiche alla configurazione influenzano le prestazioni del carico di lavoro in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le modifiche alla configurazione del cluster, come ad esempio un disco guasto, un failover HA o lo spostamento di un volume, potrebbero influire negativamente sulle prestazioni del volume e causare un aumento della latenza.
+
+In Unified Manager, puoi consultare la pagina Analisi del carico di lavoro per verificare quando si è verificata una recente modifica della configurazione e confrontarla con le operazioni e la latenza (tempo di risposta) per capire se si è verificata una variazione nell'attività del carico di lavoro del volume selezionato.
+
+Le pagine delle prestazioni di Unified Manager possono rilevare solo un numero limitato di eventi di modifica. Le pagine dello stato di salute forniscono avvisi per altri eventi causati da modifiche alla configurazione. Puoi cercare il volume in Unified Manager per visualizzare la cronologia degli eventi.

@@ -1,0 +1,26 @@
+---
+permalink: config/concept_what_functionality_maintenance_console_provides.html 
+sidebar: sidebar 
+keywords: functionality, maintenance, console 
+summary: La console di manutenzione di Unified Manager ti consente di gestire le impostazioni del tuo sistema Unified Manager e di apportare le modifiche necessarie per evitare eventuali problemi. 
+---
+= Scopri la console di manutenzione in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La console di manutenzione di Unified Manager ti consente di gestire le impostazioni del tuo sistema Unified Manager e di apportare le modifiche necessarie per evitare eventuali problemi.
+
+A seconda del sistema operativo su cui hai installato Unified Manager, la console di manutenzione offre le seguenti funzioni:
+
+* Risolvi eventuali problemi con la tua appliance virtuale, soprattutto se l'interfaccia web di Unified Manager non è disponibile
+* Esegui l'aggiornamento a versioni più recenti di Unified Manager
+* Genera pacchetti di supporto da inviare al supporto tecnico
+* Configura le impostazioni di rete
+* Cambia la password dell'utente di manutenzione
+* Connettiti a un provider di dati esterno per inviare statistiche sulle performance
+* Modifica l'impostazione interna della raccolta dei dati sulle prestazioni
+* Ripristina il database e le impostazioni di configurazione di Unified Manager da una versione di backup salvata in precedenza.
+

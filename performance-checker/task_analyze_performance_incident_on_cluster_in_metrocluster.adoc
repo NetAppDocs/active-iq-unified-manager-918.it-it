@@ -1,0 +1,52 @@
+---
+permalink: performance-checker/task_analyze_performance_incident_on_cluster_in_metrocluster.html 
+sidebar: sidebar 
+keywords: analyze, dynamic, performance, event, cluster, metrocluster, configuration 
+summary: 'Puoi utilizzare Unified Manager per analizzare il cluster in una configurazione MetroCluster in cui è stato rilevato un evento di prestazioni. Puoi identificare il nome del cluster, l"ora di rilevamento dell"evento e i carichi di lavoro "bullo" e "vittima" coinvolti.' 
+---
+= Analizza un evento di performance MetroCluster su un cluster in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi utilizzare Unified Manager per analizzare il cluster in una configurazione MetroCluster in cui è stato rilevato un evento di prestazioni. Puoi identificare il nome del cluster, l'ora di rilevamento dell'evento e i carichi di lavoro _bully_ e _victim_ coinvolti.
+
+.Prima di iniziare
+* Devi disporre del ruolo di Operatore, Amministratore di applicazioni o Amministratore di archiviazione.
+* Devono essere presenti eventi di prestazione nuovi, riconosciuti o obsoleti per una configurazione MetroCluster.
+* Entrambi i cluster nella configurazione MetroCluster devono essere monitorati dalla stessa istanza di Unified Manager.
+
+
+.Passaggi
+. Visualizza la pagina *Dettagli dell'evento* per vedere le informazioni sull'evento.
+. Esamina la descrizione dell'evento per visualizzare i nomi dei carichi di lavoro coinvolti e il loro numero.
++
+In questo esempio, l'icona Risorse di MetroCluster è rossa, a indicare che le risorse di MetroCluster sono in contesa. Posiziona il cursore sull'icona per visualizzarne una descrizione.
+
++
+image::../media/opm_mcc_incident_summary_png.gif[Riepilogo dell'evento di prestazione per la configurazione MetroCluster]
+
+. Annota il nome del cluster e l'ora di rilevamento dell'evento, che potrai utilizzare per analizzare gli eventi relativi alle prestazioni sul cluster partner.
+. Nei grafici, esamina i carichi di lavoro _victim_ per confermare che i loro tempi di risposta siano superiori alla soglia di prestazione.
++
+In questo esempio, il workload vittima viene visualizzato nel testo che appare al passaggio del mouse. I grafici della latenza mostrano, a un livello high-level, un modello di latenza coerente per i workload vittima coinvolti. Anche se la latenza anomala dei workload vittima ha innescato l'evento, un modello di latenza coerente potrebbe indicare che i workload funzionano entro l'intervallo previsto, ma che un picco di I/O ha aumentato la latenza e innescato l'evento.
+
++
+image::../media/opm_mcc_incident_victim_workloads_png.gif[Carichi di lavoro vittima nell'evento di prestazione per la configurazione MetroCluster]
+
++
+Se di recente hai installato un'applicazione su un client che accede a questi workload dei volumi e tale applicazione invia a questi un volume elevato di I/O, potresti aspettarti un aumento della latenza. Se la latenza dei workload torna entro l'intervallo previsto, lo stato dell'evento passa a obsoleto e rimane in questo stato per più di 30 minuti, probabilmente puoi ignorare l'evento. Se l'evento è ancora in corso e rimane nel nuovo stato, puoi analizzarlo ulteriormente per determinare se l'evento è stato causato da altri problemi.
+
+. Nel grafico Workload Throughput, seleziona *Bully Workloads* per visualizzare i bully workloads.
++
+La presenza di carichi di lavoro aggressivi indica che l'evento potrebbe essere stato causato da uno o più carichi di lavoro sul cluster locale che hanno sovrautilizzato le risorse MetroCluster. I carichi di lavoro aggressivi presentano un'elevata deviazione nel throughput di scrittura (MB/s).
+
++
+Questo grafico mostra, a livello high-level, il pattern di throughput di scrittura (MB/s) per i carichi di lavoro. Puoi esaminare il pattern di scrittura in MB/s per identificare throughput anomalo, che potrebbe indicare che un carico di lavoro sta utilizzando eccessivamente le risorse MetroCluster.
+
++
+Se nell'evento non sono coinvolti carichi di lavoro aggressivi, la causa potrebbe essere un problema di integrità del collegamento tra i cluster o un problema di prestazioni sul cluster partner. Puoi utilizzare Unified Manager per verificare l'integrità di entrambi i cluster in una configurazione MetroCluster. Puoi anche utilizzare Unified Manager per verificare e analizzare gli eventi relativi alle prestazioni sul cluster partner.
+
+

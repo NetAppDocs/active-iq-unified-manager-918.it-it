@@ -1,0 +1,45 @@
+---
+permalink: storage-mgmt/reference_window_layout_customization.html 
+sidebar: sidebar 
+keywords: window, layout, customization 
+summary: Active IQ Unified Manager ti consente di personalizzare il layout delle informazioni nelle pagine degli oggetti di archiviazione e di rete. Personalizzando le finestre, puoi controllare quali dati sono visibili e come vengono visualizzati. 
+---
+= Personalizzazione del layout delle finestre in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Active IQ Unified Manager ti consente di personalizzare il layout delle informazioni nelle pagine degli oggetti di archiviazione e di rete. Personalizzando le finestre, puoi controllare quali dati sono visibili e come vengono visualizzati.
+
+* *Ordinamento*
++
+Puoi fare clic sull'intestazione di colonna per modificare l'ordinamento delle voci della colonna. Quando fai clic sull'intestazione di colonna, per quella colonna vengono visualizzate le frecce di ordinamento (image:../media/sort_asc_um60.gif["Icona per l'ordinamento delle colonne – crescente"] e image:../media/sort_desc_um60.gif["Icona per l'ordinamento della colonna – decrescente"]).
+
+* *Filtraggio*
++
+Puoi fare clic sull'icona del filtro (image:../media/filtering_icon.gif[""]) per applicare filtri e personalizzare la visualizzazione delle informazioni nelle pagine degli oggetti di storage e di rete, in modo che vengano visualizzate solo le voci che corrispondono alle condizioni specificate. Puoi applicare i filtri dal riquadro Filtri.
+
++
+Il riquadro Filtri ti consente di filtrare la maggior parte delle colonne in base alle opzioni selezionate. Ad esempio, nella vista Stato di salute: Tutti i volumi, puoi usare il riquadro Filtri per visualizzare tutti i volumi offline selezionando l'opzione di filtro appropriata in Stato.
+
++
+Le colonne relative alla capacità in qualsiasi elenco mostrano sempre i dati sulla capacità nelle unità appropriate, arrotondati a due cifre decimali. Questo vale anche quando filtri le colonne della capacità. Ad esempio, se usi il filtro nella colonna Total Data Capacity nella vista Health: All Aggregates per filtrare i dati maggiori di 20.45 GB, la capacità effettiva di 20.454 GB viene visualizzata come 20.45 GB. Analogamente, se filtri i dati minori di 20.45 GB, la capacità effettiva di 20.449 GB viene visualizzata come 20.45 GB.
+
++
+Se usi il filtro nella colonna Dati disponibili % della vista Health: All Aggregates per filtrare i dati maggiori di 20,45%, la capacità effettiva di 20,454% viene visualizzata come 20,45%. Analogamente, se filtri i dati minori di 20,45%, la capacità effettiva di 20,449% viene visualizzata come 20,45%.
+
+* *Nascondere o mostrare le colonne*
++
+Puoi fare clic sull'icona di visualizzazione delle colonne (*Mostra/Nascondi*) per selezionare le colonne che desideri visualizzare. Una volta selezionate le colonne appropriate, puoi riordinarle trascinandole con il mouse.
+
+* *Ricerca in corso*
++
+Puoi usare la casella di ricerca per cercare determinati attributi degli oggetti e affinare così l'elenco degli elementi nella pagina dell'inventario. Ad esempio, puoi inserire "cloud" per filtrare l'elenco dei volumi nella pagina dell'inventario dei volumi e visualizzare tutti i volumi che contengono la parola "cloud".
+
+* *Esportazione dei dati*
++
+Puoi fare clic sul pulsante *Report* (o sul pulsante *Esporta* per esportare i dati in un file di valori separati da virgole  `(.csv)`, `(.pdf)` documento o file Microsoft Excel `(.xlsx)` e usare i dati esportati per creare report).
+
+

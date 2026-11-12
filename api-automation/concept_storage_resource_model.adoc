@@ -1,0 +1,31 @@
+---
+permalink: api-automation/concept_storage_resource_model.html 
+sidebar: sidebar 
+keywords: storage, resource, ONTAP 
+summary: Le risorse di storage in ONTAP possono essere classificate in modo generale in risorse di storage fisico e risorse di storage logiche. Per gestire in modo efficace i sistemi ONTAP utilizzando le API fornite in Active IQ Unified Manager, devi comprendere il modello delle risorse di storage e la relazione tra le varie risorse di storage. 
+---
+= Comprendi il modello di risorse di archiviazione ONTAP in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le risorse di storage in ONTAP possono essere classificate in modo generale in _storage fisico_ e _risorse di storage logiche._ Per gestire efficacemente i tuoi sistemi ONTAP utilizzando le API fornite in Active IQ Unified Manager, devi comprendere il modello delle risorse di storage e la relazione tra le varie risorse di storage.
+
+* *risorse di storage fisico*
++
+Si riferisce agli oggetti di storage fisico forniti da ONTAP. Le risorse di storage fisico includono dischi, cluster, controller di storage, nodi e aggregati.
+
+* *Risorse di storage logiche*
++
+Si riferisce alle risorse di storage fornite da ONTAP che non sono vincolate a una risorsa fisica. Queste risorse sono associate a una macchina virtuale di storage (SVM, precedentemente nota come Vserver) ed esistono indipendentemente da qualsiasi risorsa di storage fisico specifica, come un disco, array LUN o un aggregate.
+
++
+Le risorse di storage logiche includono volumi di tutti i tipi e qtree, nonché le funzionalità e le configurazioni che puoi utilizzare con tali risorse, come copie Snapshot, deduplicazione, compressione e quote.
+
+
+
+L'illustrazione seguente mostra le risorse di storage in un cluster a 2 nodi:
+
+image::../media/storage_resource_model.gif[Uno screenshot dell'interfaccia utente che mostra risorse di storage in un cluster a 2 nodi.]

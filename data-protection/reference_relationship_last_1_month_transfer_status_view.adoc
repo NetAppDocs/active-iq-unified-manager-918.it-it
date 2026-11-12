@@ -1,0 +1,73 @@
+---
+permalink: data-protection/reference_relationship_last_1_month_transfer_status_view.html 
+sidebar: sidebar 
+keywords: relationship, 1 month, transfer status, view 
+summary: 'La visualizzazione "Stato del trasferimento dell"ultimo mese" nella pagina "Relazione" mostra l"andamento dei trasferimenti e lo stato di successo o errore per le relazioni asincrone.' 
+---
+= Visualizza la vista dello stato dei trasferimenti dell'ultimo mese in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La vista "Stato del trasferimento: ultimo mese" ti consente di analizzare nel tempo le tendenze dei trasferimenti per volumi e Storage VM nelle relazioni asincrone. Questa pagina mostra anche se il trasferimento è andato a buon fine o non è riuscito.
+
+I controlli nella parte superiore della pagina ti consentono di eseguire ricerche per individuare oggetti specifici, creare e applicare filtri per restringere l'elenco dei dati visualizzati, aggiungere/rimuovere/riordinare le colonne nella pagina ed esportare i dati della pagina in un file `.csv`, `.pdf`, o `.xlsx`. Dopo aver personalizzato la pagina, puoi salvare i risultati come vista personalizzata e quindi pianificare la generazione e l'invio regolari tramite email di un report di questi dati. Puoi usare l'opzione *Filter* per visualizzare solo i sistemi storage selezionati, ad esempio solo i volumi o solo le Storage VMs. Lo stesso report viene visualizzato nella pagina Storage e solo per l'entità storage selezionata. Ad esempio, se vuoi visualizzare le relazioni dei volumi, puoi accedere al report *Relationship: Last 1 Month Transfer Status* per le Storage VMs dal menu *Storage* > *Storage VMs* > *Relationship: Last 1 Month Transfer Status* oppure dal menu *Protection* > *Relationships* > *Relationship: Last 1 Month Transfer Status*, e usare *Filter* per visualizzare solo i dati dei volumi.
+
+* *Volume di origine*
++
+Visualizza il nome del volume di origine.
+
+* *Volume di destinazione*
++
+Visualizza il nome del volume di destinazione.
+
+* *Tipo di operazione*
++
+Visualizza il tipo di trasferimento del volume.
+
+* *Esito dell'operazione*
++
+Indica se il trasferimento del volume è andato a buon fine.
+
+* *Orario di inizio del trasferimento*
++
+Visualizza l'ora di inizio del trasferimento del volume.
+
+* *Orario di fine del trasferimento*
++
+Visualizza l'ora di fine del trasferimento del volume.
+
+* *Durata del trasferimento*
++
+Visualizza il tempo impiegato (in ore) per completare il trasferimento del volume.
+
+* *Dimensione del trasferimento*
++
+Visualizza la dimensione (in MB) del volume trasferito.
+
+* *SVM di origine*
++
+Visualizza il nome della macchina virtuale di storage (SVM).
+
+* *Cluster di origine*
++
+Visualizza il nome del cluster di origine.
+
+* *SVM di destinazione*
++
+Visualizza il nome della SVM di destinazione.
+
+* *Cluster di destinazione*
++
+Visualizza il nome del cluster di destinazione.
+
+
+
+*Informazioni correlate*
+
+* Per informazioni sulla vista *Relazione: Tutte le relazioni*, consulta link:../data-protection/reference_relationship_all_relationships_view.html["Relazione: visualizzazione Tutte le relazioni"].
+* Per informazioni sulla vista *Relazione:MetroCluster*, consulta link:../storage-mgmt/task_monitor_metrocluster_configurations.html["Monitoraggio delle configurazioni MetroCluster"].
+* Per informazioni sulla vista *Relazione: Tutte le relazioni*, consulta link:../data-protection/reference_relationship_last_1_month_transfer_rate_view.html["Relazione: Visualizzazione della velocità di trasferimento dell'ultimo mese"].
+

@@ -1,0 +1,47 @@
+---
+permalink: performance-checker/task_select_performance_charts_to_display.html 
+sidebar: sidebar 
+keywords: select, performance, charts, display 
+summary: 'L"elenco a discesa "Scegli grafici" ti consente di selezionare i tipi di grafici dei contatori delle prestazioni da visualizzare nel riquadro "Grafici dei contatori". In questo modo puoi visualizzare dati e contatori specifici, in base alle tue esigenze in termini di prestazioni.' 
+---
+= Seleziona i grafici delle prestazioni da visualizzare in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'elenco a discesa "Scegli grafici" ti consente di selezionare i tipi di grafici dei contatori delle prestazioni da visualizzare nel riquadro "Grafici dei contatori". In questo modo puoi visualizzare dati e contatori specifici, in base alle tue esigenze in termini di prestazioni.
+
+.Passaggi
+. Nel riquadro *Grafici contatore*, fai clic sull'elenco a discesa *Scegli grafici*.
+. Aggiungi o rimuovi grafici:
++
+|===
+| A... | Fai così... 
+
+
+ a| 
+Aggiungi o rimuovi singoli grafici
+ a| 
+Fai clic sulle caselle di controllo accanto ai grafici che desideri mostrare o nascondere
+
+
+
+ a| 
+Aggiungi tutti i grafici
+ a| 
+Fai clic su *Seleziona tutto*
+
+
+
+ a| 
+Rimuovi tutti i grafici
+ a| 
+Fai clic su *Deseleziona tutto*
+
+|===
++
+Le selezioni dei grafici vengono visualizzate nel riquadro Grafici contatore. Tieni presente che, man mano che aggiungi grafici, i nuovi grafici vengono inseriti nel riquadro Grafici contatore in modo da rispecchiare l'ordine dei grafici elencati nell'elenco a discesa Scegli grafici. La selezione di altri grafici potrebbe richiedere altro scorrimento.
+
+

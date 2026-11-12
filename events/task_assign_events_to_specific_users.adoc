@@ -1,0 +1,55 @@
+---
+permalink: events/task_assign_events_to_specific_users.html 
+sidebar: sidebar 
+keywords: assign, events, specific, users 
+summary: 'Puoi assegnare gli eventi non assegnati a te stesso o ad altri utenti, inclusi gli utenti remoti. Se necessario, puoi riassegnare gli eventi già assegnati a un altro utente. Ad esempio, quando si verificano problemi frequenti su un oggetto di storage, puoi assegnare gli eventi relativi a questi problemi all"utente che gestisce quell"oggetto.' 
+---
+= Assegna eventi a utenti specifici in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi assegnare gli eventi non assegnati a te stesso o ad altri utenti, inclusi gli utenti remoti. Se necessario, puoi riassegnare gli eventi già assegnati a un altro utente. Ad esempio, quando si verificano problemi frequenti su un oggetto di storage, puoi assegnare gli eventi relativi a questi problemi all'utente che gestisce quell'oggetto.
+
+.Prima di iniziare
+* Il nome dell'utente e l'ID email devono essere configurati correttamente.
+* Devi disporre del ruolo di Operatore, Amministratore di applicazioni o Amministratore di archiviazione.
+
+
+.Passaggi
+. Nel riquadro di navigazione a sinistra, fai clic su *Event Management*.
+. Nella pagina di inventario *Event Management*, seleziona uno o più eventi che desideri assegnare.
+. Assegna l'evento scegliendo una delle seguenti opzioni:
++
+|===
+| Se vuoi assegnare l'evento a... | Poi fai così... 
+
+
+ a| 
+Te stesso
+ a| 
+Fai clic su *Assign To* > *Me*.
+
+
+
+ a| 
+Un altro utente
+ a| 
+.. Fai clic su *Assegna a* > *Un altro utente*.
+.. Nella finestra di dialogo Assign Owner, immetti il nome utente oppure seleziona un utente dall'elenco a discesa.
+.. Fai clic su *Assegna*.
++
+Il sistema invia una notifica via e-mail all'utente.
+
++
+[NOTE]
+====
+Se non inserisci un nome utente o non selezioni un utente dall'elenco a discesa, e fai clic su *Assegna*, l'evento rimarrà non assegnato.
+
+====
+
+
+|===
+

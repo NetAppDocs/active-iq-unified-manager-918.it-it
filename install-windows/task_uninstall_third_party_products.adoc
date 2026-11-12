@@ -1,0 +1,36 @@
+---
+permalink: install-windows/task_uninstall_third_party_products.html 
+sidebar: sidebar 
+keywords: MS Visual C, python, uninstall, uninstalling, 9.18 
+summary: Disinstalla i prodotti di terze parti, inclusi Python e il runtime di Microsoft Visual C 2013. 
+---
+= Disinstalla i prodotti di terze parti in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dopo aver aggiornato Unified Manager, puoi disinstallare prodotti di terze parti, come Python o Microsoft Visual C++ 2013. È facoltativo.
+
+
+
+[[uninstall-python]]
+== Disinstalla Python
+
+.Passaggi
+. Dal *Pannello di controllo* seleziona *Programmi* > *Programmi e funzionalità*.
+. Seleziona Python dall'elenco dei programmi.
+. Seleziona *Disinstalla questo programma*. Disinstalla qualsiasi versione di Python tranne la 3.13.3. Assicurati di conservare la versione 3.13.3 di Python.
+
+
+
+
+[[uninstall-microsoft-visual-c-2013]]
+== Disinstalla Microsoft Visual C++ 2013
+
+.Passaggi
+. Dal *Pannello di controllo* seleziona *Programmi* > *Programmi e funzionalità*.
+. Seleziona *Microsoft Visual C++ 2013* dall'elenco dei programmi.
+. Seleziona *Disinstalla questo programma*.
+

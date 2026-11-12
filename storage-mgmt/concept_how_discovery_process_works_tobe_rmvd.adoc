@@ -1,0 +1,20 @@
+---
+permalink: storage-mgmt/concept_how_discovery_process_works_tobe_rmvd.html 
+sidebar: sidebar 
+keywords: discovery, process, works 
+summary: Dopo aver aggiunto il cluster a Unified Manager, il server rileva gli oggetti del cluster e li aggiunge al proprio database. Capire come funziona il processo di rilevamento ti aiuta a gestire i cluster della tua organizzazione e i relativi oggetti. 
+---
+= Scopri come funziona il processo di rilevamento dei cluster in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dopo aver aggiunto il cluster a Unified Manager, il server rileva gli oggetti del cluster e li aggiunge al proprio database. Capire come funziona il processo di individuazione ti aiuta a gestire i cluster della tua organizzazione e i relativi oggetti.
+
+L'intervallo di monitoraggio predefinito è di 15 minuti: se hai aggiunto un cluster al server Unified Manager, occorrono 15 minuti per visualizzare i dettagli del cluster nell'interfaccia utente di Unified Manager.
+
+L'immagine seguente illustra il processo di rilevamento in Active IQ Unified Manager:
+
+image::../media/discovery_process_oc_6_0.gif[Come funziona il processo di scoperta]

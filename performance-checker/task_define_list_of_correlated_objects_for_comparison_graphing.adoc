@@ -1,0 +1,68 @@
+---
+permalink: performance-checker/task_define_list_of_correlated_objects_for_comparison_graphing.html 
+sidebar: sidebar 
+keywords: defining, list, correlated, objects, comparison, graphing 
+summary: 'Nel riquadro Grafico del contatore puoi definire un elenco di oggetti correlati per il confronto di dati e prestazioni. Ad esempio, se la macchina virtuale di storage (SVM) presenta un problema di prestazioni, puoi confrontare tutti i volumi nell"SVM per identificare quale volume potrebbe causare il problema.' 
+---
+= Definisci gli oggetti correlati per la creazione di grafici comparativi in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Nel riquadro Grafico del contatore puoi definire un elenco di oggetti correlati per il confronto di dati e prestazioni. Ad esempio, se la macchina virtuale di storage (SVM) presenta un problema di prestazioni, puoi confrontare tutti i volumi nell'SVM per identificare quale volume potrebbe causare il problema.
+
+Puoi aggiungere qualsiasi oggetto nella griglia degli oggetti correlati ai riquadri Confronto e grafico del contatore. In questo modo puoi visualizzare e confrontare i dati di più oggetti con l'oggetto radice. Puoi aggiungere e rimuovere oggetti dalla griglia degli oggetti correlati; tuttavia, l'oggetto radice nel riquadro Confronto non può essere rimosso.
+
+[NOTE]
+====
+L'aggiunta di molti oggetti al riquadro di confronto potrebbe influire negativamente sulle prestazioni. Per mantenere prestazioni ottimali, dovresti selezionare un numero limitato di grafici per il confronto dei dati.
+
+====
+.Passaggi
+. Nella griglia degli oggetti, individua l'oggetto che desideri aggiungere e fai clic sul pulsante *Aggiungi*.
++
+Il pulsante *Aggiungi* diventa grigio e l'oggetto viene aggiunto all'elenco degli oggetti aggiuntivi nel riquadro Confronto. I dati dell'oggetto vengono aggiunti ai grafici nei riquadri Grafici contatore. Il colore dell'icona a forma di occhio dell'oggetto (image:../media/eye_icon.gif[""]) corrisponde al colore della linea di tendenza dei dati dell'oggetto nei grafici.
+
+. *Opzionale:* Nascondi o mostra i dati per gli oggetti selezionati:
++
+|===
+| Per farlo... | Esegui questa azione... 
+
+
+ a| 
+Nascondi l'oggetto selezionato
+ a| 
+Fai clic sull'icona a forma di occhio dell'oggetto selezionato (image:../media/eye_icon.gif[""]) nel riquadro di confronto. I dati dell'oggetto sono nascosti e l'icona a forma di occhio di quell'oggetto diventa grigia.
+
+
+
+ a| 
+Mostra un oggetto nascosto
+ a| 
+Fai clic sull'icona a forma di occhio grigio dell'oggetto selezionato nel riquadro di confronto.
+
+L'icona a forma di occhio torna al suo colore originale e i dati dell'oggetto vengono aggiunti di nuovo ai grafici nel riquadro Grafici contatore.
+
+|===
+. *Facoltativo:* Rimuovi gli oggetti selezionati dal riquadro *Confronto*:
++
+|===
+| Per farlo... | Esegui questa azione... 
+
+
+ a| 
+Rimuovi un oggetto selezionato
+ a| 
+Nel riquadro di confronto, passa con il puntatore sul nome dell'oggetto selezionato per visualizzare il pulsante Rimuovi oggetto (*X*), quindi fai clic sul pulsante. L'oggetto viene rimosso dal riquadro di confronto e i relativi dati vengono cancellati dai grafici dei contatori.
+
+
+
+ a| 
+Rimuovi tutti gli oggetti selezionati
+ a| 
+Fai clic sul pulsante "Rimuovi tutti gli oggetti" (*X*) nella parte superiore del riquadro di confronto. Tutti gli oggetti selezionati e i relativi dati vengono rimossi, lasciando solo l'oggetto radice.
+
+|===
+

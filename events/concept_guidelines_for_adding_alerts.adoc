@@ -1,0 +1,58 @@
+---
+permalink: events/concept_guidelines_for_adding_alerts.html 
+sidebar: sidebar 
+keywords: guidelines, adding, alerts 
+summary: 'Puoi aggiungere avvisi basati su una risorsa, come un cluster, un nodo, un aggregato o un volume, e su eventi di un particolare tipo di severità. Come best practice, puoi aggiungere un avviso per uno qualsiasi dei tuoi oggetti critici dopo aver aggiunto il cluster a cui appartiene l"oggetto.' 
+---
+= Linee guida per l'aggiunta di avvisi in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi aggiungere avvisi basati su una risorsa, come un cluster, un nodo, un aggregato o un volume, e su eventi di un particolare tipo di severità. Come best practice, puoi aggiungere un avviso per uno qualsiasi dei tuoi oggetti critici dopo aver aggiunto il cluster a cui appartiene l'oggetto.
+
+Puoi utilizzare le seguenti linee guida e considerazioni per creare avvisi che ti consentano di gestire i tuoi sistemi in modo efficace:
+
+* Descrizione avviso
++
+Dovresti fornire una descrizione per l'avviso, in modo che ti aiuti a tenere traccia degli avvisi in modo efficace.
+
+* Risorse
++
+Devi decidere quale risorsa fisica o logica richiede un avviso. Puoi includere ed escludere risorse, secondo necessità. Ad esempio, se vuoi monitorare attentamente i tuoi aggregati configurando un avviso, devi selezionare gli aggregati richiesti dall'elenco delle risorse.
+
++
+Se selezioni una categoria di risorse, ad esempio, *+<<All User or Group Quotas>>+*, riceverai avvisi per tutti gli oggetti di quella categoria.
+
++
+[NOTE]
+====
+Se selezioni un cluster come risorsa, gli oggetti di storage all'interno di quel cluster non vengono selezionati automaticamente. Ad esempio, se crei un avviso per tutti gli eventi critici di tutti i cluster, riceverai avvisi solo per gli eventi critici del cluster. Non riceverai avvisi per gli eventi critici su nodi, aggregati e così via.
+
+====
+* Gravità dell'evento
++
+Devi decidere se un evento di un tipo di severità specificato (Critical, Error, Warning) deve attivare l'avviso e, in tal caso, quale tipo di severità.
+
+* Eventi selezionati
++
+Se aggiungi un avviso in base al tipo di evento generato, devi decidere quali eventi richiedono un avviso.
+
++
+Se selezioni un livello di gravità per un evento, ma non selezioni singoli eventi (se lasci vuota la colonna "Selected Events"), riceverai avvisi per tutti gli eventi della categoria.
+
+* Azioni
++
+Devi fornire i nomi utente e gli indirizzi e-mail degli utenti che ricevono la notifica. Puoi anche specificare una trap SNMP come modalità di notifica. Puoi associare i tuoi script a un avviso in modo che vengano eseguiti quando viene generato un avviso.
+
+* Frequenza di notifica
++
+Puoi configurare un avviso in modo che invii ripetutamente notifiche ai destinatari per un periodo di tempo specificato. Devi determinare da quando la notifica dell'evento è attiva per l'avviso. Se vuoi che la notifica dell'evento venga ripetuta fino a quando l'evento non viene confermato, devi determinare con quale frequenza vuoi che la notifica venga ripetuta.
+
+* Esegui script
++
+Puoi associare il tuo script a un avviso. Il tuo script viene eseguito quando viene generato l'avviso.
+
+

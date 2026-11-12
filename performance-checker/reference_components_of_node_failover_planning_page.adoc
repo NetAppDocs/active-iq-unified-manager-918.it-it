@@ -1,0 +1,80 @@
+---
+permalink: performance-checker/reference_components_of_node_failover_planning_page.html 
+sidebar: sidebar 
+keywords: components, node, failover, planning page, performance, statistics, grid 
+summary: 'I componenti della pagina Pianificazione del failover di prestazioni/nodi vengono visualizzati in una griglia e nel riquadro di confronto. Queste sezioni ti consentono di valutare l"impatto del failover di un nodo sulle prestazioni del nodo di takeover.' 
+---
+= Esamina i componenti della pagina Performance/Node Failover Planning in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+I componenti della pagina Pianificazione del failover di prestazioni/nodi vengono visualizzati in una griglia e nel riquadro di confronto. Queste sezioni ti consentono di valutare l'impatto del failover di un nodo sulle prestazioni del nodo di takeover.
+
+
+
+[[performance-statistics-grid]]
+== Griglia delle statistiche sulle prestazioni
+
+La pagina Performance/Node Failover Planning visualizza una griglia contenente statistiche per latenza, IOPS, utilizzo e capacità prestazionale utilizzata.
+
+[NOTE]
+====
+I valori di latenza e IOPS visualizzati in questa pagina e nella pagina Performance/Node Performance Explorer potrebbero non corrispondere, poiché per calcolare i valori usati per prevedere il failover del nodo vengono utilizzati contatori delle prestazioni diversi.
+
+====
+Nella grid, a ogni nodo è assegnato uno dei seguenti ruoli:
+
+* Primario
++
+Il nodo che subentra al partner HA quando quest'ultimo si guasta. L'oggetto radice è sempre il nodo primario.
+
+* Partner
++
+Il nodo che si guasta nello scenario di failover.
+
+* Takeover stimato
++
+Come per il nodo primario. Le statistiche sulle prestazioni visualizzate per questo nodo mostrano le prestazioni del nodo di takeover dopo che ha preso il posto del partner guasto.
+
+
+
+[NOTE]
+====
+Sebbene il carico di lavoro del nodo takeover sia equivalente alla combinazione dei carichi di lavoro di entrambi i nodi dopo un failover, le statistiche del nodo Estimated Takeover non sono la somma delle statistiche del nodo Primary e del nodo Partner. Ad esempio, se la latenza del nodo Primary è di 2 ms/op e la latenza del nodo Partner è di 3 ms/op, il nodo Estimated Takeover potrebbe avere una latenza di 4 ms/op. Questo valore è un calcolo eseguito da Unified Manager.
+
+====
+Puoi fare clic sul nome del nodo Partner se desideri che diventi l'oggetto radice. Dopo che viene visualizzata la pagina Performance/Node Performance Explorer, puoi fare clic sulla scheda *Failover Planning* per vedere come cambiano le prestazioni in questo scenario di guasto del nodo. Ad esempio, se Node1 è il nodo Primary e Node2 è il nodo Partner, puoi fare clic su Node2 per renderlo il nodo Primary. In questo modo, puoi vedere come cambiano le prestazioni stimate a seconda di quale nodo si guasta.
+
+
+
+[[comparing-pane]]
+== Pannello di confronto
+
+Il seguente elenco descrive i componenti visualizzati per impostazione predefinita nel riquadro di confronto:
+
+* *Grafici degli eventi*
++
+Sono visualizzati nello stesso formato di quelli presenti nella pagina Performance/Node Performance Explorer. Si riferiscono esclusivamente al nodo primario.
+
+* *Grafici dei contatori*
++
+Visualizzano le statistiche cronologiche del contatore delle prestazioni mostrato nella griglia. In ogni grafico, il grafico del nodo di takeover stimato mostra le prestazioni stimate se si fosse verificato un failover in un dato momento.
+
++
+Ad esempio, supponi che il grafico di utilizzo mostri il 73% per il nodo di takeover stimato alle 11:00 dell'8 febbraio. Se a quell'ora si fosse verificato un failover, l'utilizzo del nodo di takeover sarebbe stato del 73%.
+
++
+Le statistiche storiche ti aiutano a trovare il momento ottimale per avviare un failover, riducendo al minimo la possibilità di sovraccaricare il nodo di takeover. Puoi pianificare un failover solo quando le prestazioni previste del nodo di takeover sono accettabili.
+
+
+
+Per impostazione predefinita, nel riquadro Confronto vengono visualizzate le statistiche sia per l'oggetto root sia per il nodo partner. A differenza della pagina Performance/Node Performance Explorer, questa pagina non visualizza il pulsante *Add* per aggiungere oggetti per il confronto delle statistiche.
+
+Puoi personalizzare il riquadro Confronto nello stesso modo in cui fai nella pagina Performance/Node Performance Explorer. L'elenco seguente mostra alcuni esempi di personalizzazione dei grafici:
+
+* Fai clic su un nome del nodo per mostrare o nascondere le statistiche del nodo nei grafici Counter.
+* Fai clic su *Zoom View* per visualizzare un grafico dettagliato di un determinato contatore in una nuova finestra.
+

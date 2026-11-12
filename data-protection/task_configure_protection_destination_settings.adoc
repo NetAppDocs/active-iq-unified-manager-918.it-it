@@ -1,0 +1,29 @@
+---
+permalink: data-protection/task_configure_protection_destination_settings.html 
+sidebar: sidebar 
+keywords: configure, destination, efficiency, settings 
+summary: 'Puoi configurare le impostazioni di efficienza della destinazione, come deduplicazione, compressione, espansione automatica e garanzia di spazio, su una destinazione di protezione utilizzando la finestra di dialogo Impostazioni avanzate destinazione. Usi queste impostazioni quando vuoi massimizzare l"utilizzo dello spazio su una destinazione o un volume secondario.' 
+---
+= Configura le impostazioni di efficienza della destinazione in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi configurare le impostazioni di efficienza della destinazione, come deduplicazione, compressione, espansione automatica e garanzia di spazio, su una destinazione di protezione utilizzando la finestra di dialogo Impostazioni avanzate destinazione. Usi queste impostazioni quando vuoi massimizzare l'utilizzo dello spazio su una destinazione o un volume secondario.
+
+.Prima di iniziare
+Devi disporre del ruolo di Amministratore dell'applicazione o di Amministratore dello storage.
+
+Per impostazione predefinita, le impostazioni di efficienza corrispondono a quelle del volume di origine, ad eccezione delle impostazioni di compressione in una relazione di SnapVault, che sono disabilitate per impostazione predefinita.
+
+.Passaggi
+. Nella finestra di dialogo *Configura protezione*, fai clic sulla scheda *SnapMirror* oppure sulla scheda *SnapVault*, a seconda del tipo di relazione che stai configurando.
+. Nell'area *Informazioni di destinazione*, fai clic su *Advanced*.
++
+Si apre la finestra di dialogo Impostazioni di destinazione avanzate.
+
+. Attiva o disattiva le impostazioni di efficienza per deduplicazione, compressione, espansione automatica e garanzia di spazio, secondo necessità.
+. Fai clic su *Applica* per salvare le selezioni e tornare alla finestra di dialogo *Configura protezione*.
+

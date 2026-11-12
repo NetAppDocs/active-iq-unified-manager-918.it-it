@@ -1,0 +1,24 @@
+---
+permalink: storage-mgmt/concept_fix_ontap_issues_directly_from_unified_manager.html 
+sidebar: sidebar 
+keywords: fix, ontap, issues, directly, unified manager, fix it, fix-it, remediation 
+summary: 'Puoi risolvere alcuni problemi di ONTAP direttamente dall"interfaccia utente di Unified Manager, senza dover usare ONTAP System Manager o ONTAP CLI. L"opzione "Management Actions" fornisce soluzioni per diversi problemi di ONTAP che hanno attivato eventi di Unified Manager.' 
+---
+= Gestisci problemi o funzionalità di ONTAP direttamente da Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi risolvere alcuni problemi di ONTAP o gestire alcune funzionalità di ONTAP direttamente dall'interfaccia utente di Unified Manager, invece di dover usare ONTAP System Manager o ONTAP CLI. L'opzione "`Management Actions`" fornisce soluzioni per una serie di problemi di ONTAP che hanno attivato eventi in Unified Manager.
+
+Puoi risolvere i problemi direttamente dalla pagina Management Actions selezionando l'opzione *Management Actions* nel riquadro di navigazione a sinistra. Puoi accedere a Management Actions anche dal pannello Management Actions nella Dashboard, dalla pagina Event details e dalla selezione Workload Analysis nel menu di navigazione a sinistra.
+
+Esistono alcuni problemi che Unified Manager può diagnosticare in modo approfondito e per i quali può fornire un'unica soluzione. Per alcune funzionalità di ONTAP, come il monitoraggio anti-ransomware, Unified Manager esegue controlli interni e consiglia azioni specifiche. Quando disponibili, queste soluzioni vengono visualizzate in Management Actions con un pulsante *Fix It*. Fai clic sul pulsante *Fix It* per risolvere il problema. Devi disporre del ruolo di Application Administrator o Storage Administrator.
+
+Unified Manager invia i comandi ONTAP al cluster per eseguire la correzione richiesta. Quando la correzione è completata, l'evento diventa obsoleto.
+
+Alcune azioni di gestione ti consentono di risolvere lo stesso problema su più oggetti di storage utilizzando il pulsante *Fix All*. Ad esempio, potrebbero esserci 5 volumi che presentano l'evento "Volume Space Full", che potrebbe essere risolto facendo clic sull'azione di gestione *Fix All* per "Enable volume autogrow". Con un solo clic puoi risolvere questo problema su 5 volumi.
+
+Per informazioni sui problemi e sulle funzionalità di ONTAP che puoi gestire tramite la correzione automatica, consulta link:../storage-mgmt/reference_what_ontap_issues_can_unified_manager_fix.html["Quali problemi può risolvere Unified Manager"].

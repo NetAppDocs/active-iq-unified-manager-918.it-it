@@ -1,0 +1,75 @@
+---
+permalink: api-automation/concept_api_url_and_categories.html 
+sidebar: sidebar 
+keywords: active iq, unified manager, api, access, categories 
+summary: 'Le API di Active IQ Unified Manager ti consentono di gestire ed eseguire il provisioning degli oggetti di storage nel tuo ambiente. Puoi anche accedere all"interfaccia utente web di Unified Manager per eseguire alcune di queste funzioni.' 
+---
+= Gestisci l'accesso alle API e le categorie di Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+:pp: &#43;&#43;
+
+
+[role="lead"]
+Le API di Active IQ Unified Manager ti consentono di gestire ed eseguire il provisioning degli oggetti di storage nel tuo ambiente. Puoi anche accedere all'interfaccia utente web di Unified Manager per eseguire alcune di queste funzioni.
+
+
+
+[[construct-a-url-to-directly-access-rest-apis]]
+== Costruisci un URL per accedere direttamente alle API REST
+
+Puoi accedere alle API REST direttamente tramite un linguaggio di programmazione, come Python, C#, C{pp}, JavaScript e così via. Inserisci l'host name o l'indirizzo IP e l'URL per accedere alle API REST nel formato
+
++https://<hostname>/api+
+
+[NOTE]
+====
+La porta predefinita è 443. Puoi configurare la porta in base alle esigenze del tuo ambiente.
+
+====
+
+
+[[access-the-online-api-documentation-page]]
+== Accedi alla pagina della documentazione API online
+
+Puoi accedere alla pagina di contenuto di riferimento _API Documentation_ inclusa nel prodotto per visualizzare la documentazione API, nonché per eseguire manualmente una chiamata API (nell'interfaccia, ad esempio Swagger). Puoi accedere a questa documentazione facendo clic su *Menu Bar* > *Help button* > *API Documentation*
+
+In alternativa, inserisci l'host name o l'indirizzo IP e l'URL per accedere alla pagina dell'API REST nel formato
+
++https://<hostname>/docs/api/+
+
+
+
+[[categories]]
+== Categorie
+
+Le chiamate API sono organizzate in base alle funzionalità, suddivise per aree o categorie. Per individuare un'API specifica, clicca sulla categoria API corrispondente.
+
+Le API REST fornite con Unified Manager consentono di eseguire funzioni amministrative, di monitoraggio e di provisioning. Le API sono raggruppate nelle seguenti categorie.
+
+* *data center*
++
+Questa categoria contiene le API che ti aiutano nella gestione e nell'analisi dello storage del data center utilizzando strumenti come Work Flow Automation e Ansible. Le API REST di questa categoria forniscono informazioni su cluster, nodi, aggregati, volumi, LUN, condivisioni di file, namespace e altri elementi presenti nel tuo data center.
+
+* *management-server*
++
+Le API nella categoria *management-server* contengono le API `jobs, system,` e `events`. I job sono operazioni pianificate per l'esecuzione asincrona correlate alla gestione di oggetti di storage o workload su Unified Manager. L'API `events` restituisce gli eventi nel tuo data center e l'API `system` restituisce i dettagli dell'istanza di Unified Manager.
+
+* *storage-provider*
++
+Questa categoria contiene tutte le API di provisioning necessarie per gestire ed eseguire il provisioning di condivisioni di file, LUN, livelli di servizio delle prestazioni e criteri di efficienza dello storage. Le API ti consentono inoltre di configurare endpoint di accesso, Active Directory, nonché di assegnare livelli di servizio delle prestazioni e criteri di efficienza dello storage ai carichi di lavoro dello storage.
+
+* *amministrazione*
++
+Questa categoria contiene le API utilizzate per eseguire attività amministrative, come la gestione delle impostazioni di backup, la visualizzazione dei certificati dell'archivio attendibile per le origini dati di Unified Manager e la gestione dei cluster ONTAP come origini dati per Unified Manager.
+
+* *gateway*
++
+Unified Manager ti consente di richiamare le API REST di ONTAP tramite le API nella categoria gateway e di gestire gli oggetti di archiviazione nel tuo data center.
+
+* *sicurezza*
++
+Questa categoria contiene le API per gestire gli utenti di Unified Manager.
+
+

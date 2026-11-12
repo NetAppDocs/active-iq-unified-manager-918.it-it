@@ -1,0 +1,264 @@
+---
+permalink: storage-mgmt/reference_what_ontap_issues_can_unified_manager_fix.html 
+sidebar: sidebar 
+keywords: ontap issues, fix it action, automatic remediation feature, remediation events, fix-it messages, fix-it events 
+summary: 'Questa tabella descrive i problemi di ONTAP che Unified Manager può risolvere direttamente dall"interfaccia utente di Unified Manager facendo clic sul pulsante Fix It o Fix All.' 
+---
+= Scopri i problemi di ONTAP che Active IQ Unified Manager può risolvere
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Usando la funzione di correzione automatica di Active IQ Unified Manager, puoi scegliere di risolvere determinati problemi di ONTAP o gestire in modo efficace alcune funzionalità di ONTAP, come il monitoraggio anti-ransomware, tramite Unified Manager.
+
+Questa tabella descrive i problemi o le funzionalità di ONTAP che puoi gestire direttamente tramite il pulsante *Correggi* o *Correggi tutto* nell'interfaccia web di Unified Manager.
+
+|===
+| Nome e descrizione dell'evento | Azione di gestione | Operazione "Fix It" 
+
+
+ a| 
+Spazio del volume pieno
+
+Lo spazio disponibile sul volume è quasi esaurito e ha superato la soglia di capacità massima. Questa soglia è impostata di default al 90% della dimensione del volume.
+ a| 
+Abilita l'aumento automatico del volume
+ a| 
+Unified Manager rileva che l'espansione automatica del volume non è configurata per questo volume, quindi abilita questa funzione in modo che il volume aumenti di capacità quando necessario.
+
+
+
+ a| 
+Inode pieni
+
+Questo volume ha esaurito gli inode e non può accettare alcun nuovo file.
+ a| 
+Aumenta il numero di inode sul volume
+ a| 
+Aumenta del 2% il numero di inode sul volume.
+
+
+
+ a| 
+Rilevata mancata corrispondenza dei criteri del tier di storage
+
+Il volume contiene molti dati inattivi e l'attuale policy di tiering è impostata su "snapshot-only" o "none".
+ a| 
+Abilita il tiering automatico nel cloud
+ a| 
+Poiché il volume risiede già su FabricPool, la policy di tiering viene modificata in "auto" in modo che i dati inattivi vengano spostati nel tier cloud a costo inferiore.
+
+
+
+ a| 
+Rilevata mancata corrispondenza del tier di storage
+
+Il volume contiene molti dati inattivi, ma non risiede su un tier di storage abilitato per il cloud (FabricPool).
+ a| 
+Modifica il tier di storage dei volumi
+ a| 
+Sposta il volume nel tier di storage abilitato per il cloud e imposta la policy di tiering su "auto" per spostare i dati inattivi nel tier cloud.
+
+
+
+ a| 
+Log di controllo disabilitato
+
+Il registro di controllo non è abilitato per la VM di storage
+ a| 
+Abilita la registrazione di controllo per la VM di storage
+ a| 
+Abilita la registrazione di audit sulla VM di storage.
+
+Tieni presente che la storage VM deve già avere configurata una posizione locale o remota per i log di controllo.
+
+
+
+ a| 
+Banner di accesso disabilitato
+
+Il banner di accesso del cluster dovrebbe essere abilitato per aumentare la sicurezza e chiarire le restrizioni di accesso.
+ a| 
+Imposta il banner di accesso per il cluster
+ a| 
+Imposta il banner di accesso del cluster su "`Access restricted to authorized users`".
+
+
+
+ a| 
+Banner di accesso disabilitato
+
+Il banner di accesso per la storage VM dovrebbe essere abilitato per aumentare la sicurezza, rendendo chiare le restrizioni di accesso.
+ a| 
+Imposta il banner di accesso per la VM di storage
+ a| 
+Imposta il banner di accesso della storage VM su "Accesso limitato agli utenti autorizzati".
+
+
+
+ a| 
+SSH utilizza algoritmi di crittografia non sicuri
+
+I cifrari con il suffisso "-cbc" sono considerati non sicuri.
+ a| 
+Rimuovi i cifrari non sicuri dal cluster
+ a| 
+Rimuove i cifrari non sicuri, come aes192-cbc e aes128-cbc, dal cluster.
+
+
+
+ a| 
+SSH utilizza algoritmi di crittografia non sicuri
+
+I cifrari con il suffisso "-cbc" sono considerati non sicuri.
+ a| 
+Rimuovi i cifrari non sicuri dalla VM di storage
+ a| 
+Rimuove gli algoritmi di crittografia non sicuri, come aes192-cbc e aes128-cbc, dalla VM di storage.
+
+
+
+ a| 
+AutoSupport trasporto HTTPS disabilitato
+
+Il protocollo di trasporto utilizzato per inviare messaggi AutoSupport al supporto tecnico deve essere crittografato.
+ a| 
+Imposta HTTPS come protocollo di trasporto per i messaggi di AutoSupport
+ a| 
+Imposta HTTPS come protocolma di trasporto per i messaggi AutoSupport sul cluster.
+
+
+
+ a| 
+Superata la soglia di squilibrio del carico del cluster
+
+Indica che il carico è sbilanciato tra i nodi del cluster. Questo evento viene generato quando la differenza nella capacità prestazionale utilizzata tra i nodi supera il 30%.
+ a| 
+Bilancia i carichi di lavoro del cluster
+ a| 
+Unified Manager identifica il volume migliore da spostare da un nodo all'altro per ridurre lo squilibrio, quindi sposta il volume.
+
+
+
+ a| 
+Superata la soglia di squilibrio della capacità del cluster
+
+Indica che la capacità è sbilanciata tra gli aggregati nel cluster. Questo evento viene generato quando la varianza della capacità utilizzata tra gli aggregati supera il 70%.
+ a| 
+Bilancia la capacità del cluster
+ a| 
+Unified Manager individua il volume migliore da spostare da un aggregato all'altro per ridurre lo squilibrio e quindi sposta il volume.
+
+
+
+ a| 
+Soglia della capacità prestazionale utilizzata superata
+
+Indica che il carico sul nodo potrebbe diventare eccessivo se non riduci l'utilizzo da parte di uno o più carichi di lavoro altamente attivi. Questo evento viene generato quando il valore di utilizzo della capacità delle prestazioni del nodo supera il 100% per più di 12 ore.
+ a| 
+Limita il carico elevato sul nodo
+ a| 
+Unified Manager identifica il volume con il valore di IOPS più elevato e applica un criterio QoS utilizzando i livelli di IOPS storici previsti e di picco per ridurre il carico sul nodo.
+
+
+
+ a| 
+Superata la soglia di avviso per eventi dinamici
+
+Indica che il nodo è già in uno stato di sovraccarico a causa del carico anormalmente elevato di alcuni carichi di lavoro.
+ a| 
+Riduci il sovraccarico nel nodo
+ a| 
+Unified Manager identifica il volume con il valore di IOPS più elevato e applica un criterio QoS utilizzando i livelli di IOPS storici previsti e di picco per ridurre il carico sul nodo.
+
+
+
+ a| 
+Il takeover non è possibile
+
+Il failover è attualmente disabilitato, pertanto l'accesso alle risorse del nodo durante un'interruzione o un riavvio andrebbe perso finché il nodo non tornerà disponibile.
+ a| 
+Abilita il failover del nodo
+ a| 
+Unified Manager invia il comando appropriato per abilitare il failover su tutti i nodi del cluster.
+
+
+
+ a| 
+L'opzione Cf.takeover.on_panic è configurata su OFF
+
+L'opzione nodeshell "cf.takeover.on_panic" è impostata su *off*, il che potrebbe causare un problema sui sistemi configurati in HA.
+ a| 
+Abilita takeover in caso di panico
+ a| 
+Unified Manager invia il comando appropriato al cluster per impostare questa opzione su *on*.
+
+
+
+ a| 
+Disabilita l'opzione snapmirror.enable di nodeshell
+
+La vecchia opzione nodeshell "snapmirror.enable" è impostata su *on*, il che potrebbe causare un problema durante l'avvio dopo l'aggiornamento a ONTAP 9.3 o versioni successive.
+ a| 
+Imposta l'opzione snapmirror.enable su off
+ a| 
+Unified Manager invia al cluster il comando appropriato per impostare questa opzione su *off*.
+
+
+
+ a| 
+Telnet abilitato
+
+Indica un potenziale problema di sicurezza perché Telnet non è sicuro e trasmette i dati in modo non crittografato.
+ a| 
+Disabilita Telnet
+ a| 
+Unified Manager invia il comando appropriato al cluster per disabilitare Telnet.
+
+
+
+ a| 
+Configurare l'apprendimento anti-ransomware della VM di storage
+
+Verifica periodicamente la presenza di cluster con licenze per il monitoraggio anti-ransomware. Convalida se una VM di storage supporta solo volumi NFS o SMB in tale cluster.
+ a| 
+Metti le VM di storage in  `learning`modalità di monitoraggio anti-ransomware
+ a| 
+Unified Manager imposta il monitoraggio anti-ransomware sullo stato  `learning` per le VM di storage tramite la cluster management console. Il monitoraggio anti-ransomware su tutti i nuovi volumi creati sulla VM di storage viene automaticamente impostato in modalità di apprendimento. Grazie a questa abilitazione, ONTAP può apprendere i modelli di attività sui volumi e rilevare anomalie dovute a potenziali attacchi dannosi.
+
+
+
+ a| 
+Configura l'apprendimento anti-ransomware del volume
+
+Verifica periodicamente la presenza di cluster con licenze per il monitoraggio anti-ransomware. Convalida se un volume supporta solo i servizi NFS o SMB in tale cluster.
+ a| 
+Metti i volumi in `learning` modalità di monitoraggio anti-ransomware
+ a| 
+Unified Manager imposta il monitoraggio anti-ransomware per i volumi sullo stato  `learning` tramite la cluster management console. Con questa abilitazione, ONTAP può apprendere il modello di attività sui volumi e rilevare le anomalie dovute a potenziali attacchi dannosi.
+
+
+
+ a| 
+Abilita anti-ransomware del volume
+
+Verifica periodicamente la presenza di cluster con licenze per il monitoraggio anti-ransomware. Rileva se i volumi sono nella `learning` modalità di monitoraggio anti-ransomware da più di 45 giorni e valuta la possibilità di attivarli.
+ a| 
+Metti i volumi in `active` modalità di monitoraggio anti-ransomware
+ a| 
+Unified Manager imposta il monitoraggio anti-ransomware  `active`sui volumi tramite la cluster management console. Grazie a questa abilitazione, ONTAP può apprendere i modelli di attività sui volumi, rilevare le anomalie dovute a potenziali attacchi dannosi e generare avvisi per le azioni di protezione dei dati.
+
+
+
+ a| 
+Disabilita l'anti-ransomware del volume
+
+Verifica periodicamente la presenza di cluster con licenze per il monitoraggio anti-ransomware. Rileva notifiche ripetute durante il monitoraggio anti-ransomware attivo sui volumi (ad esempio, vengono restituiti più avvisi di potenziali attacchi ransomware nell'arco di 30 giorni).
+ a| 
+Disabilita il monitoraggio anti-ransomware sui volumi
+ a| 
+Unified Manager disabilita il monitoraggio anti-ransomware sui volumi tramite la cluster management console.
+
+|===

@@ -1,0 +1,160 @@
+---
+permalink: events/reference_logical_interface_events.html 
+sidebar: sidebar 
+keywords: network, interface, lif events, impact area, availability, configuration, performance 
+summary: 'Gli eventi dell"interfaccia di rete forniscono informazioni sullo stato delle tue interfacce di rete (LIF), così puoi monitorare eventuali problemi. Gli eventi sono raggruppati per area di impatto e includono il nome dell"evento e della trap, il livello di impatto, il tipo di origine e la gravità.' 
+---
+= Eventi dell'interfaccia di rete in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Gli eventi dell'interfaccia di rete forniscono informazioni sullo stato delle tue interfacce di rete (LIF), così puoi monitorare eventuali problemi. Gli eventi sono raggruppati per area di impatto e includono il nome dell'evento e della trap, il livello di impatto, il tipo di origine e la gravità.
+
+
+
+[[impact-area-availability]]
+== Area di impatto: disponibilità
+
+|===
+| Nome dell'evento (Nome della trap) | Livello di impatto | Tipo di origine | Gravità 
+
+
+ a| 
+Stato dell'interfaccia di rete non disponibile(ocumEvtLifStatusDown)
+ a| 
+Rischio
+ a| 
+Interfaccia
+ a| 
+Errore
+
+
+
+ a| 
+Stato dell'interfaccia di rete FC/FCoE non attivo(ocumEvtFCLifStatusDown)
+ a| 
+Rischio
+ a| 
+Interfaccia
+ a| 
+Errore
+
+
+
+ a| 
+Impossibile effettuare il failover dell'interfaccia di rete(ocumEvtLifFailoverNotPossible)
+ a| 
+Rischio
+ a| 
+Interfaccia
+ a| 
+Avvertimento
+
+
+
+ a| 
+Interfaccia di rete non sulla porta home (ocumEvtLifNotAtHomePort)
+ a| 
+Rischio
+ a| 
+Interfaccia
+ a| 
+Avvertimento
+
+|===
+
+
+[[impact-area-configuration]]
+== Area di impatto: configurazione
+
+|===
+| Nome dell'evento (Nome della trap) | Livello di impatto | Tipo di origine | Gravità 
+
+
+ a| 
+Route dell'interfaccia di rete non configurata(non applicabile)
+ a| 
+Evento
+ a| 
+Interfaccia
+ a| 
+Informazioni
+
+|===
+
+
+[[impact-area-performance]]
+== Area di impatto: performance
+
+|===
+| Nome dell'evento (Nome della trap) | Livello di impatto | Tipo di origine | Gravità 
+
+
+ a| 
+Soglia critica MB/s dell'interfaccia di rete superata(ocumNetworkLifMbpsIncident)
+ a| 
+Incidente
+ a| 
+Interfaccia
+ a| 
+Critico
+
+
+
+ a| 
+Superata la soglia di avviso MB/s dell'interfaccia di rete (ocumNetworkLifMbpsWarning)
+ a| 
+Rischio
+ a| 
+Interfaccia
+ a| 
+Avvertimento
+
+
+
+ a| 
+Soglia critica MB/s dell'interfaccia di rete FC superata(ocumFcpLifMbpsIncident)
+ a| 
+Incidente
+ a| 
+Interfaccia
+ a| 
+Critico
+
+
+
+ a| 
+Superata la soglia di avviso MB/s dell'interfaccia di rete FC(ocumFcpLifMbpsWarning)
+ a| 
+Rischio
+ a| 
+Interfaccia
+ a| 
+Avvertimento
+
+
+
+ a| 
+Interfaccia di rete NVMf FC superata la soglia critica in MB/s(ocumNvmfFcLifMbpsIncident)
+ a| 
+Incidente
+ a| 
+Interfaccia
+ a| 
+Critico
+
+
+
+ a| 
+Superata la soglia di avviso MB/s dell'interfaccia di rete NVMf FC(ocumNvmfFcLifMbpsWarning)
+ a| 
+Rischio
+ a| 
+Interfaccia
+ a| 
+Avvertimento
+
+|===

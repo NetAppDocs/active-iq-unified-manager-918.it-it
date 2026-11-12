@@ -1,0 +1,53 @@
+---
+permalink: health-checker/task_view_details_about_cifs_shares.html 
+sidebar: sidebar 
+keywords: smb, cifs, view, shares, details 
+summary: Visualizza i dettagli sulle condivisioni SMB/CIFS, come il nome della condivisione, il percorso di giunzione, le impostazioni di sicurezza e le policy di esportazione, utilizzando la vista Tutte le condivisioni SMB nella pagina Stato di salute. 
+---
+= Visualizza i dettagli sulle condivisioni SMB/CIFS in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi visualizzare i dettagli di tutte le CIFS share SMB/CIFS, ad esempio il nome della share, il percorso di giunzione, gli oggetti contenuti, le impostazioni di sicurezza e le policy di esportazione definite per la share. Usa la vista Health: All SMB Shares per vedere tutte le share SMB in tutti i cluster monitorati e usa la pagina Storage VM / Health details per visualizzare tutte le share SMB su una specifica storage virtual machine (SVM).
+
+.Prima di iniziare
+* La licenza CIFS deve essere abilitata sul cluster.
+* Le interfacce di rete che servono le condivisioni SMB/CIFS devono essere configurate.
+* Devi disporre del ruolo di Operatore, Amministratore di applicazioni o Amministratore di archiviazione.
+
+
+[NOTE]
+====
+Le condivisioni nelle cartelle non vengono visualizzate.
+
+====
+.Passaggio
+. Nel riquadro di navigazione a sinistra, segui i passaggi seguenti a seconda che tu voglia visualizzare tutte le CIFS share SMB/CIFS o solo le condivisioni per una SVM specifica.
++
+[cols="2*"]
+|===
+| A... | Segui questi passaggi... 
+
+
+ a| 
+Visualizza tutte le condivisioni SMB/CIFS
+ a| 
+Fai clic su *Archiviazione* > *Condivisioni SMB*
+
+
+
+ a| 
+Visualizza le condivisioni SMB/CIFS per una singola SVM
+ a| 
+.. Fai clic su *Storage* > *Storage VMs*
+.. Fai clic sull'SVM per cui vuoi visualizzare i dettagli della CIFS share SMB/CIFS.
+.. Nella pagina dei dettagli di Storage VM / Health, fai clic sulla scheda *SMB Shares*.
+
+
+|===
+
+
+Per ulteriori informazioni, consulta link:../api-automation/concept_provision_file_share.html["Provisioning di condivisioni file CIFS e NFS tramite API"].

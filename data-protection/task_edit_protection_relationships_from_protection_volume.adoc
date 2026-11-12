@@ -1,0 +1,31 @@
+---
+permalink: data-protection/task_edit_protection_relationships_from_protection_volume.html 
+sidebar: sidebar 
+keywords: edit, protection, relationships, volume, relationships, page 
+summary: Puoi modificare le relazioni di protezione esistenti per cambiare la velocità di trasferimento massima, la policy di protezione o la pianificazione della protezione. Potresti modificare una relazione per ridurre la larghezza di banda utilizzata per i trasferimenti o per aumentare la frequenza dei trasferimenti pianificati perché i dati cambiano spesso. 
+---
+= Modifica le relazioni di protezione dalla pagina Relazioni di volume in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi modificare le relazioni di protezione esistenti per cambiare la velocità di trasferimento massima, la policy di protezione o la pianificazione della protezione. Potresti modificare una relazione per ridurre la larghezza di banda utilizzata per i trasferimenti o per aumentare la frequenza dei trasferimenti pianificati perché i dati cambiano spesso.
+
+.Prima di iniziare
+Devi disporre del ruolo di Amministratore dell'applicazione o di Amministratore dello storage.
+
+I volumi selezionati devono essere destinazioni di relazioni di protezione. Non puoi modificare le relazioni quando sono selezionati volumi di origine, volumi con condivisione del carico o volumi che non sono la destinazione di una relazione di SnapMirror o SnapVault.
+
+.Passaggi
+. Dalla pagina *Relazioni tra volumi*, seleziona nell'elenco dei volumi uno o più volumi nello stesso SVM per cui vuoi modificare le impostazioni della relazione, quindi seleziona *Modifica* dalla barra degli strumenti.
++
+Si apre la finestra di dialogo Modifica relazione.
+
+. Nella finestra di dialogo *Modifica relazione*, modifica la velocità massima di trasferimento, la policy di protezione o la pianificazione di protezione, in base alle esigenze.
+. Fai clic su *Applica*.
++
+Le modifiche vengono applicate alle relazioni selezionate.
+
+

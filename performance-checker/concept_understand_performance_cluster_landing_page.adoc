@@ -1,0 +1,26 @@
+---
+permalink: performance-checker/concept_understand_performance_cluster_landing_page.html 
+sidebar: sidebar 
+keywords: understand, performance, cluster, landing page 
+summary: 'La landing page Performance Cluster fornisce una panoramica high-level delle prestazioni di un cluster selezionato, con particolare attenzione allo stato delle prestazioni dei 10 oggetti principali all"interno del cluster. I problemi di prestazioni vengono visualizzati nella parte superiore della pagina, nel pannello Tutti gli eventi in questo cluster.' 
+---
+= Scopri la pagina di destinazione del cluster delle prestazioni in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La landing page Performance Cluster fornisce una panoramica high-level delle prestazioni di un cluster selezionato, con particolare attenzione allo stato delle prestazioni dei 10 oggetti principali all'interno del cluster. I problemi di prestazioni vengono visualizzati nella parte superiore della pagina, nel pannello Tutti gli eventi in questo cluster.
+
+La landing page Performance Cluster fornisce una panoramica high-level di ciascun cluster gestito da un'istanza di Unified Manager. Questa pagina ti fornisce informazioni su eventi e prestazioni e ti consente di monitorare e risolvere i problemi dei cluster. L'immagine seguente mostra un esempio della landing page Performance Cluster per il cluster denominato opm-mobility:
+
+image::../media/opm_cluster_landing_page_draft.gif[Uno screenshot che mostra un esempio della landing page del cluster Performance chiamato opm-mobility.]
+
+Il conteggio degli eventi nella pagina Riepilogo cluster potrebbe non corrispondere al conteggio degli eventi nella pagina Inventario eventi di prestazioni. Questo perché la pagina Riepilogo cluster può mostrare un evento in ciascuna delle barre Latenza e Utilizzo quando vengono violate le policy di soglia combinate, mentre la pagina Inventario eventi di prestazioni mostra un solo evento quando viene violata una policy combinata.
+
+[NOTE]
+====
+Se un cluster è stato rimosso dalla gestione di Unified Manager, lo stato *Rimosso* viene visualizzato a destra del nome del cluster nella parte superiore della pagina.
+
+====

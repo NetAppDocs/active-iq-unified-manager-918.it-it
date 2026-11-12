@@ -1,0 +1,31 @@
+---
+permalink: performance-checker/task_view_qos_policy_group_settings_for_volumes_or_luns.html 
+sidebar: sidebar 
+keywords: view, qos, policy, group, settings, applied, specific, volumes, luns 
+summary: Puoi visualizzare i gruppi di policy QoS applicati ai tuoi volumi e alle LUN e collegarti alla vista Performance/QoS Policy Groups per visualizzare le impostazioni di configurazione dettagliate per ogni policy QoS. 
+---
+= Visualizza le impostazioni del gruppo di policy QoS per volumi o LUN in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi visualizzare i gruppi di policy QoS applicati ai tuoi volumi e alle LUN e collegarti alla vista Performance/QoS Policy Groups per visualizzare le impostazioni di configurazione dettagliate per ogni policy QoS.
+
+Di seguito trovi i passaggi per visualizzare la policy QoS applicata a un volume. I passaggi per visualizzare queste informazioni per una LUN sono simili.
+
+.Passaggi
+. Nel riquadro di navigazione a sinistra, fai clic su *Archiviazione* > *Volumi*.
++
+Per impostazione predefinita viene visualizzata la vista Stato di salute: Tutti i volumi.
+
+. Nel menu Visualizza, seleziona *Prestazioni: Volumi nel gruppo di criteri QoS*.
+. Individua il volume che vuoi esaminare e scorri verso destra finché non visualizzi la colonna *QoS Policy Group*.
+. Fai clic sul nome del gruppo di criteri QoS.
++
+La pagina Quality of Service corrispondente viene visualizzata a seconda che si tratti di una policy QoS tradizionale, di una policy QoS adattiva o di una policy QoS creata utilizzando Unified Manager Performance Service Levels.
+
+. Visualizza le impostazioni di configurazione dettagliate per il gruppo di criteri QoS.
+. Fai clic sul pulsante di espansione (image:../media/chevron_down.gif[""]) accanto al nome del gruppo di criteri QoS per visualizzare maggiori dettagli sul gruppo di criteri.
+

@@ -1,0 +1,70 @@
+---
+permalink: performance-checker/reference_what_data_does_workload_analyzer_display.html 
+sidebar: sidebar 
+keywords: workload analyzer, charts, display, data 
+summary: 'La pagina di analisi del carico di lavoro visualizza informazioni su eventuali eventi in corso che potrebbero influire sul carico di lavoro, suggerimenti per correggere il problema che causa l"evento e grafici per analizzare la cronologia delle prestazioni e della capacità.' 
+---
+= Comprendi i dati dell'analizzatore del carico di lavoro in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La pagina di analisi del carico di lavoro visualizza informazioni su eventuali eventi in corso che potrebbero influire sul carico di lavoro, suggerimenti per correggere il problema che causa l'evento e grafici per analizzare la cronologia delle prestazioni e della capacità.
+
+Nella parte superiore della pagina puoi specificare il nome del carico di lavoro (volume o LUN) che vuoi analizzare e l'intervallo di tempo per il quale vuoi visualizzare le statistiche. Puoi modificare l'intervallo di tempo in qualsiasi momento se vuoi visualizzare un periodo più breve o più lungo.
+
+Le altre sezioni della pagina mostrano i risultati dell'analisi e i grafici relativi a prestazioni e capacità.
+
+[NOTE]
+====
+I grafici del carico di lavoro per le LUN non forniscono lo stesso livello di statistiche dei grafici per i volumi, quindi noterai delle differenze quando analizzi questi due tipi di carico di lavoro.
+
+====
+* *Area di riepilogo degli eventi*
++
+Visualizza una breve panoramica del numero e dei tipi di eventi verificatisi nel periodo di tempo considerato. Quando sono presenti eventi relativi a diverse aree di impatto (ad esempio, prestazioni e capacità), queste informazioni vengono visualizzate in modo che tu possa selezionare i dettagli relativi al tipo di evento che ti interessa. Fai clic sul tipo di evento per visualizzare un elenco dei nomi degli eventi.
+
++
+Se durante l'intervallo di tempo si verifica un solo evento, per alcuni eventi viene visualizzato un elenco di raccomandazioni per risolvere il problema.
+
+* *Cronologia dell'evento*
++
+Mostra tutte le occorrenze degli eventi durante l'intervallo di tempo specificato. Passa il cursore su ciascun evento per visualizzarne il nome.
+
++
+Se sei arrivato a questa pagina facendo clic sul pulsante *Analizza carico di lavoro* dalla pagina dei dettagli dell'evento, l'icona dell'evento selezionato appare più grande in modo che tu possa identificare l'evento.
+
+* *Area dei grafici delle prestazioni*
++
+Visualizza grafici per latenza, throughput (sia IOPS che MB/s) e utilizzo (sia per il nodo che per l'aggregato) in base all'intervallo di tempo che hai selezionato. Puoi fare clic sul collegamento "View performance details" per visualizzare la pagina Performance Explorer del carico di lavoro se vuoi eseguire un'analisi più approfondita.
+
++
+** *Latenza* visualizza la latenza del carico di lavoro nell'intervallo di tempo selezionato. Il grafico offre tre visualizzazioni che ti consentono di vedere:
++
+*** latenza *totale*
+*** *Ripartizione* della latenza (suddivisa tra letture, scritture e altri processi)
+*** latenza dei *Componenti del cluster* (suddivisa per componente del cluster)
+
+
+
+
+
+
+Vedi link:concept_cluster_components_and_why_they_can_be_in_contention.html["Componenti del cluster e perché possono essere in contesa"] per una descrizione dei componenti del cluster visualizzati qui. ** *Throughput* mostra sia gli IOPS sia il throughput in MB/s per il carico di lavoro nell'intervallo di tempo selezionato. Il grafico ha quattro viste che ti consentono di visualizzare: *** *Total* throughput *** *Breakdown* throughput (suddiviso per letture, scritture e altri processi) *** *Cloud Throughput* (gli MB/s utilizzati per scrivere dati nel cloud e leggere dati dal cloud; per i carichi di lavoro che eseguono il tiering della capacità nel cloud) *** *IOPS with Forecast* (una previsione dei valori superiori e inferiori del throughput IOPS previsti nell'intervallo di tempo) Questo grafico visualizza anche le impostazioni delle soglie massime e minime di throughput di Quality of Service (QoS), se configurate, così puoi vedere dove il sistema potrebbe limitare intenzionalmente il throughput con i criteri QoS. ** *Utilization* mostra l'utilizzo sia dell'aggregato sia del nodo su cui è in esecuzione il carico di lavoro nell'intervallo di tempo selezionato. Da qui puoi vedere se il tuo aggregato o nodo sono sovrautilizzati, causando potenzialmente una latenza elevata. Quando analizzi i volumi FlexGroup, nei grafici di utilizzo sono elencati più nodi e più aggregati.
+
+* *Area del grafico di capacità*
++
+Visualizza i grafici della capacità dei dati e della capacità Snapshot per il carico di lavoro relativo all'ultimo mese.
+
++
+Per i volumi, puoi fare clic sul collegamento "Visualizza dettagli capacità" per visualizzare la pagina "Dettagli integrità" del carico di lavoro se vuoi eseguire ulteriori analisi. Le LUN non offrono questo collegamento perché non esiste una pagina "Dettagli integrità" per le LUN.
+
++
+** *Vista capacità* mostra lo spazio totale disponibile allocato per il carico di lavoro e lo spazio logico utilizzato (dopo tutte le ottimizzazioni NetApp).
+** *Snapshot View* mostra lo spazio totale riservato per le copie Snapshot e la quantità di spazio attualmente in uso. Tieni presente che le LUN non forniscono una *Snapshot View*.
+** *Cloud Tier View* mostra quanta capacità viene utilizzata nel tier di prestazioni locale e quanta nel cloud tier. Questi grafici includono una stima del tempo rimanente prima che la capacità di questo carico di lavoro sia piena. Queste informazioni si basano sull'utilizzo storico e richiedono un minimo di 10 giorni di dati. Quando rimangono meno di 30 giorni di capacità, Unified Manager identifica lo storage come "`almost full`".
+
+
+

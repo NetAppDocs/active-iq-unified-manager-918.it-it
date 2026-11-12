@@ -1,0 +1,16 @@
+---
+permalink: performance-checker/concept_refine_object_inventory_performance_page_content.html 
+sidebar: sidebar 
+keywords: refining, performance, inventory, page, contents 
+summary: Le pagine di inventario degli oggetti relativi alle prestazioni contengono strumenti che ti aiutano a perfezionare il contenuto dei dati di inventario degli oggetti, consentendoti di individuare dati specifici in modo rapido e semplice. 
+---
+= Perfeziona il contenuto della pagina di inventario delle prestazioni in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le pagine di inventario degli oggetti relativi alle prestazioni contengono strumenti che ti aiutano a perfezionare il contenuto dei dati di inventario degli oggetti, consentendoti di individuare dati specifici in modo rapido e semplice.
+
+Le informazioni contenute nelle pagine dell'inventario degli oggetti di prestazione possono essere molto estese, spesso distribuite su più pagine. Questo tipo di dati completi è ideale per monitorare, tracciare e migliorare le prestazioni; tuttavia, per individuare dati specifici sono necessari strumenti che consentano di trovarli rapidamente. Pertanto, le pagine dell'inventario degli oggetti di prestazione includono funzionalità di ricerca, ordinamento e filtraggio. Inoltre, la ricerca e il filtraggio possono essere utilizzati in combinazione per restringere ulteriormente i risultati.

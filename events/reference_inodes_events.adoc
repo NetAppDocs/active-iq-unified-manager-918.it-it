@@ -1,0 +1,45 @@
+---
+permalink: events/reference_inodes_events.html 
+sidebar: sidebar 
+keywords: inodes, events, impact area, capacity 
+summary: 'Gli eventi relativi agli inode forniscono informazioni quando l"inode è pieno o quasi pieno, consentendoti di monitorare potenziali problemi. Gli eventi sono raggruppati per area di impatto e includono il nome dell"evento e del trap, il livello di impatto, il tipo di origine e la gravità.' 
+---
+= Scopri gli eventi inode in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Gli eventi relativi agli inode forniscono informazioni quando l'inode è pieno o quasi pieno, consentendoti di monitorare potenziali problemi. Gli eventi sono raggruppati per area di impatto e includono il nome dell'evento e del trap, il livello di impatto, il tipo di origine e la gravità.
+
+
+
+[[impact-area-capacity]]
+== Area di impatto: capacità
+
+|===
+| Nome dell'evento (Nome della trap) | Livello di impatto | Tipo di origine | Gravità 
+
+
+ a| 
+Inode quasi pieni(ocumEvtInodesAlmostFull)
+ a| 
+Rischio
+ a| 
+Volume
+ a| 
+Avvertimento
+
+
+
+ a| 
+Inode completi(ocumEvtInodesFull)
+ a| 
+Rischio
+ a| 
+Volume
+ a| 
+Errore
+
+|===

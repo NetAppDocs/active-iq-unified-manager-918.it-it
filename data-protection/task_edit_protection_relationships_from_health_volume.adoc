@@ -1,0 +1,37 @@
+---
+permalink: data-protection/task_edit_protection_relationships_from_health_volume.html 
+sidebar: sidebar 
+keywords: edit, protection, relationships, volume, health details page 
+summary: 'Puoi modificare le relazioni di protezione esistenti per cambiare l"attuale velocità massima di trasferimento, la policy di protezione o la pianificazione della protezione. Potresti modificare una relazione per ridurre la larghezza di banda utilizzata per i trasferimenti o per aumentare la frequenza dei trasferimenti pianificati perché i dati cambiano spesso.' 
+---
+= Modifica le relazioni di protezione dalla pagina Dettagli Volume/Salute in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi modificare le relazioni di protezione esistenti per cambiare l'attuale velocità massima di trasferimento, la policy di protezione o la pianificazione della protezione. Potresti modificare una relazione per ridurre la larghezza di banda utilizzata per i trasferimenti o per aumentare la frequenza dei trasferimenti pianificati perché i dati cambiano spesso.
+
+.Prima di iniziare
+* Devi disporre del ruolo di Amministratore dell'applicazione o di Amministratore dello storage.
+* Devi aver installato e configurato Workflow Automation.
+
+
+I volumi selezionati devono essere destinazioni di relazioni di protezione. Non puoi modificare le relazioni quando sono selezionati volumi di origine, volumi con condivisione del carico o volumi che non sono la destinazione di una relazione di SnapMirror o SnapVault.
+
+.Passaggi
+. Nella scheda *Protezione* della pagina dei dettagli *Volume / Integrità*, individua nella topologia la relazione di protezione che desideri modificare e fai clic con il pulsante destro del mouse su di essa.
+. Seleziona *Modifica* dal menu.
++
+In alternativa, dal menu *Azioni*, seleziona *Relazione* > *Modifica* per modificare la relazione di cui stai visualizzando i dettagli.
+
++
+Si apre la finestra di dialogo *Modifica relazione*.
+
+. Nella finestra di dialogo "Edit Relationship", modifica la velocità di trasferimento massima, la policy di protezione o la pianificazione della protezione, secondo necessità.
+. Fai clic su *Applica*.
++
+Le modifiche vengono applicate alle relazioni selezionate.
+
+

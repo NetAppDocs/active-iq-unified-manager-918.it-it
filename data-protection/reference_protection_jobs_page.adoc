@@ -1,0 +1,157 @@
+---
+permalink: data-protection/reference_protection_jobs_page.html 
+sidebar: sidebar 
+keywords: jobs, page 
+summary: La pagina Jobs ti consente di visualizzare lo stato attuale e altre informazioni su tutti i processi di protezione delle applicazioni partner attualmente in esecuzione, nonché su quelli completati. Puoi usare queste informazioni per vedere quali processi sono ancora in esecuzione e se un processo è riuscito o non è riuscito. 
+---
+= Scopri la pagina dei job in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La pagina Jobs ti consente di visualizzare lo stato attuale e altre informazioni su tutti i processi di protezione delle applicazioni partner attualmente in esecuzione, nonché su quelli completati. Puoi usare queste informazioni per vedere quali processi sono ancora in esecuzione e se un processo è riuscito o non è riuscito.
+
+
+
+[[command-buttons]]
+== Pulsanti di comando
+
+I pulsanti di comando consentono di eseguire le seguenti operazioni:
+
+* *Interrompi*
++
+Interrompe il job selezionato. Questa opzione è disponibile solo se il job selezionato è in esecuzione.
+
+* *Riprova*
++
+Riavvia un'attività non riuscita di tipo Configurazione di protezione o Operazione di relazione di protezione. Puoi riprovare una sola attività non riuscita alla volta. Se selezioni più attività non riuscite, il pulsante *Riprova* è disattivato. Non puoi riprovare le attività non riuscite del servizio di storage.
+
+* *Aggiorna*
++
+Aggiorna l'elenco dei job e le informazioni associate.
+
+
+
+
+
+[[jobs-list]]
+== Elenco dei job
+
+L'elenco dei lavori visualizza, in formato tabellare, un elenco dei lavori in corso. Per impostazione predefinita, l'elenco mostra solo i lavori generati nell'ultima settimana. Puoi utilizzare l'ordinamento e il filtro delle colonne per personalizzare i lavori visualizzati.
+
+* *Stato*
++
+Visualizza lo stato attuale di un lavoro. Lo stato può essere Errore (image:../media/sev_error.gif[""]) o Normale (image:../media/sev_normal.gif[""]).
+
+* *ID del job*
++
+Visualizza il numero identificativo del lavoro. Per impostazione predefinita, questa colonna è nascosta.
+
++
+Il numero di identificazione del job è univoco e viene assegnato dal server all'avvio del job. Puoi cercare un job specifico inserendo il numero di identificazione del job nella casella di testo fornita dal filtro della colonna.
+
+* *Nome*
++
+Visualizza il nome del job.
+
+* *Tipo*
++
+Visualizza il tipo di job. I tipi di job sono i seguenti:
+
++
+** *Acquisizione del cluster*
++
+Un processo di automazione del flusso di lavoro sta rilevando nuovamente un cluster.
+
+** *Configurazione di protezione*
++
+Un'attività di protezione avvia i workflow di Workflow Automation, come le pianificazioni cron, la creazione di criteri SnapMirror e così via.
+
+** *Operazione della relazione di protezione*
++
+Un processo di protezione sta eseguendo operazioni SnapMirror.
+
+** *Sequenza di flussi di lavoro di protezione*
++
+Un job di Workflow Automation esegue più workflow.
+
+** *Ripristina*
++
+È in corso un'operazione di ripristino.
+
+** *Pulizia*
++
+Il job ripulisce gli artefatti dei membri del servizio di storage che non sono più necessari ai fini del ripristino.
+
+** *Conforme*
++
+Il processo verifica la configurazione dei membri del servizio storage per assicurarsi che siano conformi.
+
+** *Distruggi*
++
+Il processo sta eliminando un servizio di archiviazione.
+
+** *Importa*
++
+Il lavoro consiste nell'importare oggetti di storage non gestiti in un servizio di storage esistente.
+
+** *Modifica*
++
+Il processo modifica gli attributi di un servizio di archiviazione esistente.
+
+** *Iscriviti*
++
+Il processo consiste nell'iscrivere gli utenti a un servizio di storage.
+
+** *Disiscriviti*
++
+Il processo annulla l'iscrizione dei membri a un servizio di storage.
+
+** *Aggiornamento*
++
+È in corso un'operazione di aggiornamento della protezione.
+
+** *Configurazione WFA*
++
+Un processo di automazione del flusso di lavoro invia le credenziali del cluster e sincronizza le cache del database.
+
+
+
+* *Stato*
++
+Visualizza lo stato di esecuzione del processo. Le opzioni di stato sono le seguenti:
+
++
+** *Interrotto*
++
+Il processo è stato interrotto.
+
+** *Interruzione in corso*
++
+L'operazione è in fase di interruzione.
+
+** *Completato*
++
+Il lavoro è terminato.
+
+** *In esecuzione*
++
+Il processo è in corso.
+
+
+
+* *Orario di invio*
++
+Mostra l'ora in cui il job è stato inviato.
+
+* *Durata*
++
+Visualizza il tempo impiegato per completare l'operazione. Questa colonna viene visualizzata per impostazione predefinita.
+
+* *Tempo di completamento*
++
+Visualizza l'ora in cui il job è terminato. Per impostazione predefinita, questa colonna è nascosta.
+
+

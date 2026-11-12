@@ -1,0 +1,18 @@
+---
+permalink: health-checker/concept_what_annotations_are.html 
+sidebar: sidebar 
+keywords: annotations 
+summary: 'Un"annotazione è una stringa di testo (il nome) assegnata a un"altra stringa di testo (il valore). Puoi associare dinamicamente ogni coppia nome-valore di annotazione agli oggetti di storage usando regole di annotazione. Quando associ gli oggetti di storage ad annotazioni predefinite, puoi filtrare e visualizzare gli eventi correlati. Puoi applicare annotazioni a cluster, volumi e storage virtual machine (SVM).' 
+---
+= Scopri le annotazioni in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Un'annotazione è una stringa di testo (il nome) assegnata a un'altra stringa di testo (il valore). Puoi associare dinamicamente ogni coppia nome-valore di annotazione agli oggetti di storage usando regole di annotazione. Quando associ gli oggetti di storage ad annotazioni predefinite, puoi filtrare e visualizzare gli eventi correlati. Puoi applicare annotazioni a cluster, volumi e storage virtual machine (SVM).
+
+Ogni nome di annotazione può avere più valori; ogni coppia nome-valore può essere associata a un oggetto di storage tramite regole.
+
+Ad esempio, puoi creare un'annotazione denominata "`data-center`" con i valori "`Boston`" e "`Canada`". Puoi quindi applicare l'annotazione "`data-center`" con il valore "`Boston`" al volume v1. Quando viene generato un avviso per qualsiasi evento su un volume v1 annotato con "`data-center`", l'e-mail generata indica la posizione del volume, "`Boston`", consentendoti di dare priorità al problema e risolverlo.

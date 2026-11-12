@@ -1,0 +1,53 @@
+---
+permalink: events/concept_event_state_definitions.html 
+sidebar: sidebar 
+keywords: event, state, definitions 
+summary: 'Lo stato di un evento ti aiuta a identificare se è necessaria un"azione correttiva appropriata. Un evento può essere Nuovo, Riconosciuto, Risolto o Obsoleto. Tieni presente che sia gli eventi Nuovi che quelli Riconosciuti sono considerati eventi attivi.' 
+---
+= Stati degli eventi in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Lo stato di un evento ti aiuta a identificare se è necessaria un'azione correttiva appropriata. Un evento può essere Nuovo, Riconosciuto, Risolto o Obsoleto. Tieni presente che sia gli eventi Nuovi che quelli Riconosciuti sono considerati eventi attivi.
+
+Gli stati dell'evento sono i seguenti:
+
+* *Nuovo*
++
+Lo stato di un nuovo evento.
+
+* *Confermato*
++
+Lo stato di un evento quando lo hai riconosciuto.
+
+* *Risolto*
++
+Lo stato di un evento quando è contrassegnato come risolto.
+
+* *Obsoleto*
++
+Lo stato di un evento quando viene corretto automaticamente o quando la causa dell'evento non è più valida.
+
++
+[NOTE]
+====
+Non puoi confermare o risolvere un evento obsoleto.
+
+====
+
+
+
+
+[[example-of-different-states-of-an-event]]
+== Esempio di diversi stati di un evento
+
+I seguenti esempi illustrano le modifiche di stato degli eventi, sia manuali che automatiche.
+
+Quando viene attivato l'evento Cluster Not Reachable, lo stato dell'evento è Nuovo. Quando confermi l'evento, lo stato dell'evento cambia in Confermato. Dopo aver intrapreso un'azione correttiva appropriata, devi contrassegnare l'evento come risolto. Lo stato dell'evento cambia quindi in Risolto.
+
+Se l'evento "Cluster Not Reachable" viene generato a causa di un'interruzione di corrente, al ripristino dell'alimentazione il cluster riprende a funzionare senza alcun intervento dell'amministratore. Pertanto, l'evento "Cluster Not Reachable" non è più valido e il suo stato cambia in "Obsolete" nel ciclo di monitoraggio successivo.
+
+Unified Manager invia un avviso quando un evento si trova nello stato Obsoleto o Risolto. L'oggetto e il contenuto dell'e-mail di avviso forniscono informazioni sullo stato dell'evento. Anche una trap SNMP include informazioni sullo stato dell'evento.

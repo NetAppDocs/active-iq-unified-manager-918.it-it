@@ -1,0 +1,18 @@
+---
+permalink: performance-checker/concept_use_performance_capacity_used_counter.html 
+sidebar: sidebar 
+keywords: performance, capacity, counter, manage, performance 
+summary: 'In genere, le organizzazioni vogliono operare con una percentuale di capacità prestazionale utilizzata inferiore al 100%, in modo da usare le risorse in modo efficiente e riservare al contempo una certa capacità prestazionale aggiuntiva per supportare i picchi di domanda. Puoi usare i criteri di soglia per personalizzare quando vengono inviati gli avvisi per valori elevati di capacità prestazionale utilizzata.' 
+---
+= Usa il contatore della capacità prestazionale utilizzata in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+In genere, le organizzazioni vogliono operare con una percentuale di capacità prestazionale utilizzata inferiore al 100%, in modo da usare le risorse in modo efficiente e riservare al contempo una certa capacità prestazionale aggiuntiva per supportare i picchi di domanda. Puoi usare i criteri di soglia per personalizzare quando vengono inviati gli avvisi per valori elevati di capacità prestazionale utilizzata.
+
+Puoi definire obiettivi specifici in base ai tuoi requisiti di performance. Ad esempio, le società di servizi finanziari potrebbero riservare una maggiore capacità di performance per garantire l'esecuzione tempestiva delle operazioni. Queste aziende potrebbero voler impostare soglie per la capacità di performance utilizzata nell'intervallo 70-80%. Le aziende manifatturiere con margini più ridotti potrebbero scegliere di riservare una minore capacità di performance se sono disposte a rischiare sulle performance per gestire meglio i costi IT. Queste aziende potrebbero impostare soglie per la capacità di performance utilizzata nell'intervallo 85-95%.
+
+Quando il valore della capacità prestazionale utilizzata supera la percentuale impostata in una policy di soglia definita dall'utente, Unified Manager invia un'e-mail di avviso e aggiunge l'evento alla pagina Event Inventory. In questo modo puoi gestire i potenziali problemi prima che influiscano sulle prestazioni. Puoi anche usare questi eventi come indicatori della necessità di spostare i carichi di lavoro e apportare modifiche all'interno dei nodi e degli aggregati.

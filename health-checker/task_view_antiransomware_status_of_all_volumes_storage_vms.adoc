@@ -1,0 +1,46 @@
+---
+permalink: health-checker/task_view_antiransomware_status_of_all_volumes_storage_vms.html 
+sidebar: sidebar 
+keywords: view, anti-ransomware status, volumes, storage VMs, SVMs 
+summary: Puoi visualizzare un elenco di tutti i volumi e delle VM di storage, nonché il loro stato anti-ransomware attuale, così puoi stabilire se i dati sui tuoi volumi sono adeguatamente protetti dagli attacchi ransomware. 
+---
+= Visualizza lo stato anti-ransomware di tutti i volumi e le storage VM in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi visualizzare un elenco di tutti i volumi e delle VM di storage (SVM) e il loro stato anti-ransomware attuale, in modo da determinare se i dati sui volumi e sulle SVM sono adeguatamente protetti dagli attacchi ransomware.
+
+.Prima di iniziare
+Devi disporre del ruolo di Operatore, Amministratore di applicazioni o Amministratore di archiviazione.
+
+Per ulteriori informazioni sui diversi stati anti-ransomware, consulta link:https://docs.netapp.com/us-en/ontap/anti-ransomware/enable-task.html#system-manager-procedure["ONTAP: Abilita la protezione anti-ransomware"].
+
+
+
+[[view-security-details-of-all-volumes-with-anti-ransomware-detection]]
+== Visualizza i dettagli di sicurezza di tutti i volumi con rilevamento anti-ransomware
+
+.Passaggi
+. Nel riquadro di navigazione a sinistra, fai clic su *Archiviazione* > *Volumi*.
+. Nel menu Visualizza, seleziona *Health* > *Security* > *Anti-ransomware*
+. Nella vista *Sicurezza: Anti-ransomware*, puoi ordinare in base ai vari campi o usare il filtro.
+
+
+
+NOTE: La protezione anti-ransomware non è supportata per i volumi offline, i volumi con restrizioni, i volumi SnapLock, i volumi FlexGroup, i volumi FlexCache, i volumi solo SAN, i volumi di storage VM arrestate, i volumi root delle storage VM o i volumi di protezione dei dati.
+
+
+
+[[view-security-details-of-all-storage-vms-with-anti-ransomware-detection]]
+== Visualizza i dettagli di sicurezza di tutte le VM di storage con rilevamento anti-ransomware
+
+.Passaggi
+. Nel riquadro di navigazione a sinistra, fai clic su *Archiviazione > Macchine virtuali di archiviazione*.
+. Seleziona *Visualizza > Sicurezza > Anti-ransomware*. Vedi un elenco di SVM con lo stato anti-ransomware.
+
+
+
+NOTE: Il monitoraggio anti-ransomware non è supportato sulle VM di storage che non hanno il protocollo NAS abilitato.

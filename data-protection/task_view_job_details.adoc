@@ -1,0 +1,23 @@
+---
+permalink: data-protection/task_view_job_details.html 
+sidebar: sidebar 
+keywords: view, job, details 
+summary: 'Dopo aver avviato un lavoro, puoi monitorarne l"avanzamento dalla pagina dei dettagli del lavoro e controllare le attività associate per individuare eventuali errori.' 
+---
+= Visualizza i dettagli del job in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dopo aver avviato un lavoro, puoi monitorarne l'avanzamento dalla pagina dei dettagli del lavoro e controllare le attività associate per individuare eventuali errori.
+
+.Prima di iniziare
+Devi disporre del ruolo di Amministratore dell'applicazione o di Amministratore dello storage.
+
+.Passaggi
+. Nel riquadro di navigazione a sinistra, fai clic su *Protezione* > *Lavori*.
+. Nella pagina Processi, fai clic sul nome di un processo nella colonna *Name* per visualizzare l'elenco delle attività associate al processo.
+. Fai clic su un'attività per visualizzare informazioni aggiuntive nel riquadro *Dettagli attività* e nel riquadro *Messaggi attività* a destra dell'elenco delle attività.
+

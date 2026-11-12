@@ -1,0 +1,14 @@
+---
+permalink: performance-checker/concept_monitor_cluster_performance_from_dashboard.html 
+sidebar: sidebar 
+keywords: monitor, cluster, performance, dashboard 
+summary: La Dashboard di Unified Manager fornisce alcuni pannelli che mostrano lo stato delle prestazioni high-level di tutti i cluster monitorati da questa istanza di Unified Manager. Ti consente di valutare le prestazioni complessive dei cluster gestiti e di individuare, localizzare o assegnare rapidamente per la risoluzione eventuali eventi specifici identificati. 
+---
+= Monitora le prestazioni del cluster dalla Dashboard in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La Dashboard di Unified Manager fornisce alcuni pannelli che mostrano lo stato delle prestazioni high-level di tutti i cluster monitorati da questa istanza di Unified Manager. Ti consente di valutare le prestazioni complessive dei cluster gestiti e di individuare, localizzare o assegnare rapidamente per la risoluzione eventuali eventi specifici identificati.

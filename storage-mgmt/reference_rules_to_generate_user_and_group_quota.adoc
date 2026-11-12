@@ -1,0 +1,85 @@
+---
+permalink: storage-mgmt/reference_rules_to_generate_user_and_group_quota.html 
+sidebar: sidebar 
+keywords: rules, generate, user, group, quota, email, address, page, area, define, add comments, syntax, command buttons 
+summary: 'La pagina Regole per generare gli indirizzi e-mail delle quote utente e di gruppo ti consente di creare regole per specificare indirizzi e-mail in base alla quota utente associata a cluster, SVM, volumi, qtree, utenti o gruppi di utenti. Quando viene superata una quota, il sistema invia una notifica all"indirizzo e-mail specificato.' 
+---
+= Scopri le regole degli indirizzi email per le quote in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La pagina Regole per generare gli indirizzi e-mail delle quote utente e di gruppo ti consente di creare regole per specificare indirizzi e-mail in base alla quota utente associata a cluster, SVM, volumi, qtree, utenti o gruppi di utenti. Quando viene superata una quota, il sistema invia una notifica all'indirizzo e-mail specificato.
+
+
+
+[[rules-area]]
+== Area delle regole
+
+Devi definire le regole per un indirizzo email per le quote. Puoi anche aggiungere commenti per spiegare le regole.
+
+
+
+[[how-you-define-rules]]
+== Come definire le regole
+
+Devi inserire le regole nell'ordine in cui vuoi eseguirle. Se il criterio della prima regola è soddisfatto, l'indirizzo email viene generato in base a questa regola. Se il criterio non è soddisfatto, viene preso in considerazione il criterio della regola successiva e così via. Ogni riga elenca una regola separata. La regola predefinita è l'ultima regola nell'elenco. Puoi modificare l'ordine di priorità delle regole. Tuttavia, non puoi modificare l'ordine della regola predefinita.
+
+Ad esempio, se vuoi utilizzare l'indirizzo e-mail qtree1@xyz.com per ricevere notifiche relative al superamento delle quote per qtree1 e utilizzare l'indirizzo e-mail admin@xyz.com per tutti gli altri qtree, le regole devono essere elencate nel seguente ordine:
+
+* se ( $QTREE == 'qtree1' ) allora qtree1@xyz.com
+* se ( $QTREE == * ) allora admin@xyz.com
+
+
+Se nessuno dei criteri delle regole che hai specificato è soddisfatto, viene usata la regola predefinita:
+
+if ( $USER_OR_GROUP == * ) then $USER_OR_GROUP@$DOMAIN
+
+Se più utenti hanno la stessa quota, i nomi degli utenti compaiono come valori separati da virgole e le regole non sono applicabili alla quota.
+
+
+
+[[how-you-add-comments]]
+== Come aggiungere commenti
+
+Puoi aggiungere commenti per spiegare le regole. Dovresti usare # all'inizio di ogni commento e ogni riga deve elencare un commento separato.
+
+
+
+[[rules-syntax]]
+== Sintassi delle regole
+
+La sintassi della regola deve essere una delle seguenti:
+
+* se ( `valid variableoperator *`) allora `email ID@domain name`
++
+if è una parola chiave ed è in minuscolo. L'operatore è ==. L'ID email può contenere qualsiasi carattere, le variabili valide $USER_OR_GROUP, $USER, o $GROUP, oppure una combinazione di qualsiasi carattere e delle variabili valide $USER_OR_GROUP, $USER, o $GROUP. Il domain name può contenere qualsiasi carattere, la variabile valida $DOMAIN, oppure una combinazione di qualsiasi carattere e della variabile valida $DOMAIN. Le variabili valide possono essere in maiuscolo o in minuscolo, ma non devono essere una combinazione di entrambi. Ad esempio, $domain e $DOMAIN sono validi, ma $Domain non è una variabile valida.
+
+* se ( `valid variableoperator `string``) allora `email ID@domain name`
++
+if è una parola chiave ed è in minuscolo. L'operatore può essere contains o ==. L'ID email può contenere qualsiasi carattere, le variabili valide $USER_OR_GROUP, $USER, o $GROUP, oppure una combinazione di qualsiasi carattere e delle variabili valide $USER_OR_GROUP, $USER, o $GROUP. Il domain name può contenere qualsiasi carattere, la variabile valida $DOMAIN, oppure una combinazione di qualsiasi carattere e della variabile valida $DOMAIN. Le variabili valide possono essere in maiuscolo o minuscolo, ma non devono essere una combinazione di entrambi. Ad esempio, $domain e $DOMAIN sono validi, ma $Domain non è una variabile valida.
+
+
+
+
+
+[[command-buttons]]
+== Pulsanti di comando
+
+I pulsanti di comando consentono di salvare, convalidare o annullare le regole create:
+
+* *Convalida*
++
+Convalida la sintassi della regola creata. Se si verificano errori durante la convalida, viene visualizzata la regola che ha generato l'errore, insieme a un messaggio di errore.
+
+* *Ripristina le impostazioni di fabbrica*
++
+Consente di ripristinare le regole di indirizzamento ai valori predefiniti di fabbrica.
+
+* *Salva*
++
+Convalida la sintassi della regola e salva la regola se non ci sono errori. Se durante la convalida si verificano errori, visualizza la regola che genera l'errore insieme a un messaggio di errore.
+
+

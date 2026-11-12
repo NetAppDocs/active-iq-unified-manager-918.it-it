@@ -1,0 +1,59 @@
+---
+permalink: data-protection/task_update_protection_voldtls_page.html 
+sidebar: sidebar 
+keywords: initialize, update, protection, relationships, volume, health details page 
+summary: Puoi eseguire un trasferimento baseline iniziale su una nuova relazione di protezione oppure aggiornare una relazione già inizializzata se vuoi eseguire subito un aggiornamento incrementale manuale non pianificato per trasferire immediatamente i dati. 
+---
+= Inizializza o aggiorna le relazioni di protezione dalla pagina Dettagli volume/salute in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi eseguire un trasferimento baseline iniziale su una nuova relazione di protezione oppure aggiornare una relazione già inizializzata se vuoi eseguire subito un aggiornamento incrementale manuale non pianificato per trasferire immediatamente i dati.
+
+*NOTA*: Non è possibile inizializzare o aggiornare i volumi protetti da Consistency Groups.
+
+.Prima di iniziare
+* Devi disporre del ruolo di Amministratore dell'applicazione o di Amministratore dello storage.
+* Devi aver configurato OnCommand Workflow Automation.
+
+
+.Passaggi
+. Nella scheda *Protezione* della pagina dei dettagli *Volume / Integrità*, individua nella topologia la relazione di protezione che desideri inizializzare o aggiornare, quindi fai clic con il pulsante destro del mouse su di essa.
+. Seleziona *Inizializza/Aggiorna* dal menu.
++
+In alternativa, dal menu *Azioni*, seleziona *Relazione* > *Inizializza/Aggiorna* per inizializzare o aggiornare la relazione di cui stai visualizzando i dettagli.
+
++
+Si apre la finestra di dialogo Inizializza/Aggiorna.
+
+. Nella scheda *Opzioni di trasferimento*, seleziona una priorità di trasferimento e la velocità di trasferimento massima.
+. Fai clic su *Copie Snapshot di origine*; quindi, nella colonna *Copia Snapshot*, fai clic su *Default*.
++
+Viene visualizzata la finestra di dialogo Seleziona copia Snapshot di origine.
+
+. Se vuoi specificare una copia Snapshot esistente anziché trasferire la copia Snapshot predefinita, fai clic su *Existing Snapshot Copy* e seleziona una copia Snapshot dall'elenco.
+. Fai clic su *Submit*.
++
+Tornerai alla finestra di dialogo Inizializza/Aggiorna.
+
+. Se hai selezionato più di un'origine da inizializzare o aggiornare, fai clic su *Predefinito* per l'origine di lettura/scrittura successiva per la quale desideri specificare una copia Snapshot esistente.
++
+Non puoi selezionare una copia Snapshot diversa per i volumi di protezione dei dati.
+
+. Fai clic su *Invia* per avviare il processo di inizializzazione o aggiornamento.
++
+Il processo di inizializzazione o aggiornamento viene avviato, vieni reindirizzato alla pagina dei dettagli Volume / Health e nella parte superiore della pagina viene visualizzato un collegamento ai processi.
+
+. *Facoltativo:* Fai clic su *View Jobs* nella pagina dei dettagli *Volume / Health* per monitorare lo stato di ogni processo di inizializzazione o aggiornamento.
++
+Viene visualizzato un elenco filtrato di processi.
+
+. *Opzionale:* Clicca su ciascun job per visualizzarne i dettagli.
+. *Facoltativo:* Fai clic sulla freccia Indietro del browser per tornare alla pagina dei dettagli *Volume / Health*.
++
+L'operazione di inizializzazione o aggiornamento è terminata quando tutte le attività del job vengono completate correttamente.
+
+

@@ -1,0 +1,39 @@
+---
+permalink: data-protection/task_create_cascade_or_fanout_relationships_to_extend_protection.html 
+sidebar: sidebar 
+keywords: create, cascade fanout, relationships, extend protection, existing protection relationship 
+summary: Puoi estendere la protezione da una relazione esistente creando un fanout dal volume di origine o una cascata dal volume di destinazione di una relazione esistente. Potresti farlo quando devi copiare dati da un sito a più siti o per fornire una protezione aggiuntiva creando più backup. 
+---
+= Estendi la protezione utilizzando le relazioni a cascata o a ventaglio in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi estendere la protezione da una relazione esistente creando un fanout dal volume di origine o una cascata dal volume di destinazione di una relazione esistente. Potresti farlo quando devi copiare dati da un sito a più siti o per fornire una protezione aggiuntiva creando più backup.
+
+Puoi estendere la protezione ai volumi utilizzando il consistency group, ovvero un container che contiene diversi volumi che ti consente di gestire tutti i volumi come un'unica entità. Puoi visualizzare la relazione di synchronous consistency group e del Consistency Group di SnapMirror active sync nella pagina Relationships di Unified Manager.
+
+.Prima di iniziare
+* Devi disporre del ruolo di Amministratore dell'applicazione o di Amministratore dello storage.
+* Devi aver configurato Workflow Automation.
+
+
+.Passaggi
+. Fai clic su *Protezione* > *Relazioni*. In alternativa, puoi visualizzare le relazioni dalla pagina dei dettagli del volume.
+. Dalla pagina *Relazioni di volume*, seleziona la relazione di SnapMirror da cui desideri estendere la protezione.
+. Nella barra delle azioni, fai clic su *Estendi protezione*.
+. Nel menu, seleziona *Da origine* o *Da destinazione*, a seconda che tu stia creando una relazione di fanout dall'origine o una relazione a cascata dalla destinazione.
+. Seleziona *Con SnapMirror* o *Con SnapVault* a seconda del tipo di relazione di protezione che stai creando.
++
+Si apre la finestra di dialogo *Configura protezione*.
+
++
+[NOTE]
+====
+Puoi farlo dalla pagina dei dettagli Unified Relationship / Volume Relationship e Volume / Health.
+
+====
+. Completa le informazioni come indicato nella finestra di dialogo *Configura protezione*.
+

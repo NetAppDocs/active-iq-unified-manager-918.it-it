@@ -1,0 +1,30 @@
+---
+permalink: health-checker/task_view_security_events_that_require_software_or_firmware_updates.html 
+sidebar: sidebar 
+keywords: upgrade events, view, security events, software, firmware updates 
+summary: 'Esistono determinati eventi di sicurezza che hanno un"area di impatto "Upgrade". Questi eventi vengono segnalati dalla piattaforma Active IQ e identificano problemi la cui risoluzione richiede l"upgrade del software ONTAP, del firmware del nodo o del software del sistema operativo (per gli avvisi di sicurezza).' 
+---
+= Visualizza gli eventi di sicurezza che potrebbero richiedere aggiornamenti software o firmware in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Esistono determinati eventi di sicurezza che hanno un'area di impatto "`Upgrade`". Questi eventi vengono segnalati dalla piattaforma Active IQ e identificano problemi la cui risoluzione richiede di aggiornare il software ONTAP, il firmware del nodo o il software del sistema operativo (per gli avvisi di sicurezza).
+
+.Prima di iniziare
+Devi disporre del ruolo di Operatore, Amministratore di applicazioni o Amministratore di archiviazione.
+
+Potresti voler intervenire immediatamente per risolvere alcuni di questi problemi, mentre altri possono attendere fino alla prossima manutenzione programmata. Puoi visualizzare tutti questi eventi e assegnarli agli utenti che possono risolvere i problemi. Inoltre, se ci sono determinati eventi di upgrade della sicurezza per cui non vuoi ricevere notifiche, questo elenco può aiutarti a identificarli, così puoi disabilitarli.
+
+.Passaggi
+. Nel riquadro di navigazione a sinistra, fai clic su *Event Management*.
++
+Per impostazione predefinita, la pagina di inventario Event Management mostra tutti gli eventi attivi (nuovi e confermati).
+
+. Dal menu Visualizza, seleziona *Eventi di aggiornamento*.
++
+La pagina visualizza tutti gli eventi di sicurezza dell'upgrade attivi.
+
+

@@ -1,0 +1,45 @@
+---
+permalink: performance-checker/task_respond_to_system_defined_node_resources_overutilized.html 
+sidebar: sidebar 
+keywords: node, resources, overutilized, performance, events 
+summary: 'Unified Manager genera eventi di avviso di utilizzo eccessivo delle risorse del nodo quando un singolo nodo opera oltre i limiti della sua efficienza operativa, con possibili ripercussioni sulle latenze dei carichi di lavoro. Questi eventi definiti dal sistema offrono l"opportunità di correggere potenziali problemi di prestazioni prima che la latenza influisca su numerosi carichi di lavoro.' 
+---
+= Rispondi agli eventi di sovraccarico delle risorse del nodo in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager genera eventi di avviso di utilizzo eccessivo delle risorse del nodo quando un singolo nodo opera oltre i limiti della sua efficienza operativa, con possibili ripercussioni sulle latenze dei carichi di lavoro. Questi eventi definiti dal sistema offrono l'opportunità di correggere potenziali problemi di prestazioni prima che la latenza influisca su numerosi carichi di lavoro.
+
+.Prima di iniziare
+* Devi disporre del ruolo di Operatore, Amministratore di applicazioni o Amministratore di archiviazione.
+* Devono esserci eventi relativi alle prestazioni nuovi o obsoleti.
+
+
+Unified Manager genera eventi di avviso per le violazioni delle policy di utilizzo eccessivo delle risorse dei nodi, individuando i nodi che utilizzano oltre il 100% della loro capacità prestazionale per più di 30 minuti.
+
+Puoi utilizzare System Manager o i comandi ONTAP per correggere questo tipo di problema di prestazioni, incluse le seguenti attività:
+
+* Creazione e applicazione di una policy QoS a qualsiasi volume o LUN che utilizza eccessivamente le risorse di sistema
+* Riduzione del limite massimo di throughput QoS di un gruppo di criteri a cui sono stati applicati carichi di lavoro
+* Spostare un carico di lavoro in un aggregato o in un nodo diverso
+* Aumentare la capacità aggiungendo dischi al nodo oppure eseguendo l'aggiornamento a un nodo con una CPU più veloce e più RAM
+
+
+.Passaggi
+. Visualizza la pagina *Dettagli dell'evento* per vedere le informazioni sull'evento.
+. Esamina la *Descrizione*, che illustra il superamento della soglia che ha causato l'evento.
++
+Ad esempio, il messaggio "`Il valore di Perf. Capacity Used pari al 139% su simplicity-02 ha attivato un evento di AVVISO per identificare potenziali problemi di prestazioni nell'unità di Data Processing.`" indica che la capacità prestazionale sul nodo simplicity-02 è sovrautilizzata e sta influenzando le prestazioni del nodo.
+
+. Nella sezione *Diagnosi di sistema*, esamina i tre grafici: uno relativo alla capacità prestazionale utilizzata sul nodo, uno relativo agli IOPS di archiviazione medi utilizzati dai carichi di lavoro principali e uno relativo alla latenza dei carichi di lavoro principali. Organizzandoli in questo modo, potrai individuare quali carichi di lavoro causano la latenza sul nodo.
++
+Puoi vedere a quali carichi di lavoro sono applicati criteri QoS e a quali no spostando il cursore sul grafico IOPS.
+
+. Nella sezione *Azioni suggerite*, esamina i suggerimenti e determina quali azioni dovresti intraprendere per evitare un aumento della latenza per il carico di lavoro.
++
+Se necessario, fai clic sul pulsante *Help* per visualizzare maggiori dettagli sulle azioni suggerite che puoi eseguire per provare a risolvere l'evento di prestazioni.
+
+

@@ -1,0 +1,35 @@
+---
+permalink: events/task_schedule_maintenance_window_to_disable_cluster_notifications.html 
+sidebar: sidebar 
+keywords: schedule, maintenance, window, disable, cluster, event, notifications 
+summary: Se hai un periodo di inattività pianificato per un cluster, ad esempio per aggiornare il cluster o per spostare uno dei nodi, puoi sopprimere gli eventi e gli avvisi che verrebbero normalmente generati durante quel periodo pianificando una finestra di manutenzione di Unified Manager. 
+---
+= Pianifica una finestra di manutenzione per disabilitare le notifiche degli eventi del cluster in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se hai un periodo di inattività pianificato per un cluster, ad esempio per aggiornare il cluster o per spostare uno dei nodi, puoi sopprimere gli eventi e gli avvisi che verrebbero normalmente generati durante quel periodo pianificando una finestra di manutenzione di Unified Manager.
+
+.Prima di iniziare
+Devi disporre del ruolo di Amministratore dell'applicazione o di Amministratore dello storage.
+
+Durante una finestra di manutenzione, si generano comunque gli eventi relativi a tutti gli oggetti di quel cluster, ma non vengono visualizzati nella pagina degli eventi e non vengono inviati avvisi o altri tipi di notifiche per questi eventi.
+
+L'orario che inserisci per la finestra di manutenzione si basa sull'orario del server Unified Manager.
+
+.Passaggi
+. Nel riquadro di navigazione a sinistra, fai clic su *Gestione dello storage* > *Configurazione del cluster*.
+. Nella colonna *Modalità di manutenzione* del cluster, seleziona il pulsante a scorrimento e spostalo verso destra.
++
+Si apre la finestra del calendario.
+
+. Seleziona la data e l'ora di inizio e fine della finestra di manutenzione e fai clic su *Apply*.
++
+Il messaggio "Scheduled" appare accanto al pulsante di scorrimento.
+
+
+
+Quando viene raggiunta l'ora di inizio, il cluster passa alla modalità di manutenzione e viene generato un evento "Avviata finestra di manutenzione degli oggetti".

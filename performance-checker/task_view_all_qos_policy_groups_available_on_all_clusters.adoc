@@ -1,0 +1,24 @@
+---
+permalink: performance-checker/task_view_all_qos_policy_groups_available_on_all_clusters.html 
+sidebar: sidebar 
+keywords: viewing, qos, policy, groups, available, clusters 
+summary: Puoi visualizzare un elenco di tutti i gruppi di criteri QoS disponibili sui cluster monitorati da Unified Manager. Sono inclusi i criteri QoS tradizionali, i criteri QoS adattivi e i criteri QoS gestiti dai criteri Performance Service Level di Unified Manager. 
+---
+= Visualizza i gruppi di policy QoS disponibili su tutti i cluster in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi visualizzare un elenco di tutti i gruppi di criteri QoS disponibili sui cluster monitorati da Unified Manager. Sono inclusi i criteri QoS tradizionali, i criteri QoS adattivi e i criteri QoS gestiti dai criteri Performance Service Level di Unified Manager.
+
+.Passaggi
+. Nel riquadro di navigazione a sinistra, fai clic su *Storage* > *QoS Policy Groups*.
++
+Per impostazione predefinita, viene visualizzata la vista Performance: Traditional QoS Policy Groups.
+
+. Visualizza le impostazioni di configurazione dettagliate per ciascun gruppo di criteri QoS tradizionale disponibile.
+. Fai clic sul pulsante di espansione (image:../media/chevron_down.gif[""]) accanto al nome del gruppo di criteri QoS per visualizzare maggiori dettagli sul gruppo di criteri.
+. Nel menu Visualizza, seleziona una delle opzioni aggiuntive per visualizzare tutti i gruppi di criteri QoS adattivi oppure tutti i gruppi di criteri QoS creati usando Unified Manager Performance Service Levels.
+

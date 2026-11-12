@@ -1,0 +1,33 @@
+---
+permalink: config/task_add_space_to_data_disk_of_vmware_virtual_machine.html 
+sidebar: sidebar 
+keywords: add, space, data, disk, vmware, virtual, machine 
+summary: 'Se devi aumentare la quantità di spazio sul disco dati per il database di Unified Manager, puoi aggiungere capacità dopo l"installazione aumentando lo spazio su disco tramite la console di manutenzione di Unified Manager.' 
+---
+= Aggiungi spazio al disco dati di una macchina virtuale VMware in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se devi aumentare la quantità di spazio sul disco dati per il database di Unified Manager, puoi aggiungere capacità dopo l'installazione aumentando lo spazio su disco tramite la console di manutenzione di Unified Manager.
+
+.Prima di iniziare
+* Devi avere accesso al vSphere Client.
+* La macchina virtuale non deve avere snapshot memorizzati localmente.
+* Devi disporre delle credenziali dell'utente di manutenzione.
+
+
+Ti consigliamo di eseguire un backup della macchina virtuale prima di aumentare le dimensioni dei dischi virtuali.
+
+.Passaggi
+. Nel client vSphere, seleziona la macchina virtuale Unified Manager, quindi aggiungi ulteriore capacità del disco ai dati `disk 3`. Per i dettagli, consulta la documentazione VMware.
++
+In alcuni rari casi, la distribuzione di Unified Manager utilizza "`Hard Disk 2`" per il disco dati invece di "`Hard Disk 3`". Se questo si è verificato nella tua distribuzione, aumenta lo spazio del disco più grande. Il disco dati avrà sempre più spazio dell'altro disco.
+
+. Nel client vSphere, seleziona la macchina virtuale Unified Manager, quindi seleziona la scheda *Console*.
+. Fai clic nella finestra della console, quindi accedi alla console di manutenzione utilizzando il tuo nome utente e la password.
+. Nel menu principale, immetti il numero corrispondente all'opzione *Configurazione di sistema*.
+. Nel menu Configurazione di sistema, inserisci il numero dell'opzione *Aumenta dimensione disco dati*.
+

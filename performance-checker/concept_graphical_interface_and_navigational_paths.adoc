@@ -1,0 +1,14 @@
+---
+permalink: performance-checker/concept_graphical_interface_and_navigational_paths.html 
+sidebar: sidebar 
+keywords: graphical, interface, navigational, paths 
+summary: Unified Manager offre grande flessibilità e ti consente di svolgere diverse attività in vari modi. Scoprirai numerosi percorsi di navigazione mentre lavori in Unified Manager. Sebbene non sia possibile mostrare tutte le possibili combinazioni di navigazione, è utile che tu acquisisca familiarità con alcuni degli scenari più comuni. 
+---
+= Esplora l'interfaccia grafica e i percorsi di navigazione in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager offre grande flessibilità e ti consente di svolgere diverse attività in vari modi. Scoprirai numerosi percorsi di navigazione mentre lavori in Unified Manager. Sebbene non sia possibile mostrare tutte le possibili combinazioni di navigazione, è utile che tu acquisisca familiarità con alcuni degli scenari più comuni.

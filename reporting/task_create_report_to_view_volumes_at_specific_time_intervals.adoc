@@ -1,0 +1,41 @@
+---
+permalink: reporting/task_create_report_to_view_volumes_at_specific_time_intervals.html 
+sidebar: sidebar 
+keywords: create, report, view, volume, transfer, trends, specific, time intervals 
+summary: 'Puoi creare un report che visualizza l"andamento dei trasferimenti di volume a intervalli di tempo specifici.' 
+---
+= Crea un report per visualizzare le tendenze di trasferimento del volume a intervalli di tempo in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi creare un report che visualizza l'andamento dei trasferimenti di volume a intervalli di tempo specifici.
+
+.Prima di iniziare
+* Devi disporre del ruolo di Amministratore dell'applicazione o di Amministratore dello storage.
+
+
+Segui questi passaggi per creare una visualizzazione personalizzata dei volumi a intervalli di tempo specifici e quindi pianifica la generazione di un report per tale visualizzazione.
+
+.Passaggi
+. Nel riquadro di navigazione a sinistra, fai clic su *Archiviazione* > *Volumi*.
+. Nel menu Visualizza, seleziona *Relazione* > *Stato del trasferimento dell'ultimo mese*.
+. Seleziona *Mostra/Nascondi* per rimuovere le colonne che non vuoi nel report.
+. Trascina la colonna Durata del trasferimento vicino alla colonna "`Operational Result`".
+. Fai clic sull'icona del filtro, aggiungi il seguente filtro e poi fai clic su *Applica filtro*:
++
+** Ora di fine del trasferimento negli ultimi 7 giorni
+
+
+. Fai clic sulla parte superiore della colonna "`Transfer Duration`" per ordinare i volumi in base all'intervallo di tempo.
+. Salva la vista con un nome specifico che ne rifletta il contenuto, ad esempio "`Volumi per durata`".
+. Nella pagina dell'inventario, fai clic sul pulsante *Report programmati*.
+. Inserisci un nome per la pianificazione del report, imposta la frequenza su *Settimanale* e completa gli altri campi del report, quindi fai clic sul segno di spunta (image:../media/blue_check.gif[""]) alla fine della riga.
++
+Il report viene inviato immediatamente a scopo di test. Successivamente, il report viene generato e inviato via email ai destinatari indicati con la frequenza specificata.
+
+
+
+In base ai risultati riportati nel report, puoi analizzare gli intervalli di tempo di trasferimento.

@@ -1,0 +1,35 @@
+---
+permalink: data-protection/task_resume_scheduled_transfers_voldtls_page.html 
+sidebar: sidebar 
+keywords: resume schedule, transfers, quiesce, relationship,  volume, health details page 
+summary: Dopo aver sospeso una relazione per interrompere i trasferimenti pianificati, puoi utilizzare Riprendi nella pagina dei dettagli Volume / Health per riattivare i trasferimenti pianificati e proteggere così i dati sul volume di origine o primario. I trasferimenti riprendono da un checkpoint, se presente, al successivo intervallo di trasferimento pianificato. 
+---
+= Riprendi i trasferimenti su una relazione quiescente dalla pagina Dettagli volume/salute in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dopo aver sospeso una relazione per interrompere i trasferimenti pianificati, puoi utilizzare *Resume* nella pagina dei dettagli Volume / Health per riattivare i trasferimenti pianificati in modo che i dati sul volume di origine o primario siano protetti. I trasferimenti riprendono da un checkpoint, se presente, al successivo intervallo di trasferimento pianificato.
+
+.Prima di iniziare
+* Devi disporre del ruolo di Amministratore dell'applicazione o di Amministratore dello storage.
+* Devi aver configurato Workflow Automation.
+
+
+.Passaggi
+. Nella scheda *Protezione* della pagina dei dettagli *Volume / Integrità*, fai clic con il pulsante destro del mouse, nella vista della topologia, su una relazione sospesa che desideri riprendere.
++
+In alternativa, seleziona *Riprendi* dal menu *Azioni* > *Relazione*.
+
+. Nella finestra di dialogo *Riprendi*, fai clic su *Continua*.
++
+Tornerai alla pagina dei dettagli di Volume / Health.
+
+. Per visualizzare le attività correlate e monitorarne l'avanzamento, fai clic sul collegamento del job visualizzato nella parte superiore della pagina dei dettagli di *Volume / Health*.
+. Nella pagina dei dettagli di *Job*, fai clic su *Refresh* per aggiornare l'elenco delle attività e i relativi dettagli associati al job di configurazione della protezione e per verificare quando il job è completo.
++
+Una volta completate le operazioni, i trasferimenti di dati riprendono al successivo intervallo di trasferimento programmato.
+
+

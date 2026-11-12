@@ -1,0 +1,36 @@
+---
+permalink: reporting/task_create_report_to_view_svms_reaching_maximum_volume_limit.html 
+sidebar: sidebar 
+keywords: create, report, view, storage VMs, volume, limit 
+summary: Puoi creare un report per individuare le SVM che stanno raggiungendo il limite massimo di volumi. 
+---
+= Crea un report per visualizzare le VM di storage che raggiungono il limite massimo di volume in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi creare un report per individuare le SVM che stanno raggiungendo il limite massimo di volumi.
+
+.Prima di iniziare
+* Devi disporre del ruolo di Amministratore dell'applicazione o di Amministratore dello storage.
+
+
+Segui questi passaggi per creare una vista personalizzata che mostri le VM di storage che stanno raggiungendo il limite massimo di volume, quindi pianifica un report per tale vista.
+
+.Passaggi
+. Nel riquadro di navigazione a sinistra, fai clic su *Storage* > *Storage VMs*.
+. Seleziona *Mostra/Nascondi* per rimuovere le colonne che non vuoi nel report.
+. Trascina le colonne "`Volume Count`" e "`Maximum Allowed Volumes`" vicino alla colonna "`Storage VM`".
+. Fai clic sulla parte superiore della colonna "`Maximum Allowed Volumes`" per ordinare i risultati in base al numero più elevato di volumi.
+. Salva la vista con un nome specifico che rifletta ciò che mostra, ad esempio "`SVMs reaching max volumes`" e fai clic sul segno di spunta (image:../media/blue_check.gif[""]).
+. Nella pagina dell'inventario, fai clic sul pulsante *Report programmati*.
+. Fai clic su *Aggiungi pianificazione* per aggiungere una nuova riga alla pagina *Pianificazioni report* in modo da poter definire le caratteristiche della pianificazione per il nuovo report.
+. Inserisci un nome per la pianificazione del report e completa gli altri campi del report, quindi fai clic sul segno di spunta (image:../media/blue_check.gif[""]) alla fine della riga.
++
+Il report viene inviato immediatamente a scopo di test. Successivamente, il report viene generato e inviato via email ai destinatari indicati con la frequenza specificata.
+
+
+
+In base ai risultati riportati nel report, potresti voler bilanciare i volumi assegnati alle VM di storage oppure, se possibile, usare ONTAP System Manager per modificare il numero massimo di volumi consentiti.

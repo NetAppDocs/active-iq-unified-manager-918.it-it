@@ -1,0 +1,45 @@
+---
+permalink: performance-checker/concept_understand_counter_charts.html 
+sidebar: sidebar 
+keywords: understand, counter, charts 
+summary: 'I grafici nel riquadro Grafici contatore ti consentono di visualizzare e confrontare i dati sulle prestazioni dell"oggetto radice e degli oggetti che hai aggiunto dalla griglia degli oggetti correlati. Questo può aiutarti a comprendere le tendenze delle prestazioni e a individuare e risolvere i problemi di prestazioni.' 
+---
+= Comprendi i grafici a contatore in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+I grafici nel riquadro Grafici contatore ti consentono di visualizzare e confrontare i dati sulle prestazioni dell'oggetto radice e degli oggetti che hai aggiunto dalla griglia degli oggetti correlati. Questo può aiutarti a comprendere le tendenze delle prestazioni e a individuare e risolvere i problemi di prestazioni.
+
+I grafici dei contatori visualizzati per impostazione predefinita sono Eventi, Latenza, IOPS e MBps. I grafici opzionali che puoi scegliere di visualizzare sono Utilizzo, Capacità prestazionale utilizzata, IOPS disponibili, IOPS/TB e Rapporto di cache miss. Inoltre, puoi scegliere di visualizzare i valori totali o i valori di dettaglio per i grafici di Latenza, IOPS, MBps e Capacità prestazionale utilizzata.
+
+Performance Explorer visualizza per impostazione predefinita alcuni grafici dei contatori, indipendentemente dal fatto che l'oggetto di archiviazione li supporti tutti o meno. Se un contatore non è supportato, il grafico del contatore è vuoto e viene visualizzato il messaggio `Not applicable for <object>`.
+
+I grafici mostrano l'andamento delle prestazioni per l'oggetto radice e per tutti gli oggetti selezionati nel riquadro di confronto. I dati in ciascun grafico sono organizzati come segue:
+
+* *Asse X*
++
+Visualizza il periodo di tempo specificato. Se non specifichi un intervallo di tempo, per impostazione predefinita viene usato il periodo precedente di 72 ore.
+
+* *Asse Y*
++
+Visualizza le unità di misura univoche dell'oggetto o degli oggetti selezionati.
+
+
+
+I colori delle linee di tendenza corrispondono al colore del nome dell'oggetto visualizzato nel riquadro Comparing. Puoi posizionare il cursore su un punto di qualsiasi linea di tendenza per visualizzare i dettagli relativi all'ora e al valore di quel punto.
+
+Se desideri analizzare un periodo di tempo specifico all'interno di un grafico, puoi utilizzare uno dei seguenti metodi:
+
+* Usa il pulsante *<* per espandere il riquadro Counter Charts fino a occupare l'intera larghezza della pagina.
+* Usa il cursore, quando si trasforma in una lente d'ingrandimento, per selezionare una porzione dell'intervallo temporale nel grafico e mettere a fuoco e ingrandire quell'area. Puoi fare clic su Reset Chart Zoom per riportare il grafico all'intervallo temporale predefinito.
+* Usa il pulsante *Zoom View* per visualizzare un grafico di un singolo contatore di grandi dimensioni che contiene dettagli estesi e indicatori di soglia.
+
+
+[NOTE]
+====
+Occasionalmente, le linee di tendenza visualizzate presentano interruzioni. Queste interruzioni indicano che Unified Manager non è riuscito a raccogliere i dati sulle prestazioni dal sistema storage oppure che Unified Manager potrebbe essere stato inattivo.
+
+====

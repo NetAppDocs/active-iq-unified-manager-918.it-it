@@ -1,0 +1,24 @@
+---
+permalink: api-automation/reference_intended_audience_for_this_guide.html 
+sidebar: sidebar 
+keywords: audience, api, rest 
+summary: Questa sezione è destinata agli sviluppatori che creano applicazioni che si interfacciano con il software Active IQ Unified Manager tramite API REST. 
+---
+= Identifica gli utenti previsti delle REST API di Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Gli argomenti qui trattati sono destinati agli sviluppatori che creano applicazioni che si interfacciano con il software Active IQ Unified Manager tramite API REST.
+
+Gli amministratori e gli architetti dello storage possono consultare queste informazioni per acquisire una comprensione di base di come le API REST di Unified Manager possono essere utilizzate per creare applicazioni client per gestire e monitorare i sistemi di storage NetApp.
+
+Dovresti usare queste informazioni se vuoi usare il provider di storage, il cluster ONTAP e le API di amministrazione della gestione per gestire il tuo storage.
+
+[NOTE]
+====
+Devi disporre di uno dei seguenti ruoli: Operator, Storage Administrator o Application Administrator. Devi conoscere l'indirizzo IP o il fully qualified domain name del server Unified Manager sul quale vuoi eseguire le API REST.
+
+====

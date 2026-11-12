@@ -1,0 +1,23 @@
+---
+permalink: reporting/task_search_to_refine_view.html 
+sidebar: sidebar 
+keywords: search, refine, view 
+summary: Dopo aver ottenuto la visualizzazione desiderata, puoi affinare ulteriormente i risultati utilizzando il campo di ricerca per concentrarti sui risultati che vuoi includere nel report. 
+---
+= Cerca per affinare la visualizzazione in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dopo aver ottenuto la visualizzazione desiderata, puoi affinare ulteriormente i risultati utilizzando il campo di ricerca per concentrarti sui risultati che vuoi includere nel report.
+
+.Passaggi
+. Apri la vista personalizzata o predefinita che desideri utilizzare come base per il tuo report.
+. Digita nel campo di ricerca per filtrare i dati elencati nella vista. Puoi inserire dati parziali in una qualsiasi delle colonne visualizzate. Ad esempio, se vuoi cercare nodi che includono "US_East" nel nome, puoi filtrare l'elenco completo dei nodi.
++
+I risultati della tua ricerca vengono salvati nella vista personalizzata e usati nel report pianificato che ne deriva.
+
+. Assegna un nome alla vista non salvata per salvare le modifiche.
+

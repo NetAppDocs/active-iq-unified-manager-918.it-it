@@ -1,0 +1,38 @@
+---
+permalink: performance-checker/concept_what_used_headroom_value_means.html 
+sidebar: sidebar 
+keywords: performance, capacity, value, means 
+summary: Il valore della capacità prestazionale utilizzata consente di identificare i nodi e gli aggregati attualmente sovrautilizzati o sottoutilizzati. Ciò consente di ridistribuire i carichi di lavoro per rendere più efficienti le risorse di storage. 
+---
+= Usa il valore della capacità prestazionale utilizzata in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Il valore della capacità prestazionale utilizzata consente di identificare i nodi e gli aggregati attualmente sovrautilizzati o sottoutilizzati. Ciò consente di ridistribuire i carichi di lavoro per rendere più efficienti le risorse di storage.
+
+La figura seguente mostra la curva della latenza in funzione dell'utilizzo di una risorsa e identifica, con punti colorati, tre aree in cui potrebbe trovarsi il punto operativo attuale.
+
+image::../media/headroom_chart_over_under.gif[Uno screenshot dell'interfaccia utente che mostra la curva della latenza in funzione dell'utilizzo di una risorsa.]
+
+* Un utilizzo della capacità prestazionale pari al 100% rappresenta il punto ottimale.
++
+Al momento stai utilizzando le risorse in modo efficiente.
+
+* Una percentuale di capacità prestazionale utilizzata superiore al 100% indica che il nodo o l'aggregato è sovrautilizzato e che i carichi di lavoro stanno ricevendo prestazioni non ottimali.
++
+Non dovresti aggiungere nuovi carichi di lavoro alla risorsa e potrebbe essere necessario ridistribuire quelli esistenti.
+
+* Una percentuale di capacità prestazionale utilizzata inferiore al 100% indica che il nodo o l'aggregato è sottoutilizzato e che le risorse non vengono utilizzate in modo efficace.
++
+Puoi aggiungere altri carichi di lavoro alla risorsa.
+
+
+
+[NOTE]
+====
+A differenza dell'utilizzo, la percentuale di capacità prestazionale utilizzata può superare il 100%. Non esiste una percentuale massima, ma in genere le risorse si attestano tra il 110% e il 140% quando sono sovrautilizzate. Percentuali più elevate indicano una risorsa con problemi seri.
+
+====

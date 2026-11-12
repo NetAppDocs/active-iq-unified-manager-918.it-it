@@ -1,0 +1,19 @@
+---
+permalink: reporting/task_sort_data.html 
+sidebar: sidebar 
+keywords: sort, data 
+summary: 'Per ordinare i risultati, fai clic su una colonna e indica se desideri un ordine crescente o decrescente. L"ordinamento dei dati consente di dare priorità alle informazioni necessarie per il report.' 
+---
+= Ordina i dati in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Per ordinare i risultati, fai clic su una colonna e indica se desideri un ordine crescente o decrescente. L'ordinamento dei dati consente di dare priorità alle informazioni necessarie per il report.
+
+.Passaggi
+. Fai clic sulla parte superiore di una colonna per ordinare i risultati in modo che le informazioni più importanti appaiano nella parte superiore della vista.
+. Assegna un nome alla vista non salvata per salvare le modifiche.
+

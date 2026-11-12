@@ -1,0 +1,94 @@
+---
+permalink: config/reference_network_configuration_menu.html 
+sidebar: sidebar 
+keywords: network configuration menu 
+summary: 'Il menu Configurazione di rete ti consente di gestire le impostazioni di rete. Dovresti usare questo menu quando l"interfaccia utente di Unified Manager non è disponibile.' 
+---
+= Menu Configurazione rete in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Il menu Configurazione di rete ti consente di gestire le impostazioni di rete. Dovresti usare questo menu quando l'interfaccia utente di Unified Manager non è disponibile.
+
+[NOTE]
+====
+Questo menu non è disponibile se Unified Manager è installato su Red Hat Enterprise Linux o su Microsoft Windows.
+
+====
+Sono disponibili le seguenti opzioni di menu.
+
+* *Visualizza le impostazioni dell'indirizzo IP*
++
+Visualizza le impostazioni di rete correnti per l'appliance virtuale, inclusi l'indirizzo IP, la rete, l'indirizzo di broadcast, la netmask, il gateway e i server DNS.
+
+* *Modifica le impostazioni dell'indirizzo IP*
++
+Ti consente di modificare qualsiasi impostazione di rete dell'appliance virtuale, inclusi l'indirizzo IP, la subnet mask, il gateway o i server DNS. Se passi dalle impostazioni di rete DHCP alla rete statica usando la console di manutenzione, non puoi modificare il host name. Devi selezionare *Applica modifiche* perché le modifiche abbiano effetto.
+
+* *Visualizza le impostazioni di ricerca del domain name*
++
+Visualizza l'elenco di ricerca del domain name utilizzato per la risoluzione degli host name.
+
+* *Modifica le impostazioni di ricerca del domain name*
++
+Ti consente di modificare i domain name in cui vuoi cercare durante la risoluzione dei host name. Devi selezionare *Commit Changes* perché le modifiche abbiano effetto.
+
+* *Visualizza route statiche*
++
+Visualizza i percorsi di rete statici correnti.
+
+* *Modifica route statiche*
++
+Ti consente di aggiungere o eliminare percorsi di rete statici. Devi selezionare *Commit Changes* affinché le modifiche abbiano effetto.
+
++
+** *Aggiungi route*
++
+Ti consente di aggiungere una route statica.
+
+** *Elimina route*
++
+Ti consente di eliminare una rotta statica.
+
+** *Indietro*
++
+Ti riporta al *menu principale*.
+
+** *Uscita*
++
+Esci dalla console di manutenzione.
+
+
+
+* *Disabilita l'interfaccia di rete*
++
+Disabilita tutte le interfacce di rete disponibili. Se è disponibile una sola interfaccia di rete, non puoi disabilitarla. Devi selezionare *Applica modifiche* perché le modifiche abbiano effetto.
+
+* *Abilita l'interfaccia di rete*
++
+Abilita le interfacce di rete disponibili. Devi selezionare *Applica modifiche* affinché le modifiche abbiano effetto.
+
+* *Conferma le modifiche*
++
+Applica tutte le modifiche apportate alle impostazioni di rete per l'appliance virtuale. Devi selezionare questa opzione affinché le modifiche abbiano effetto, altrimenti non verranno applicate.
+
+* *Esegui il ping di un host*
++
+Esegue un ping verso un host di destinazione per confermare le modifiche all'indirizzo IP o alle configurazioni DNS.
+
+* *Ripristina le impostazioni predefinite*
++
+Ripristina tutte le impostazioni ai valori predefiniti di fabbrica. Devi selezionare *Applica modifiche* affinché le modifiche abbiano effetto.
+
+* *Indietro*
++
+Ti riporta al *menu principale*.
+
+* *Uscita*
++
+Esci dalla console di manutenzione.
+
+

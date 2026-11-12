@@ -1,0 +1,107 @@
+---
+permalink: performance-checker/concept_how_user_defined_performance_threshold_policies_work.html 
+sidebar: sidebar 
+keywords: user-defined, performance, threshold, policies, work 
+summary: 'Imposti criteri di soglia delle prestazioni sugli oggetti di storage (ad esempio, su aggregati e volumi) in modo che venga inviato un evento all"amministratore dello storage per informarlo che il cluster sta riscontrando un problema di prestazioni.' 
+---
+= Usa le policy di soglia delle prestazioni definite dall'utente in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Imposti criteri di soglia delle prestazioni sugli oggetti di storage (ad esempio, su aggregati e volumi) in modo che venga inviato un evento all'amministratore dello storage per informarlo che il cluster sta riscontrando un problema di prestazioni.
+
+Crei una policy di soglia delle prestazioni per un oggetto di archiviazione procedendo come segue:
+
+* Selezione di un oggetto di storage
+* Selezione di un contatore delle prestazioni associato a quell'oggetto
+* Specifica i valori che definiscono i limiti superiori del contatore delle prestazioni considerati situazioni di avviso e situazioni critiche
+* Specificare un periodo di tempo che definisce per quanto tempo il contatore deve superare il limite superiore
+
+
+Ad esempio, puoi impostare una policy di soglia delle prestazioni su un volume in modo da ricevere una notifica di un evento critico ogni volta che le IOPS per quel volume superano 750 operazioni al secondo per 10 minuti consecutivi. Questa stessa policy di soglia può anche specificare che venga inviato un evento di avviso quando le IOPS superano 500 operazioni al secondo per 10 minuti.
+
+[NOTE]
+====
+La versione attuale prevede soglie che inviano eventi quando il valore di un contatore supera la soglia impostata. Non è possibile impostare soglie che inviino eventi quando il valore di un contatore scende al di sotto della soglia impostata.
+
+====
+Qui di seguito è riportato un esempio di grafico a contatori, che indica come una soglia di allarme (icona gialla) sia stata superata alle 1:00 e come una soglia critica (icona rossa) sia stata superata alle 12:10, alle 12:30 e alle 1:10:
+
+image::../media/opm2_threshold_breach.gif[Uno screenshot dell'interfaccia utente che mostra un esempio di grafico a contatore.]
+
+Il superamento della soglia deve verificarsi in modo continuativo per la durata specificata. Se la soglia scende al di sotto dei valori limite per qualsiasi motivo, un successivo superamento è considerato l'inizio di una nuova durata.
+
+Alcuni oggetti del cluster e contatori delle prestazioni ti consentono di creare una policy di soglia combinata che richiede che due contatori delle prestazioni superino i rispettivi limiti massimi prima che venga generato un evento. Ad esempio, puoi creare una policy di soglia utilizzando i seguenti criteri:
+
+|===
+| Oggetto cluster | contatore delle prestazioni | Soglia di attenzione | Soglia critica | Durata 
+
+
+ a| 
+Volume
+ a| 
+Latenza
+ a| 
+10 millisecondi
+ a| 
+20 millisecondi
+ a| 
+15 minuti
+
+
+
+ a| 
+Aggregato
+ a| 
+Utilizzo
+ a| 
+65%
+ a| 
+85%
+ a| 
+
+|===
+Le policy di soglia che utilizzano due oggetti cluster generano un evento solo quando vengono superate entrambe le condizioni. Ad esempio, utilizzando la policy di soglia definita nella tabella:
+
+|===
+| Se la latenza del volume è nella media... | E l'utilizzo del disco dell'aggregato è... | Poi... 
+
+
+ a| 
+15 millisecondi
+ a| 
+50%
+ a| 
+Non è stato segnalato alcun evento.
+
+
+
+ a| 
+15 millisecondi
+ a| 
+75%
+ a| 
+Si segnala un evento di avviso.
+
+
+
+ a| 
+25 millisecondi
+ a| 
+75%
+ a| 
+Si segnala un evento di avviso.
+
+
+
+ a| 
+25 millisecondi
+ a| 
+90%
+ a| 
+Viene segnalato un evento critico.
+
+|===

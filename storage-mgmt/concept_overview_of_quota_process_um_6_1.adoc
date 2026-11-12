@@ -1,0 +1,30 @@
+---
+permalink: storage-mgmt/concept_overview_of_quota_process_um_6_1.html 
+sidebar: sidebar 
+keywords: overview, quota, process 
+summary: 'Le quote possono essere soft o hard. Le quote soft fanno sì che ONTAP invii una notifica quando vengono superati i limiti specificati, mentre le quote hard impediscono il completamento di un"operazione di scrittura quando vengono superati i limiti specificati.' 
+---
+= Scopri il processo di quota di Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le quote possono essere soft o hard. Le quote soft fanno sì che ONTAP invii una notifica quando vengono superati i limiti specificati, mentre le quote hard impediscono il completamento di un'operazione di scrittura quando vengono superati i limiti specificati.
+
+Quando ONTAP riceve una richiesta da un utente o da un gruppo di utenti per scrivere su un FlexVol volume, verifica se sono attivate quote su quel volume per l'utente o il gruppo di utenti e determina quanto segue:
+
+* Se verrà raggiunto il limite massimo
++
+In caso affermativo, l'operazione di scrittura non riesce quando viene raggiunto il limite massimo e viene inviata la notifica di quota massima.
+
+* Se si supera il limite flessibile
++
+In caso affermativo, l'operazione di scrittura riesce quando viene superato il limite soft e viene inviata la notifica della quota soft.
+
+* Se un'operazione di scrittura non supererà il soft limit
++
+In caso affermativo, l'operazione di scrittura ha esito positivo e non viene inviata alcuna notifica.
+
+

@@ -1,0 +1,72 @@
+---
+permalink: health-checker/task_add_scripts.html 
+sidebar: sidebar 
+keywords: add, scripts 
+summary: 'Puoi aggiungere script in Unified Manager e associarli agli avvisi. Questi script vengono eseguiti automaticamente quando viene generato un avviso e ti consentono di ottenere informazioni sugli oggetti di archiviazione per i quali viene generato l"evento.' 
+---
+= Aggiungi script in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi aggiungere script in Unified Manager e associarli agli avvisi. Questi script vengono eseguiti automaticamente quando viene generato un avviso e ti consentono di ottenere informazioni sugli oggetti di archiviazione per i quali viene generato l'evento.
+
+.Prima di iniziare
+* Devi aver creato e salvato gli script che vuoi aggiungere al server Unified Manager.
+* I formati di file supportati per gli script sono Perl, Shell, PowerShell, Python e  `.bat`file.
++
+[cols="2*"]
+|===
+| Piattaforma su cui è installato Unified Manager | Lingue supportate 
+
+
+ a| 
+VMware
+ a| 
+Script Perl e Shell
+
+
+
+ a| 
+Linux
+ a| 
+Script Perl, Python e Shell
+
+
+
+ a| 
+Windows
+ a| 
+PowerShell, Perl, Python e script .bat
+
+|===
++
+** Per gli script Perl, Perl deve essere installato sul server Unified Manager. Nelle installazioni VMware, Perl 5 è installato per impostazione predefinita e gli script supportano solo ciò che supporta Perl 5. Se Perl è stato installato dopo Unified Manager, devi riavviare il server Unified Manager.
+** Per gli script PowerShell, è necessario impostare i criteri di esecuzione appropriati di PowerShell sul server Windows affinché gli script possano essere eseguiti.
+
+
++
+[NOTE]
+====
+Se il tuo script crea file di registro per tenere traccia dell'avanzamento dello script di avviso, devi assicurarti che tali file non vengano creati in alcuna cartella all'interno della cartella di installazione di Unified Manager.
+
+====
+* Devi disporre del ruolo di Amministratore dell'applicazione o di Amministratore dello storage.
+
+
+Puoi caricare script personalizzati e raccogliere dettagli sugli eventi relativi all'avviso.
+
+[NOTE]
+====
+Se non vedi questa funzionalità disponibile nell'interfaccia utente, è perché la funzionalità è stata disabilitata dal tuo amministratore. Se necessario, puoi abilitare questa funzionalità da *Storage Management* > *Feature Settings*.
+
+====
+.Passaggi
+. Nel riquadro di navigazione a sinistra, fai clic su *Storage Management* > *Scripts*.
+. Nella pagina *Scripts*, fai clic su *Add*.
+. Nella finestra di dialogo *Aggiungi script*, fai clic su *Sfoglia* per selezionare il file dello script.
+. Inserisci una descrizione per lo script che selezioni.
+. Fai clic su *Add*.
+

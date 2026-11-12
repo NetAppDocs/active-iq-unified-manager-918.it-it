@@ -1,0 +1,16 @@
+---
+permalink: health-checker/concept_on_demand_backup_for_unified_manger.html 
+sidebar: sidebar 
+keywords: backup, on-demand, unified manager 
+summary: 'Puoi utilizzare l"interfaccia utente di Active IQ Unified Manager per generare un backup su richiesta ogni volta che necessario. Il backup su richiesta ti consente di creare istantaneamente un backup utilizzando il metodo di backup esistente. Il backup su richiesta non fa distinzione tra il backup basato su MySQL o su NetApp Snapshot.' 
+---
+= Comprendi il backup su richiesta per Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi utilizzare l'interfaccia utente di Active IQ Unified Manager per generare un backup su richiesta ogni volta che necessario. Il backup su richiesta ti consente di creare istantaneamente un backup utilizzando il metodo di backup esistente. Il backup su richiesta non fa distinzione tra il backup basato su MySQL o su NetApp Snapshot.
+
+Puoi eseguire il backup su richiesta utilizzando il pulsante *Esegui backup ora* nella pagina Backup del database. Il backup su richiesta non dipende dalle pianificazioni che hai configurato per Active IQ Unified Manager.

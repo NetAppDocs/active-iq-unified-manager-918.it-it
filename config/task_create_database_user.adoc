@@ -1,0 +1,47 @@
+---
+permalink: config/task_create_database_user.html 
+sidebar: sidebar 
+keywords: create, database, user 
+summary: 'Per supportare una connessione tra Workflow Automation e Unified Manager, o per accedere alle viste del database, devi prima creare un utente del database con il ruolo Integration Schema o Report Schema nell"interfaccia web di Unified Manager.' 
+---
+= Crea un utente database in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Per supportare una connessione tra Workflow Automation e Unified Manager, o per accedere alle viste del database, devi prima creare un utente del database con il ruolo Integration Schema o Report Schema nell'interfaccia web di Unified Manager.
+
+.Prima di iniziare
+Devi avere il ruolo di Amministratore dell'applicazione.
+
+Gli utenti del database consentono l'integrazione con Workflow Automation e l'accesso alle viste del database specifiche per i report. Gli utenti del database non hanno accesso all'interfaccia utente web di Unified Manager né alla console di manutenzione e non possono eseguire chiamate API.
+
+.Passaggi
+. Nel riquadro di navigazione a sinistra, fai clic su *Generale* > *Utenti*.
+. Nella pagina Utenti, fai clic su *Aggiungi*.
+. Nella finestra di dialogo Aggiungi utente, seleziona *Utente database* nell'elenco a discesa *Tipo*.
+. Inserisci un nome e una password per l'utente del database.
+. Nel menu a discesa *Ruolo*, seleziona il ruolo appropriato.
++
+[cols="2*"]
+|===
+| Se sei... | Scegli questo ruolo 
+
+
+ a| 
+Collegamento di Unified Manager con Workflow Automation
+ a| 
+Schema di integrazione
+
+
+
+ a| 
+Accesso ai report e ad altre viste del database
+ a| 
+Schema di report
+
+|===
+. Fai clic su *Add*.
+

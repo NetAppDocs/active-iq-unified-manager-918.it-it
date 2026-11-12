@@ -1,0 +1,24 @@
+---
+permalink: config/task_set_session_timeout_CLI.html 
+sidebar: sidebar 
+keywords: session timeout, CLI, maximum 
+summary: Puoi impostare un valore massimo di timeout della sessione per Unified Manager tramite la CLI, in modo che la sessione venga terminata automaticamente dopo un determinato periodo di tempo. 
+---
+= Imposta il timeout della sessione tramite la CLI in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi impostare un valore massimo di timeout della sessione per Unified Manager utilizzando la CLI, in modo che la sessione termini automaticamente dopo un determinato periodo di tempo. Per impostazione predefinita, il timeout della sessione è impostato sul valore massimo, ovvero 4,320 minuti (72 ore). Ciò significa che la sessione termina automaticamente dopo 72 ore, anche se hai effettuato l'accesso e stai utilizzando attivamente Unified Manager.
+
+.Informazioni su questa attività
+Devi avere il ruolo di Amministratore dell'applicazione.
+
+L'impostazione del timeout di sessione influisce su tutte le sessioni degli utenti che hanno effettuato l'accesso.
+
+.Passaggi
+. Accedi alla CLI di Unified Manager inserendo il comando  `um cli login`. Usa un nome utente e una password validi per l'autenticazione.
+. Inserisci il `um option set max.session.timeout.value=<in mins>` comando per modificare il valore di timeout della sessione.
+

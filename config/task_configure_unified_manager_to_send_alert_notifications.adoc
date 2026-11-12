@@ -1,0 +1,42 @@
+---
+permalink: config/task_configure_unified_manager_to_send_alert_notifications.html 
+sidebar: sidebar 
+keywords: configure, unified manager, send, alert, notifications 
+summary: Puoi configurare Unified Manager per inviare notifiche che ti avvisano degli eventi nel tuo ambiente. Prima di poter inviare le notifiche, devi configurare diverse altre opzioni di Unified Manager. 
+---
+= Configura Active IQ Unified Manager per inviare notifiche di avviso
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi configurare Unified Manager per inviare notifiche che ti avvisano degli eventi nel tuo ambiente. Prima di poter inviare le notifiche, devi configurare diverse altre opzioni di Unified Manager.
+
+.Prima di iniziare
+Devi avere il ruolo di Amministratore dell'applicazione.
+
+Dopo aver distribuito Unified Manager e completato la configurazione iniziale, dovresti prendere in considerazione la configurazione del tuo ambiente per attivare avvisi e generare notifiche via email o trap SNMP in base alla ricezione di eventi.
+
+.Passaggi
+. link:task_configure_event_notification_settings.html["Configura le impostazioni di notifica degli eventi"].
++
+Se desideri ricevere notifiche di avviso quando si verificano determinati eventi nel tuo ambiente, devi configurare un server SMTP e fornire un indirizzo e-mail da cui inviare le notifiche di avviso. Se preferisci utilizzare le trap SNMP, puoi selezionare questa opzione e fornire le informazioni necessarie.
+
+. link:task_enable_remote_authentication.html["Abilita l'autenticazione remota"].
++
+Se vuoi che gli utenti remoti di LDAP o Active Directory accedano all'istanza di Unified Manager e ricevano notifiche di avviso, devi abilitare l'autenticazione remota.
+
+. link:task_add_authentication_servers.html["Aggiungi server di autenticazione"].
++
+Puoi aggiungere server di autenticazione in modo che gli utenti remoti nel server di autenticazione possano accedere a Unified Manager.
+
+. link:task_add_users.html["Aggiungi utenti"].
++
+Puoi aggiungere diversi tipi di utenti locali o remoti e assegnare ruoli specifici. Quando crei un avviso, assegni un utente per ricevere le notifiche dell'avviso.
+
+. link:task_add_alerts.html["Aggiungi avvisi"].
++
+Dopo aver aggiunto l'indirizzo email per l'invio delle notifiche, aver aggiunto gli utenti che le riceveranno, aver configurato le impostazioni di rete e le opzioni SMTP e SNMP necessarie per il tuo ambiente, puoi assegnare gli avvisi.
+
+

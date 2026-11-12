@@ -1,0 +1,20 @@
+---
+permalink: performance-checker/concept_add_disks_and_perform_aggregate_layout_reconstruction.html 
+sidebar: sidebar 
+keywords: add, disks, perform, aggregate, layout, reconstruction 
+summary: 'Puoi aggiungere dischi a un aggregate per aumentarne la capacità di archiviazione e le prestazioni. Dopo aver aggiunto i dischi, noterai un miglioramento delle prestazioni solo dopo aver ricostruito l"aggregate.' 
+---
+= Scopri come l'aggiunta di dischi influisce sulla configurazione dell'aggregato in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi aggiungere dischi a un aggregate per aumentarne la capacità di archiviazione e le prestazioni. Dopo aver aggiunto i dischi, noterai un miglioramento delle prestazioni solo dopo aver ricostruito l'aggregate.
+
+Quando ricevi un evento di soglia definito dal sistema nella pagina Dettagli evento, il testo della descrizione dell'evento elenca il nome dell'aggregato che presenta il problema. Puoi aggiungere dischi e ricostruire i dati su questo aggregato.
+
+I dischi che aggiungi all'aggregato devono già esistere nel cluster. Se il cluster non ha dischi extra disponibili, potresti dover contattare il tuo amministratore o acquistare altri dischi. Puoi usare ONTAP System Manager o i comandi ONTAP per aggiungere dischi a un aggregato.
+
+https://www.netapp.com/pdf.html?item=/media/19675-tr-3838.pdf["Rapporto tecnico 3838: Guida alla configurazione del sottosistema di archiviazione"^]

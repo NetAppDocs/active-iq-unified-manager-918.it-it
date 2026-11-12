@@ -1,0 +1,25 @@
+---
+permalink: performance-checker/task_view_performance_threshold_policies.html 
+sidebar: sidebar 
+keywords: view, performance, threshold, policies 
+summary: Puoi visualizzare tutte le policy delle soglie di prestazione attualmente definite nella pagina Soglie di prestazione. 
+---
+= Visualizza le policy relative alle soglie di prestazione in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi visualizzare tutte le policy delle soglie di prestazione attualmente definite nella pagina Soglie di prestazione.
+
+L'elenco delle policy di soglia è ordinato alfabeticamente per nome della policy e include policy per tutti i tipi di oggetti di storage. Puoi fare clic sull'intestazione di una colonna per ordinare le policy in base a quella colonna. Se stai cercando una policy specifica, usa i meccanismi di filtro e ricerca per affinare l'elenco delle policy di soglia visualizzate nell'elenco di inventario.
+
+Passando il cursore del mouse sul nome del criterio e sul nome della condizione, puoi visualizzare i dettagli di configurazione del criterio. Inoltre, puoi utilizzare i pulsanti forniti per creare, clonare, modificare ed eliminare i criteri di soglia definiti dall'utente.
+
+.Passaggio
+. Nel riquadro di navigazione a sinistra, seleziona *Soglie evento* > *Prestazioni*.
++
+Viene visualizzata la pagina Performance Thresholds.
+
+

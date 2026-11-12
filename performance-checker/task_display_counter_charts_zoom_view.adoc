@@ -1,0 +1,21 @@
+---
+permalink: performance-checker/task_display_counter_charts_zoom_view.html 
+sidebar: sidebar 
+keywords: display, counter charts, zoom, view 
+summary: La vista Zoom dei grafici dei contatori offre un livello di dettaglio più fine per il grafico dei contatori selezionato e la relativa sequenza temporale. Questo ingrandisce i dati del grafico dei contatori, consentendoti di avere una visualizzazione più precisa degli eventi relativi alle prestazioni e delle loro cause sottostanti. 
+---
+= Visualizza la vista zoom dei grafici dei contatori in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La vista Zoom dei grafici dei contatori offre un livello di dettaglio più fine per il grafico dei contatori selezionato e la relativa sequenza temporale. Questo ingrandisce i dati del grafico dei contatori, consentendoti di avere una visualizzazione più precisa degli eventi relativi alle prestazioni e delle loro cause sottostanti.
+
+Puoi visualizzare la vista Zoom dei grafici dei contatori per qualsiasi grafico di contatore.
+
+.Passaggi
+. Fai clic su *Zoom View* per aprire il grafico selezionato in una nuova finestra del browser.
+. Se stai visualizzando un grafico di ripartizione e poi fai clic su *Zoom View*, il grafico di ripartizione viene visualizzato in Zoom View. Puoi selezionare *Total* mentre sei in Zoom View se vuoi cambiare l'opzione di visualizzazione.
+

@@ -1,0 +1,95 @@
+---
+permalink: performance-checker/concept_cluster_configuration_and_performance_data_collection_activity.html 
+sidebar: sidebar 
+keywords: cluster, configuration, performance, data, collection, activity 
+summary: 'L"intervallo di raccolta dei dati di configurazione del cluster è di 15 minuti. Ad esempio, dopo aver aggiunto un cluster, occorrono 15 minuti per visualizzare i dettagli del cluster nell"interfaccia utente di Unified Manager. Questo intervallo si applica anche quando apporti modifiche a un cluster.' 
+---
+= Visualizza la configurazione del cluster e i dati sulle prestazioni in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'intervallo di raccolta dei dati di configurazione del cluster è di 15 minuti. Ad esempio, dopo aver aggiunto un cluster, occorrono 15 minuti per visualizzare i dettagli del cluster nell'interfaccia utente di Unified Manager. Questo intervallo si applica anche quando apporti modifiche a un cluster.
+
+Ad esempio, se aggiungi due nuovi volumi a un SVM in un cluster, vedrai questi nuovi oggetti nell'interfaccia utente dopo il successivo intervallo di polling, che può arrivare fino a 15 minuti.
+
+Unified Manager raccoglie le _statistiche sulle prestazioni_ correnti da tutti i cluster monitorati ogni cinque minuti. Analizza questi dati per identificare eventi relativi alle prestazioni e potenziali problemi. Conserva 30 giorni di dati storici sulle prestazioni a intervalli di cinque minuti e 180 giorni di dati storici sulle prestazioni a intervalli di un'ora. Questo ti consente di visualizzare dettagli molto granulari sulle prestazioni per il mese corrente e tendenze generali delle prestazioni fino a un anno.
+
+Le sessioni di raccolta dati sono sfalsate di alcuni minuti in modo che i dati provenienti da tutti i cluster non vengano inviati contemporaneamente, il che potrebbe influire sulle prestazioni.
+
+La tabella seguente descrive le attività di raccolta dati eseguite da Unified Manager:
+
+|===
+| Attività | Intervallo di tempo | Descrizione 
+
+
+ a| 
+Sondaggio delle statistiche sulle prestazioni
+ a| 
+Ogni 5 minuti
+ a| 
+Raccoglie dati sulle prestazioni in real-time da ciascun cluster.
+
+
+
+ a| 
+Analisi statistica
+ a| 
+Ogni 5 minuti
+ a| 
+Dopo ogni rilevazione delle statistiche, Unified Manager confronta i dati raccolti con soglie definite dall'utente, dal sistema e dinamiche.
+
+Se vengono superate soglie di performance, Unified Manager genera eventi e invia e-mail agli utenti specificati, se è configurato per farlo.
+
+
+
+ a| 
+Polling della configurazione
+ a| 
+Ogni 15 minuti
+ a| 
+Raccoglie informazioni dettagliate sull'inventario da ciascun cluster per identificare tutti gli oggetti di storage (nodi, SVM, volumi e così via).
+
+
+
+ a| 
+Riassunto
+ a| 
+Ogni ora
+ a| 
+Riassume le ultime 12 raccolte di dati sulle prestazioni, effettuate ogni cinque minuti, in medie orarie.
+
+Alcune pagine dell'interfaccia utente usano i valori medi orari, che vengono conservati per 180 giorni.
+
+
+
+ a| 
+Analisi previsionale e potatura dei dati
+ a| 
+Ogni giorno dopo mezzanotte
+ a| 
+Analizza i dati del cluster per stabilire soglie dinamiche per la latenza del volume e gli IOPS per le prossime 24 ore.
+
+Elimina dal database tutti i dati sulle prestazioni relativi a intervalli di cinque minuti risalenti a più di 30 giorni.
+
+
+
+ a| 
+Eliminazione dei dati obsoleti
+ a| 
+Ogni giorno dopo le 2 del mattino
+ a| 
+Elimina dal database tutti gli eventi più vecchi di 180 giorni e le soglie dinamiche più vecchie di 180 giorni.
+
+
+
+ a| 
+Eliminazione dei dati obsoleti
+ a| 
+Ogni giorno dopo le 3:30 del mattino.
+ a| 
+Elimina dal database tutti i dati sulle prestazioni orarie più vecchi di 180 giorni.
+
+|===

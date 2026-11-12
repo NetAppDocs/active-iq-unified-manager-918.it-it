@@ -1,0 +1,40 @@
+---
+permalink: reporting/task_schedule_an_imported_report.html 
+sidebar: sidebar 
+keywords: schedule, imported, reports 
+summary: Puoi pianificare i report esistenti creati e importati in una versione precedente di Unified Manager. 
+---
+= Pianifica i report .rptdesign importati in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi pianificare i report esistenti creati e importati in una versione precedente di Unified Manager.
+
+La pianificazione dei report importati richiede quanto segue:
+
+* report da file .rptdesign progettati con BIRT importati in una versione precedente di Unified Manager
+* Applicabile in caso di aggiornamento a Unified Manager 9.6 GA o versioni successive
+
+
+Dopo l'aggiornamento a Unified Manager 9.6 GA o versioni successive, la pagina Report Schedules elenca i report importati. Puoi modificare la pianificazione di questi report per specificare gli indirizzi email dei destinatari, la frequenza e il formato (PDF o CSV). Altrimenti non puoi modificare o visualizzare questi report nella UI di Unified Manager.
+
+.Passaggi
+. Apri la pagina Pianificazione dei report. Se hai importato dei report, viene visualizzato un messaggio.
++
+image::../media/message_non_scehduled_reports.png[Compare una screenshot dell'interfaccia utente con il messaggio se sono presenti report importati.]
+
+. Fai clic sul nome *View* per visualizzare la query SQL utilizzata per generare il report.
++
+image::../media/importedreport1.png[Uno screenshot dell'interfaccia utente che mostra la query SQL utilizzata per generare il report.]
+
+. Fai clic sull'icona "Altro" image:../media/more_icon.gif[""], fai clic su *Edit*, definisci i dettagli della pianificazione del report e salva il report.
++
+[NOTE]
+====
+Puoi anche eliminare i report indesiderati dall'icona Altro image:../media/more_icon.gif[""].
+
+====
+

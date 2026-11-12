@@ -1,0 +1,31 @@
+---
+permalink: health-checker/task_view_encryption_status_of_all_volumes.html 
+sidebar: sidebar 
+keywords: view, encryption status, volumes 
+summary: 'Puoi visualizzare un elenco di tutti i volumi e il loro stato di crittografia attuale, in modo da determinare se i dati sui tuoi volumi sono adeguatamente protetti dall"accesso da parte di utenti non autorizzati.' 
+---
+= Visualizza lo stato di crittografia di tutti i volumi in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi visualizzare un elenco di tutti i volumi e il loro stato di crittografia attuale, in modo da determinare se i dati sui tuoi volumi sono adeguatamente protetti dall'accesso da parte di utenti non autorizzati.
+
+.Prima di iniziare
+Devi disporre del ruolo di Operatore, Amministratore di applicazioni o Amministratore di archiviazione.
+
+I tipi di crittografia che possono essere applicati a un volume sono:
+
+* Software - Volumi protetti tramite le soluzioni di crittografia software NetApp Volume Encryption (NVE) o NetApp Aggregate Encryption (NAE).
+* Hardware - Volumi protetti tramite la crittografia hardware NetApp Storage Encryption (NSE).
+* Software e hardware - volumi protetti sia dalla crittografia software che hardware.
+* Nessuno - Volumi non crittografati.
+
+
+.Passaggi
+. Nel riquadro di navigazione a sinistra, fai clic su *Archiviazione* > *Volumi*.
+. Nel menu Visualizza, seleziona *Integrità* > *Crittografia dei volumi*
+. Nella vista *Integrità: Crittografia dei volumi*, ordina in base al campo *Tipo di crittografia* oppure utilizza il filtro per visualizzare i volumi che hanno un tipo di crittografia specifico o che non sono crittografati (Tipo di crittografia "`None`").
+

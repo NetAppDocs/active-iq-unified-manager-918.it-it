@@ -1,0 +1,42 @@
+---
+permalink: data-protection/task_quiesce_protection_relationship_from_volume_relationships.html 
+sidebar: sidebar 
+keywords: quiesce, protection, relationship, volume, relationships page 
+summary: 'Dalla pagina Relazioni tra volumi, puoi sospendere una relazione di protezione per impedire temporaneamente il trasferimento dei dati. Potresti dover sospendere una relazione quando vuoi creare una copia Snapshot di un volume di destinazione SnapMirror che contiene un database e vuoi assicurarti che il suo contenuto rimanga stabile durante l"operazione di copia Snapshot.' 
+---
+= Metti in quiescenza una relazione di protezione dalla pagina Relazioni di volume in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dalla pagina Relazioni tra volumi, puoi sospendere una relazione di protezione per impedire temporaneamente il trasferimento dei dati. Potresti dover sospendere una relazione quando vuoi creare una copia Snapshot di un volume di destinazione SnapMirror che contiene un database e vuoi assicurarti che il suo contenuto rimanga stabile durante l'operazione di copia Snapshot.
+
+.Prima di iniziare
+* Devi disporre del ruolo di Amministratore dell'applicazione o di Amministratore dello storage.
+* Devi aver configurato Workflow Automation.
+
+
+L'azione di quiescenza non viene visualizzata nei seguenti casi:
+
+* Se le impostazioni RBAC non consentono questa azione; ad esempio, se hai solo privilegi di operatore
+* Quando l'ID del volume è sconosciuto; ad esempio, quando hai una relazione intercluster e il cluster di destinazione non è ancora stato rilevato
+* Quando non hai associato Workflow Automation e Unified Manager
+
+
+.Passaggi
+. Per sospendere i trasferimenti per una o più relazioni di protezione, dalla pagina *Relazioni di volume*, seleziona uno o più volumi e, sulla barra degli strumenti, fai clic su *Sospendi*.
++
+Viene visualizzata la finestra di dialogo Quiesce.
+
+. Fai clic su *Continua*.
++
+Lo stato del processo di quiescenza viene visualizzato nella parte superiore della pagina dei dettagli Volume / Health, insieme a un collegamento ai dettagli del processo.
+
+. Fai clic sul link *Visualizza dettagli* per accedere alla pagina dei dettagli del *Job* e visualizzare ulteriori dettagli e l'avanzamento del job.
+. *Facoltativo:* Fai clic sulla freccia *Indietro* del tuo browser per tornare alla pagina *Relazioni di volume*.
++
+Il processo di quiescenza termina quando tutte le attività del job sono state completate con successo.
+
+

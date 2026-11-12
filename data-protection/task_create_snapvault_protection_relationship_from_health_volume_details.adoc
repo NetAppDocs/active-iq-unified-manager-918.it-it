@@ -1,0 +1,48 @@
+---
+permalink: data-protection/task_create_snapvault_protection_relationship_from_health_volume_details.html 
+sidebar: sidebar 
+keywords: create, snapvault, protection, relationship, volume, health details page 
+summary: Puoi creare una relazione di SnapVault tramite la pagina dei dettagli Volume / Health in modo da abilitare i backup dei dati a scopo di protezione sui volumi. 
+---
+= Crea una relazione di protezione SnapVault dalla pagina Dettagli Volume/Salute in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi creare una relazione di SnapVault tramite la pagina dei dettagli Volume / Health in modo da abilitare i backup dei dati a scopo di protezione sui volumi.
+
+.Prima di iniziare
+* Devi disporre del ruolo di Amministratore dell'applicazione o di Amministratore dello storage.
+* Per eseguire questa attività, devi aver configurato Workflow Automation.
+
+
+Il menu *Proteggi* non compare nei seguenti casi:
+
+* Se le impostazioni RBAC non consentono questa azione: ad esempio, se hai solo privilegi di operatore
+* Quando l'ID del volume è sconosciuto: ad esempio, quando hai una relazione intercluster e il cluster di destinazione non è ancora stato individuato
+
+
+.Passaggi
+. Nella scheda *Protezione* della pagina dei dettagli *Volume / Integrità*, fai clic con il pulsante destro del mouse su un volume nella vista della topologia che desideri proteggere.
+. Seleziona *Protect* > *SnapVault* dal menu.
++
+Si apre la finestra di dialogo Configura protezione.
+
+. Fai clic su *SnapVault* per visualizzare la scheda *SnapVault* e configurare le informazioni sulla risorsa secondaria.
+. Fai clic su *Avanzate* per impostare deduplicazione, compressione, crescita automatica e garanzia di spazio secondo necessità, quindi fai clic su *Applica*.
+. Completa le sezioni *Informazioni sulla destinazione* e *Impostazioni della relazione* nella finestra di dialogo *Configura protezione*.
+. Fai clic su *Applica*.
++
+Tornerai alla pagina dei dettagli di Volume / Health.
+
+. Fai clic sul collegamento del processo di configurazione della protezione nella parte superiore della pagina dei dettagli di *Volume / Health*.
++
+Viene visualizzata la pagina dei dettagli del job.
+
+. Fai clic su *Refresh* per aggiornare l'elenco delle attività e i dettagli delle attività associati al processo di configurazione della protezione e per capire quando il processo è completo.
++
+Una volta completate le attività del processo, le nuove relazioni vengono visualizzate nella vista topologica della pagina dei dettagli Volume / Health.
+
+

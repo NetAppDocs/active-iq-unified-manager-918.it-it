@@ -1,0 +1,53 @@
+---
+permalink: health-checker/task_test_script_execution.html 
+sidebar: sidebar 
+keywords: test, script, execution 
+summary: Puoi verificare che lo script venga eseguito correttamente quando viene generato un avviso per un oggetto di storage. 
+---
+= Esecuzione dello script di test in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi verificare che lo script venga eseguito correttamente quando viene generato un avviso per un oggetto di storage.
+
+* Devi disporre del ruolo di Amministratore dell'applicazione o di Amministratore dello storage.
+* Devi aver caricato uno script in un formato di file supportato su Unified Manager.
+
+
+.Passaggi
+. Nel riquadro di navigazione a sinistra, fai clic su *Storage Management* > *Scripts*.
+. Nella pagina Script, aggiungi il tuo script di test.
+. Nel riquadro di navigazione a sinistra, fai clic su *Storage Management* > *Alert Setup*.
+. Nella pagina *Configurazione avvisi*, esegui una delle seguenti azioni:
++
+[cols="2*"]
+|===
+| A... | Fai così... 
+
+
+ a| 
+Aggiungi un avviso
+ a| 
+.. Fai clic su *Add*.
+.. Nella sezione Azioni, associa l'avviso al tuo script di test.
+
+
+
+
+ a| 
+Modifica un avviso
+ a| 
+.. Seleziona un avviso, quindi fai clic su *Modifica*.
+.. Nella sezione Azioni, associa l'avviso al tuo script di test.
+
+
+|===
+. Fare clic su *Save*.
+. Nella pagina *Alert Setup*, seleziona l'avviso che hai aggiunto o modificato, quindi fai clic su *Test*.
++
+Lo script viene eseguito con l'argomento "`-test`" e un avviso di notifica viene inviato agli indirizzi e-mail specificati al momento della creazione dell'avviso.
+
+

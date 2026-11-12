@@ -1,0 +1,41 @@
+---
+permalink: reporting/task_create_report_to_view_qtrees_that_are_nearly_full.html 
+sidebar: sidebar 
+keywords: create, report, view, qtrees, full 
+summary: 'Puoi creare un report per analizzare la capacità di storage e l"utilizzo dei qtree, nonché per visualizzare i qtree quasi pieni.' 
+---
+= Crea un report per visualizzare i qtree quasi pieni in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi creare un report per analizzare la capacità di storage e l'utilizzo dei qtree, nonché per visualizzare i qtree quasi pieni.
+
+.Prima di iniziare
+* Devi disporre del ruolo di Amministratore dell'applicazione o di Amministratore dello storage.
+
+
+Segui questi passaggi per creare una vista personalizzata che mostri i qtree quasi pieni e pianifica la generazione di un report per tale vista.
+
+.Passaggi
+. Nel riquadro di navigazione a sinistra, fai clic su *Archiviazione* > *Qtrees*.
+. Seleziona *Mostra/Nascondi* per rimuovere le colonne che non vuoi nel report.
+. Trascina la colonna "`Disk Used %`" vicino alla colonna "`Qtrees`".
+. Fai clic sull'icona del filtro, aggiungi i seguenti filtri e poi fai clic su *Applica filtro*:
++
+** La percentuale di utilizzo del disco è superiore al 75%
+
+
+. Fai clic sulla parte superiore della colonna "`Disk Used %`" per ordinare i risultati in base alla percentuale di capacità.
+. Salva la vista con un nome specifico che rifletta ciò che mostra la vista, ad esempio "`Qtrees nearing full`", e fai clic sul segno di spunta (image:../media/blue_check.gif[""]).
+. Nella pagina dell'inventario, fai clic sul pulsante *Report programmati*.
+. Fai clic su *Aggiungi pianificazione* per aggiungere una nuova riga alla pagina *Pianificazioni report* in modo da poter definire le caratteristiche della pianificazione per il nuovo report.
+. Inserisci un nome per la pianificazione del report e completa gli altri campi del report, quindi fai clic sul segno di spunta (image:../media/blue_check.gif[""]) alla fine della riga.
++
+Il report viene inviato immediatamente a scopo di test. Successivamente, il report viene generato e inviato via email ai destinatari indicati con la frequenza specificata.
+
+
+
+In base ai risultati mostrati nel report, potresti voler regolare i limiti rigidi e morbidi del disco (se impostati) oppure bilanciare i dati tra i qtree.

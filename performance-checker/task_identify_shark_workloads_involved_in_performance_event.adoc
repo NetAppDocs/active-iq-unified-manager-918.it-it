@@ -1,0 +1,27 @@
+---
+permalink: performance-checker/task_identify_shark_workloads_involved_in_performance_event.html 
+sidebar: sidebar 
+keywords: identify, shark workloads, involved, dynamic, performance, event 
+summary: 'In Unified Manager, puoi identificare quali carichi di lavoro presentano la maggiore deviazione nell"utilizzo di un componente di storage in contesa. Identificare questi carichi di lavoro ti aiuta a determinare se conviene spostarli in un cluster meno utilizzato.' 
+---
+= Identifica i carichi di lavoro shark in un evento di prestazioni dinamico in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+In Unified Manager, puoi identificare quali carichi di lavoro presentano la maggiore deviazione nell'utilizzo di un componente di storage in contesa. Identificare questi carichi di lavoro ti aiuta a determinare se conviene spostarli in un cluster meno utilizzato.
+
+.Prima di iniziare
+* Devi disporre del ruolo di Operatore, Amministratore di applicazioni o Amministratore di archiviazione.
+* Sono presenti eventi dinamici delle prestazioni nuovi, riconosciuti o obsoleti.
+
+
+La pagina Dettagli evento visualizza un elenco dei carichi di lavoro definiti dall'utente e dal sistema, classificati in base al maggiore utilizzo del componente o a quelli maggiormente interessati dall'evento. I valori si basano sui picchi che Unified Manager ha identificato quando ha rilevato e analizzato per l'ultima volta l'evento.
+
+.Passaggi
+. Visualizza la pagina *Dettagli dell'evento* per vedere le informazioni sull'evento.
+. Nei grafici Latenza del carico di lavoro e Attività del carico di lavoro, seleziona *Carichi di lavoro Shark*.
+. Passa il cursore sui grafici per visualizzare i principali carichi di lavoro definiti dall'utente che influiscono sul componente e il nome del carico di lavoro squalo.
+

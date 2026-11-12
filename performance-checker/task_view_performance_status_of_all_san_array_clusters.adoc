@@ -1,0 +1,37 @@
+---
+permalink: performance-checker/task_view_performance_status_of_all_san_array_clusters.html 
+sidebar: sidebar 
+keywords: all san, array, performance, clusters 
+summary: Utilizza la vista Tutti i cluster nella pagina Prestazioni per visualizzare lo stato delle prestazioni dei cluster All SAN Array. 
+---
+= Visualizza le prestazioni di tutti i cluster SAN Array in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi utilizzare la vista Performance: All Clusters per visualizzare lo stato delle prestazioni dei cluster All SAN Array.
+
+.Prima di iniziare
+Devi disporre del ruolo di Operatore, Amministratore di applicazioni o Amministratore di archiviazione.
+
+Puoi visualizzare informazioni di panoramica per i cluster All SAN Array nella vista Performance: All Clusters e i dettagli nella pagina Cluster / Performance Explorer.
+
+.Passaggi
+. Nel riquadro di navigazione a sinistra, fai clic su *Archiviazione* > *Cluster*.
+. Assicurati che la colonna "`Personality`" sia visualizzata nella vista *Health: All Clusters* oppure aggiungila utilizzando il controllo *Show / Hide*.
++
+Questa colonna visualizza "`All SAN Array`" per i cluster All SAN Array.
+
+. Per visualizzare le informazioni sulle prestazioni di tali cluster, seleziona la vista *Prestazioni: Tutti i cluster*.
++
+Visualizza le informazioni sulle prestazioni del cluster All SAN Array.
+
+. Per visualizzare informazioni dettagliate sulle prestazioni di quei cluster, fai clic sul nome di un cluster All SAN Array.
+. Fai clic sulla scheda *Explorer*.
+. Nella pagina *Cluster / Performance Explorer*, seleziona *Nodes on this Cluster* dal menu *View and Compare*.
++
+Puoi confrontare le statistiche sulle prestazioni di entrambi i nodi di questo cluster per assicurarti che il carico sia pressoché identico su entrambi i nodi. Se ci sono grandi discrepanze tra i due nodi, puoi aggiungere il secondo nodo ai grafici e confrontare i valori su un intervallo di tempo più lungo per identificare eventuali problemi di configurazione.
+
+

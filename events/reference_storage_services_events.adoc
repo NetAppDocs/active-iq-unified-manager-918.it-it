@@ -1,0 +1,86 @@
+---
+permalink: events/reference_storage_services_events.html 
+sidebar: sidebar 
+keywords: storage, services, events, impact area, configuration, protection 
+summary: 'Gli eventi dei servizi di storage ti forniscono informazioni sulla creazione e la sottoscrizione dei servizi di storage, così puoi monitorare eventuali problemi. Gli eventi sono raggruppati per area di impatto e includono il nome dell"evento e della trap, il livello di impatto, il tipo di origine e la gravità.' 
+---
+= Scopri gli eventi relativi ai servizi di archiviazione in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Gli eventi dei servizi di storage ti forniscono informazioni sulla creazione e la sottoscrizione dei servizi di storage, così puoi monitorare eventuali problemi. Gli eventi sono raggruppati per area di impatto e includono il nome dell'evento e della trap, il livello di impatto, il tipo di origine e la gravità.
+
+
+
+[[impact-area-configuration]]
+== Area di impatto: configurazione
+
+|===
+| Nome dell'evento (Nome della trap) | Livello di impatto | Tipo di origine | Gravità 
+
+
+ a| 
+Servizio di storage creato(non applicabile)
+ a| 
+Evento
+ a| 
+Servizio di storage
+ a| 
+Informazioni
+
+
+
+ a| 
+Servizio di storage in abbonamento(non applicabile)
+ a| 
+Evento
+ a| 
+Servizio di storage
+ a| 
+Informazioni
+
+
+
+ a| 
+Servizio di storage non sottoscritto (non applicabile)
+ a| 
+Evento
+ a| 
+Servizio di storage
+ a| 
+Informazioni
+
+|===
+
+
+[[impact-area-protection]]
+== Area di impatto: protezione
+
+|===
+| Nome dell'evento (Nome della trap) | Livello di impatto | Tipo di origine | Gravità 
+
+
+ a| 
+Eliminazione imprevista della relazione SnapMirror gestita RelationshipocumEvtStorageServiceUnsupportedRelationshipDeletion
+ a| 
+Rischio
+ a| 
+Servizio di storage
+ a| 
+Avvertimento
+
+
+
+ a| 
+Eliminazione imprevista del volume membro del servizio di storage(ocumEvtStorageServiceUnexpectedVolumeDeletion)
+ a| 
+Incidente
+ a| 
+Servizio di storage
+ a| 
+Critico
+
+|===

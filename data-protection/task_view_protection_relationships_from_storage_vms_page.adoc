@@ -1,0 +1,27 @@
+---
+permalink: data-protection/task_view_protection_relationships_from_storage_vms_page.html 
+sidebar: sidebar 
+keywords: storage vm, viewing protection relationships 
+summary: Usando la pagina VM di storage, puoi visualizzare lo stato delle relazioni di disaster recovery delle VM di storage esistenti. 
+---
+= Visualizza le relazioni di protezione dalla pagina delle VM di archiviazione in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Usando la pagina Storage VMs, puoi visualizzare lo stato delle relazioni di disaster recovery delle VM di storage esistenti.
+
+.Prima di iniziare
+Devi disporre del ruolo di Amministratore dell'applicazione o di Amministratore dello storage.
+
+Puoi anche esaminare i dettagli delle relazioni di protezione, inclusi lo stato di trasferimento e di ritardo e i dettagli di origine e destinazione. Puoi pianificare i report o scaricare quelli esistenti nel formato che ti serve. Il pulsante *Mostra/Nascondi* ti consente di aggiungere ai report le colonne necessarie, poiché per impostazione predefinita non vengono visualizzate.
+
+.Passaggi
+. Nel riquadro di navigazione a sinistra, fai clic su *ARCHIVIAZIONE* > *VM di archiviazione*.
+. Dal menu *VISUALIZZA*, seleziona *Relazione* > *Tutte le relazioni*.
++
+La vista Relationship: All Relationships viene visualizzata con tutte le VM di storage configurate.
+
+

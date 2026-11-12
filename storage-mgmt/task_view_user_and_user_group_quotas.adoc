@@ -1,0 +1,26 @@
+---
+permalink: storage-mgmt/task_view_user_and_user_group_quotas.html 
+sidebar: sidebar 
+keywords: view, user, user, group, quotas 
+summary: 'La pagina Storage VM / Health details visualizza informazioni sulle quote utente e del gruppo di utenti configurate sulla SVM. Puoi visualizzare il nome dell"utente o del gruppo di utenti, i limiti impostati su dischi e file, lo spazio su disco e file utilizzato e l"indirizzo e-mail per le notifiche.' 
+---
+= Visualizza le quote utente e di gruppo in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La pagina Storage VM / Health details visualizza informazioni sulle quote utente e del gruppo di utenti configurate sulla SVM. Puoi visualizzare il nome dell'utente o del gruppo di utenti, i limiti impostati su dischi e file, lo spazio su disco e file utilizzato e l'indirizzo e-mail per le notifiche.
+
+.Prima di iniziare
+Devi disporre del ruolo di Operatore, Amministratore di applicazioni o Amministratore di archiviazione.
+
+.Passaggi
+. Nel riquadro di navigazione a sinistra, fai clic su *Storage* > *Storage VMs*.
+. Nella vista *Integrità: tutte le Storage VM*, seleziona una Storage VM e fai clic sulla scheda *Quote utente e di gruppo*.
+
+
+*Informazioni correlate*
+
+link:../config/task_add_users.html["Aggiunta di utenti"]

@@ -1,0 +1,20 @@
+---
+permalink: install-linux/concept_introduction_to_unified_manager.html 
+sidebar: sidebar 
+keywords: introduction, active iq unified manager 
+summary: 'Active IQ Unified Manager (precedentemente OnCommand Unified Manager) ti consente di monitorare e gestire lo stato e le prestazioni dei tuoi sistemi di storage ONTAP da un"unica interfaccia. Puoi distribuire Unified Manager su un server Linux, su un server Windows o come appliance virtuale su un host VMware.' 
+---
+= Scopri Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Active IQ Unified Manager (precedentemente OnCommand Unified Manager) ti consente di monitorare e gestire lo stato e le prestazioni dei tuoi sistemi di storage ONTAP da un'unica interfaccia. Puoi distribuire Unified Manager su un server Linux, su un server Windows o come appliance virtuale (vApp) su un host VMware.
+
+Una volta completata l'installazione e aggiunti i cluster da gestire, Unified Manager fornisce un'interfaccia grafica che visualizza la capacità, la disponibilità, la protezione e lo stato delle prestazioni dei sistemi di storage monitorati.
+
+*Informazioni correlate*
+
+https://mysupport.netapp.com/matrix["Tool NetApp Interoperability Matrix"]

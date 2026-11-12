@@ -1,0 +1,28 @@
+---
+permalink: performance-checker/reference_how_expected_range_is_used_in_performance_analysis.html 
+sidebar: sidebar 
+keywords: latency, forecast, performance, analysis 
+summary: 'Unified Manager utilizza la previsione della latenza per rappresentare la tipica attività di latenza I/O (tempo di risposta) per i carichi di lavoro monitorati. Ti avvisa quando la latenza effettiva di un carico di lavoro supera i limiti superiori della previsione della latenza, attivando un evento di prestazioni dinamico, in modo che tu possa analizzare il problema di prestazioni e intraprendere azioni correttive per risolverlo.' 
+---
+= Utilizza la previsione della latenza per l'analisi delle prestazioni in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager utilizza la previsione della latenza per rappresentare la tipica attività di latenza I/O (tempo di risposta) per i carichi di lavoro monitorati. Ti avvisa quando la latenza effettiva di un carico di lavoro supera i limiti superiori della previsione della latenza, attivando un evento di prestazioni dinamico, in modo che tu possa analizzare il problema di prestazioni e intraprendere azioni correttive per risolverlo.
+
+La previsione della latenza definisce la baseline delle prestazioni per il carico di lavoro. Nel tempo, Unified Manager apprende dalle misurazioni delle prestazioni passate per prevedere i livelli di prestazioni e attività attesi per il carico di lavoro. Il limite superiore dell'intervallo previsto stabilisce la soglia dinamica delle prestazioni. Unified Manager utilizza la baseline per determinare quando la latenza effettiva è superiore o inferiore a una soglia, oppure al di fuori dei limiti dell'intervallo previsto. Il confronto tra i valori effettivi e i valori attesi crea un profilo delle prestazioni per il carico di lavoro.
+
+Quando la latenza effettiva di un carico di lavoro supera la soglia di prestazioni dinamiche, a causa della contesa su un componente del cluster, la latenza è elevata e il carico di lavoro viene eseguito più lentamente del previsto. Anche le prestazioni di altri carichi di lavoro che condividono gli stessi componenti del cluster potrebbero essere più lente del previsto.
+
+Unified Manager analizza l'evento di superamento della soglia e determina se l'attività costituisce un evento di prestazione. Se l'attività ad alto carico di lavoro si mantiene costante per un lungo periodo di tempo, ad esempio diverse ore, Unified Manager la considera normale e regola dinamicamente la previsione della latenza per definire la nuova soglia dinamica delle prestazioni.
+
+Alcuni carichi di lavoro potrebbero avere un'attività costantemente bassa, per cui la previsione della latenza non mostra un elevato tasso di variazione nel tempo. Per ridurre al minimo il numero di eventi durante l'analisi degli eventi di performance, Unified Manager attiva un evento solo per i volumi a bassa attività le cui operazioni e latenze sono molto superiori alle aspettative.
+
+image::../media/opm_expected_range_jpg.png[Intervallo previsto per la latenza in Unified Manager]
+
+In questo esempio, per un volume la previsione della latenza, in grigio, è di 3,5 millisecondi per operazione (ms/op) al minimo e di 5,5 ms/op al massimo. Se la latenza effettiva, in blu, aumenta improvvisamente fino a 10 ms/op, a causa di un picco intermittente nel traffico di rete o di contesa su un componente del cluster, allora supera la previsione della latenza e ha oltrepassato la soglia delle prestazioni dinamiche.
+
+Quando il traffico di rete diminuisce o il componente del cluster non è più in contesa, la latenza rientra nella previsione della latenza. Se la latenza rimane pari o superiore a 10 ms/op per un lungo periodo di tempo, potresti dover intervenire per risolvere il problema.

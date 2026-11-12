@@ -1,0 +1,16 @@
+---
+permalink: events/concept_what_alerts_are.html 
+sidebar: sidebar 
+keywords: alerts 
+summary: 'Sebbene gli eventi si verifichino continuamente, Unified Manager genera un avviso solo quando un evento soddisfa i criteri di filtro specificati. Puoi scegliere gli eventi per i quali devono essere generati avvisi, ad esempio quando viene superata una soglia di spazio o quando un oggetto va offline. Puoi anche associare un avviso a uno script eseguito quando l"avviso viene attivato.' 
+---
+= Scopri gli avvisi in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sebbene gli eventi si verifichino continuamente, Unified Manager genera un avviso solo quando un evento soddisfa i criteri di filtro specificati. Puoi scegliere gli eventi per cui devono essere generati gli avvisi, ad esempio quando viene superata una soglia di spazio o un oggetto va offline. Puoi anche associare un avviso a uno script eseguito quando viene attivato un avviso.
+
+I criteri di filtro includono la classe dell'oggetto, il nome o la severità dell'evento.

@@ -1,0 +1,31 @@
+---
+permalink: performance-checker/task_view_volumes_or_luns_in_same_qos_policy_group.html 
+sidebar: sidebar 
+keywords: view, volumes, luns, same. qos, policy, group 
+summary: Puoi visualizzare un elenco dei volumi e delle LUN a cui è stato assegnato lo stesso gruppo di criteri QoS. 
+---
+= Visualizza i volumi o le LUN all'interno dello stesso gruppo di policy QoS in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi visualizzare un elenco dei volumi e delle LUN a cui è stato assegnato lo stesso gruppo di criteri QoS.
+
+Nel caso di gruppi di criteri QoS tradizionali "`shared`" tra più volumi, questo può esserti utile per verificare se determinati volumi stanno utilizzando eccessivamente il throughput definito per il gruppo di criteri. Può anche aiutarti a decidere se puoi aggiungere altri volumi al gruppo di criteri senza influire negativamente sugli altri volumi.
+
+Nel caso delle policy QoS adattive e delle policy Performance Service Levels di Unified Manager, può esserti utile visualizzare tutti i volumi o le LUN che utilizzano un gruppo di policy, così puoi vedere quali oggetti verrebbero interessati se cambiassi le impostazioni di configurazione della policy QoS.
+
+.Passaggi
+. Nel riquadro di navigazione a sinistra, fai clic su *Storage* > *QoS Policy Groups*.
++
+Per impostazione predefinita, viene visualizzata la vista Performance: Traditional QoS Policy Groups.
+
+. Se sei interessato al gruppo di criteri tradizionale, rimani su questa pagina. Altrimenti, seleziona una delle opzioni View aggiuntive per visualizzare tutti i gruppi di criteri QoS adattivi o tutti i gruppi di criteri QoS creati da Unified Manager Performance Service Levels.
+. Nella policy QoS di tuo interesse, fai clic sul pulsante di espansione (image:../media/chevron_down.gif["icona del pulsante Espandi"]) accanto al nome del gruppo di policy QoS per visualizzare maggiori dettagli.image:../media/adaptive_qos_expanded.gif["Uno screenshot che mostra tutti i gruppi di criteri QoS creati da Unified Manager Performance Service Levels."]
+. Fai clic sul collegamento Volumes o LUNs per visualizzare gli oggetti che utilizzano questa policy QoS.
++
+Nella pagina dell'inventario delle prestazioni per i volumi o le LUN viene visualizzato l'elenco ordinato degli oggetti che utilizzano la policy QoS.
+
+

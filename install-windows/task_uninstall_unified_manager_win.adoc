@@ -1,0 +1,56 @@
+---
+permalink: install-windows/task_uninstall_unified_manager_win.html 
+sidebar: sidebar 
+keywords: uninstall, unified manager 
+summary: 'Puoi disinstallare Unified Manager utilizzando la procedura guidata Programmi e funzionalità oppure eseguendo una disinstallazione non presidiata dall"interfaccia a riga di comando.' 
+---
+= Disinstalla Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+:pp: &#43;&#43;
+
+
+[role="lead"]
+Puoi disinstallare Unified Manager utilizzando la procedura guidata Programmi e funzionalità oppure eseguendo una disinstallazione non presidiata dall'interfaccia a riga di comando.
+
+.Prima di iniziare
+* Devi disporre dei privilegi di amministratore di Windows.
+* Tutti i cluster (origini dati) devono essere rimossi dal server Unified Manager prima di disinstallare il software.
+* Dovresti eliminare manualmente le regole del firewall create per consentire o bloccare la porta 3306 di MySQL. Le regole del firewall non vengono eliminate automaticamente.
+
+
+.Passaggi
+. Disinstalla Unified Manager scegliendo una delle seguenti opzioni:
++
+** Se disinstalli Unified Manager tramite la procedura guidata *Programmi e funzionalità*, segui questi passaggi:
++
+... Vai a *Pannello di controllo* > *Programmi e funzionalità*.
+... Seleziona Active IQ Unified Manager e fai clic su *Uninstall*.
+
+
+** Se disinstalli Unified Manager dalla riga di comando, segui questi passaggi:
++
+... Accedi alla riga di comando di Windows utilizzando i privilegi di amministratore.
+... Passa alla directory Active IQ Unified Manager ed esegui il seguente comando:
++
+`+msiexec /x {A78760DB-7EC0-4305-97DB-E4A89CDFF4E1} /qn /l*v %systemdrive%\UmUnInstall.log+`
+
++
+Se il Controllo account utente (UAC) è abilitato sul server e hai effettuato l'accesso come utente di dominio, devi utilizzare il metodo di disinstallazione tramite riga di comando.
+
++
+Unified Manager è stato disinstallato dal tuo sistema.
+
+
+
+
+
+. Disinstalla i seguenti pacchetti e dati di terze parti che non vengono rimossi durante la disinstallazione di Unified Manager:
++
+** Pacchetti di terze parti: JRE, MySQL, Microsoft Visual C&#43;&#43; 2015 Redistributable, Python e 7zip
+** Dati dell'applicazione MySQL generati da Unified Manager
+** Registri delle applicazioni e contenuto della directory dei dati delle applicazioni
+
+
+

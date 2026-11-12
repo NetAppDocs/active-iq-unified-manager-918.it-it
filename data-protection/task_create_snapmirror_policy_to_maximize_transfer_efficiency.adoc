@@ -1,0 +1,34 @@
+---
+permalink: data-protection/task_create_snapmirror_policy_to_maximize_transfer_efficiency.html 
+sidebar: sidebar 
+keywords: create, snapmirror, policy, maximize, transfer, efficiency 
+summary: 'Puoi creare una policy di SnapMirror per specificare la priorità di trasferimento di SnapMirror per le relazioni di protezione. Le policy di SnapMirror ti consentono di massimizzare l"efficienza del trasferimento dall"origine alla destinazione assegnando priorità, in modo che i trasferimenti con priorità inferiore vengano programmati per essere eseguiti dopo quelli con priorità normale.' 
+---
+= Crea una policy SnapMirror per massimizzare l'efficienza dei trasferimenti in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi creare una policy di SnapMirror per specificare la priorità di trasferimento di SnapMirror per le relazioni di protezione. Le policy di SnapMirror ti consentono di massimizzare l'efficienza del trasferimento dall'origine alla destinazione assegnando priorità, in modo che i trasferimenti con priorità inferiore vengano programmati per essere eseguiti dopo quelli con priorità normale.
+
+.Prima di iniziare
+* Devi disporre del ruolo di Amministratore dell'applicazione o di Amministratore dello storage.
+* Devi aver configurato Workflow Automation.
+* Questa procedura presuppone che tu abbia già completato la sezione Informazioni sulla destinazione nella finestra di dialogo Configura protezione.
+
+
+.Passaggi
+. Dalla scheda *SnapMirror* della finestra di dialogo *Configura protezione*, fai clic sul collegamento *Crea criteri* nell'area *Impostazioni relazione*.
++
+Viene visualizzata la finestra di dialogo Crea criterio SnapMirror.
+
+. Nel campo *Nome policy*, digita il nome che vuoi assegnare alla policy.
+. Nel campo *Priorità di trasferimento*, seleziona la priorità di trasferimento che vuoi assegnare alla policy.
+. Nel campo *Comment*, inserisci un commento facoltativo per la policy.
+. Fai clic su *Create*.
++
+La nuova policy viene visualizzata nell'elenco a discesa SnapMirror Policy.
+
+

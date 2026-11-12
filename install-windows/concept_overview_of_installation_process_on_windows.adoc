@@ -1,0 +1,16 @@
+---
+permalink: install-windows/concept_overview_of_installation_process_on_windows.html 
+sidebar: sidebar 
+keywords: overview, installation, process 
+summary: Il flusso di lavoro di installazione descrive le attività che devi eseguire prima di poter utilizzare Unified Manager. 
+---
+= Scopri il processo di installazione di Active IQ Unified Manager su Windows
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Il flusso di lavoro di installazione descrive le attività che devi eseguire prima di poter utilizzare Unified Manager.
+
+image::../media/install_flow_on_windows.gif[Un diagramma che mostra i prerequisiti, l'installazione di Unified Manager e i passaggi del flusso di lavoro per la configurazione iniziale]

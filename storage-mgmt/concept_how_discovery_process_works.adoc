@@ -1,0 +1,28 @@
+---
+permalink: storage-mgmt/concept_how_discovery_process_works.html 
+sidebar: sidebar 
+keywords: cluster, discovery, process, works 
+summary: Dopo aver aggiunto un cluster a Unified Manager, il server rileva gli oggetti del cluster e li aggiunge al proprio database. Capire come funziona il processo di rilevamento ti aiuta a gestire i cluster della tua organizzazione e i relativi oggetti. 
+---
+= Scopri come funziona il processo di rilevamento dei cluster in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dopo aver aggiunto un cluster a Unified Manager, il server rileva gli oggetti del cluster e li aggiunge al proprio database. Capire come funziona il processo di rilevamento ti aiuta a gestire i cluster della tua organizzazione e i relativi oggetti.
+
+L'intervallo di monitoraggio per la raccolta delle informazioni sulla configurazione del cluster è di 15 minuti. Ad esempio, dopo che hai aggiunto un cluster, occorrono 15 minuti per visualizzare gli oggetti del cluster nell'interfaccia utente di Unified Manager. Questo intervallo di tempo vale anche quando apporti modifiche a un cluster. Ad esempio, se aggiungi due nuovi volumi a una SVM in un cluster, vedi questi nuovi oggetti nell'interfaccia utente dopo il successivo intervallo di polling, che potrebbe richiedere fino a 15 minuti.
+
+L'immagine seguente illustra il processo di scoperta:
+
+image::../media/discovery_process_oc_6_0.gif[Come funziona il processo di scoperta]
+
+Una volta individuati tutti gli oggetti per un nuovo cluster, Unified Manager inizia a raccogliere i dati storici sulle prestazioni relativi ai 15 giorni precedenti. Queste statistiche vengono raccolte utilizzando la funzionalità di raccolta della continuità dei dati. Questa funzionalità ti fornisce oltre due settimane di informazioni sulle prestazioni di un cluster immediatamente dopo che è stato aggiunto. Al termine del ciclo di raccolta della continuità dei dati, i dati real-time sulle prestazioni del cluster vengono raccolti, per impostazione predefinita, ogni cinque minuti.
+
+[NOTE]
+====
+Poiché la raccolta di 15 giorni di dati sulle prestazioni richiede un uso intensivo della CPU, ti consigliamo di scaglionare l'aggiunta di nuovi cluster in modo che i poll di raccolta della continuità dei dati non vengano eseguiti su troppi cluster contemporaneamente.
+
+====

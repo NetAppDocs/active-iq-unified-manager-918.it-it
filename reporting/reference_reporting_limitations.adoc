@@ -1,0 +1,57 @@
+---
+permalink: reporting/reference_reporting_limitations.html 
+sidebar: sidebar 
+keywords: reporting, limitations 
+summary: Ci sono alcune limitazioni nella nuova funzionalità di reportistica di Active IQ Unified Manager di cui dovresti essere a conoscenza. 
+---
+= Comprendi i limiti di reporting in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Ci sono alcune limitazioni nella nuova funzionalità di reportistica di Active IQ Unified Manager di cui dovresti essere a conoscenza.
+
+
+
+[[existing-reports-from-previous-versions-of-unified-manager]]
+== Report esistenti provenienti da versioni precedenti di Unified Manager
+
+Puoi modificare la pianificazione e i destinatari solo per i report esistenti creati e importati (come file .rptdesign) in Unified Manager 9.5 e versioni precedenti. Se hai personalizzato uno qualsiasi dei report standard forniti con Unified Manager 9.5 o versioni precedenti, questi report personalizzati non vengono importati nel nuovo strumento di reporting.
+
+Se devi modificare report esistenti importati da file .rptdesign, esegui una delle seguenti operazioni e rimuovi il report importato:
+
+* crea una nuova vista e pianifica un report da tale vista (opzione preferita)
+* Passa con il mouse sul report, copia l'SQL e recupera i dati con uno strumento esterno
+
+
+Le viste predefinite possono essere generate come report senza bisogno di alcuna personalizzazione. Puoi utilizzare la nuova soluzione di reporting per ricreare qualsiasi report personalizzato.
+
+
+
+[[schedule-and-report-relationship]]
+== Relazione tra pianificazione e report
+
+Puoi creare diverse pianificazioni con qualsiasi combinazione di destinatari per ciascun report salvato. Tuttavia, non puoi riutilizzare la stessa pianificazione per più report.
+
+
+
+[[report-protection]]
+== Protezione dei report
+
+Qualsiasi utente con le autorizzazioni appropriate può modificare o eliminare i report. Non c'è modo di impedire ad altri utenti di rimuovere o modificare visualizzazioni o pianificazioni salvate.
+
+
+
+[[event-reports]]
+== Rapporti sugli eventi
+
+Sebbene tu possa personalizzare la visualizzazione degli eventi e scaricare il report risultante in formato CSV, non puoi programmare la generazione e la distribuzione di report di eventi ricorrenti.
+
+
+
+[[report-attachments]]
+== Allegati al report
+
+Non è possibile inviare i report nel corpo di un'e-mail. Invece, i report vengono inviati solo come allegati PDF, Excel o CSV.

@@ -1,0 +1,16 @@
+---
+permalink: performance-checker/concept_analyze_events_from_user_defined_performance_thresholds.html 
+sidebar: sidebar 
+keywords: analyze, events, user-defined, performance, thresholds 
+summary: 'Gli eventi generati da soglie definite dall"utente indicano che un contatore delle prestazioni per un determinato oggetto di archiviazione, ad esempio un aggregate o un volume, ha superato la soglia definita nella policy. Ciò indica che l"oggetto cluster sta riscontrando un problema di prestazioni.' 
+---
+= Analizza gli eventi derivanti da soglie di prestazione definite dall'utente in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Gli eventi generati da soglie definite dall'utente indicano che un contatore delle prestazioni per un determinato oggetto di archiviazione, ad esempio un aggregate o un volume, ha superato la soglia definita nella policy. Ciò indica che l'oggetto cluster sta riscontrando un problema di prestazioni.
+
+Usi la pagina Dettagli evento per analizzare l'evento relativo alle prestazioni e, se necessario, intraprendere azioni correttive per riportare le prestazioni alla normalità.

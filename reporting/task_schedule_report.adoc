@@ -1,0 +1,74 @@
+---
+permalink: reporting/task_schedule_report.html 
+sidebar: sidebar 
+keywords: report, schedule 
+summary: Dopo aver creato una vista o un file Excel che vuoi programmare per la generazione e la distribuzione periodica, puoi programmare il report. 
+---
+= Pianifica un report in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dopo aver creato una vista o un file Excel che vuoi programmare per la generazione e la distribuzione periodica, puoi programmare il report.
+
+.Prima di iniziare
+* Devi disporre del ruolo di Amministratore dell'applicazione o di Amministratore dello storage.
+* Devi aver configurato le impostazioni del server SMTP nella pagina *General* > *Notifications* affinché il motore di reporting possa inviare i report come allegati e-mail all'elenco dei destinatari dal server Unified Manager.
+* Il server di posta elettronica deve essere configurato in modo da consentire l'invio di allegati con le email generate.
+
+
+Segui questi passaggi per testare e pianificare la generazione di un report per una vista. Seleziona o personalizza la vista che desideri utilizzare. La procedura seguente utilizza una vista di rete che mostra le prestazioni delle interfacce di rete, ma puoi utilizzare qualsiasi vista desideri.
+
+.Passaggi
+. Apri la visualizzazione. Questo esempio utilizza la visualizzazione di rete predefinita che mostra le prestazioni LIF. Nel riquadro di navigazione a sinistra, fai clic su *Rete > Interfacce di rete*.
+. Personalizza la visualizzazione secondo necessità utilizzando le funzionalità integrate di Unified Manager.
+. Dopo aver personalizzato la vista, puoi inserire un nome univoco nel campo *View* e fare clic sul segno di spunta per salvarla.
++
+image::../media/view_save.gif[Uno screenshot che mostra come salvare una vista.]
+
+. Puoi utilizzare le funzionalità avanzate di Microsoft® Excel per personalizzare il report. Per ulteriori dettagli, consulta link:task_use_excel_to_customize_your_report.html["Usare Excel per personalizzare il report"].
+. Per visualizzare l'output prima di programmarlo o condividerlo:
++
+[cols="2*"]
+|===
+| Opzione | Descrizione 
+
+
+ a| 
+*Se hai utilizzato Excel per personalizzare il report*
+ a| 
+Visualizza il file Excel già scaricato.
+
+
+
+ a| 
+*Se non hai utilizzato Excel per personalizzare il report*
+ a| 
+Scarica il report in formato *CSV*, *PDF* o *XLSX*.
+
+|===
++
+Apri il file con un'applicazione installata, come Microsoft Excel (CSV/XSLX) o Adobe Acrobat (PDF).
+
+. Se sei soddisfatto del report, fai clic su *Report programmati*.
+. Nella pagina Pianificazione dei report, fai clic su *Aggiungi pianificazione*.
+. Accetta il nome predefinito, che è una combinazione del nome della vista e della frequenza, oppure personalizza il *nome della pianificazione*.
+. Per testare il report programmato la prima volta, aggiungi solo te stesso come *destinatario*. Quando sei soddisfatto, aggiungi gli indirizzi email di tutti i destinatari del report.
+. Specifica con quale frequenza generare e inviare il report ai destinatari. Puoi scegliere *Giornaliero*, *Settimanale* o *Mensile*.
+. Seleziona il formato, *PDF*, *CSV* o *XSLX*.
++
+[NOTE]
+====
+Per i report in cui hai utilizzato Excel per personalizzare il contenuto, seleziona sempre *XSLX*.
+
+====
+. Fai clic sul segno di spunta (image:../media/blue_check.gif[""]) per salvare la pianificazione del report.
++
+image::../media/scheduled_reports.gif[Uno screenshot dell'interfaccia utente che mostra come salvare la pianificazione del report.]
+
++
+Il report viene inviato immediatamente a scopo di test. Successivamente, il report viene generato e inviato via email ai destinatari indicati secondo la frequenza programmata.
+
+

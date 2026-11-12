@@ -1,0 +1,41 @@
+---
+permalink: data-protection/task_resume_scheduled_transfers_on_quiesced_relationship.html 
+sidebar: sidebar 
+keywords: resume, schedule, transfers, quiesce, relationship, volume relationships page 
+summary: Dopo aver messo in pausa una relazione per interrompere i trasferimenti pianificati, puoi utilizzare Resume per riattivarli e proteggere così i dati sul volume di origine o primario. I trasferimenti riprendono da un checkpoint, se presente, al successivo intervallo di trasferimento pianificato. 
+---
+= Riprendi i trasferimenti programmati su una relazione sospesa dalla pagina Relazioni di volume in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dopo che hai messo in pausa una relazione per impedire l'esecuzione dei trasferimenti pianificati, puoi usare *Riprendi* per riabilitare i trasferimenti pianificati in modo che i dati sul volume di origine o primario siano protetti. I trasferimenti riprendono da un checkpoint, se esiste, al successivo intervallo di trasferimento pianificato.
+
+.Prima di iniziare
+* Devi disporre del ruolo di Amministratore dell'applicazione o di Amministratore dello storage.
+* Devi aver configurato Workflow Automation.
+
+
+Puoi selezionare non più di 10 relazioni quiescenti per le quali riprendere i trasferimenti.
+
+.Passaggi
+. Dalla pagina *Relazioni* dei volumi, seleziona uno o più volumi con relazioni in stato di quiescenza e, sulla barra degli strumenti, fai clic su *Riprendi*.
+. Nella finestra di dialogo *Riprendi*, fai clic su *Continua*.
++
+Tornerai alla pagina Relazioni dei volumi.
+
+. Per visualizzare le attività correlate e monitorarne l'avanzamento, fai clic sul link del processo visualizzato nella parte superiore della pagina *Volume Relationships*.
+. Esegui una delle seguenti operazioni:
++
+** Se viene visualizzato un solo job, nella pagina Dettagli job fai clic su *Aggiorna* per aggiornare l'elenco delle attività e i dettagli delle attività associati al job di configurazione della protezione e per determinare quando il job è completo.
+** Se viene visualizzato più di un lavoro,
++
+... Nella pagina Jobs, fai clic sul job di cui vuoi visualizzare i dettagli.
+... Nella pagina Dettagli del lavoro, fai clic su *Aggiorna* per aggiornare l'elenco delle attività e i dettagli delle attività associati al job di configurazione della protezione e per determinare quando il job è completo. Al termine dei job, i trasferimenti di dati riprendono al successivo intervallo di trasferimento pianificato.
+
+
+
+
+

@@ -1,0 +1,37 @@
+---
+permalink: health-checker/task_determine_if_volume_is_offline_because_of_broken_disks.html 
+sidebar: sidebar 
+keywords: determine, volume, offline, broken disks, aggregate 
+summary: 'Puoi usare l"interfaccia utente web di Unified Manager per confermare o escludere la possibilità che un volume sia offline perché problemi ai dischi RAID hanno portato offline l"aggregato host.' 
+---
+= Determina se un volume è offline a causa di dischi danneggiati in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi usare l'interfaccia utente web di Unified Manager per confermare o escludere la possibilità che un volume sia offline perché problemi ai dischi RAID hanno portato offline l'aggregato host.
+
+.Prima di iniziare
+Devi disporre del ruolo di Operatore, Amministratore di applicazioni o Amministratore di archiviazione.
+
+Per determinare se la condizione di volume offline è causata da problemi del disco RAID che portano offline l'aggregato che lo ospita, esegui le seguenti operazioni:
+
+.Passaggi
+. Individua e fai clic sul collegamento ipertestuale visualizzato sotto Aggregate nel riquadro *Related Devices* della pagina dei dettagli *Volume / Health*.
++
+La pagina Dettagli aggregato/Stato di salute mostra lo stato online o offline dell'aggregato che ospita. Se lo stato dell'aggregato è online, i problemi del disco RAID non sono la causa dello stato offline del volume.
+
+. Se lo stato dell'aggregato è offline, fai clic su *Informazioni disco* e cerca gli eventi relativi a dischi danneggiati nell'elenco *Eventi* nella scheda *Informazioni disco*.
+. Per identificare ulteriormente i dischi danneggiati, fai clic sul collegamento ipertestuale visualizzato sotto Node nel riquadro *Dispositivi correlati*.
++
+Si apre la pagina dei dettagli del cluster/stato di salute.
+
+. Fai clic su *Dischi*, quindi seleziona *Danneggiati* nel riquadro *Filtri* per elencare tutti i dischi nello stato danneggiato.
++
+Se i dischi nello stato danneggiato hanno causato lo stato offline dell'aggregato host, il nome dell'aggregato viene visualizzato nella colonna Aggregato interessato.
+
+
+
+Dopo aver confermato che la condizione di volume offline è causata da dischi RAID guasti e dal conseguente stato offline dell'aggregato host, contatta l'amministratore o l'operatore appropriato per sostituire manualmente i dischi guasti e riportare online l'aggregato.

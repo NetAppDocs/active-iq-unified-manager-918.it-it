@@ -1,0 +1,36 @@
+---
+permalink: health-checker/task_configure_global_volume_health_threshold_values.html 
+sidebar: sidebar 
+keywords: configure, global, volume, health, threshold values 
+summary: Puoi configurare i valori globali della soglia di integrità per tutti i volumi per tenere traccia di eventuali superamenti della soglia. Quando vengono superate le soglie di integrità, vengono generati eventi appropriati e puoi adottare misure preventive sulla base di questi eventi. Puoi configurare i valori globali in base alle impostazioni best practice per le soglie che si applicano a tutti i volumi monitorati. 
+---
+= Configura i valori di soglia globali per la salute del volume in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi configurare i valori globali della soglia di integrità per tutti i volumi per tenere traccia di eventuali superamenti della soglia. Quando vengono superate le soglie di integrità, vengono generati eventi appropriati e puoi adottare misure preventive sulla base di questi eventi. Puoi configurare i valori globali in base alle impostazioni best practice per le soglie che si applicano a tutti i volumi monitorati.
+
+.Prima di iniziare
+Devi disporre del ruolo di Amministratore dell'applicazione o di Amministratore dello storage.
+
+La maggior parte delle opzioni di soglia presenta valori predefiniti per un monitoraggio più efficace. Tuttavia, puoi modificare questi valori in base alle esigenze del tuo ambiente.
+
+Tieni presente che quando Autogrow è abilitato su un volume, le soglie di capacità sono considerate superate in base alla dimensione massima del volume impostata da Autogrow, non in base alla dimensione originale del volume.
+
+[NOTE]
+====
+Il valore predefinito di 1000 copie Snapshot è applicabile solo ai volumi FlexVol quando la versione di ONTAP è 9.4 o superiore e ai volumi FlexGroup quando la versione di ONTAP è 9.8 o superiore. Per i cluster installati con versioni meno recenti del software ONTAP, il numero massimo è 250 copie Snapshot per volume. Per queste versioni meno recenti, Unified Manager interpreta il numero 1000 (e qualsiasi numero compreso tra 1000 e 250) come 250; questo significa che continuerai a ricevere eventi quando il numero di copie Snapshot raggiunge 250. Se vuoi impostare questa soglia su un valore inferiore a 250 per queste versioni meno recenti, devi impostare qui la soglia su 250 o su un valore inferiore, nella vista Health: All Volumes o nella pagina Volume / Health details.
+
+====
+.Passaggi
+. Nel riquadro di navigazione a sinistra, fai clic su *Soglie evento* > *Volume*.
+. Configura i valori di soglia appropriati per capacità, copie Snapshot, quote qtree, crescita del volume e inode.
+. Fare clic su *Save*.
+
+
+*Informazioni correlate*
+
+link:../config/task_add_users.html["Aggiunta di utenti"]

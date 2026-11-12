@@ -1,0 +1,29 @@
+---
+permalink: events/reference_what_system_diagnosis_section_displays.html 
+sidebar: sidebar 
+keywords: system, diagnosis, section, displays 
+summary: 'La sezione Diagnosi di sistema della pagina Dettagli evento fornisce informazioni che possono aiutarti a diagnosticare i problemi che potrebbero essere stati responsabili dell"evento.' 
+---
+= Scopri la diagnostica di sistema in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La sezione Diagnosi di sistema della pagina Dettagli evento fornisce informazioni che possono aiutarti a diagnosticare i problemi che potrebbero essere stati responsabili dell'evento.
+
+Quest'area viene visualizzata solo per alcuni eventi.
+
+Alcuni eventi relativi alle prestazioni forniscono grafici pertinenti allo specifico evento che è stato attivato. In genere, includono un grafico IOPS o MBps e un grafico della latenza per i dieci giorni precedenti. Disposti in questo modo, puoi vedere quali componenti di storage influiscono maggiormente sulla latenza o sono maggiormente influenzati dalla latenza quando l'evento è attivo.
+
+Per gli eventi dinamici relativi alle prestazioni, vengono visualizzati i seguenti grafici:
+
+* Latenza del carico di lavoro - Visualizza la cronologia della latenza per i principali carichi di lavoro vittima, aggressore o squalo nel componente conteso.
+* Attività del carico di lavoro - Visualizza i dettagli sull'utilizzo del carico di lavoro del componente del cluster in contesa.
+* Attività delle risorse - Visualizza le statistiche cronologiche delle prestazioni per il componente del cluster conteso.
+
+
+Altri grafici vengono visualizzati quando alcuni componenti del cluster sono in contesa.
+
+Altri eventi forniscono una breve descrizione del tipo di analisi che il sistema sta eseguendo sull'oggetto di storage. In alcuni casi saranno presenti una o più righe, una per ogni componente analizzato, per le policy delle prestazioni definite dal sistema che analizzano più contatori delle prestazioni. In questo scenario, accanto alla diagnosi viene visualizzata un'icona verde o rossa per indicare se in quella specifica diagnosi è stato rilevato o meno un problema.

@@ -1,0 +1,62 @@
+---
+permalink: data-protection/reference_create_resource_pool_dialog_box.html 
+sidebar: sidebar 
+keywords: create, resource pool, dialog box 
+summary: Puoi utilizzare la finestra di dialogo Crea pool di risorse per assegnare un nome e una descrizione a un nuovo pool di risorse e per aggiungere o eliminare aggregati da tale pool di risorse. 
+---
+= Usa la finestra di dialogo Crea pool di risorse in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi utilizzare la finestra di dialogo Crea pool di risorse per assegnare un nome e una descrizione a un nuovo pool di risorse e per aggiungere o eliminare aggregati da tale pool di risorse.
+
+
+
+[[resource-pool-name]]
+== Nome del pool di risorse
+
+Le caselle di testo consentono di aggiungere le seguenti informazioni per creare un pool di risorse:
+
+Consente di specificare il nome di un pool di risorse.
+
+
+
+[[description]]
+== Descrizione
+
+Ti consente di descrivere un pool di risorse.
+
+
+
+[[members]]
+== Membri
+
+Visualizza i membri del pool di risorse. Puoi anche aggiungere ed eliminare membri.
+
+
+
+[[command-buttons]]
+== Pulsanti di comando
+
+I pulsanti di comando consentono di eseguire le seguenti operazioni:
+
+* *Aggiungi*
++
+Apre la finestra di dialogo Aggregates così puoi aggiungere aggregati da un cluster specifico al pool di risorse. Puoi aggiungere aggregati da cluster diversi, ma gli stessi aggregati non possono essere aggiunti a più di un pool di risorse.
+
+* *Rimuovi*
++
+Ti consente di rimuovere gli aggregati selezionati dal pool di risorse.
+
+* *Crea*
++
+Crea il pool di risorse. Questo pulsante non è abilitato finché non vengono inserite informazioni nei campi Nome pool di risorse o Descrizione.
+
+* *Annulla*
++
+Annulla le modifiche e chiude la finestra di dialogo Crea pool di risorse.
+
+

@@ -1,0 +1,35 @@
+---
+permalink: reporting/task_edit_scheduled_reports.html 
+sidebar: sidebar 
+keywords: editing, schedule, reports 
+summary: Dopo aver programmato i report, puoi modificarli nella pagina Programmazione report. 
+---
+= Modifica i report programmati in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dopo aver programmato i report, puoi modificarli nella pagina Programmazione report.
+
+.Prima di iniziare
+* Devi disporre del ruolo di Amministratore dell'applicazione o di Amministratore dello storage.
+
+
+.Passaggi
+. Nel riquadro di navigazione a sinistra, fai clic su *Gestione dello storage* > *Pianificazioni report*.
++
+image::../media/scheduled_reports_2.gif[Uno screenshot dell'interfaccia utente che mostra i report programmati.]
+
++
+[NOTE]
+====
+Se disponi delle autorizzazioni appropriate puoi modificare qualsiasi report e la relativa pianificazione nel sistema.
+
+====
+. Fai clic sull'icona Altro image:../media/more_icon.gif[""] per la programmazione che vuoi modificare.
+. Fai clic su *Modifica*.
+. Puoi modificare *Nome pianificazione*, l'elenco dei *destinatari*, la *Frequenza* e il *Formato* della pianificazione del report.
+. Al termine, fai clic sul segno di spunta per salvare le modifiche.
+

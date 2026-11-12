@@ -1,0 +1,33 @@
+---
+permalink: data-protection/task_edit_resource_pools.html 
+sidebar: sidebar 
+keywords: edit, resource, pools 
+summary: Puoi modificare un pool di risorse esistente quando vuoi cambiarne il nome e la descrizione. 
+---
+= Modifica i pool di risorse in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi modificare un pool di risorse esistente quando vuoi cambiarne il nome e la descrizione.
+
+.Prima di iniziare
+Devi disporre del ruolo di Amministratore dell'applicazione o di Amministratore dello storage.
+
+Il pulsante *Modifica* è abilitato solo quando è selezionato un solo pool di risorse. Se è selezionato più di un pool di risorse, il pulsante *Modifica* è disabilitato.
+
+.Passaggi
+. Nel riquadro di navigazione a sinistra, fai clic su *Protezione* > *Pool di risorse*.
+. Seleziona un pool di risorse dall'elenco.
+. Fai clic su *Modifica*.
++
+Si apre la finestra Modifica pool di risorse.
+
+. Modifica il nome e la descrizione del pool di risorse secondo necessità.
+. Fare clic su *Save*.
++
+Il nuovo nome e la nuova descrizione vengono visualizzati nell'elenco dei pool di risorse.
+
+

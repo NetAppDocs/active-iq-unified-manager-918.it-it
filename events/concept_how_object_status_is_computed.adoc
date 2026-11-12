@@ -1,0 +1,14 @@
+---
+permalink: events/concept_how_object_status_is_computed.html 
+sidebar: sidebar 
+keywords: object, status, computed 
+summary: 'Lo stato di un oggetto è determinato dall"evento più grave che al momento ha uno stato Nuovo o Riconosciuto. Ad esempio, se lo stato di un oggetto è Errore, uno degli eventi dell"oggetto ha un tipo di severità Errore. Quando viene intrapresa un"azione correttiva, lo stato dell"evento passa a Risolto.' 
+---
+= Come Active IQ Unified Manager calcola lo stato degli oggetti
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Lo stato di un oggetto è determinato dall'evento più grave che al momento ha uno stato Nuovo o Riconosciuto. Ad esempio, se lo stato di un oggetto è Errore, uno degli eventi dell'oggetto ha un tipo di severità Errore. Quando intraprendi un'azione correttiva, lo stato dell'evento passa a Risolto.

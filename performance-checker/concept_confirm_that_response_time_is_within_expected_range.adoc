@@ -1,0 +1,16 @@
+---
+permalink: performance-checker/concept_confirm_that_response_time_is_within_expected_range.html 
+sidebar: sidebar 
+keywords: confirm, latency, within, expected, range 
+summary: 'Quando un componente del cluster è conteso, i carichi di lavoro dei volumi che lo utilizzano potrebbero avere tempi di risposta (latenza) più elevati. Puoi esaminare la latenza di ciascun carico di lavoro vittima sul componente conteso per verificare che la latenza effettiva rientri nell"intervallo previsto. Puoi anche fare clic sul nome di un volume per visualizzare i dati storici del volume.' 
+---
+= Conferma che la latenza sia nell'intervallo previsto in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Quando un componente del cluster è conteso, i carichi di lavoro dei volumi che lo utilizzano potrebbero avere tempi di risposta (latenza) più elevati. Puoi esaminare la latenza di ciascun carico di lavoro vittima sul componente conteso per verificare che la latenza effettiva rientri nell'intervallo previsto. Puoi anche fare clic sul nome di un volume per visualizzare i dati storici del volume.
+
+Se l'evento di prestazioni si trova nello stato obsoleto, la latenza di ciascuna vittima coinvolta nell'evento potrebbe essere rientrata nell'intervallo previsto.

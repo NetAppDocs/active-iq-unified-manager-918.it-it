@@ -1,0 +1,45 @@
+---
+permalink: health-checker/task_delete_snapshot_copies.html 
+sidebar: sidebar 
+keywords: delete, snapshot copies 
+summary: Puoi eliminare una copia Snapshot per risparmiare spazio o per liberare spazio su disco, oppure puoi eliminare la copia Snapshot se non è più necessaria. 
+---
+= Elimina le copie Snapshot in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi eliminare una copia Snapshot per risparmiare spazio o per liberare spazio su disco, oppure puoi eliminare la copia Snapshot se non è più necessaria.
+
+.Prima di iniziare
+Devi disporre del ruolo di Amministratore dell'applicazione o di Amministratore dello storage.
+
+Il volume deve essere online.
+
+Per eliminare una copia Snapshot occupata o bloccata, devi aver rilasciato la copia Snapshot dall'applicazione che la stava utilizzando.
+
+* Non puoi eliminare la copia Snapshot di base in un volume d'origine se un volume FlexClone utilizza quella copia Snapshot.
++
+La copia Snapshot di base è la copia Snapshot utilizzata per creare il volume FlexClone e mostra lo stato `Busy` e la dipendenza dell'applicazione come `Busy, Vclone` nel volume d'origine.
+
+* Non puoi eliminare una copia Snapshot bloccata utilizzata in una relazione di SnapMirror.
++
+La copia Snapshot è bloccata ed è necessaria per il prossimo aggiornamento.
+
+
+
+.Passaggi
+. Nel riquadro di navigazione a sinistra, fai clic su *Archiviazione* > *Volumi*.
+. Nella vista *Stato di salute: Tutti i volumi*, seleziona il volume che contiene le copie Snapshot che desideri visualizzare.
++
+Viene visualizzato l'elenco delle copie Snapshot.
+
+. Nella pagina dei dettagli *Volume / Integrità*, fai clic sulla scheda *Capacità*.
+. Nel riquadro *Details* della scheda *Capacity*, nella sezione Other Details, fai clic sul collegamento accanto a *Snapshot Copies*.
++
+Il numero di copie Snapshot è un collegamento che visualizza l'elenco delle copie Snapshot.
+
+. Nella vista *Copie Snapshot*, seleziona le copie Snapshot che vuoi eliminare, quindi fai clic su *Elimina selezionati*.
+

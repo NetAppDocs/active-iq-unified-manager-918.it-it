@@ -1,0 +1,72 @@
+---
+permalink: install-vapp/task_upgrade_unified_manager_virtual_appliance_vapp.html 
+sidebar: sidebar 
+keywords: upgrade, unified manager, virtual, appliance 
+summary: 'Puoi aggiornare l"appliance virtuale Unified Manager' 
+---
+= Aggiorna l'appliance virtuale Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi aggiornare l'appliance virtuale Active IQ Unified Manager dalle versioni 9.14 o 9.16 alla versione 9.18.
+
+.Prima di iniziare
+Assicurarsi quanto segue:
+
+* Hai scaricato il file di aggiornamento, l'immagine ISO, dal sito di supporto NetApp.
+* Il sistema su cui stai eseguendo l'aggiornamento di Unified Manager soddisfa i requisiti di sistema e software.
++
+Vedi link:concept_virtual_infrastructure_or_hardware_system_requirements.html["Requisiti dell'infrastruttura virtuale"].
+
++
+Vedi link:reference_vmware_software_and_installation_requirements.html["Requisiti software e di installazione di VMware"].
+
+* Per gli utenti di vSphere 6.5 e versioni successive, hai installato VMware Remote Console (VMRC).
+* Durante l'aggiornamento, potrebbe esserti chiesto di confermare se vuoi mantenere le precedenti impostazioni predefinite per la conservazione dei dati sulle prestazioni per 13 mesi o modificarle a 6 mesi. Dopo la conferma, i dati storici sulle prestazioni vengono eliminati dopo 6 mesi.
+* Hai a disposizione le seguenti informazioni:
++
+** Credenziali di accesso per il NetApp Support Site
+** Credenziali per l'accesso al server VMware vCenter e al client Web vSphere
+** Credenziali per l'utente della manutenzione di Unified Manager
+
+
+
+
+Durante il processo di aggiornamento, Unified Manager non è disponibile. Dovresti completare tutte le operazioni in corso prima di aggiornare Unified Manager.
+
+Se hai associato Workflow Automation a Unified Manager, devi aggiornare manualmente l'host name in Workflow Automation.
+
+.Passaggi
+. Nel client vSphere, fai clic su *Home* > *Inventario* > *VM e modelli*.
+. Seleziona la macchina virtuale (VM) su cui è installata l'appliance virtuale Unified Manager.
+. Se la VM di Unified Manager è in esecuzione, vai a *Summary* > *Commands* > *Shut Down Guest*.
+. Crea una copia di backup, ad esempio uno snapshot o un clone, della VM Unified Manager per creare un backup coerente con l'applicazione.
+. Dal vSphere Client, accendi la VM di Unified Manager.
+. Avvia VMware Remote Console.
+. Fai clic sull'icona *CDROM* e seleziona *Connetti al file di immagine disco (.iso)*.
+. Seleziona il `ActiveIQUnifiedManager-<version>-virtual-update.iso` file e fai clic su *Apri*.
+. Fai clic sulla scheda *Console*.
+. Accedi alla console di manutenzione di Unified Manager.
+. Nel menu principale, seleziona *Aggiorna*.
++
+Viene visualizzato un messaggio che informa che Unified Manager non sarà disponibile durante il processo di aggiornamento e riprenderà a funzionare al termine.
+
+. Digita `y` per continuare.
++
+Compare un avviso che ti ricorda di eseguire il backup della macchina virtuale su cui risiede l'appliance virtuale.
+
+. Digita `y` per continuare.
++
+Il processo di aggiornamento e il riavvio dei servizi di Unified Manager possono richiedere diversi minuti.
+
+. Premi un tasto qualsiasi per continuare.
++
+Vieni disconnesso automaticamente dalla console di manutenzione.
+
+. *Facoltativo:* Accedi alla console di manutenzione e verifica la versione di Unified Manager.
+
+
+Puoi avviare l'interfaccia utente web in una nuova finestra di un browser web supportato e accedere per utilizzare la versione aggiornata di Unified Manager. Tieni presente che devi attendere il completamento del processo di rilevamento prima di eseguire qualsiasi operazione nell'interfaccia utente.

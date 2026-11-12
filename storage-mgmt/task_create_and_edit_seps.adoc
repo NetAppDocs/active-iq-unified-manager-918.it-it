@@ -1,0 +1,58 @@
+---
+permalink: storage-mgmt/task_create_and_edit_seps.html 
+sidebar: sidebar 
+keywords: create, edit, storage, efficiency, policies 
+summary: Quando i criteri di efficienza dello storage definiti dal sistema non corrispondono ai requisiti del tuo carico di lavoro, puoi creare criteri di efficienza dello storage personalizzati e ottimizzati per i tuoi carichi di lavoro. 
+---
+= Crea e modifica le policy di efficienza dello storage in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Quando i criteri di efficienza dello storage definiti dal sistema non corrispondono ai requisiti del tuo carico di lavoro, puoi creare criteri di efficienza dello storage personalizzati e ottimizzati per i tuoi carichi di lavoro.
+
+.Prima di iniziare
+* Devi avere il ruolo di Amministratore dell'applicazione.
+* Il nome del criterio di efficienza dello storage deve essere univoco e non puoi utilizzare le seguenti parole chiave riservate:
++
+`High`, `Low`, `Unassigned`, `Learning`, `Idle`, `Default`, e `None`.
+
+
+
+Puoi creare e modificare criteri di efficienza dello storage personalizzati dalla pagina Criteri di efficienza dello storage, definendo le caratteristiche di efficienza dello storage necessarie per le applicazioni che accederanno allo storage.
+
+[NOTE]
+====
+Non puoi modificare un criterio di efficienza dello storage se è attualmente assegnato a un carico di lavoro.
+
+====
+.Passaggi
+. Nel riquadro di navigazione a sinistra, sotto *Impostazioni*, seleziona *Criteri* > *Efficienza di archiviazione*.
+. Nella pagina *Criteri di efficienza dello storage*, fai clic sul pulsante appropriato a seconda che tu voglia creare un nuovo criterio di efficienza dello storage o modificare un criterio di efficienza dello storage esistente.
++
+|===
+| A... | Segui questi passaggi... 
+
+
+ a| 
+Crea una nuova policy di efficienza dello storage
+ a| 
+Fai clic su *Aggiungi*
+
+
+
+ a| 
+Modifica un criterio di efficienza dello storage esistente
+ a| 
+Seleziona un criterio di efficienza dello storage esistente e fai clic su *Modifica*
+
+|===
++
+Viene visualizzata la pagina per aggiungere o modificare un criterio di efficienza dello storage.
+
+. Personalizza il criterio di efficienza dello storage specificando le caratteristiche di efficienza dello storage, quindi fai clic su *Invia* per salvare il criterio di efficienza dello storage.
+
+
+Puoi applicare ai carichi di lavoro (LUN, condivisioni file NFS, condivisioni CIFS) i criteri di efficienza dello storage nuovi o modificati dalla pagina Carichi di lavoro oppure durante il provisioning di un nuovo carico di lavoro.

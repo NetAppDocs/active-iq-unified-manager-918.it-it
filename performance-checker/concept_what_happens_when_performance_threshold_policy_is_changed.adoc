@@ -1,0 +1,24 @@
+---
+permalink: performance-checker/concept_what_happens_when_performance_threshold_policy_is_changed.html 
+sidebar: sidebar 
+keywords: happens, performance, threshold, policy, changed 
+summary: Se modifichi il valore del contatore o la durata di un criterio di soglia delle prestazioni esistente, la modifica del criterio viene applicata a tutti gli oggetti di storage che utilizzano il criterio. La nuova impostazione ha effetto immediato e Unified Manager inizia a confrontare i valori dei contatori delle prestazioni con le nuove impostazioni di soglia per tutti i nuovi dati sulle prestazioni raccolti. 
+---
+= Comprendi le modifiche alle policy relative alle soglie di prestazione in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se modifichi il valore del contatore o la durata di un criterio di soglia delle prestazioni esistente, la modifica del criterio viene applicata a tutti gli oggetti di storage che utilizzano il criterio. La nuova impostazione ha effetto immediato e Unified Manager inizia a confrontare i valori dei contatori delle prestazioni con le nuove impostazioni di soglia per tutti i nuovi dati sulle prestazioni raccolti.
+
+Se esistono eventi attivi per gli oggetti che utilizzano la policy di soglia modificata, tali eventi vengono contrassegnati come obsoleti e la policy di soglia inizia a monitorare il contatore come se fosse una policy di soglia appena definita.
+
+Nella vista dettagliata dei grafici dei contatori, quando visualizzi il contatore a cui è stata applicata la soglia, le linee delle soglie critica e di avviso riflettono le impostazioni di soglia correnti. Le impostazioni di soglia originali non vengono visualizzate in questa pagina, nemmeno se visualizzi dati storici relativi al periodo in cui era in vigore la vecchia impostazione di soglia.
+
+[NOTE]
+====
+Poiché le impostazioni di soglia meno recenti non vengono visualizzate nella Counter Charts Detailed View, potresti vedere eventi storici che sembrano al di sotto delle linee di soglia correnti.
+
+====

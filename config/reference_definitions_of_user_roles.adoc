@@ -1,0 +1,54 @@
+---
+permalink: config/reference_definitions_of_user_roles.html 
+sidebar: sidebar 
+keywords: definitions, user roles 
+summary: 'L"utente di manutenzione o l"Application Administrator assegna un ruolo a ogni utente. Ogni ruolo contiene determinati privilegi. L"ambito delle attività che puoi svolgere in Unified Manager dipende dal ruolo che ti è stato assegnato e dai privilegi che tale ruolo contiene.' 
+---
+= Scopri i ruoli utente in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'utente di manutenzione o l'Application Administrator assegna un ruolo a ogni utente. Ogni ruolo contiene determinati privilegi. L'ambito delle attività che puoi svolgere in Unified Manager dipende dal ruolo che ti è stato assegnato e dai privilegi che tale ruolo contiene.
+
+Unified Manager include i seguenti ruoli utente predefiniti:
+
+* *Operatore*
++
+Visualizza le informazioni del sistema storage e altri dati raccolti da Unified Manager, inclusi lo storico e l'andamento della capacità. Questo ruolo consente all'operatore storage di visualizzare, assegnare, confermare, risolvere e aggiungere note agli eventi.
+
+* *Amministratore dello storage*
++
+Configura le operazioni di gestione dello storage all'interno di Unified Manager. Questo ruolo consente all'amministratore dello storage di configurare le soglie e di creare avvisi e altre opzioni e policy specifiche per la gestione dello storage.
+
+* *Amministratore dell'applicazione*
++
+Configura impostazioni non correlate alla gestione dello storage. Questo ruolo consente la gestione di utenti, certificati di sicurezza, accesso al database e opzioni amministrative, tra cui autenticazione, SMTP, rete e AutoSupport.
+
++
+[NOTE]
+====
+Quando Unified Manager viene installato su sistemi Linux, all'utente iniziale con il ruolo di Amministratore dell'applicazione viene assegnato automaticamente il nome "`umadmin`".
+
+====
+* *Schema di integrazione*
++
+Questo ruolo consente l'accesso in sola lettura alle viste del database di Unified Manager per integrare Unified Manager con OnCommand Workflow Automation (WFA).
+
+* *Schema del report*
++
+Questo ruolo ti consente l'accesso in sola lettura ai report e ad altre viste del database direttamente dal database di Unified Manager. I database che puoi visualizzare includono:
+
++
+** netapp_model_view
+** netapp_performance
+** ocum
+** ocum_report
+** ocum_report_birt
+** opm
+** scalemonitor
+
+
+

@@ -1,0 +1,57 @@
+---
+permalink: api-automation/concept_manage_active_directory.html 
+sidebar: sidebar 
+keywords: manage, active, directory, mapping 
+summary: 'Puoi utilizzare le API elencate qui per gestire le mappature di Active Directory sull"SVM necessarie per il provisioning delle condivisioni CIFS sugli SVM. Le mappature di Active Directory devono essere configurate per mappare gli SVM con ONTAP.' 
+---
+= Gestisci le mappature di Active Directory tramite API in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi utilizzare le API elencate qui per gestire le mappature di Active Directory sull'SVM necessarie per il provisioning delle condivisioni CIFS sugli SVM. Le mappature di Active Directory devono essere configurate per mappare gli SVM con ONTAP.
+
+
+
+[[view-active-directory-mappings]]
+== Visualizza le mappature di Active Directory
+
+Puoi visualizzare i dettagli di configurazione delle mappature di Active Directory per un SVM utilizzando il seguente metodo. Per visualizzare le mappature di Active Directory su un SVM, devi immettere la chiave SVM. Per interrogare i dettagli di una mappatura specifica, devi immettere la chiave di mappatura.
+
+[cols="3*"]
+|===
+| Categoria | Verbo HTTP | Percorso 
+
+
+ a| 
+storage-provider
+ a| 
+GET
+ a| 
+`/storage-provider/active-directories-mappings`
+
+`/storage-provider/active-directories-mappings/\{key}`
+
+|===
+
+
+[[add-active-directory-mapping]]
+== Aggiungi la mappatura di Active Directory
+
+Puoi creare mappature di Active Directory su un SVM utilizzando il metodo seguente. Devi immettere i dettagli della mappatura come parametri di input.
+
+[cols="3*"]
+|===
+| Categoria | Verbo HTTP | Percorso 
+
+
+ a| 
+storage-provider
+ a| 
+POST
+ a| 
+`/storage-provider/active-directories-mappings`
+
+|===

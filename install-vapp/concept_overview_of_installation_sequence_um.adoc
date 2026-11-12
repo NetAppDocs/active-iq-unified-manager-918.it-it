@@ -1,0 +1,18 @@
+---
+permalink: install-vapp/concept_overview_of_installation_sequence_um.html 
+sidebar: sidebar 
+keywords: overview, installation, sequence 
+summary: Il flusso di lavoro di installazione descrive le attività che devi eseguire prima di poter utilizzare Unified Manager. 
+---
+= Scopri la sequenza di installazione di Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Il flusso di lavoro di installazione descrive le attività che devi eseguire prima di poter utilizzare Unified Manager.
+
+Queste sezioni descrivono ciascuno degli elementi illustrati nel flusso di lavoro sottostante.
+
+image::../media/overall_um_install_flow.png[Un diagramma che mostra i flussi di lavoro relativi all'installazione, alla configurazione iniziale e alle impostazioni amministrative di Unified Manager]

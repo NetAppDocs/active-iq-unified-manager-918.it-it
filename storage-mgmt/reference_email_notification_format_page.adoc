@@ -1,0 +1,88 @@
+---
+permalink: storage-mgmt/reference_email_notification_format_page.html 
+sidebar: sidebar 
+keywords: email, notification, format, page 
+summary: 'La pagina Formato notifica e-mail mostra le regole dell"e-mail inviata a un utente o a un gruppo di utenti quando si verifica un problema relativo alla quota (superamento del limite flessibile o raggiungimento del limite massimo).' 
+---
+= Scopri la pagina Formato notifica e-mail in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La pagina Formato notifica e-mail mostra le regole dell'e-mail inviata a un utente o a un gruppo di utenti quando si verifica un problema relativo alla quota (superamento del limite flessibile o raggiungimento del limite massimo).
+
+La notifica via e-mail viene inviata solo quando vengono generati i seguenti eventi di quota utente o quota di gruppo: superamento del limite flessibile dello spazio su disco della quota utente o di gruppo, superamento del limite flessibile del numero di file della quota utente o di gruppo, raggiungimento del limite massimo dello spazio su disco della quota utente o di gruppo oppure raggiungimento del limite massimo del numero di file della quota utente o di gruppo.
+
+* *Da*
++
+Visualizza l'indirizzo email da cui viene inviata l'email, che puoi modificare. Per impostazione predefinita, si tratta dell'indirizzo email specificato nella pagina Notifiche.
+
+* *Soggetto*
++
+Visualizza l'oggetto dell'e-mail di notifica.
+
+* *Dettagli email*
++
+Visualizza il testo dell'e-mail di notifica. Puoi modificare il testo in base alle tue esigenze. Ad esempio, puoi fornire informazioni relative agli attributi della quota e ridurre il numero di parole chiave. Tuttavia, non devi modificare le parole chiave.
+
++
+Le parole chiave valide sono le seguenti:
+
++
+** $EVENT_NAME
++
+Specifica il nome dell'evento che ha generato la notifica e-mail.
+
+** $QUOTA_TARGET
++
+Specifica il qtree o il volume a cui si applica la quota.
+
+** $QUOTA_USED_PERCENT
++
+Specifica la percentuale del limite massimo di spazio su disco, del limite soft di spazio su disco, del limite massimo di file o del limite soft di file utilizzata dall'utente o dal gruppo di utenti.
+
+** $QUOTA_LIMIT
++
+Specifica il limite massimo del disco o il limite massimo dei file raggiunto dall'utente o dal gruppo di utenti e genera uno dei seguenti eventi:
+
++
+*** Limite massimo di spazio su disco per la quota utente o di gruppo raggiunto
+*** Raggiunto il limite flessibile dello spazio su disco della quota utente o di gruppo
+*** Raggiunto il limite massimo del conteggio file per la quota utente o di gruppo
+*** Limite flessibile del conteggio dei file per quota utente o di gruppo raggiunto
+
+
+** $QUOTA_USED
++
+Specifica lo spazio su disco utilizzato o il numero di file creati dall'utente o dal gruppo di utenti.
+
+** $QUOTA_USER
++
+Specifica il nome dell'utente o del gruppo di utenti.
+
+
+
+
+
+
+
+[[command-buttons]]
+== Pulsanti di comando
+
+I pulsanti di comando ti consentono di visualizzare in anteprima, salvare o annullare le modifiche apportate al formato delle notifiche e-mail:
+
+* *Anteprima*
++
+Visualizza un'anteprima dell'e-mail di notifica.
+
+* *Ripristina le impostazioni di fabbrica*
++
+Consente di ripristinare il formato delle notifiche ai valori predefiniti di fabbrica.
+
+* *Salva*
++
+Salva le modifiche apportate al formato della notifica.
+
+

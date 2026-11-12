@@ -1,0 +1,58 @@
+---
+permalink: performance-checker/task_remove_performance_threshold_policies_from_storage_objects.html 
+sidebar: sidebar 
+keywords: remove, performance, threshold, policies, storage, objects 
+summary: 'Puoi rimuovere un criterio di soglia delle prestazioni definito dall"utente da un oggetto di storage quando non vuoi più che Unified Manager monitori il valore del contatore delle prestazioni.' 
+---
+= Rimuovi le policy di soglia delle prestazioni dagli oggetti di storage in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi rimuovere un criterio di soglia delle prestazioni definito dall'utente da un oggetto di storage quando non vuoi più che Unified Manager monitori il valore del contatore delle prestazioni.
+
+.Prima di iniziare
+Devi avere il ruolo di Amministratore dell'applicazione.
+
+Puoi rimuovere un solo criterio alla volta da un oggetto selezionato.
+
+Puoi rimuovere un criterio di soglia da più oggetti di storage selezionando più di un oggetto nell'elenco.
+
+.Passaggi
+. Dalla pagina *inventario* di qualsiasi oggetto di storage, seleziona uno o più oggetti a cui è stata applicata almeno una policy di soglia delle prestazioni.
++
+|===
+| Per eliminare le soglie da... | Fai così... 
+
+
+ a| 
+Un singolo oggetto
+ a| 
+Seleziona la check box a sinistra di quell'oggetto.
+
+
+
+ a| 
+Oggetti multipli
+ a| 
+Seleziona la check box a sinistra di ciascun oggetto.
+
+
+
+ a| 
+Tutti gli oggetti nella pagina
+ a| 
+Fai clic image:../media/select_dropdown_65_png.gif["seleziona l'icona del menu a tendina"] nell'intestazione della colonna.
+
+|===
+. Fai clic su *Cancella criterio di soglia delle prestazioni*.
++
+Si apre la pagina Cancella criteri di soglia, che mostra un elenco dei criteri di soglia attualmente assegnati agli oggetti di storage.
+
+. Seleziona la policy di soglia che vuoi rimuovere dagli oggetti e fai clic su *Clear Policy*.
++
+Quando selezioni una policy di soglia, vengono visualizzati i dettagli della policy in modo che tu possa verificare di aver selezionato la policy appropriata.
+
+

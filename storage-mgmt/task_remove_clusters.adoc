@@ -1,0 +1,38 @@
+---
+permalink: storage-mgmt/task_remove_clusters.html 
+sidebar: sidebar 
+keywords: remove, cluster 
+summary: Puoi rimuovere un cluster da Unified Manager utilizzando la pagina Configurazione cluster. Ad esempio, puoi rimuovere un cluster se il rilevamento del cluster non riesce o quando vuoi decommissionare un sistema storage. 
+---
+= Rimuovi i cluster da Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi rimuovere un cluster da Unified Manager utilizzando la pagina Configurazione cluster. Ad esempio, puoi rimuovere un cluster se il rilevamento del cluster non riesce o quando vuoi decommissionare un sistema storage.
+
+.Prima di iniziare
+Devi disporre del ruolo di Amministratore dell'applicazione o del ruolo di Amministratore dello storage.
+
+Questa operazione rimuove il cluster selezionato da Unified Manager. Dopo la rimozione di un cluster, questo non viene più monitorato. Anche l'istanza di Unified Manager registrata con il cluster rimosso viene annullata dalla registrazione nel cluster.
+
+La rimozione di un cluster elimina anche tutti i relativi oggetti storage, i dati storici, i servizi storage e tutti gli eventi associati da Unified Manager. Queste modifiche si riflettono nelle pagine di inventario e nelle pagine dei dettagli dopo il ciclo successivo di raccolta di dati.
+
+[NOTE]
+====
+Devi rimuovere un cluster da Unified Manager prima di disattivarlo. Se il cluster è già offline o irraggiungibile quando provi a rimuoverlo, Unified Manager non può comunicare con il cluster per rimuovere il record dell'applicazione e gli abbonamenti EMS (Event Management System) configurati. Questo farà sì che il processo di rimozione fallisca o diventi non responsivo prima del completamento.
+
+====
+.Passaggi
+. Nel riquadro di navigazione a sinistra, fai clic su *Gestione dello storage* > *Configurazione del cluster*.
+. Nella pagina Configurazione cluster, seleziona il cluster che desideri rimuovere e fai clic su *Rimuovi*.
+. Nella finestra di dialogo *Rimuovi origine dati*, fai clic su *Rimuovi* per confermare la richiesta di rimozione.
+
+
+*Informazioni correlate*
+
+link:../config/task_add_users.html["Aggiunta di utenti"]
+
+link:../health-checker/task_view_cluster_list_and_details.html["Visualizzazione dell'elenco e dei dettagli del cluster"]

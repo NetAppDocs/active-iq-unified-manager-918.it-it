@@ -1,0 +1,28 @@
+---
+permalink: health-checker/task_delete_groups.html 
+sidebar: sidebar 
+keywords: delete, groups 
+summary: Puoi eliminare un gruppo da Unified Manager quando non è più necessario. 
+---
+= Elimina i gruppi in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi eliminare un gruppo da Unified Manager quando non è più necessario.
+
+.Prima di iniziare
+* Nessuno degli oggetti di storage (cluster, SVM o volumi) deve essere associato ad alcuna regola di gruppo associata al gruppo che vuoi eliminare.
+* Devi disporre del ruolo di Amministratore dell'applicazione o di Amministratore dello storage.
+
+
+.Passaggi
+. Nel riquadro di navigazione a sinistra, fai clic su *Gestione dello storage* > *Gruppi*.
+. Nella scheda *Gruppi*, seleziona il gruppo che vuoi eliminare, quindi fai clic su *Elimina*.
+. Nella finestra di dialogo *Avviso*, conferma l'eliminazione facendo clic su *Sì*.
++
+L'eliminazione di un gruppo non comporta l'eliminazione delle azioni di gruppo associate. Tuttavia, queste azioni di gruppo verranno rimosse dalla mappatura dopo l'eliminazione del gruppo.
+
+

@@ -1,0 +1,41 @@
+---
+permalink: health-checker/task_view_aggregate_list_and_details.html 
+sidebar: sidebar 
+keywords: view, aggregate list, details 
+summary: 'Usa la vista "Tutti gli aggregati" nella pagina Stato di salute per monitorare l"inventario degli aggregati e la vista "Tutti gli aggregati" nella pagina Capacità per i dettagli su capacità e utilizzo.' 
+---
+= Visualizza l'elenco aggregato e i dettagli in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dalla vista Stato di salute: tutti gli aggregati, puoi monitorare l'inventario degli aggregati. La vista Capacità: tutti gli aggregati ti consente di visualizzare informazioni sulla capacità e sull'utilizzo degli aggregati in tutti i cluster.
+
+.Prima di iniziare
+Devi disporre del ruolo di Operatore, Amministratore di applicazioni o Amministratore di archiviazione.
+
+Dalla pagina Dettagli aggregate/Stato di salute puoi visualizzare dettagli quali capacità e configurazione dell'aggregate e informazioni sui dischi. Se necessario, puoi utilizzare questi dettagli prima di configurare le impostazioni di soglia.
+
+.Passaggi
+. Nel riquadro di navigazione a sinistra, fai clic su *Storage* > *Aggregates*.
+. Scegli una delle seguenti modalità per visualizzare i dettagli dell'aggregato:
++
+** Per visualizzare le informazioni sullo stato di salute di tutti gli aggregati in tutti i cluster, nel menu Visualizza seleziona Stato di salute: visualizzazione Tutti gli aggregati.
+** Per visualizzare le informazioni sulla capacità e sull'utilizzo di tutti gli aggregati in tutti i cluster, nel menu Visualizza, seleziona Capacità: visualizzazione Tutti gli aggregati.
+** Per visualizzare i dettagli completi, fai clic sul nome dell'aggregato.
++
+Puoi anche visualizzare i dettagli completi facendo clic su *Visualizza dettagli* nella finestra di dialogo con i dettagli minimi.
+
+
+
+. Visualizza gli oggetti correlati all'aggregato facendo clic su *View Related* nella finestra di dialogo dei dettagli minimi.
+
+
+*Informazioni correlate*
+
+* link:../health-checker/reference_health_aggregate_details_page.html["Pagina dei dettagli di Aggregate / Health"]
+* link:../performance-checker/performance-view-all.html#performance-all-aggregates-view["Prestazioni: vista di tutti gli aggregati"]
+* link:../reporting/task_create_report_to_view_aggregates_reaching_full_capacity.html["Crea un report per visualizzare gli aggregati che raggiungono la piena capacità in Active IQ Unified Manager"]
+

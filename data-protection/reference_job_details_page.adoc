@@ -1,0 +1,129 @@
+---
+permalink: data-protection/reference_job_details_page.html 
+sidebar: sidebar 
+keywords: job, details, page 
+summary: 'La pagina Dettagli del lavoro ti consente di visualizzare lo stato e altre informazioni su attività specifiche del job di protezione in esecuzione, in coda o completate. Puoi usare queste informazioni per monitorare l"avanzamento del job di protezione e per risolvere gli errori del job.' 
+---
+= Scopri la pagina dei dettagli del lavoro in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La pagina Dettagli del lavoro ti consente di visualizzare lo stato e altre informazioni su attività specifiche del job di protezione in esecuzione, in coda o completate. Puoi usare queste informazioni per monitorare l'avanzamento del job di protezione e per risolvere gli errori del job.
+
+
+
+[[job-summary]]
+== Riepilogo del lavoro
+
+Il riepilogo del job visualizza le seguenti informazioni:
+
+* ID lavoro
+* Tipo
+* Stato
+* Ora di invio
+* Tempo di completamento
+* Durata
+
+
+
+
+[[command-buttons]]
+== Pulsanti di comando
+
+I pulsanti di comando consentono di eseguire le seguenti operazioni:
+
+* *Aggiorna*
++
+Aggiorna l'elenco delle attività e le proprietà associate a ciascuna attività.
+
+* *Visualizza offerte di lavoro*
++
+Ti riporta alla pagina Jobs.
+
+
+
+
+
+[[job-tasks-list]]
+== Elenco delle mansioni
+
+L'elenco delle attività del job visualizza in una tabella tutte le attività associate a un job specifico e le proprietà relative a ciascuna attività.
+
+* *Ora di inizio*
++
+Visualizza il giorno e l'ora di inizio dell'attività. Per impostazione predefinita, le attività più recenti vengono visualizzate nella parte superiore della colonna, mentre quelle meno recenti vengono visualizzate nella parte inferiore.
+
+* *Tipo*
++
+Visualizza il tipo di attività.
+
+* *Stato*
++
+Lo stato di un'attività specifica:
+
++
+** *Completato*
++
+L'operazione è terminata.
+
+** *In coda*
++
+L'attività sta per essere eseguita.
+
+** *In esecuzione*
++
+L'attività è in esecuzione.
+
+** *In attesa*
++
+Hai inviato un job e alcune attività associate sono in attesa di essere accodate ed eseguite.
+
+
+
+* *Stato*
++
+Visualizza lo stato dell'attività:
+
++
+** *Errore (image:../media/sev_error.gif[""])*
++
+L'operazione non è riuscita.
+
+** *Normale (image:../media/sev_normal.gif[""])*
++
+L'operazione è stata completata con successo.
+
+** *Saltato (image:../media/icon_skipped.gif[""])*
++
+Un'operazione non è andata a buon fine, quindi le operazioni successive sono state saltate.
+
+
+
+* *Durata*
++
+Visualizza il tempo trascorso dall'inizio dell'attività.
+
+* *Tempo di completamento*
++
+Visualizza l'ora di completamento dell'attività. Per impostazione predefinita, questa colonna è nascosta.
+
+* *ID attività*
++
+Visualizza il GUID che identifica una singola attività per un lavoro. La colonna può essere ordinata e filtrata. Per impostazione predefinita, questa colonna è nascosta.
+
+* *Ordine di dipendenza*
++
+Visualizza un numero intero che rappresenta la sequenza delle attività in un grafico, con zero assegnato alla prima attività. Per impostazione predefinita, questa colonna è nascosta.
+
+* *Riquadro Dettagli attività*
++
+Visualizza informazioni aggiuntive su ogni attività del job, tra cui il nome dell'attività, la descrizione dell'attività e, se l'attività non è riuscita, il motivo dell'errore.
+
+* *Riquadro dei messaggi delle attività*
++
+Visualizza i messaggi specifici relativi all'attività selezionata. I messaggi possono includere la causa dell'errore e suggerimenti per risolverlo. Non tutte le attività visualizzano i messaggi relativi all'attività stessa.
+
+

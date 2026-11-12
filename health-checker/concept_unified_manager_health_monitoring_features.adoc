@@ -1,0 +1,48 @@
+---
+permalink: health-checker/concept_unified_manager_health_monitoring_features.html 
+sidebar: sidebar 
+keywords: unified manager, health, monitor, features 
+summary: 'Unified Manager si basa su un"infrastruttura server che offre scalabilità, supportabilità e funzionalità avanzate di monitoraggio e notifica. Unified Manager supporta il monitoraggio dei sistemi che eseguono il software ONTAP.' 
+---
+= Scopri le funzionalità di monitoraggio dello stato di salute di Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager si basa su un'infrastruttura server che offre scalabilità, supportabilità e funzionalità avanzate di monitoraggio e notifica. Unified Manager supporta il monitoraggio dei sistemi che eseguono il software ONTAP.
+
+Unified Manager include le seguenti funzionalità:
+
+* Rilevamento, monitoraggio e notifiche per i sistemi su cui è installato il software ONTAP:
++
+** Oggetti fisici: nodi, dischi, alloggiamenti per dischi, coppie SFO, porte e Flash Cache
+** Oggetti logici: cluster, macchine virtuali di storage (SVM), aggregati, volumi, LUN, namespace, qtree, LIF, copie Snapshot, percorsi di giunzione, condivisioni NFS, condivisioni SMB, quote utenti e gruppi, gruppi di criteri QoS e gruppi initiator
+** Protocolli: CIFS, NFS, FC, iSCSI, NVMe e FCoE
+** Efficienza dello storage: aggregati SSD, aggregati Flash Pool, aggregati FabricPool, deduplicazione e compressione
+** Protezione: relazioni SnapMirror (sincrone e asincrone) e relazioni SnapVault
+
+
+* Visualizzazione dello stato di rilevamento e monitoraggio del cluster
+* MetroCluster su configurazioni FC e IP: visualizzazione e monitoraggio della configurazione, dei problemi e dello stato di connettività dei componenti del cluster. MetroCluster switch e bridge per configurazioni MetroCluster su FC
+* Infrastruttura migliorata per avvisi, eventi e soglie
+* Autenticazione LDAP, LDAPS, SAML e supporto per utenti locali
+* Controllo degli accessi basato sui ruoli (RBAC, per un insieme predefinito di ruoli)
+* AutoSupport e pacchetto di supporto
+* Dashboard migliorata per visualizzare capacità, disponibilità, protezione e stato di salute delle prestazioni dell'ambiente
+* Interoperabilità dello spostamento del volume, cronologia dello spostamento del volume e cronologia delle modifiche del percorso di giunzione
+* Area dell'impatto che visualizza graficamente le risorse interessate per eventi quali Alcuni dischi guasti, MetroCluster Mirroring dell'aggregato degradato e MetroCluster Dischi di riserva lasciati indietro
+* Area Possibile effetto che mostra l'effetto degli eventi MetroCluster
+* Area Azioni correttive suggerite che visualizza le azioni che possono essere eseguite per risolvere eventi come Alcuni dischi guasti, MetroCluster Mirroring aggregato degradato e MetroCluster Dischi di riserva lasciati indietro
+* Area Risorse che potrebbero essere interessate, che visualizza le risorse che potrebbero essere interessate da eventi quali l'evento Volume Offline, l'evento Volume Restricted e l'evento Thin-Provisioned Volume Space At Risk
+* Supporto per SVM con volumi FlexVol o FlexGroup
+* Supporto per il monitoraggio dei volumi root dei nodi
+* Monitoraggio avanzato delle copie Snapshot, incluso il calcolo dello spazio recuperabile e l'eliminazione delle copie Snapshot
+* Annotazioni per gli oggetti di storage
+* Creazione e gestione di report relativi alle informazioni sugli oggetti di storage, come capacità fisica e logica, utilizzo, risparmio di spazio, prestazioni ed eventi correlati
+* Integrazione con OnCommand Workflow Automation per eseguire i flussi di lavoro
++
+https://mysupport.netapp.com/site/products/all/details/ocwfa/downloads-tab["Download WFA"^]
+
+

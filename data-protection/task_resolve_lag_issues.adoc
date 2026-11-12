@@ -1,0 +1,56 @@
+---
+permalink: data-protection/task_resolve_lag_issues.html 
+sidebar: sidebar 
+keywords: resolve, lag, issues 
+summary: Questo flusso di lavoro fornisce un esempio di come potresti risolvere un problema di ritardo. In questo scenario, sei un amministratore o un operatore che accede alla pagina Dashboard di Unified Manager per verificare se ci sono problemi con le tue relazioni di protezione e, in tal caso, trovare delle soluzioni. 
+---
+= Risolvi i problemi di latenza in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Questo flusso di lavoro fornisce un esempio di come potresti risolvere un problema di ritardo. In questo scenario, sei un amministratore o un operatore che accede alla pagina Unified ManagerDashboard per verificare se esistono problemi con le tue relazioni di protezione e, in tal caso, per trovare delle soluzioni.
+
+.Prima di iniziare
+Devi disporre del ruolo di Amministratore dell'applicazione o di Amministratore dello storage.
+
+Nella pagina Dashboard, osservi l'area Incidenti e rischi irrisolti e vedi un errore di ritardo di SnapMirror nel riquadro Protezione in Rischi di protezione.
+
+.Passaggi
+. Nel riquadro *Protezione* della pagina *Dashboard*, individua l'errore di ritardo della relazione SnapMirror e fai clic su di esso.
++
+Viene visualizzata la pagina dei dettagli dell'evento relativo all'errore di ritardo.
+
+. Dalla pagina dei dettagli di *Event* puoi eseguire una o più delle seguenti operazioni:
++
+** Esamina il messaggio di errore nel campo Causa dell'area Riepilogo per verificare se è suggerita un'azione correttiva.
+** Fai clic sul nome dell'oggetto, in questo caso un volume, nel campo Origine dell'area Riepilogo per visualizzare i dettagli relativi al volume.
+** Cerca eventuali note aggiunte in merito a questo evento.
+** Aggiungi una nota all'evento.
+** Assegna l'evento a un utente specifico.
+** Riconosci o risolvi l'evento.
+
+
+. In questo scenario, fai clic sul nome dell'oggetto (in questo caso, un volume) nel campo Source dell'area *Summary* per ottenere i dettagli sul volume.
++
+Viene visualizzata la scheda Protezione della pagina dei dettagli Volume/Stato di integrità.
+
+. Nella scheda *Protezione*, visualizzi il diagramma topologico.
++
+Noti che il volume con l'errore di ritardo è l'ultimo volume in una cascata di tre volumi di SnapMirror. Il volume che hai selezionato è delineato in grigio scuro e una doppia linea arancione dal volume di origine indica un errore di relazione di SnapMirror.
+
++
+image::../media/topology_cascade_lag_error.gif[SnapMirror topologia a cascata del ritardo]
+
+. Fai clic su ciascuno dei volumi nella cascata SnapMirror.
++
+Quando selezioni ciascun volume, le informazioni di protezione nelle aree Riepilogo, Topologia, Cronologia, Eventi, Dispositivi correlati e Avvisi correlati cambiano per mostrare i dettagli pertinenti al volume selezionato.
+
+. Guarda l'area *Riepilogo* e posiziona il cursore sull'icona delle informazioni nel campo *Pianificazione aggiornamenti* per ciascun volume.
++
+In questo scenario, noti che il criterio di SnapMirror è DPDefault e che la pianificazione di SnapMirror si aggiorna ogni ora, cinque minuti dopo l'ora. Ti rendi conto che tutti i volumi nella relazione stanno tentando di completare un trasferimento di SnapMirror contemporaneamente.
+
+. Per risolvere il problema del ritardo, modifichi le pianificazioni di due dei volumi in cascata in modo che ogni destinazione avvii un trasferimento SnapMirror dopo che la sua origine ha completato un trasferimento.
+

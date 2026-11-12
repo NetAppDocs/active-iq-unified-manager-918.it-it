@@ -1,0 +1,53 @@
+---
+permalink: performance-checker/concept_performance_capacity_used_threshold_conditions.html 
+sidebar: sidebar 
+keywords: performance, capacity, threshold, conditions 
+summary: 'Puoi creare criteri di soglia delle prestazioni definiti dall"utente in modo che gli eventi vengano attivati quando il valore della capacità prestazionale utilizzata per un nodo o un aggregato supera la soglia definita per la capacità prestazionale utilizzata.' 
+---
+= Configura le soglie di utilizzo della capacità prestazionale in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi creare criteri di soglia delle prestazioni definiti dall'utente in modo che gli eventi vengano attivati quando il valore della capacità prestazionale utilizzata per un nodo o un aggregato supera la soglia definita per la capacità prestazionale utilizzata.
+
+Inoltre, i nodi possono essere configurati con una policy di soglia "`Performance capacity used takeover`". Questa policy di soglia somma le statistiche relative alla capacità prestazionale utilizzata per entrambi i nodi in una coppia HA per determinare se uno dei due nodi avrebbe capacità sufficiente in caso di guasto dell'altro nodo. Poiché il carico di lavoro durante il failover è la combinazione dei carichi di lavoro dei due nodi partner, la stessa policy "`Performance capacity used takeover`" può essere applicata a entrambi i nodi.
+
+[NOTE]
+====
+Questa equivalenza della capacità prestazionale utilizzata è generalmente valida tra i nodi. Tuttavia, se il traffico tra nodi destinato a uno dei nodi tramite il relativo partner di failover è significativamente maggiore, la capacità prestazionale totale utilizzata durante l'esecuzione di tutti i carichi di lavoro su un nodo partner rispetto all'altro potrebbe essere leggermente diversa a seconda del nodo che si è guastato.
+
+====
+Le condizioni di capacità prestazionale utilizzata possono essere impiegate anche come impostazioni secondarie della soglia prestazionale per creare una policy di soglia combinata quando definisci le soglie per LUN e volumi. La condizione di capacità prestazionale utilizzata si applica all'aggregate o al nodo su cui risiede il volume o il LUN. Ad esempio, puoi creare una policy di soglia combinata utilizzando i seguenti criteri:
+
+|===
+| Oggetto di storage | contatore delle prestazioni | Soglia di attenzione | Soglia critica | Durata 
+
+
+ a| 
+Volume
+ a| 
+Latenza
+ a| 
+15 ms/op
+ a| 
+25 ms/operazione
+ a| 
+20 minuti
+
+
+
+ a| 
+Aggregato
+ a| 
+Capacità delle prestazioni utilizzata
+ a| 
+80%
+ a| 
+95%
+ a| 
+
+|===
+Le policy di soglia combinate generano un evento solo quando entrambe le condizioni vengono superate per l'intera durata.

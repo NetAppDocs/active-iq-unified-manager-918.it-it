@@ -1,0 +1,18 @@
+---
+permalink: performance-checker/concept_metrocluster_configuration_health_check.html 
+sidebar: sidebar 
+keywords: metrocluster, configuration, health, check 
+summary: Puoi utilizzare Unified Manager per verificare lo stato di salute dei cluster in una configurazione MetroCluster. Lo stato di salute e gli eventi ti aiutano a determinare se sono presenti problemi hardware o software che potrebbero influire sulle prestazioni dei tuoi carichi di lavoro. 
+---
+= Verifica lo stato della configurazione di MetroCluster in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi usare Unified Manager per verificare lo stato di salute dei cluster in una configurazione MetroCluster tramite IP o FC. Lo stato di salute e gli eventi ti aiutano a determinare se sono presenti problemi hardware o software che potrebbero influire sulle prestazioni dei tuoi carichi di lavoro.
+
+Se configuri Unified Manager per inviare avvisi via email, puoi controllare la tua email per eventuali problemi di integrità sul cluster locale o remoto che potrebbero aver contribuito a un evento di prestazioni. Nella GUI di Unified Manager, puoi selezionare *Event Management* per visualizzare un elenco degli eventi correnti e quindi usare i filtri per visualizzare solo gli eventi di configurazione di MetroCluster.
+
+Per ulteriori informazioni, vedi link:../health-checker/task_check_health_of_clusters_in_metrocluster_configuration.html["Verifica dello stato di salute dei cluster in una configurazione MetroCluster"]

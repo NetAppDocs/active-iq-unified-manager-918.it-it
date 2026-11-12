@@ -1,0 +1,45 @@
+---
+permalink: events/reference_service_processor_events.html 
+sidebar: sidebar 
+keywords: service, processor, events, impact area, availability 
+summary: 'Gli eventi del processore di servizio ti forniscono informazioni sullo stato del processore, in modo che tu possa monitorare eventuali problemi. Gli eventi sono raggruppati per area di impatto e includono il nome dell"evento e della trap, il livello di impatto, il tipo di origine e la gravità.' 
+---
+= Scopri gli eventi del Service Processor in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Gli eventi del processore di servizio ti forniscono informazioni sullo stato del processore, in modo che tu possa monitorare eventuali problemi. Gli eventi sono raggruppati per area di impatto e includono il nome dell'evento e della trap, il livello di impatto, il tipo di origine e la gravità.
+
+
+
+[[impact-area-availability]]
+== Area di impatto: disponibilità
+
+|===
+| Nome dell'evento (Nome della trap) | Livello di impatto | Tipo di origine | Gravità 
+
+
+ a| 
+Processore di servizio non configurato(ocumEvtServiceProcessorNotConfigured)
+ a| 
+Rischio
+ a| 
+Nodo
+ a| 
+Avvertimento
+
+
+
+ a| 
+Processore di servizio offline(ocumEvtServiceProcessorOffline)
+ a| 
+Rischio
+ a| 
+Nodo
+ a| 
+Errore
+
+|===

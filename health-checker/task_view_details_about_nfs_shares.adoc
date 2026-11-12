@@ -1,0 +1,48 @@
+---
+permalink: health-checker/task_view_details_about_nfs_shares.html 
+sidebar: sidebar 
+keywords: view, details, nfs shares 
+summary: Visualizza i dettagli sulle condivisioni NFS, come stato, percorso del volume, livelli di accesso client e policy di esportazione, utilizzando la vista Tutte le condivisioni NFS nella pagina Stato di salute. 
+---
+= Visualizza i dettagli sulle condivisioni NFS in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi visualizzare i dettagli di tutte le condivisioni NFS, come lo stato, il percorso associato al volume (volumi FlexGroup o volumi FlexVol), i livelli di accesso dei client alle condivisioni NFS e la policy di esportazione definita per i volumi esportati. Usa la vista Health: All NFS Shares per vedere tutte le condivisioni NFS su tutti i cluster monitorati e usa la pagina dei dettagli Storage VM / Health per visualizzare tutte le condivisioni NFS su una specifica storage virtual machine (SVM).
+
+.Prima di iniziare
+* La licenza NFS deve essere abilitata sul cluster.
+* Le interfacce di rete che servono le condivisioni NFS devono essere configurate.
+* Devi disporre del ruolo di Operatore, Amministratore di applicazioni o Amministratore di archiviazione.
+
+
+.Passaggio
+. Nel riquadro di navigazione a sinistra, segui i passaggi seguenti a seconda che tu voglia visualizzare tutte le condivisioni NFS o solo le condivisioni NFS per una specifica SVM.
++
+[cols="2*"]
+|===
+| A... | Segui questi passaggi... 
+
+
+ a| 
+Visualizza tutte le condivisioni NFS
+ a| 
+Fai clic su *Archiviazione* > *Condivisioni NFS*
+
+
+
+ a| 
+Visualizza le condivisioni NFS per una singola SVM
+ a| 
+.. Fai clic su *Storage* > *Storage VMs*
+.. Fai clic sull'SVM per cui vuoi visualizzare i dettagli delle condivisioni NFS.
+.. Nella pagina dei dettagli di Storage VM / Health, fai clic sulla scheda *NFS Shares*.
+
+
+|===
+
+
+Per ulteriori informazioni, vedere link:../storage-mgmt/task_provision_fileshares.html["Provisioning dei volumi di condivisione file"] e link:../api-automation/concept_provision_file_share.html["Provisioning di condivisioni file CIFS e NFS tramite API"].

@@ -1,0 +1,61 @@
+---
+permalink: events/reference_disable_events_dialog_box.html 
+sidebar: sidebar 
+keywords: disable, events, dialog box, properties, area, command buttons 
+summary: 'La finestra di dialogo Disabilita eventi visualizza l"elenco dei tipi di evento per i quali puoi disabilitare gli eventi. Puoi disabilitare gli eventi per un tipo di evento in base a una particolare severità o per un insieme di eventi.' 
+---
+= Disabilita la finestra di dialogo Eventi in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La finestra di dialogo Disabilita eventi visualizza l'elenco dei tipi di evento per i quali puoi disabilitare gli eventi. Puoi disabilitare gli eventi per un tipo di evento in base a una particolare severità o per un insieme di eventi.
+
+Devi disporre del ruolo di Amministratore dell'applicazione o di Amministratore dello storage.
+
+
+
+[[event-properties-area]]
+== Area Proprietà evento
+
+L'area Proprietà dell'evento specifica le seguenti proprietà dell'evento:
+
+* *Gravità dell'evento*
++
+Ti consente di selezionare gli eventi in base al tipo di severità, che può essere Critico, Errore, Avviso o Informazione.
+
+* *Il nome dell'evento contiene*
++
+Ti consente di filtrare gli eventi il cui nome contiene i caratteri specificati.
+
+* *Eventi corrispondenti*
++
+Visualizza l'elenco degli eventi corrispondenti al tipo di severità dell'evento e alla stringa di testo che specifichi.
+
+* *Disabilita gli eventi*
++
+Visualizza l'elenco degli eventi che hai selezionato da disattivare.
+
++
+La gravità dell'evento viene visualizzata insieme al nome dell'evento.
+
+
+
+
+
+[[command-buttons]]
+== Pulsanti di comando
+
+I pulsanti di comando consentono di eseguire le seguenti operazioni per gli eventi selezionati:
+
+* *Salva e chiudi*
++
+Disattiva il tipo di evento e chiude la finestra di dialogo.
+
+* *Annulla*
++
+Annulla le modifiche e chiude la finestra di dialogo.
+
+

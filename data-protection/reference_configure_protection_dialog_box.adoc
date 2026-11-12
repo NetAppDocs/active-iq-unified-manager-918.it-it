@@ -1,0 +1,268 @@
+---
+permalink: data-protection/reference_configure_protection_dialog_box.html 
+sidebar: sidebar 
+keywords: configure, protection, dialog box 
+summary: Puoi usare la finestra di dialogo Configura protezione per creare relazioni di SnapMirror e SnapVault per tutti i volumi di lettura, scrittura e protezione dei dati sui cluster, per garantire che i dati su un volume di origine o un volume primario vengano replicati. 
+---
+= Usa la finestra di dialogo Configura protezione in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi usare la finestra di dialogo Configura protezione per creare relazioni di SnapMirror e SnapVault per tutti i volumi di lettura, scrittura e protezione dei dati sui cluster, per garantire che i dati su un volume di origine o un volume primario vengano replicati.
+
+
+
+[[source-tab]]
+== scheda Origine
+
+* *Vista topologica*
++
+Mostra una rappresentazione visiva della relazione che stai creando. L'origine nella topologia è evidenziata per impostazione predefinita.
+
+* *Informazioni sulla fonte*
++
+Visualizza i dettagli relativi ai volumi sorgente selezionati, incluse le seguenti informazioni:
+
++
+** Nome del cluster di origine
+** Nome SVM di origine
+** Dimensione totale cumulativa del volume
++
+Visualizza la dimensione totale di tutti i volumi sorgente selezionati.
+
+** Dimensione cumulativa utilizzata del volume
++
+Visualizza le dimensioni cumulative dello spazio utilizzato del volume per tutti i volumi di origine selezionati.
+
+** Volume sorgente
++
+Visualizza le seguenti informazioni in una tabella:
+
++
+*** Volume di origine
++
+Visualizza i nomi dei volumi sorgente selezionati.
+
+*** Tipo
++
+Visualizza il tipo di volume.
+
+*** SnapLock Tipo
++
+Visualizza il tipo di volume SnapLock. Le opzioni sono Compliance, Enterprise e Non-SnapLock.
+
+*** copia Snapshot
++
+Visualizza la copia Snapshot utilizzata per il trasferimento baseline. Se il volume di origine è di lettura/scrittura, il valore Predefinito nella colonna Copia Snapshot indica che, per impostazione predefinita, viene creata una nuova copia Snapshot e utilizzata per il trasferimento baseline. Se il volume di origine è un volume di protezione dei dati, il valore Predefinito nella colonna Copia Snapshot indica che non viene creata alcuna nuova copia Snapshot e che tutte le copie Snapshot esistenti vengono trasferite alla destinazione. Facendo clic sul valore di Copia Snapshot, viene visualizzato un elenco di copie Snapshot da cui puoi selezionare una copia Snapshot esistente da utilizzare per il trasferimento baseline. Non puoi selezionare una copia Snapshot predefinita diversa se il tipo di origine è protezione dei dati.
+
+
+
+
+
+
+
+
+
+[[snapmirror-tab]]
+== SnapMirror scheda
+
+Ti consente di specificare un cluster di destinazione, una macchina virtuale di storage (SVM) e un aggregato per una relazione di protezione, nonché una convenzione di naming per le destinazioni durante la creazione di una relazione di SnapMirror. Puoi anche specificare una policy di SnapMirror e una pianificazione.
+
+* *Vista topologica*
++
+Mostra una rappresentazione visiva della relazione che stai creando. La risorsa di destinazione di SnapMirror nella topologia è evidenziata per impostazione predefinita.
+
+* *Informazioni sulla destinazione*
++
+Ti consente di selezionare le risorse di destinazione per una relazione di protezione:
+
++
+** Link avanzato
++
+Apre la finestra di dialogo Impostazioni di destinazione avanzate quando crei una relazione di SnapMirror.
+
+** Cluster
++
+Elenca i cluster disponibili come host di destinazione per la protezione. Questo campo è obbligatorio.
+
+** macchina virtuale di storage (SVM)
++
+Elenca le SVM disponibili nel cluster selezionato. Devi selezionare un cluster prima che l'elenco delle SVM venga popolato. Questo campo è obbligatorio.
+
+** Aggregato
++
+Elenca gli aggregati disponibili sull'SVM selezionato. Devi selezionare un cluster prima che venga compilato l'elenco Aggregate. Questo campo è obbligatorio. L'elenco Aggregate visualizza le seguenti informazioni:
+
++
+*** Classifica
++
+Quando più aggregati soddisfano tutti i requisiti per una destinazione, la classificazione indica la priorità con cui l'aggregato viene elencato, secondo le seguenti condizioni:
+
++
+.... Per consentire la separazione del dominio di guasto, è preferibile utilizzare un aggregato situato su un nodo diverso dal nodo del volume sorgente.
+.... Per consentire il bilanciamento del carico tra i nodi di un cluster, è preferibile un aggregato su un nodo con un numero inferiore di volumi.
+.... Per consentire il bilanciamento della capacità, si preferisce un aggregato che dispone di più spazio libero rispetto agli altri aggregati. Un punteggio di 1 indica che l'aggregato è quello più preferito in base ai tre criteri.
+
+
+*** Nome aggregato
++
+Nome dell'aggregato
+
+*** Capacità disponibile
+*** Quantità di spazio disponibile sull'aggregato per i dati
+*** Pool di risorse
++
+Nome del pool di risorse a cui appartiene l'aggregato
+
+
+
+** Convenzione di naming
++
+Specifica la convenzione di naming predefinita applicata al volume di destinazione. Puoi accettare la convenzione di naming fornita oppure crearne una personalizzata. La convenzione di naming può avere i seguenti attributi: %C, %M, %V e %N, dove %C è il nome del cluster, %M è il nome dell'SVM, %V è il volume di origine e %N è il nome del nodo di destinazione della topologia.
+
++
+Il campo della convenzione di naming viene evidenziato in rosso se il valore immesso non è valido. Facendo clic sul collegamento "`Preview Name`" viene visualizzata un'anteprima della convenzione di naming che hai inserito e il testo di anteprima si aggiorna dinamicamente mentre digiti una convenzione di naming nel campo di testo. Al nome di destinazione viene aggiunto un suffisso compreso tra 001 e 999 quando viene creata la relazione, sostituendo nnn visualizzato nel testo di anteprima, con 001 assegnato per primo, 002 assegnato per secondo e così via.
+
+
+
+* *Impostazioni della relazione*
++
+Ti consente di specificare la velocità di trasferimento massima, il criterio SnapMirror e la pianificazione utilizzati dalla relazione di protezione:
+
++
+** Velocità di trasferimento massima
++
+Specifica la velocità massima con cui i dati vengono trasferiti tra i cluster sulla rete. Se scegli di non utilizzare una velocità massima di trasferimento, il trasferimento baseline tra le relazioni è illimitato.
+
+** SnapMirror criterio
++
+Specifica il criterio ONTAP SnapMirror per la relazione di SnapMirror. Il valore predefinito è DPDefault.
+
+** Crea policy
++
+Apre la finestra di dialogo Crea criterio di SnapMirror, che ti consente di creare e utilizzare un nuovo criterio di SnapMirror.
+
+** SnapMirror Programma
++
+Specifica il criterio ONTAP SnapMirror per la relazione. Le pianificazioni disponibili includono None, 5min, 8hour, daily, hourly e weekly. Il valore predefinito è None, a indicare che nessuna pianificazione è associata alla relazione. Le relazioni senza pianificazioni non hanno valori dello stato di ritardo, a meno che non appartengano a un servizio di storage.
+
+** Crea pianificazione
++
+Apre la finestra di dialogo Create Schedule, che ti consente di creare una nuova pianificazione di SnapMirror.
+
+
+
+
+
+
+
+[[snapvault-tab]]
+== SnapVault scheda
+
+Ti consente di specificare un cluster secondario, una SVM e un aggregate per una relazione di protezione, nonché una convenzione di naming per i volumi secondari durante la creazione di una relazione di SnapVault. Puoi anche specificare un criterio di SnapVault e una pianificazione.
+
+* *Vista topologica*
++
+Mostra una rappresentazione visiva della relazione che stai creando. La risorsa secondaria SnapVault nella topologia è evidenziata per impostazione predefinita.
+
+* *Informazioni secondarie*
++
+Consente di selezionare le risorse secondarie per una relazione di protezione:
+
++
+** Link avanzato
++
+Apre la finestra di dialogo Impostazioni secondarie avanzate.
+
+** Cluster
++
+Elenca i cluster disponibili come host di protezione secondaria. Questo campo è obbligatorio.
+
+** macchina virtuale di storage (SVM)
++
+Elenca le SVM disponibili nel cluster selezionato. Devi selezionare un cluster prima che l'elenco delle SVM venga popolato. Questo campo è obbligatorio.
+
+** Aggregato
++
+Elenca gli aggregati disponibili sull'SVM selezionato. Devi selezionare un cluster prima che venga compilato l'elenco Aggregate. Questo campo è obbligatorio. L'elenco Aggregate visualizza le seguenti informazioni:
+
++
+*** Classifica
++
+Quando più aggregati soddisfano tutti i requisiti per una destinazione, la classificazione indica la priorità con cui l'aggregato viene elencato, secondo le seguenti condizioni:
+
++
+.... Per consentire la separazione del dominio di guasto, è preferibile utilizzare un aggregato situato su un nodo diverso da quello del volume primario.
+.... Per consentire il bilanciamento del carico tra i nodi di un cluster, è preferibile un aggregato su un nodo con un numero inferiore di volumi.
+.... Per consentire il bilanciamento della capacità, si preferisce un aggregato che dispone di più spazio libero rispetto agli altri aggregati. Un punteggio di 1 indica che l'aggregato è quello più preferito in base ai tre criteri.
+
+
+*** Nome aggregato
++
+Nome dell'aggregato
+
+*** Capacità disponibile
+*** Quantità di spazio disponibile sull'aggregato per i dati
+*** Pool di risorse
++
+Nome del pool di risorse a cui appartiene l'aggregato
+
+
+
+** Convenzione di naming
++
+Specifica la convenzione di naming predefinita applicata al volume secondario. Puoi accettare la convenzione di naming fornita oppure crearne una personalizzata. La convenzione di naming può avere i seguenti attributi: %C, %M, %V e %N, dove %C è il nome del cluster, %M è il nome dell'SVM, %V è il volume di origine e %N è il nome del nodo secondario della topologia.
+
++
+Il campo convenzione di naming viene evidenziato in rosso se il valore che inserisci non è valido. Facendo clic sul collegamento "`Preview Name`", viene visualizzata un'anteprima della convenzione di naming che hai inserito e il testo di anteprima si aggiorna dinamicamente mentre digiti una convenzione di naming nel campo di testo. Se digiti un valore non valido, le informazioni non valide vengono visualizzate come punti interrogativi rossi nell'area di anteprima. Al nome secondario viene aggiunto un suffisso compreso tra 001 e 999 quando viene creata la relazione, sostituendo nnn visualizzato nel testo di anteprima; viene assegnato prima 001, poi 002 e così via.
+
+
+
+* *Impostazioni della relazione*
++
+Ti consente di specificare la velocità di trasferimento massima, la policy di SnapVault e la pianificazione di SnapVault utilizzate dalla relazione di protezione:
+
++
+** Velocità di trasferimento massima
++
+Specifica la velocità massima con cui i dati vengono trasferiti tra i cluster sulla rete. Se scegli di non utilizzare una velocità massima di trasferimento, il trasferimento baseline tra le relazioni è illimitato.
+
+** Policy di SnapVault
++
+Specifica il criterio ONTAP SnapVault per la relazione. Il valore predefinito è XDPDefault.
+
+** Crea policy
++
+Apre la finestra di dialogo Crea criterio SnapVault, che ti consente di creare e utilizzare un nuovo criterio SnapVault.
+
+** SnapVault Programma
++
+Specifica la pianificazione di ONTAP SnapVault per la relazione. Le pianificazioni disponibili includono None, 5min, 8hour, daily, hourly e weekly. Il valore predefinito è None, a indicare che nessuna pianificazione è associata alla relazione. Le relazioni senza pianificazioni non hanno valori di stato di ritardo, a meno che non appartengano a un servizio di storage.
+
+** Crea pianificazione
++
+Apre la finestra di dialogo Crea pianificazione, che ti consente di creare una pianificazione SnapVault.
+
+
+
+
+
+
+
+[[command-buttons]]
+== Pulsanti di comando
+
+I pulsanti di comando consentono di eseguire le seguenti operazioni:
+
+* *Annulla*
++
+Annulla le selezioni e chiude la finestra di dialogo Configura protezione.
+
+* *Applica*
++
+Applica le tue selezioni e avvia il processo di protezione.
+
+

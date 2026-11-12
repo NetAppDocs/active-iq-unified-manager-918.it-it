@@ -1,0 +1,82 @@
+---
+permalink: config/concept_audit_logging.html 
+sidebar: sidebar 
+keywords: audit, logging 
+summary: 'Puoi rilevare se i log di audit sono stati compromessi utilizzando Audit Logs. Tutte le attività eseguite da un utente vengono monitorate e registrate in Audit Logs. Gli audit vengono eseguiti per tutte le funzionalità dell"interfaccia utente e delle API esposte pubblicamente di Active IQ Unified Manager.' 
+---
+= Scopri i registri di controllo in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi rilevare se i log di audit sono stati compromessi utilizzando Audit Logs. Tutte le attività eseguite da un utente vengono monitorate e registrate in Audit Logs. Gli audit vengono eseguiti per tutte le funzionalità dell'interfaccia utente e delle API esposte pubblicamente di Active IQ Unified Manager.
+
+Puoi usare *Audit Log: File View* per visualizzare e accedere a tutti i file di audit log disponibili in Active IQ Unified Manager. I file in Audit Log: File View sono elencati in base alla data di creazione. Questa vista mostra le informazioni di tutti gli audit log acquisiti dall'installazione o dall'aggiornamento fino al presente nel sistema. Ogni volta che esegui un'azione in Unified Manager, le informazioni vengono aggiornate e sono disponibili nei log. Lo stato di ciascun file di log viene acquisito usando l'attributo "`File Integrity Status`", che viene monitorato attivamente per rilevare manomissioni o eliminazioni del file di log. Gli audit log possono avere uno dei seguenti stati quando sono disponibili nel sistema:
+
+[cols="2*"]
+|===
+| Stato | Descrizione 
+
+
+ a| 
+ATTIVO
+ a| 
+File in cui sono attualmente registrati i log.
+
+
+
+ a| 
+NORMALE
+ a| 
+File inattivo, compresso e memorizzato nel sistema.
+
+
+
+ a| 
+MANOMESSO
+ a| 
+File compromesso da un utente che lo ha modificato manualmente.
+
+
+
+ a| 
+MANUAL_DELETE
+ a| 
+File eliminato da un utente autorizzato.
+
+
+
+ a| 
+ROLLOVER_DELETE
+ a| 
+File eliminato a causa della rimozione in base al criterio di configurazione Rolling.
+
+
+
+ a| 
+UNEXPECTED_DELETE
+ a| 
+File eliminato per motivi sconosciuti.
+
+|===
+La pagina Audit Log include i seguenti pulsanti di comando:
+
+* Configurare
+* Elimina
+* Scarica
+
+
+Il pulsante *DELETE* ti consente di eliminare uno qualsiasi dei log di controllo elencati nella vista Audit Logs. Puoi eliminare un log di controllo e, facoltativamente, specificare un motivo per eliminare il file, il che ti aiuterà in futuro a determinare se l'eliminazione è valida. La colonna REASON elenca il motivo insieme al nome dell'utente che ha eseguito l'operazione di eliminazione.
+
+[NOTE]
+====
+Se elimini un file di log, il file verrà rimosso dal sistema, ma la relativa voce nella tabella DB non verrà eliminata.
+
+====
+Puoi scaricare i log di audit da Active IQ Unified Manager utilizzando il pulsante *DOWNLOAD* nella sezione Log di audit ed esportare i file di log di audit. I file contrassegnati come "`NORMAL`" o "`TAMPERED`" vengono scaricati in formato `.gzip` compresso.
+
+I file di log di audit vengono archiviati periodicamente e salvati nel database per consultazione. Prima dell'archiviazione, i file di log di audit vengono firmati digitalmente per garantirne la sicurezza e l'integrità.
+
+Quando viene generato un bundle AutoSupport completo, il bundle di supporto include sia i file di log di audit archiviati che quelli attivi. Ma quando viene generato un bundle di supporto leggero, include solo i file di log di audit attivi. I file di log di audit archiviati non sono inclusi.

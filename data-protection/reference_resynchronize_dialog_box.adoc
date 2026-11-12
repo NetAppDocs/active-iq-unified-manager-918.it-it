@@ -1,0 +1,71 @@
+---
+permalink: data-protection/reference_resynchronize_dialog_box.html 
+sidebar: sidebar 
+keywords: resynchronize, dialog box 
+summary: 'La finestra di dialogo Risincronizza ti consente di risincronizzare i dati su una relazione di SnapMirror o SnapVault che era stata precedentemente interrotta e la cui destinazione è stata poi resa un volume di lettura/scrittura. Potresti anche dover risincronizzare quando una copia Snapshot comune richiesta sul volume di origine viene eliminata, causando l"errore degli aggiornamenti di SnapMirror o SnapVault.' 
+---
+= Usa la finestra di dialogo di risincronizzazione in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La finestra di dialogo Risincronizza ti consente di risincronizzare i dati su una relazione di SnapMirror o SnapVault che era stata precedentemente interrotta e la cui destinazione è stata poi resa un volume di lettura/scrittura. Potresti anche dover risincronizzare quando una copia Snapshot comune richiesta sul volume di origine viene eliminata, causando l'errore degli aggiornamenti di SnapMirror o SnapVault.
+
+
+
+[[resynchronization-options-tab]]
+== Scheda Opzioni di risincronizzazione
+
+La scheda Opzioni di risincronizzazione ti consente di impostare la priorità di trasferimento e la velocità di trasferimento massima per la relazione di protezione che stai risincronizzando.
+
+* *Priorità di trasferimento*
++
+La priorità con cui viene eseguito il trasferimento. Puoi selezionare Normale o Bassa. Le relazioni con criteri che specificano una priorità di trasferimento normale vengono eseguite prima di quelle con criteri che specificano una priorità di trasferimento bassa.
+
+* *Velocità di trasferimento massima*
++
+Specifica la velocità massima con cui i dati vengono trasferiti tra i cluster sulla rete. Quando la selezioni, la larghezza di banda di rete è limitata al valore che specifichi. Puoi immettere un valore numerico e quindi selezionare kilobyte al secondo (KBps), megabyte al secondo (MBps), gigabyte al secondo (GBps) o TBps. Se scegli di non utilizzare una velocità di trasferimento massima, il trasferimento baseline tra le relazioni è illimitato.
+
+
+
+
+
+[[source-snapshot-copies-tab]]
+== Scheda Copie Snapshot di origine
+
+La scheda Copie Snapshot di origine visualizza le seguenti informazioni sulla copia Snapshot di origine utilizzata per il trasferimento baseline:
+
+* *Volume di origine*
++
+Visualizza i nomi dei volumi di origine corrispondenti.
+
+* *Volume di destinazione*
++
+Visualizza i nomi dei volumi di destinazione selezionati.
+
+* *Tipo di origine*
++
+Visualizza il tipo di volume: lettura/scrittura o protezione dati.
+
+* *Copia Snapshot*
++
+Visualizza la copia Snapshot utilizzata per il trasferimento dei dati. Se fai clic sul valore della copia Snapshot, viene visualizzata la finestra di dialogo Select Source Snapshot Copy, in cui puoi selezionare una copia Snapshot specifica per il trasferimento, in base al tipo di relazione di protezione e all'operazione che stai eseguendo.
+
+
+
+
+
+[[command-buttons]]
+== Pulsanti di comando
+
+* *Invia*
++
+Avvia il processo di risincronizzazione e chiude la finestra di dialogo Risincronizza.
+
+* *Annulla*
++
+Annulla le tue selezioni e chiude la finestra di dialogo Resynchronize.
+
+

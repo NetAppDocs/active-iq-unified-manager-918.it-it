@@ -1,0 +1,62 @@
+---
+permalink: config/task_enable_saml_authentication_um.html 
+sidebar: sidebar 
+keywords: enable, saml, authentication 
+summary: 'Puoi abilitare l"autenticazione SAML (Security Assertion Markup Language) in modo che gli utenti remoti vengano autenticati da un provider di identità (IdP) sicuro prima di poter accedere all"interfaccia utente web di Unified Manager.' 
+---
+= Abilita l'autenticazione SAML in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi abilitare l'autenticazione SAML (Security Assertion Markup Language) in modo che gli utenti remoti vengano autenticati da un provider di identità (IdP) sicuro prima di poter accedere all'interfaccia utente web di Unified Manager.
+
+.Prima di iniziare
+* Devi aver configurato l'autenticazione remota e aver verificato che sia andata a buon fine.
+* Devi aver creato almeno un Remote User o un Remote Group con il ruolo di Application Administrator.
+* Il provider di identità (IdP) deve essere supportato da Unified Manager e deve essere configurato.
+* Devi disporre dell'URL dell'IdP e dei metadati.
+* Devi avere accesso al server IdP.
+
+
+Dopo aver abilitato l'autenticazione SAML da Unified Manager, gli utenti non possono accedere all'interfaccia utente grafica finché l'IdP non è stato configurato con le informazioni host del server Unified Manager. Quindi devi essere pronto a completare entrambe le parti della connessione prima di avviare il processo di configurazione. L'IdP può essere configurato prima o dopo aver configurato Unified Manager.
+
+Solo gli utenti remoti avranno accesso all'interfaccia utente grafica di Unified Manager dopo che avrai abilitato l'autenticazione SAML. Gli utenti locali e gli utenti di manutenzione non potranno accedere all'interfaccia utente. Questa configurazione non influisce sugli utenti che accedono alla console di manutenzione, ai comandi di Unified Manager o alle ZAPI.
+
+[NOTE]
+====
+Unified Manager si riavvia automaticamente al termine della configurazione SAML su questa pagina.
+
+====
+.Passaggi
+. Nel riquadro di navigazione a sinistra, fai clic su *Generale* > *Autenticazione SAML*.
+. Seleziona la casella di controllo *Abilita autenticazione SAML*.
++
+Vedi i campi necessari per configurare la connessione IdP.
+
+. Inserisci l'URI dell'IdP e i metadati dell'IdP necessari per connettere il server Unified Manager al server IdP.
++
+Se il server IdP è accessibile direttamente dal server Unified Manager, dopo aver inserito l'URI dell'IdP, puoi fare clic sul pulsante *Recupera metadati IdP* per compilare automaticamente il campo Metadati IdP.
+
+. Copia l'URI dei metadati dell'host di Unified Manager oppure salva i metadati dell'host in un file di testo XML.
++
+Puoi configurare il server IdP con queste informazioni in questo momento.
+
+. Fare clic su *Save*.
++
+Viene visualizzata una finestra di messaggio per confermare che vuoi completare la configurazione e riavviare Unified Manager.
+
+. Fai clic su *Confirm and Logout* e Unified Manager si riavvia.
+
+
+La prossima volta che gli utenti remoti autorizzati tenteranno di accedere all'interfaccia grafica di Unified Manager, dovranno inserire le proprie credenziali nella pagina di accesso dell'IdP anziché nella pagina di accesso di Unified Manager.
+
+Se non l'hai già fatto, accedi al tuo IdP e inserisci l'URI del server Unified Manager e i metadati per completare la configurazione.
+
+[NOTE]
+====
+Quando usi ADFS come provider di identità, la GUI di Unified Manager non rispetta il timeout di ADFS e continua a funzionare finché non viene raggiunto il timeout della sessione di Unified Manager. Puoi modificare il timeout della sessione della GUI facendo clic su *Generale* > *Impostazioni funzionalità* > *Timeout di inattività*.
+
+====

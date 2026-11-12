@@ -1,0 +1,103 @@
+---
+permalink: health-checker/reference_setup_autosupport_page.html 
+sidebar: sidebar 
+keywords: autosupport, messages, support bundles, technical support 
+summary: 'La pagina AutoSupport ti consente di inviare messaggi AutoSupport predefiniti e su richiesta al tuo team di supporto tecnico per garantire il corretto funzionamento del tuo ambiente e per aiutarti a mantenerne l"integrità. AutoSupport è abilitato per impostazione predefinita e non deve essere disabilitato, così puoi usufruire dei vantaggi di NetAppActive IQ.' 
+---
+= Invia i messaggi AutoSupport al supporto tecnico in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La pagina AutoSupport ti consente di inviare messaggi AutoSupport predefiniti e su richiesta al tuo team di supporto tecnico per garantire il corretto funzionamento del tuo ambiente e per aiutarti a mantenerne l'integrità. AutoSupport è abilitato per impostazione predefinita e non deve essere disabilitato, così puoi usufruire dei vantaggi di NetAppActive IQ.
+
+Puoi inviare informazioni diagnostiche di sistema e dati dettagliati sul server Unified Manager in un messaggio, quando necessario, programmare l'invio periodico di un messaggio o persino generare e inviare pacchetti di supporto al team del supporto tecnico.
+
+[NOTE]
+====
+Un utente con il ruolo di amministratore dello storage può generare e inviare messaggi AutoSupport su richiesta e pacchetti di supporto al supporto tecnico. Tuttavia, solo un amministratore o un utente addetto alla manutenzione può abilitare o disabilitare AutoSupport periodico e configurare le impostazioni HTTP come descritto nella sezione "Configurazione del proxy server HTTP". In un ambiente che richiede l'utilizzo di un proxy server HTTP, la configurazione deve essere completata prima che un amministratore dello storage possa inviare messaggi AutoSupport su richiesta e pacchetti di supporto al supporto tecnico.
+
+====
+
+
+[[send-on-demand-autosupport-messages]]
+== Invia messaggi AutoSupport su richiesta
+
+Puoi generare e inviare un messaggio on-demand al supporto tecnico, a un destinatario e-mail specifico o a entrambi.
+
+.Passaggi
+. Vai a *Generale* > *AutoSupport* ed esegui una o entrambe le seguenti azioni:
+. Se vuoi inviare il messaggio AutoSupport al supporto tecnico, seleziona la check box *Send to Technical Support*.
+. Se vuoi inviare il messaggio di AutoSupport a un destinatario email specifico, seleziona la check box *Send to Email Recipient* e inserisci l'indirizzo email del destinatario.
+. Fare clic su *Save*.
+. Fai clic su *Genera e invia AutoSupport*.
+
+
+
+
+[[enable-periodic-autosupport]]
+== Abilita AutoSupport periodico
+
+Puoi inviare periodicamente al supporto tecnico messaggi specifici e predefiniti per la diagnosi e la risoluzione dei problemi. Questa funzionalità è abilitata per impostazione predefinita. Se è disabilitata, un amministratore o un utente addetto alla manutenzione può abilitare le impostazioni.
+
+.Passaggi
+. Vai a *Generale* > *AutoSupport*.
+. Nella sezione Periodic AutoSupport, seleziona il check box *Abilita l'invio periodico dei dati AutoSupport ad Active IQ*.
+. Se necessario, definisci il nome, la porta e le informazioni di autenticazione per il proxy server HTTP come descritto nella sezione Configurazione del proxy server HTTP.
+. Fare clic su *Save*.
+
+
+
+
+[[upload-on-demand-support-bundle]]
+== Carica il pacchetto di supporto su richiesta
+
+Puoi generare e inviare un pacchetto di supporto al supporto tecnico in base alle esigenze di risoluzione dei problemi. Unified Manager memorizza solo i due pacchetti di supporto generati più di recente. I pacchetti di supporto più vecchi vengono eliminati dal sistema.
+
+Poiché alcuni tipi di dati di supporto possono utilizzare una grande quantità di risorse del cluster o richiedere molto tempo per essere completati, quando selezioni il pacchetto di supporto completo, puoi includere o escludere tipi di dati specifici per ridurre le dimensioni del pacchetto di supporto. Puoi anche creare un pacchetto di supporto leggero che contiene solo 30 giorni di log e record del database di configurazione: esclude i dati sulle prestazioni, i file di registrazione dell'acquisizione e il dump dell'heap del server.
+
+.Passaggi
+. Vai a *Generale* > *AutoSupport*.
+. Nella sezione Pacchetto di supporto on-demand, fai clic su *Genera e invia pacchetto di supporto*.
+. Per inviare un pacchetto di supporto leggero al supporto tecnico, nella finestra pop-up Genera e invia pacchetto di supporto, seleziona la check box **Genera pacchetto di supporto leggero**.
+. In alternativa, per inviare un pacchetto di supporto completo, seleziona la check box *Generate full support bundle*. Seleziona i tipi di dati specifici da includere o escludere nel pacchetto di supporto.
++
+[NOTE]
+====
+Anche se non selezioni alcun tipo di dati, il pacchetto di supporto viene comunque generato con altri dati di Unified Manager.
+
+====
+. Seleziona la check box *Send the bundle to technical support* per generare e inviare il pacchetto al supporto tecnico. Se non selezioni questa check box, il pacchetto viene generato e archiviato localmente nel server Unified Manager. Il pacchetto di supporto generato è disponibile per un uso successivo nella directory /support sui sistemi VMware, in `/opt/netapp/data/support/` sui sistemi Linux e in `ProgramData\NetApp\OnCommandAppData\ocum\support` sui sistemi Windows.
+. Fai clic su *Invia*.
+
+
+
+
+[[set-up-http-proxy-server]]
+== Configura il proxy server HTTP
+
+Se il tuo ambiente non fornisce l'accesso diretto dal server Unified Manager, puoi designare un proxy per fornire l'accesso a Internet e inviare il contenuto di AutoSupport al supporto tecnico. Questa sezione è disponibile solo per gli amministratori e gli addetti alla manutenzione.
+
+* *Usa proxy HTTP*
++
+Seleziona questo check box per identificare il server utilizzato come proxy HTTP.
+
++
+Inserisci l'host name o l'indirizzo IP del proxy server e il numero di porta usato per collegarti al server.
+
+* *Usa l'autenticazione*
++
+Seleziona questa casella se devi fornire informazioni di autenticazione per accedere al server utilizzato come proxy HTTP.
+
++
+Inserisci il nome utente e la password necessari per autenticarti con il proxy HTTP.
+
+
+
+[NOTE]
+====
+I proxy HTTP che forniscono solo Basic Authentication non sono supportati.
+
+====

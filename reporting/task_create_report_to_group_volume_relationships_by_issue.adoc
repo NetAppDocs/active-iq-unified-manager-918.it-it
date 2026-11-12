@@ -1,0 +1,36 @@
+---
+permalink: reporting/task_create_report_to_group_volume_relationships_by_issue.html 
+sidebar: sidebar 
+keywords: create, report, group, volume, relationships, issue 
+summary: Puoi creare un report che raggruppa le relazioni dei volumi in base al problema. 
+---
+= Crea un report per raggruppare le relazioni di volume per problema in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi creare un report che raggruppa le relazioni dei volumi in base al problema.
+
+.Prima di iniziare
+* Devi disporre del ruolo di Amministratore dell'applicazione o di Amministratore dello storage.
+
+
+Segui questi passaggi per creare una vista personalizzata che raggruppi le relazioni dei volumi per problema, quindi pianifica la generazione di un report per tale vista.
+
+.Passaggi
+. Nel riquadro di navigazione a sinistra, fai clic su *Archiviazione* > *Volumi*.
+. Nel menu Visualizza, seleziona *Relazione* > *Tutte le relazioni*.
+. Seleziona *Mostra/Nascondi* per rimuovere le colonne che non vuoi nel report.
+. Trascina la colonna "`Motivo di non integrità`" vicino alla colonna "`Stato`".
+. Fai clic sulla parte superiore della colonna "`Unhealthy Reason`" per raggruppare i volumi per problema.
+. Salva la vista con un nome specifico che rifletta ciò che la vista mostra, ad esempio "`Relazioni dei volumi per problema`".
+. Nella pagina dell'inventario, fai clic sul pulsante *Report programmati*.
+. Inserisci un nome per la pianificazione del report e completa gli altri campi del report, quindi fai clic sul segno di spunta (image:../media/blue_check.gif[""]) alla fine della riga.
++
+Il report viene inviato immediatamente a scopo di test. Successivamente, il report viene generato e inviato via email ai destinatari indicati con la frequenza specificata.
+
+
+
+In base ai risultati riportati nel report, puoi analizzare l'origine e l'impatto di ciascun tipo di problema.

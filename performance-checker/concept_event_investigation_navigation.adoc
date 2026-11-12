@@ -1,0 +1,30 @@
+---
+permalink: performance-checker/concept_event_investigation_navigation.html 
+sidebar: sidebar 
+keywords: event, investigation, navigation 
+summary: Le pagine dei dettagli degli eventi di Unified Manager ti offrono una panoramica approfondita di qualsiasi evento relativo alle prestazioni. Questo è utile per analizzare gli eventi relativi alle prestazioni, risolvere i problemi e ottimizzare le prestazioni del sistema. 
+---
+= Esamina gli eventi relativi alle prestazioni in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le pagine dei dettagli degli eventi di Unified Manager ti offrono una panoramica approfondita di qualsiasi evento relativo alle prestazioni. Questo è utile per analizzare gli eventi relativi alle prestazioni, risolvere i problemi e ottimizzare le prestazioni del sistema.
+
+A seconda del tipo di evento, potresti visualizzare una delle due seguenti pagine di dettagli:
+
+* Pagina dei dettagli dell'evento per eventi dei criteri di soglia definiti dall'utente e dal sistema
+* Pagina dei dettagli dell'evento per gli eventi relativi alle policy di soglia dinamica
+
+
+Questo è un esempio di navigazione per l'analisi degli eventi.
+
+. Nel riquadro di navigazione a sinistra, fai clic su *Event Management*.
+. Dal menu Visualizza, fai clic su *Eventi di prestazione attivi*.
+. Fai clic sul nome dell'evento che desideri esaminare e si apre la pagina dei dettagli dell'evento.
+. Visualizza la descrizione dell'evento e consulta le azioni suggerite (ove disponibili) per visualizzare maggiori dettagli sull'evento che potrebbero aiutarti a risolvere il problema. Puoi fare clic sul pulsante *Analyze Workload* per visualizzare grafici dettagliati sulle prestazioni che ti aiuteranno ad analizzare ulteriormente il problema.
+
+
+image::../media/event_flow.png[Uno screenshot che mostra la navigazione per l'indagine sugli eventi.]

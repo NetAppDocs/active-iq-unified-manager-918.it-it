@@ -1,0 +1,25 @@
+---
+permalink: data-protection/task_create_resource_pools.html 
+sidebar: sidebar 
+keywords: creating, resource, pools 
+summary: Puoi usare la finestra di dialogo Crea pool di risorse per raggruppare gli aggregati a scopo di provisioning. 
+---
+= Crea pool di risorse in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi usare la finestra di dialogo Crea pool di risorse per raggruppare gli aggregati a scopo di provisioning.
+
+.Prima di iniziare
+Devi disporre del ruolo di Amministratore dell'applicazione o di Amministratore dello storage.
+
+.Passaggi
+I pool di risorse possono contenere aggregati provenienti da cluster diversi, ma lo stesso aggregato non può appartenere a pool di risorse diversi.
+
+. Nel riquadro di navigazione a sinistra, fai clic su *Protezione* > *Pool di risorse*.
+. Nella pagina *Pool di risorse*, fai clic su *Crea*.
+. Segui le istruzioni nella finestra di dialogo *Crea pool di risorse* per specificare un nome e una descrizione e per aggiungere gli aggregati come membri al pool di risorse che desideri creare.
+

@@ -1,0 +1,25 @@
+---
+permalink: config/task_edit_authentication_servers.html 
+sidebar: sidebar 
+keywords: edit, authentication servers 
+summary: Puoi cambiare la porta che il server Unified Manager usa per comunicare con il tuo server di autenticazione. 
+---
+= Modifica i server di autenticazione in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi cambiare la porta che il server Unified Manager usa per comunicare con il tuo server di autenticazione.
+
+.Prima di iniziare
+Devi avere il ruolo di Amministratore dell'applicazione.
+
+.Passaggi
+. Nel riquadro di navigazione a sinistra, fai clic su *Generale* > *Autenticazione remota*.
+. Seleziona la casella *Disable Nested Group Lookup*.
+. Nell'area *Server di autenticazione*, seleziona il server di autenticazione che vuoi modificare, quindi fai clic su *Modifica*.
+. Nella finestra di dialogo *Modifica server di autenticazione*, modifica i dettagli della porta.
+. Fare clic su *Save*.
+

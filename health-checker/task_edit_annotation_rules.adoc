@@ -1,0 +1,29 @@
+---
+permalink: health-checker/task_edit_annotation_rules.html 
+sidebar: sidebar 
+keywords: edit, annotation rules 
+summary: 'Puoi modificare le regole di annotazione per cambiare i gruppi di condizioni e le condizioni all"interno del gruppo di condizioni, in modo da aggiungere o rimuovere annotazioni dagli oggetti di archiviazione.' 
+---
+= Modifica le regole di annotazione in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi modificare le regole di annotazione per cambiare i gruppi di condizioni e le condizioni all'interno del gruppo di condizioni, in modo da aggiungere o rimuovere annotazioni dagli oggetti di archiviazione.
+
+.Prima di iniziare
+Devi disporre del ruolo di Amministratore dell'applicazione o di Amministratore dello storage.
+
+Le annotazioni vengono dissociate dagli oggetti di storage quando modifichi le regole di annotazione associate.
+
+.Passaggi
+. Nel riquadro di navigazione a sinistra, fai clic su *Gestione archiviazione* > *Annotazioni*.
+. Nella scheda *Regole di annotazione*, seleziona la regola di annotazione che vuoi modificare, quindi fai clic su *Azioni* > *Modifica*.
+. Nella finestra di dialogo *Modifica regola di annotazione*, modifica il nome della regola, il nome e il valore dell'annotazione, i gruppi di condizioni e le condizioni, secondo necessità.
++
+Non puoi modificare il tipo di oggetto di destinazione per una regola di annotazione.
+
+. Fare clic su *Save*.
+

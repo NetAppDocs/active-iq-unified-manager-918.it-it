@@ -1,0 +1,667 @@
+---
+permalink: events/reference_cluster_events.html 
+sidebar: sidebar 
+keywords: cluster events, impact, area, availability, capacity, configuration, performance, security 
+summary: 'Gli eventi del cluster forniscono informazioni sullo stato dei cluster, consentendoti di monitorarli per individuare potenziali problemi. Gli eventi sono raggruppati per area di impatto e includono il nome dell"evento, il nome della trap, il livello di impatto, il tipo di origine e la gravità.' 
+---
+= Scopri gli eventi cluster in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Gli eventi del cluster forniscono informazioni sullo stato dei cluster, consentendoti di monitorarli per individuare potenziali problemi. Gli eventi sono raggruppati per area di impatto e includono il nome dell'evento, il nome della trap, il livello di impatto, il tipo di origine e la gravità.
+
+
+
+[[impact-area-availability]]
+== Area di impatto: disponibilità
+
+Un asterisco (*) identifica gli eventi EMS che sono stati convertiti in eventi di Unified Manager.
+
+|===
+| Nome dell'evento (Nome della trap) | Livello di impatto | Tipo di origine | Gravità 
+
+
+ a| 
+Il cluster non dispone di dischi di riserva(ocumEvtDisksNoSpares)
+ a| 
+Rischio
+ a| 
+Cluster
+ a| 
+Avvertimento
+
+
+
+ a| 
+Cluster non raggiungibile(ocumEvtClusterUnreachable)
+ a| 
+Rischio
+ a| 
+Cluster
+ a| 
+Errore
+
+
+
+ a| 
+Monitoraggio del cluster non riuscito(ocumEvtClusterMonitoringFailed)
+ a| 
+Rischio
+ a| 
+Cluster
+ a| 
+Avvertimento
+
+
+
+ a| 
+Cluster FabricPool Superati i limiti di capacità della licenza (ocumEvtExternalCapacityTierSpaceFull)
+ a| 
+Rischio
+ a| 
+Cluster
+ a| 
+Avvertimento
+
+
+
+ a| 
+È iniziato il periodo di grazia per NVMe-oF *(nvmfGracePeriodStart)
+ a| 
+Rischio
+ a| 
+Cluster
+ a| 
+Avvertimento
+
+
+
+ a| 
+Periodo di grazia NVMe-oF attivo *(nvmfGracePeriodActive)
+ a| 
+Rischio
+ a| 
+Cluster
+ a| 
+Avvertimento
+
+
+
+ a| 
+Periodo di grazia NVMe-oF scaduto *(nvmfGracePeriodExpired)
+ a| 
+Rischio
+ a| 
+Cluster
+ a| 
+Avvertimento
+
+
+
+ a| 
+Finestra di manutenzione dell'oggetto avviata(objectMaintenanceWindowStarted)
+ a| 
+Evento
+ a| 
+Cluster
+ a| 
+Critico
+
+
+
+ a| 
+Finestra di manutenzione oggetto terminata(objectMaintenanceWindowEnded)
+ a| 
+Evento
+ a| 
+Cluster
+ a| 
+Informazioni
+
+
+
+ a| 
+MetroCluster Dischi di riserva lasciati indietro(ocumEvtSpareDiskLeftBehind)
+ a| 
+Rischio
+ a| 
+Cluster
+ a| 
+Errore
+
+
+
+ a| 
+MetroCluster Passaggio automatico non pianificato disabilitato (ocumEvtMccAutomaticUnplannedSwitchOverDisabled)
+ a| 
+Rischio
+ a| 
+Cluster
+ a| 
+Avvertimento
+
+
+
+ a| 
+Password dell'utente del cluster modificata *(cluster.passwd.changed)
+ a| 
+Evento
+ a| 
+Cluster
+ a| 
+Informazioni
+
+|===
+
+
+[[impact-area-capacity]]
+== Area di impatto: capacità
+
+|===
+| Nome dell'evento(Nome della trap) | Livello di impatto | Tipo di origine | Gravità 
+
+
+ a| 
+Superata la soglia di squilibrio della capacità del cluster(ocumConformanceNodeImbalanceWarning)
+ a| 
+Rischio
+ a| 
+Cluster
+ a| 
+Avvertimento
+
+
+
+ a| 
+Pianificazione del livello cloud del cluster (clusterCloudTierPlanningWarning)
+ a| 
+Rischio
+ a| 
+Cluster
+ a| 
+Avvertimento
+
+
+
+ a| 
+FabricPool Risincronizzazione della replica mirror completata *(waflCaResyncComplete)
+ a| 
+Evento
+ a| 
+Cluster
+ a| 
+Avvertimento
+
+
+
+ a| 
+FabricPool Spazio quasi esaurito *(fabricpoolNearlyFull)
+ a| 
+Rischio
+ a| 
+Cluster
+ a| 
+Errore
+
+|===
+
+
+[[impact-area-configuration]]
+== Area di impatto: configurazione
+
+|===
+| Nome dell'evento(Nome della trap) | Livello di impatto | Tipo di origine | Gravità 
+
+
+ a| 
+Nodo aggiunto(non applicabile)
+ a| 
+Evento
+ a| 
+Cluster
+ a| 
+Informazioni
+
+
+
+ a| 
+Nodo rimosso(non applicabile)
+ a| 
+Evento
+ a| 
+Cluster
+ a| 
+Informazioni
+
+
+
+ a| 
+Cluster rimosso(non applicabile)
+ a| 
+Evento
+ a| 
+Cluster
+ a| 
+Informazioni
+
+
+
+ a| 
+Aggiunta del cluster non riuscita(non applicabile)
+ a| 
+Evento
+ a| 
+Cluster
+ a| 
+Errore
+
+
+
+ a| 
+Nome del cluster modificato(non applicabile)
+ a| 
+Evento
+ a| 
+Cluster
+ a| 
+Informazioni
+
+
+
+ a| 
+EMS di emergenza ricevuto (Non applicabile)
+ a| 
+Evento
+ a| 
+Cluster
+ a| 
+Critico
+
+
+
+ a| 
+Ricevuto EMS critico (Non applicabile)
+ a| 
+Evento
+ a| 
+Cluster
+ a| 
+Critico
+
+
+
+ a| 
+Avviso EMS ricevuto (non applicabile)
+ a| 
+Evento
+ a| 
+Cluster
+ a| 
+Errore
+
+
+
+ a| 
+Errore EMS ricevuto (Non applicabile)
+ a| 
+Evento
+ a| 
+Cluster
+ a| 
+Avvertimento
+
+
+
+ a| 
+Avviso EMS ricevuto (non applicabile)
+ a| 
+Evento
+ a| 
+Cluster
+ a| 
+Avvertimento
+
+
+
+ a| 
+Debug EMS ricevuto (non applicabile)
+ a| 
+Evento
+ a| 
+Cluster
+ a| 
+Avvertimento
+
+
+
+ a| 
+Avviso EMS ricevuto (non applicabile)
+ a| 
+Evento
+ a| 
+Cluster
+ a| 
+Avvertimento
+
+
+
+ a| 
+Informazione EMS ricevuta (non applicabile)
+ a| 
+Evento
+ a| 
+Cluster
+ a| 
+Avvertimento
+
+|===
+Gli eventi EMS di ONTAP sono classificati in tre livelli di gravità degli eventi di Unified Manager.
+
+|===
+
+
+| Livello di gravità dell'evento di Unified Manager | Livello di gravità dell'evento EMS di ONTAP 
+
+
+ a| 
+Critico
+ a| 
+Emergenza
+
+Critico
+
+
+
+ a| 
+Errore
+ a| 
+Avviso
+
+
+
+ a| 
+Avvertimento
+ a| 
+Errore
+
+Avvertimento
+
+Debug
+
+Avviso
+
+Informativo
+
+|===
+
+
+[[impact-area-performance]]
+== Area di impatto: performance
+
+|===
+| Nome dell'evento(Nome della trap) | Livello di impatto | Tipo di origine | Gravità 
+
+
+ a| 
+Soglia di squilibrio del carico del cluster superata()
+ a| 
+Rischio
+ a| 
+Cluster
+ a| 
+Avvertimento
+
+
+
+ a| 
+Soglia critica IOPS del cluster superata(ocumClusterIopsIncident)
+ a| 
+Incidente
+ a| 
+Cluster
+ a| 
+Critico
+
+
+
+ a| 
+Soglia di avviso IOPS del cluster superata(ocumClusterIopsWarning)
+ a| 
+Rischio
+ a| 
+Cluster
+ a| 
+Avvertimento
+
+
+
+ a| 
+Soglia critica del cluster MB/s superata(ocumClusterMbpsIncident)
+ a| 
+Incidente
+ a| 
+Cluster
+ a| 
+Critico
+
+
+
+ a| 
+Soglia di avviso MB/s del cluster superata(ocumClusterMbpsWarning)
+ a| 
+Rischio
+ a| 
+Cluster
+ a| 
+Avvertimento
+
+
+
+ a| 
+Soglia dinamica del cluster superata(ocumClusterDynamicEventWarning)
+ a| 
+Rischio
+ a| 
+Cluster
+ a| 
+Avvertimento
+
+|===
+
+
+[[impact-area-security]]
+== Area di impatto: sicurezza
+
+|===
+| Nome dell'evento(Nome della trap) | Livello di impatto | Tipo di origine | Gravità 
+
+
+ a| 
+AutoSupport Trasporto HTTPS disabilitato(ocumClusterASUPHttpsConfiguredDisabled)
+ a| 
+Rischio
+ a| 
+Cluster
+ a| 
+Avvertimento
+
+
+
+ a| 
+Inoltro del log non crittografato(ocumClusterAuditLogUnencrypted)
+ a| 
+Rischio
+ a| 
+Cluster
+ a| 
+Avvertimento
+
+
+
+ a| 
+Utente amministratore locale predefinito abilitato(ocumClusterDefaultAdminEnabled)
+ a| 
+Rischio
+ a| 
+Cluster
+ a| 
+Avvertimento
+
+
+
+ a| 
+Modalità FIPS disabilitata(ocumClusterFipsDisabled)
+ a| 
+Rischio
+ a| 
+Cluster
+ a| 
+Avvertimento
+
+
+
+ a| 
+Banner di accesso disabilitato(ocumClusterLoginBannerDisabled)
+ a| 
+Rischio
+ a| 
+Cluster
+ a| 
+Avvertimento
+
+
+
+ a| 
+Banner di accesso modificato(ocumClusterLoginBannerChanged)
+ a| 
+Rischio
+ a| 
+Cluster
+ a| 
+Avvertimento
+
+
+
+ a| 
+Destinazioni di inoltro del log modificate(ocumLogForwardDestinationsChanged)
+ a| 
+Rischio
+ a| 
+Cluster
+ a| 
+Avvertimento
+
+
+
+ a| 
+Nomi dei server NTP modificati(ocumNtpServerNamesChanged)
+ a| 
+Rischio
+ a| 
+Cluster
+ a| 
+Avvertimento
+
+
+
+ a| 
+Il numero di server NTP è basso(securityConfigNTPServerCountLowRisk)
+ a| 
+Rischio
+ a| 
+Cluster
+ a| 
+Avvertimento
+
+
+
+ a| 
+Comunicazione tra peer del cluster non crittografata(ocumClusterPeerEncryptionDisabled)
+ a| 
+Rischio
+ a| 
+Cluster
+ a| 
+Avvertimento
+
+
+
+ a| 
+SSH utilizza cifrari non sicuri(ocumClusterSSHInsecure)
+ a| 
+Rischio
+ a| 
+Cluster
+ a| 
+Avvertimento
+
+
+
+ a| 
+Protocollo Telnet abilitato(ocumClusterTelnetEnabled)
+ a| 
+Rischio
+ a| 
+Cluster
+ a| 
+Avvertimento
+
+
+
+ a| 
+Le password di alcuni account utente ONTAP utilizzano la funzione hash MD5 meno sicura(ocumClusterMD5PasswordHashUsed)
+ a| 
+Rischio
+ a| 
+Cluster
+ a| 
+Avvertimento
+
+
+
+ a| 
+Il cluster utilizza un certificato autofirmato(ocumClusterSelfSignedCertificate)
+ a| 
+Rischio
+ a| 
+Cluster
+ a| 
+Avvertimento
+
+
+
+ a| 
+Cluster Remote Shell è abilitato(ocumClusterRshDisabled)
+ a| 
+Rischio
+ a| 
+Cluster
+ a| 
+Avvertimento
+
+
+
+ a| 
+Certificato del cluster in scadenza(ocumEvtClusterCertificateAboutToExpire)
+ a| 
+Rischio
+ a| 
+Cluster
+ a| 
+Avvertimento
+
+
+
+ a| 
+Certificato del cluster scaduto(ocumEvtClusterCertificateExpired)
+ a| 
+Rischio
+ a| 
+Cluster
+ a| 
+Errore
+
+|===

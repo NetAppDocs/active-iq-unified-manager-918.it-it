@@ -1,0 +1,28 @@
+---
+permalink: config/task_view_https_security_certificate_ocf.html 
+sidebar: sidebar 
+keywords: view, https, security, certificate 
+summary: Puoi confrontare i dettagli del certificato HTTPS con il certificato recuperato nel browser per assicurarti che la connessione crittografata del browser a Unified Manager non venga intercettata. 
+---
+= Visualizza il certificato di sicurezza HTTPS in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi confrontare i dettagli del certificato HTTPS con il certificato recuperato nel browser per assicurarti che la connessione crittografata del browser a Unified Manager non venga intercettata.
+
+.Prima di iniziare
+Devi disporre del ruolo di Operatore, Amministratore di applicazioni o Amministratore di archiviazione.
+
+Visualizzando il certificato, puoi verificare il contenuto di un certificato rigenerato oppure visualizzare i nomi alternativi del soggetto (SAN) tramite i quali puoi accedere a Unified Manager.
+
+.Passaggio
+. Nel riquadro di navigazione a sinistra, fai clic su *Generale* > *Certificato HTTPS*.
++
+Il certificato HTTPS viene visualizzato in alto nella pagina
+
+
+
+Se hai bisogno di visualizzare informazioni più dettagliate sul certificato di sicurezza rispetto a quelle mostrate nella pagina HTTPS Certificate, puoi visualizzare il certificato di connessione nel tuo browser.

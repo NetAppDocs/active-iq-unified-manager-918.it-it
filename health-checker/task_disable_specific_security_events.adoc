@@ -1,0 +1,50 @@
+---
+permalink: health-checker/task_disable_specific_security_events.html 
+sidebar: sidebar 
+keywords: disable, specific, security events 
+summary: Tutti gli eventi sono abilitati per impostazione predefinita. Puoi disabilitare eventi specifici per impedire la generazione di notifiche per gli eventi che non sono importanti nel tuo ambiente. Puoi abilitare gli eventi disabilitati se vuoi riprendere a ricevere le relative notifiche. 
+---
+= Disabilita specifici eventi di sicurezza in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Tutti gli eventi sono abilitati per impostazione predefinita. Puoi disabilitare eventi specifici per impedire la generazione di notifiche per gli eventi che non sono importanti nel tuo ambiente. Puoi abilitare gli eventi disabilitati se vuoi riprendere a ricevere le relative notifiche.
+
+.Prima di iniziare
+Devi disporre del ruolo di Amministratore dell'applicazione o di Amministratore dello storage.
+
+Quando disattivi gli eventi, quelli generati in precedenza nel sistema vengono contrassegnati come obsoleti e gli avvisi configurati per tali eventi non vengono attivati. Quando riattivi gli eventi disattivati, le notifiche relative a questi eventi vengono generate a partire dal ciclo di monitoraggio successivo.
+
+.Passaggi
+. Nel riquadro di navigazione a sinistra, fai clic su *Storage Management* > *Event Setup*.
+. Nella pagina di configurazione di *Event*, puoi disabilitare o abilitare gli eventi scegliendo una delle seguenti opzioni:
++
+[cols="2*"]
+|===
+| Se vuoi... | Poi fai così... 
+
+
+ a| 
+Disabilita gli eventi
+ a| 
+.. Fai clic su *Disable*.
+.. Nella finestra di dialogo Disabilita eventi, seleziona il livello di gravità *Avviso*. Questa è la categoria per tutti gli eventi di sicurezza.
+.. Nella colonna Eventi corrispondenti, seleziona gli eventi di sicurezza che vuoi disabilitare, quindi fai clic sulla freccia a destra per spostare questi eventi nella colonna Disabilita eventi.
+.. Fai clic su *Save and Close*.
+.. Verifica che gli eventi che hai disabilitato vengano visualizzati nella vista elenco della pagina Configurazione eventi.
+
+
+
+
+ a| 
+Abilita eventi
+ a| 
+.. Dall'elenco degli eventi disabilitati, seleziona la check box corrispondente all'evento o agli eventi che desideri riattivare.
+.. Fai clic su *Enable*.
+
+
+|===
+

@@ -1,0 +1,41 @@
+---
+permalink: health-checker/task_resolve_capacity_issues.html 
+sidebar: sidebar 
+keywords: resolve, capacity issues 
+summary: Questo flusso di lavoro fornisce un esempio di come puoi risolvere un problema di capacità. In questo scenario, sei un amministratore o un operatore e accedi alla pagina Dashboard di Unified Manager per verificare se uno degli oggetti di storage monitorati presenta problemi di capacità. Vuoi determinare la possibile causa del problema e la relativa soluzione. 
+---
+= Risolvi i problemi di capacità in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Questo flusso di lavoro fornisce un esempio di come puoi risolvere un problema di capacità. In questo scenario, sei un amministratore o un operatore e accedi alla pagina Unified ManagerDashboard per verificare se uno degli oggetti di archiviazione monitorati presenta problemi di capacità. Vuoi determinare la possibile causa del problema e la relativa soluzione.
+
+.Prima di iniziare
+Devi disporre del ruolo di Operatore, Amministratore di applicazioni o Amministratore di archiviazione.
+
+Nella pagina Dashboard, cerca l'evento di errore "`Volume Space Full`" nel pannello Capacità sotto l'elenco a discesa degli eventi.
+
+.Passaggi
+. Nel pannello *Capacità* della pagina *Dashboard*, fai clic sul nome dell'evento di errore Volume Space Full.
++
+Viene visualizzata la pagina dei dettagli dell'evento per l'errore.
+
+. Dalla pagina dei dettagli di *Event*, puoi eseguire una o più delle seguenti operazioni:
++
+** Esamina il messaggio di errore nel campo Causa e fai clic sui suggerimenti sotto Azioni correttive suggerite per visualizzare le descrizioni delle possibili soluzioni.
+** Fai clic sul nome dell'oggetto, in questo caso un volume, nel campo Origine per visualizzare i dettagli relativi all'oggetto.
+** Cerca eventuali note aggiunte in merito a questo evento.
+** Aggiungi una nota all'evento.
+** Assegna l'evento a un altro utente.
+** Riconosci l'evento.
+** Contrassegna l'evento come risolto.
+
+
+
+
+*Informazioni correlate*
+
+link:../events/reference_event_details_page.html["Pagina dei dettagli dell'evento"]

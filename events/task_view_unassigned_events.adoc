@@ -1,0 +1,25 @@
+---
+permalink: events/task_view_unassigned_events.html 
+sidebar: sidebar 
+keywords: view, unassigned, events 
+summary: Puoi visualizzare gli eventi non assegnati e quindi assegnare ciascuno di essi a un utente in grado di risolverli. 
+---
+= Visualizza gli eventi non assegnati in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi visualizzare gli eventi non assegnati e quindi assegnare ciascuno di essi a un utente in grado di risolverli.
+
+.Prima di iniziare
+Devi disporre del ruolo di Operatore, Amministratore di applicazioni o Amministratore di archiviazione.
+
+.Passaggi
+. Nel riquadro di navigazione a sinistra, fai clic su *Event Management*.
++
+Per impostazione predefinita, nella pagina dell'inventario di Event Management vengono mostrati gli eventi nuovi e confermati.
+
+. Nel riquadro *Filtri*, seleziona l'opzione di filtro *Non assegnato* nell'area *Assegnato a*.
+

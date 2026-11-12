@@ -1,0 +1,22 @@
+---
+permalink: performance-checker/concept_what_timestamp_means_in_collected_data_and_events.html 
+sidebar: sidebar 
+keywords: timestamp, means, collected, data, events 
+summary: 'Il timestamp visualizzato nei dati raccolti relativi a salute e prestazioni, o come orario di rilevamento di un evento, si basa sull"ora del cluster ONTAP, adattata al fuso orario impostato nel browser web.' 
+---
+= Scopri i timestamp nei dati e negli eventi raccolti in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Il timestamp visualizzato nei dati raccolti relativi a salute e prestazioni, o come orario di rilevamento di un evento, si basa sull'ora del cluster ONTAP, adattata al fuso orario impostato nel browser web.
+
+Ti consigliamo vivamente di utilizzare un server NTP (Network Time Protocol) per sincronizzare l'ora sui server Unified Manager, sui cluster ONTAP e nei browser web.
+
+[NOTE]
+====
+Se visualizzi timestamp che sembrano errati per un particolare cluster, potresti voler verificare che l'ora del cluster sia stata impostata correttamente.
+
+====

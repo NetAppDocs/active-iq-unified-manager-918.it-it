@@ -1,0 +1,16 @@
+---
+permalink: reporting/concept_report_work_flow.html 
+sidebar: sidebar 
+keywords: report, workflow 
+summary: Albero decisionale che descrive il flusso di lavoro del report. 
+---
+= Comprendi i flussi di lavoro dei report in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Albero decisionale che descrive il flusso di lavoro del report.
+
+image::../media/reports_view_workflow.png[Un diagramma che mostra un flusso di lavoro ad albero decisionale per la visualizzazione, la personalizzazione, il caricamento e il download dei report]

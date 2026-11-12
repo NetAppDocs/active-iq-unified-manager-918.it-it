@@ -1,0 +1,78 @@
+---
+permalink: performance-checker/task_assign_performance_threshold_policies_to_storage_objects.html 
+sidebar: sidebar 
+keywords: assign, performance, threshold, policies, storage, objects 
+summary: 'Assegni una policy di soglia delle prestazioni definita dall"utente a un oggetto di storage in modo che Unified Manager segnali un evento se il valore del contatore delle prestazioni supera l"impostazione della policy.' 
+---
+= Assegna criteri di soglia delle prestazioni agli oggetti storage in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Assegni una policy di soglia delle prestazioni definita dall'utente a un oggetto di storage in modo che Unified Manager segnali un evento se il valore del contatore delle prestazioni supera l'impostazione della policy.
+
+.Prima di iniziare
+Devi avere il ruolo di Amministratore dell'applicazione.
+
+La policy, o le policy, relative alle soglie di prestazione che vuoi applicare all'oggetto devono esistere.
+
+Puoi applicare un solo criterio di prestazione alla volta a un oggetto o a un gruppo di oggetti.
+
+Puoi assegnare un massimo di tre criteri di soglia a ciascun oggetto di storage. Quando assegni criteri a più oggetti, se uno qualsiasi di essi ha già il numero massimo di criteri assegnati, Unified Manager esegue le seguenti azioni:
+
+* Applica la policy a tutti gli oggetti selezionati che non hanno raggiunto il valore massimo
+* Ignora gli oggetti che hanno raggiunto il numero massimo di politiche
+* Visualizza un messaggio che indica che la policy non è stata assegnata a tutti gli oggetti
+
+
+.Passaggi
+. Dalla pagina Inventario delle prestazioni di qualsiasi oggetto di storage, seleziona l'oggetto o gli oggetti a cui vuoi assegnare una policy di soglia:
++
+|===
+| Per assegnare soglie a... | Fai clic... 
+
+
+ a| 
+Un singolo oggetto
+ a| 
+La check box a sinistra di quell'oggetto.
+
+
+
+ a| 
+Oggetti multipli
+ a| 
+La check box a sinistra di ciascun oggetto.
+
+
+
+ a| 
+Tutti gli oggetti nella pagina
+ a| 
+La image:../media/select_dropdown_65_png.gif["seleziona l'icona del menu a tendina"]casella a discesa e scegli *Seleziona tutti gli oggetti in questa pagina*.
+
+
+
+ a| 
+Tutti gli oggetti dello stesso tipo
+ a| 
+La image:../media/select_dropdown_65_png.gif["seleziona l'icona del menu a tendina"] casella a discesa e scegli *Seleziona tutti gli oggetti*.
+
+|===
++
+Puoi usare la funzionalità di ordinamento e filtro per affinare l'elenco degli oggetti nella pagina dell'inventario e semplificare l'applicazione di criteri di soglia a molti oggetti.
+
+. Effettua la tua selezione, quindi fai clic su *Assegna criterio di soglia delle prestazioni*.
++
+Si apre la pagina Assegna criteri di soglia delle prestazioni, che mostra un elenco dei criteri di soglia esistenti per quello specifico tipo di oggetto di storage.
+
+. Fai clic su ciascuna policy per visualizzare i dettagli delle impostazioni della soglia di prestazione e verificare di aver selezionato la policy di soglia corretta.
+. Dopo aver selezionato la policy di soglia appropriata, fai clic su *Assign Policy*.
++
+Un messaggio di conferma nella parte superiore della pagina indica che la policy di soglia è stata assegnata all'oggetto o agli oggetti e fornisce un collegamento alla pagina Alerting, in modo che tu possa configurare le impostazioni di avviso per questo oggetto e questa policy.
+
+
+
+Se vuoi ricevere avvisi tramite email o come trap SNMP, per essere informato che è stato generato un particolare evento sulle prestazioni, devi configurare le impostazioni degli avvisi nella pagina Alert Setup.

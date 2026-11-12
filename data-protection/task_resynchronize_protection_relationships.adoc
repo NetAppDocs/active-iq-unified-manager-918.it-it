@@ -1,0 +1,49 @@
+---
+permalink: data-protection/task_resynchronize_protection_relationships.html 
+sidebar: sidebar 
+keywords: resynchronize, protection, relationships, volume, relationships page 
+summary: 'Dalla pagina Relazioni tra volumi, puoi risincronizzare una relazione sia per ripristinarla dopo un evento che ha disabilitato il volume di origine, sia quando vuoi cambiare l"origine corrente con un volume diverso.' 
+---
+= Risincronizza le relazioni di protezione dalla pagina Relazioni di volume in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dalla pagina Relazioni tra volumi, puoi risincronizzare una relazione sia per ripristinarla dopo un evento che ha disabilitato il volume di origine, sia quando vuoi cambiare l'origine corrente con un volume diverso.
+
+.Prima di iniziare
+* Devi disporre del ruolo di Amministratore dell'applicazione o di Amministratore dello storage.
+* Devi aver configurato Workflow Automation.
+
+
+.Passaggi
+. Dalla pagina *Relazioni tra volumi*, seleziona uno o più volumi con relazioni in pausa e, dalla barra degli strumenti, fai clic su *Risincronizza*.
++
+Si apre la finestra di dialogo Risincronizza.
+
+. Nella scheda *Opzioni di risincronizzazione*, seleziona una priorità di trasferimento e la velocità di trasferimento massima.
+. Fai clic su *Copie Snapshot di origine*; quindi, nella colonna *Copia Snapshot*, fai clic su *Default*.
++
+Viene visualizzata la finestra di dialogo Seleziona copia Snapshot di origine.
+
+. Se vuoi specificare una copia Snapshot esistente anziché trasferire la copia Snapshot predefinita, fai clic su *Existing Snapshot Copy* e seleziona una copia Snapshot dall'elenco.
+. Fai clic su *Submit*.
++
+Verrai reindirizzato alla finestra di dialogo Resynchronize.
+
+. Se hai selezionato più di un'origine da risincronizzare, fai clic su *Predefinito* per l'origine successiva per la quale vuoi specificare una copia Snapshot esistente.
+. Fai clic su *Submit* per avviare il processo di risincronizzazione.
++
+Il processo di risincronizzazione si avvia, torni alla pagina Relazioni volume e nella parte superiore della pagina viene visualizzato un collegamento ai processi.
+
+. *Facoltativo:* Fai clic su *Visualizza processi* nella pagina *Relazioni tra volumi* per monitorare lo stato di ciascun processo di risincronizzazione.
++
+Viene visualizzato un elenco filtrato di processi.
+
+. *Facoltativo:* Fai clic sulla freccia *Indietro* del tuo browser per tornare alla pagina *Relazioni di volume*.
++
+L'operazione di risincronizzazione termina quando tutte le attività del processo si completano con successo.
+
+

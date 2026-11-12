@@ -1,0 +1,20 @@
+---
+permalink: performance-checker/concept_when_would_i_use_workload_analyzer.html 
+sidebar: sidebar 
+keywords: workload analyzer, use 
+summary: 'In genere, usi l"analizzatore del carico di lavoro per risolvere un problema di latenza segnalato da un utente, per analizzare più a fondo un evento o un avviso segnalato, oppure per esaminare un carico di lavoro che sta funzionando in modo anomalo.' 
+---
+= Capisci quando usare l'analizzatore del carico di lavoro in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+In genere, usi l'analizzatore del carico di lavoro per risolvere un problema di latenza segnalato da un utente, per analizzare più a fondo un evento o un avviso segnalato, oppure per esaminare un carico di lavoro che sta funzionando in modo anomalo.
+
+Nel caso in cui gli utenti ti contattino dicendo che l'applicazione che stanno utilizzando è molto lenta, puoi controllare i grafici di latenza, throughput e utilizzo per il carico di lavoro su cui è in esecuzione l'applicazione per verificare se lo storage è la causa del problema di prestazioni. Puoi anche utilizzare il grafico della capacità per verificare se la capacità è insufficiente, poiché un sistema ONTAP in cui la capacità utilizzata supera l'85% può causare problemi di prestazioni. Questi grafici ti aiuteranno a determinare se il problema è causato dallo storage, dalla rete o da altri problemi correlati.
+
+Nel caso in cui Unified Manager abbia generato un evento di prestazioni e tu voglia esaminare più a fondo la causa del problema, puoi avviare l'analizzatore del carico di lavoro dalla pagina Dettagli evento facendo clic sul pulsante *Analizza carico di lavoro* per analizzare alcuni trend di latenza, throughput e capacità del carico di lavoro.
+
+Se noti un carico di lavoro che sembra funzionare in modo anomalo mentre visualizzi una pagina di inventario dei carichi di lavoro (volume, LUN, workload, NFS share o SMB/CIFS share), puoi fare clic sull'icona Altro image:../media/more_icon.gif[""], quindi su *Analyze Workload* per aprire la pagina Workload Analysis ed esaminare ulteriormente il carico di lavoro.

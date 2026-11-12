@@ -1,0 +1,56 @@
+---
+permalink: storage-mgmt/concept_volume_behavior_during_switchover_and_switchback.html 
+sidebar: sidebar 
+keywords: volume, behavior, switchover, switchback 
+summary: 'Gli eventi che innescano uno switchover o uno switchback causano lo spostamento dei volumi attivi da un cluster all"altro cluster nel gruppo di disaster recovery. I volumi sul cluster che erano attivi e fornivano dati ai client si arrestano, mentre i volumi sull"altro cluster si attivano e iniziano a fornire dati. Unified Manager monitora solo i volumi attivi e in esecuzione.' 
+---
+= Scopri il comportamento dei volumi durante switchover e switchback in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Gli eventi che innescano uno switchover o uno switchback causano lo spostamento dei volumi attivi da un cluster all'altro cluster nel gruppo di disaster recovery. I volumi sul cluster che erano attivi e fornivano dati ai client si arrestano, mentre i volumi sull'altro cluster si attivano e iniziano a fornire dati. Unified Manager monitora solo i volumi attivi e in esecuzione.
+
+Poiché i volumi vengono spostati da un cluster all'altro, si consiglia di monitorare entrambi i cluster. Una singola istanza di Unified Manager può monitorare entrambi i cluster in una configurazione MetroCluster, ma a volte la distanza tra le due sedi rende necessario utilizzare due istanze di Unified Manager per monitorare entrambi i cluster. La figura seguente mostra una singola istanza di Unified Manager:
+
+image::../media/opm_mcc_switchover.gif[Uno screenshot che mostra una singola istanza di Unified Manager.]
+
+I volumi con la lettera p nel nome indicano i volumi primari, mentre i volumi con la lettera b nel nome sono volumi di backup replicati creati da SnapMirror.
+
+Durante il normale funzionamento:
+
+* Il cluster A dispone di due volumi attivi: Vol1p e Vol2p.
+* Il cluster B dispone di due volumi attivi: Vol3p e Vol4p.
+* Il cluster A ha due volumi inattivi: Vol3b e Vol4b.
+* Il cluster B ha due volumi inattivi: Vol1b e Vol2b.
+
+
+Le informazioni relative a ciascuno dei volumi attivi (statistiche, eventi e così via) vengono raccolte da Unified Manager. Le statistiche di Vol1p e Vol2p vengono raccolte dal cluster A, mentre le statistiche di Vol3p e Vol4p vengono raccolte dal cluster B.
+
+In seguito a un guasto catastrofico che provoca il passaggio dei volumi attivi dal Cluster B al Cluster A:
+
+* Il cluster A dispone di quattro volumi attivi: Vol1p, Vol2p, Vol3b e Vol4b.
+* Il cluster B ha quattro volumi inattivi: Vol3p, Vol4p, Vol1b e Vol2b.
+
+
+Come durante il normale funzionamento, le informazioni relative a ciascuno dei volumi attivi vengono raccolte da Unified Manager. In questo caso, tuttavia, le statistiche di Vol1p e Vol2p vengono raccolte da Cluster A e anche le statistiche di Vol3b e Vol4b vengono raccolte da Cluster A.
+
+Tieni presente che Vol3p e Vol3b non sono gli stessi volumi, perché si trovano su cluster diversi. Le informazioni in Unified Manager per Vol3p non sono le stesse di quelle per Vol3b:
+
+* Durante il passaggio a Cluster A, le statistiche e gli eventi di Vol3p non sono visibili.
+* Al primissimo switchover, Vol3b appare come un nuovo volume, privo di informazioni cronologiche.
+
+
+Quando Cluster B viene riparato ed esegui uno switchback, Vol3p è di nuovo attivo su Cluster B, con le statistiche cronologiche e un'interruzione nelle statistiche per il periodo dello switchover. Vol3b non è visibile da Cluster A finché non si verifica un altro switchover:
+
+image::../media/opm_mcc_volumes.gif[Uno screenshot dell'interfaccia utente che mostra il comportamento del volume durante lo switchover.]
+
+[NOTE]
+====
+* I volumi MetroCluster inattivi, ad esempio Vol3b su Cluster A dopo lo switchback, sono identificati con il messaggio "`Questo volume è stato eliminato`". Il volume in realtà non è stato eliminato, ma al momento non è monitorato da Unified Manager perché non è il volume attivo.
+* Se un singolo Unified Manager monitora entrambi i cluster in una configurazione MetroCluster, la ricerca dei volumi restituisce informazioni relative al volume attivo in quel momento. Ad esempio, una ricerca di "Vol3" restituirebbe statistiche ed eventi per Vol3b sul Cluster A se si è verificato uno switchover e Vol3 è diventato attivo sul Cluster A.
+
+
+====

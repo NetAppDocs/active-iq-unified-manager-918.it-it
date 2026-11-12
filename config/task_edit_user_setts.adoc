@@ -1,0 +1,30 @@
+---
+permalink: config/task_edit_user_setts.html 
+sidebar: sidebar 
+keywords: edit, user, settings 
+summary: 'Puoi modificare le impostazioni utente, come l"indirizzo email e il ruolo, specificate per ciascun utente. Ad esempio, potresti voler modificare il ruolo di un utente che è un operatore dello storage e assegnargli i privilegi di amministratore dello storage.' 
+---
+= Modifica le impostazioni utente in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi modificare le impostazioni utente, come l'indirizzo e-mail e il ruolo, specificate per ciascun utente. Ad esempio, potresti voler modificare il ruolo di un utente che è un operatore dello storage e assegnargli i privilegi di amministratore dello storage.
+
+.Prima di iniziare
+Devi avere il ruolo di Amministratore dell'applicazione.
+
+Quando modifichi il ruolo assegnato a un utente, le modifiche vengono applicate quando si verifica una delle seguenti azioni:
+
+* Esci e accedi nuovamente a Unified Manager.
+* Hai raggiunto il timeout della sessione di 24 ore.
+
+
+.Passaggi
+. Nel riquadro di navigazione a sinistra, fai clic su *Generale* > *Utenti*.
+. Nella pagina Utenti, seleziona l'utente per il quale vuoi modificare le impostazioni e fai clic su *Modifica*.
+. Nella finestra di dialogo Modifica utente, modifica le impostazioni appropriate specificate per l'utente.
+. Fare clic su *Save*.
+

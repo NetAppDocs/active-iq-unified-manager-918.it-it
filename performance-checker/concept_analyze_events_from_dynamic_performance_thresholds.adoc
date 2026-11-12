@@ -1,0 +1,20 @@
+---
+permalink: performance-checker/concept_analyze_events_from_dynamic_performance_thresholds.html 
+sidebar: sidebar 
+keywords: analyze, events, dynamic, performance, thresholds 
+summary: 'Gli eventi generati da soglie dinamiche indicano che il tempo di risposta effettivo (latenza) per un carico di lavoro è troppo alto o troppo basso rispetto all"intervallo di tempo di risposta previsto. Utilizza la pagina Dettagli evento per analizzare l"evento di prestazioni e intraprendere azioni correttive, se necessario, per riportare le prestazioni alla normalità.' 
+---
+= Analizza gli eventi derivanti dalle soglie di prestazione dinamiche in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Gli eventi generati da soglie dinamiche indicano che il tempo di risposta effettivo (latenza) per un carico di lavoro è troppo alto o troppo basso rispetto all'intervallo di tempo di risposta previsto. Utilizza la pagina Dettagli evento per analizzare l'evento di prestazioni e intraprendere azioni correttive, se necessario, per riportare le prestazioni alla normalità.
+
+[NOTE]
+====
+Le soglie di prestazioni dinamiche non sono abilitate sui sistemi Cloud Volumes ONTAP, ONTAP Edge o ONTAP Select.
+
+====

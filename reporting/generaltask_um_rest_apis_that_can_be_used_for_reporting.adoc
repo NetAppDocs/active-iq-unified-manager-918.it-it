@@ -1,0 +1,18 @@
+---
+permalink: reporting/generaltask_um_rest_apis_that_can_be_used_for_reporting.html 
+sidebar: sidebar 
+keywords: unified manager ,rest api, reporting 
+summary: Puoi usare le API REST per gestire i cluster visualizzando le informazioni su integrità, capacità, prestazioni e sicurezza raccolte da Unified Manager. 
+---
+= Usa le API REST di Active IQ Unified Manager per la creazione di report
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi usare le API REST per gestire i cluster visualizzando le informazioni su integrità, capacità, prestazioni e sicurezza raccolte da Unified Manager.
+
+Le API REST sono esposte tramite la pagina web Swagger. Puoi accedere alla pagina web Swagger per visualizzare la documentazione delle API REST di Unified Manager, nonché per eseguire manualmente una chiamata API. Dall'interfaccia utente web di Unified Manager, nella barra dei menu, fai clic sul pulsante *Help* e quindi seleziona *API Documentation*. Per informazioni sulle API REST di Unified Manager, consulta link:../api-automation/concept_get_started_with_um_apis.html["Guida introduttiva alle API REST di Active IQ Unified Manager"].
+
+Per accedere alle API REST, devi avere il ruolo di Operatore, Amministratore dello storage o Amministratore delle applicazioni.

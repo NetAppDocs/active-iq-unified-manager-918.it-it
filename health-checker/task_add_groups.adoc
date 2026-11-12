@@ -1,0 +1,26 @@
+---
+permalink: health-checker/task_add_groups.html 
+sidebar: sidebar 
+keywords: add, groups 
+summary: 'Puoi creare gruppi per combinare cluster, volumi e macchine virtuali di archiviazione (SVM) e semplificarne la gestione.' 
+---
+= Aggiungi gruppi in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi creare gruppi per combinare cluster, volumi e macchine virtuali di archiviazione (SVM) e semplificarne la gestione.
+
+.Prima di iniziare
+Devi disporre del ruolo di Amministratore dell'applicazione o di Amministratore dello storage.
+
+Puoi definire regole di gruppo per aggiungere o rimuovere membri dal gruppo e per modificare le azioni del gruppo.
+
+.Passaggi
+. Nel riquadro di navigazione a sinistra, fai clic su *Gestione dello storage* > *Gruppi*.
+. Nella scheda *Gruppi*, fai clic su *Aggiungi*.
+. Nella finestra di dialogo *Aggiungi gruppo*, immetti un nome e una descrizione per il gruppo.
+. Fai clic su *Add*.
+

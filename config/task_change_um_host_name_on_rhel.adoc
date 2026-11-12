@@ -1,0 +1,62 @@
+---
+permalink: config/task_change_um_host_name_on_rhel.html 
+sidebar: sidebar 
+keywords: change, unified manager, host name, linux systems 
+summary: 'A un certo punto, potresti voler modificare l"host name della macchina Red Hat Enterprise Linux su cui hai installato Unified Manager. Ad esempio, potresti voler rinominare l"host per identificare più facilmente i server Unified Manager in base al tipo, al gruppo di lavoro o al gruppo di cluster monitorato quando elenchi le tue macchine Linux.' 
+---
+= Cambia l'host name di Active IQ Unified Manager sui sistemi Linux
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A un certo punto, potresti voler modificare l'host name della macchina Red Hat Enterprise Linux su cui hai installato Unified Manager. Ad esempio, potresti voler rinominare l'host per identificare più facilmente i server Unified Manager in base al tipo, al gruppo di lavoro o al gruppo di cluster monitorato quando elenchi le tue macchine Linux.
+
+.Prima di iniziare
+Devi avere accesso come utente root al sistema Linux su cui è installato Unified Manager.
+
+Puoi utilizzare l'host name (o l'indirizzo IP dell'host) per accedere all'interfaccia utente web di Unified Manager. Se durante la distribuzione hai configurato un indirizzo IP statico per la tua rete, avrai assegnato un nome all'host di rete. Se hai configurato la rete tramite DHCP, l'host name dovrebbe essere ricavato dal DNS server.
+
+Indipendentemente da come è stato assegnato l'host name, se cambi l'host name e intendi utilizzare il nuovo host name per accedere all'interfaccia utente web di Unified Manager, devi generare un nuovo certificato di sicurezza.
+
+Se accedi all'interfaccia web utilizzando l'indirizzo IP del server anziché l'host name, non devi generare un nuovo certificato se modifichi l'host name. Tuttavia, è best practice aggiornare il certificato, in modo che l'host name nel certificato corrisponda all'host name effettivo. Il nuovo certificato non ha effetto finché non riavvii la macchina Linux.
+
+Se cambi l'host name in Unified Manager, devi aggiornare manualmente l'host name in OnCommand Workflow Automation (WFA). L'host name non viene aggiornato automaticamente in WFA.
+
+.Passaggi
+. Accedi come utente root al sistema Unified Manager che desideri modificare.
+. Arresta il software Unified Manager e il relativo software MySQL immettendo il seguente comando:
++
+`systemctl stop ocieau ocie mysqld`
+
+. Modifica l'host name usando il comando Linux `hostnamectl`:
++
+`hostnamectl set-hostname new_FQDN`
+
++
+`hostnamectl set-hostname nuhost.corp.widget.com`
+
+. Rigenera il certificato HTTPS per il server:
++
+`/opt/netapp/essentials/bin/cert.sh create`
+
+. Riavvia il servizio di rete:
++
+`systemctl restart NetworkManager.service`
+
+. Dopo il riavvio del servizio, verifica se il nuovo host name riesce a eseguire un ping verso se stesso:
++
+`ping new_hostname`
+
++
+`ping nuhost`
+
++
+Questo comando dovrebbe restituire lo stesso indirizzo IP impostato in precedenza per l'host name originale.
+
+. Dopo aver completato e verificato la modifica dell'host name, riavvia Unified Manager immettendo il seguente comando:
++
+`systemctl start mysqld ocie ocieau`
+
+

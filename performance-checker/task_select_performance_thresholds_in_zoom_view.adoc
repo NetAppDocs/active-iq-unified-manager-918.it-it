@@ -1,0 +1,25 @@
+---
+permalink: performance-checker/task_select_performance_thresholds_in_zoom_view.html 
+sidebar: sidebar 
+keywords: select, performance, thresholds, counter, charts, zoom, view 
+summary: 'L"applicazione di soglie nella vista Zoom dei grafici dei contatori fornisce una visualizzazione dettagliata delle occorrenze degli eventi di soglia delle prestazioni. Questo ti consente di applicare o rimuovere le soglie e visualizzare immediatamente i risultati, operazione che può essere utile per decidere se la risoluzione dei problemi debba essere il passo successivo.' 
+---
+= Seleziona le soglie di prestazione nella vista Zoom dei grafici dei contatori in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'applicazione di soglie nella vista Zoom dei grafici dei contatori fornisce una visualizzazione dettagliata delle occorrenze degli eventi di soglia delle prestazioni. Questo ti consente di applicare o rimuovere le soglie e visualizzare immediatamente i risultati, operazione che può essere utile per decidere se la risoluzione dei problemi debba essere il passo successivo.
+
+Selezionando le soglie nella Counter Charts Zoom View, puoi visualizzare dati precisi sugli eventi delle soglie di prestazione. Puoi applicare qualsiasi soglia visualizzata nell'area *Policies* della Counter Charts Zoom View.
+
+Puoi applicare una sola policy alla volta all'oggetto nella Counter Charts Zoom View.
+
+.Passaggio
+. Seleziona o deseleziona il image:../media/eye_icon.gif["icona a forma di occhio"] associato a una policy.
++
+La soglia selezionata si applica a Counter Charts Zoom View. Le soglie critiche sono visualizzate come una linea rossa; le soglie di avviso sono visualizzate come una linea gialla.
+
+

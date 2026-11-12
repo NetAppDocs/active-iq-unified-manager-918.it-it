@@ -1,0 +1,157 @@
+---
+permalink: health-checker/concept_configure_backup_for_windows.html 
+sidebar: sidebar 
+keywords: backup, restore, windows, netapp, snapshot copy, copies, configure, backup 
+summary: 'Active IQ Unified Manager supporta backup e ripristino tramite Snapshot di NetApp sul sistema operativo Windows con l"ausilio di LUN che utilizzano il protocollo iSCSI.' 
+---
+= Configura il backup su Windows in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Active IQ Unified Manager supporta backup e ripristino tramite Snapshot di NetApp sul sistema operativo Windows con l'ausilio di LUN che utilizzano il protocollo iSCSI.
+
+Puoi eseguire un backup basato su Snapshot mentre tutti i servizi di Unified Manager sono in esecuzione. Uno stato coerente del database viene acquisito come parte dello Snapshot, poiché il backup applica un blocco di lettura globale all'intero database che impedisce qualsiasi scrittura simultanea. Per consentire al tuo sistema Unified Manager installato su Windows OS di eseguire backup e ripristino utilizzando gli Snapshot di NetApp, devi prima configurare il backup di Unified Manager come backup basato su Snapshot utilizzando la console di manutenzione.
+
+Prima di configurare Unified Manager per creare copie Snapshot, devi eseguire le seguenti operazioni di configurazione.
+
+* Configura il cluster ONTAP
+* Configurare la macchina host Windows
+
+
+
+
+[[configure-a-backup-location-for-active-iq-unified-manager-on-windows]]
+== Configura una posizione di backup per Active IQ Unified Manager su Windows
+
+Dopo aver eseguito il backup di Unified Manager su Windows, devi configurare il volume per l'archiviazione delle copie Snapshot.
+
+.Prima di iniziare
+Il cluster, la VM di storage e il volume devono soddisfare i seguenti requisiti:
+
+* Requisiti del cluster:
++
+** Devi installare ONTAP 9.3 o versione successiva
+** Dovrebbe trovarsi geograficamente vicino al server Unified Manager
+** È monitorato da Unified Manager
+
+
+* Requisiti della VM di storage:
++
+** Connettività iSCSI sul cluster ONTAP
+** Il protocollo iSCSI deve essere abilitato per la macchina configurata
+** Dovresti disporre di un volume e di un LUN dedicati per la configurazione del backup. Il volume selezionato deve contenere un solo LUN e nient'altro.
+** La dimensione del LUN deve essere almeno il doppio della dimensione dei dati che prevedi di gestire in Active IQ Unified Manager 9.9.
++
+Questo impone anche al volume lo stesso requisito di dimensione.
+
+** Assicurati che sia selezionato l'accesso completo in lettura/scrittura
+** Assicurati che l'opzione "Accesso superutente" sia impostata su "`any`" nella policy di esportazione
+
+
+* Requisiti di volume e LUN:
++
+** Il volume deve essere almeno il doppio della dimensione della directory dei dati MySQL di Unified Manager.
+** Lo stile di sicurezza deve essere impostato su Windows
+** La policy Snapshot locale deve essere disabilitata
+** Il dimensionamento automatico del volume deve essere abilitato
+** Il livello di servizio delle prestazioni dovrebbe essere impostato su una policy con IOPS elevati e bassa latenza, come ad esempio "`Extreme`"
+
+
+
+
+
+
+[[configure-an-ontap-cluster-for-backup-and-restore-in-active-iq-unified-manager]]
+== Configura un cluster ONTAP per backup e ripristino in Active IQ Unified Manager
+
+Prima di poter eseguire il backup e il ripristino di Active IQ Unified Manager utilizzando una copia Snapshot sui sistemi Windows, devi eseguire alcuni passaggi di preconfigurazione sui cluster ONTAP.
+
+Puoi configurare il cluster ONTAP tramite il prompt dei comandi o l'interfaccia utente di System Manager. La configurazione del cluster ONTAP prevede la configurazione delle Data LIF in modo che siano disponibili per essere assegnate come iSCSI LIF alla VM di storage. Il passaggio successivo consiste nel configurare una VM di storage abilitata per iSCSI tramite l'interfaccia utente di System Manager. Dovrai configurare una route di rete statica per questa VM di storage per controllare il modo in cui le LIF utilizzano la rete per il traffico outbound.
+
+[NOTE]
+====
+Dovresti disporre di un volume dedicato e di una LUN per la configurazione del backup. Il volume selezionato deve includere una sola LUN. La dimensione della LUN deve essere almeno il doppio della dimensione dei dati che Active IQ Unified Manager dovrebbe gestire.
+
+====
+Devi eseguire la seguente configurazione:
+
+.Passaggi
+. Configura una VM di storage abilitata per iSCSI oppure utilizza una VM di storage esistente con la stessa configurazione.
+. Configura una route di rete per la VM di storage configurata.
+. Configura un volume di capacità adeguata e un singolo LUN al suo interno, assicurandoti che il volume sia dedicato esclusivamente a tale LUN.
++
+
+NOTE: In uno scenario in cui la LUN viene creata su System Manager, la rimozione della mappatura della LUN potrebbe eliminare l'igroup e il ripristino potrebbe non riuscire. Per evitare questo scenario, durante la creazione di una LUN assicurati che venga creata esplicitamente e che non venga eliminata quando si rimuove la mappatura della LUN.
+
+. Configura un gruppo initiator nella VM di storage.
+. Configura un set di porte.
+. Integra l'igroup con il portset.
+. Mappa la LUN all'igroup.
+
+
+
+
+[[configure-a-windows-host-machine-in-active-iq-unified-manager]]
+== Configura una macchina host Windows in Active IQ Unified Manager
+
+Devi configurare il computer host Windows prima di poter utilizzare NetApp Snapshot per eseguire il backup e il ripristino di Active IQ Unified Manager. Per avviare Microsoft iSCSI initiator su un computer host Windows, digita "`iscsi`" nella barra di ricerca e fai clic su *iSCSI Initiator*.
+
+.Prima di iniziare
+Dovresti eliminare tutte le configurazioni precedenti presenti sulla macchina host.
+
+Se provi ad avviare iSCSI initiator su una nuova installazione di Windows, ti viene chiesta una conferma e, dopo la conferma, viene visualizzata la finestra di dialogo Proprietà iSCSI. Se invece si tratta di un'installazione di Windows esistente, viene visualizzata la finestra di dialogo Proprietà iSCSI con una destinazione inattiva o che tenta di connettersi. Quindi, devi assicurarti che tutte le configurazioni precedenti sull'host Windows vengano rimosse.
+
+.Passaggi
+. Elimina eventuali configurazioni precedenti sulla macchina host.
+. Scopri il portale di destinazione.
+. Connettiti al portale di destinazione.
+. Connettiti al portale di destinazione utilizzando il multipath.
+. Scopri entrambi i LIF.
+. Individua la LUN configurata nella macchina Windows come dispositivo.
+. Configura la LUN rilevata come nuova unità volume in Windows.
+
+
+
+
+[[specify-the-destination-location-for-snapshot-copies-on-windows-in-active-iq-unified-manager]]
+== Specifica la posizione di destinazione per le copie Snapshot su Windows in Active IQ Unified Manager
+
+Dovresti configurare il percorso di destinazione per le copie Snapshot di Active IQ Unified Manager su un volume che hai già configurato in uno dei tuoi cluster ONTAP. Dovresti usare la console di manutenzione per definire il percorso.
+
+* Devi avere i privilegi di amministratore per l'host Windows su cui è installato Active IQ Unified Manager.
+* Per accedere alla console di manutenzione del server Unified Manager, devi disporre di un ID utente e di una password autorizzati.
+* Devi disporre dell'indirizzo IP di gestione del cluster, del nome della VM di storage, del nome del volume, del nome della LUN e del nome utente e della password del sistema storage.
+* Devi aver montato il volume come unità di rete sull'host di Active IQ Unified Manager e devi disporre dell'unità montata.
+
+
+.Passaggi
+. Utilizzando Power Shell, connettiti all'indirizzo IP o al fully qualified domain name del sistema Active IQ Unified Manager.
+. Accedi al sistema con il nome utente e la password dell'utente di manutenzione (umadmin).
+. Inserisci il comando `maintenance_console` e premi Invio.
+. Nella console di manutenzione *Main Menu*, inserisci il numero dell'opzione *Backup Restore*.
+. Inserisci il numero per *Configurare NetApp Snapshot Backup*.
+. Inserisci il numero per configurare iSCSI.
+. Rivedi le informazioni che dovrai fornire, quindi inserisci il numero per *Inserisci i dettagli di configurazione del backup*.
+. Per identificare il volume in cui verrà scritto Snapshot, immetti l'indirizzo IP dell'interfaccia di gestione del cluster, il nome della storage VM, il nome del volume, il nome della LUN, il nome utente e la password del sistema storage e l'unità di montaggio.
+. Verifica queste informazioni e inserisci `y`.
++
+Il sistema esegue le seguenti attività:
+
++
+** La VM di storage è convalidata
+** Il volume è convalidato
+** Il montaggio dell'unità e lo stato sono convalidati
+** Esistenza e stato delle LUN
+** Esistenza dell'unità di rete
+** Si verifica la presenza dello spazio consigliato (più del doppio della directory dei dati di mysql) sul volume montato
+** Percorso LUN corrispondente al LUN dedicato nel volume
+** nome igroup
+** GUID del volume in cui è montata l'unità di rete
+** iSCSI initiator utilizzato per comunicare con ONTAP
+
+
+. Esci dalla console di manutenzione e avvia l'interfaccia di Active IQ Unified Manager per creare una pianificazione per le copie Snapshot.
+

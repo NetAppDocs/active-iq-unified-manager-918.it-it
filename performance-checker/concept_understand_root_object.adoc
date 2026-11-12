@@ -1,0 +1,24 @@
+---
+permalink: performance-checker/concept_understand_root_object.html 
+sidebar: sidebar 
+keywords: understand, root, object 
+summary: 'L"oggetto root è il riferimento rispetto al quale vengono confrontati gli altri oggetti. Questo ti consente di visualizzare e confrontare i dati degli altri oggetti con l"oggetto root, fornendo un"analisi dei dati sulle prestazioni che ti aiuta a risolvere i problemi e a migliorare le prestazioni degli oggetti.' 
+---
+= Usa gli oggetti radice per monitorare le prestazioni in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'oggetto root è il riferimento rispetto al quale vengono confrontati gli altri oggetti. Questo ti consente di visualizzare e confrontare i dati degli altri oggetti con l'oggetto root, fornendo un'analisi dei dati sulle prestazioni che ti aiuta a risolvere i problemi e a migliorare le prestazioni degli oggetti.
+
+Il nome dell'oggetto principale viene visualizzato nella parte superiore del riquadro Confronto. Gli oggetti aggiuntivi vengono visualizzati sotto l'oggetto principale. Sebbene non ci sia alcun limite al numero di oggetti aggiuntivi che puoi aggiungere al riquadro Confronto, è consentito un solo oggetto principale. I dati dell'oggetto principale vengono visualizzati automaticamente nei grafici del riquadro Grafici contatore.
+
+Non puoi modificare l'oggetto radice; è sempre impostato sulla pagina dell'oggetto che stai visualizzando. Ad esempio, se apri la pagina Volume Performance Explorer di Volume1, Volume1 è l'oggetto radice e non può essere modificato. Se vuoi confrontarti con un oggetto radice diverso, devi fare clic sul collegamento di un oggetto e aprire la sua landing page.
+
+[NOTE]
+====
+Eventi e soglie vengono visualizzati solo per gli oggetti radice.
+
+====

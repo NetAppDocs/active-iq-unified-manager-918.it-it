@@ -1,0 +1,40 @@
+---
+permalink: storage-mgmt/task_create_rules_to_generate_email_addresses.html 
+sidebar: sidebar 
+keywords: create, rules, generate, email, addresses 
+summary: 'Puoi creare regole per specificare l"indirizzo e-mail in base alla quota utente associata a cluster, macchine virtuali di storage (SVM), volumi, qtree, utenti o gruppi di utenti. Una notifica viene inviata all"indirizzo e-mail specificato quando si verifica un superamento della quota.' 
+---
+= Crea regole per generare indirizzi email in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi creare regole per specificare l'indirizzo e-mail in base alla quota utente associata a cluster, macchine virtuali di storage (SVM), volumi, qtree, utenti o gruppi di utenti. Una notifica viene inviata all'indirizzo e-mail specificato quando si verifica un superamento della quota.
+
+.Prima di iniziare
+* Devi disporre del ruolo di Amministratore dell'applicazione o di Amministratore dello storage.
+* Devi aver esaminato le linee guida nella pagina "Regole per generare indirizzi email per le quota utente e di gruppo".
+
+
+Devi definire le regole per gli indirizzi email delle quote e inserirle nell'ordine in cui vuoi eseguirle. Ad esempio, se vuoi utilizzare l'indirizzo email abc@xyz.com per ricevere notifiche relative al superamento delle quote per abc e utilizzare l'indirizzo email dl-$GROUP@$DOMAIN per tutti gli altri gruppi, le regole devono essere elencate nel seguente ordine:
+
+* se ( $USER == 'abc' ) allora abc@xyz.com
+* if ( $GROUP == * ) then dl-$GROUP@$DOMAIN
+
+
+Se nessuno dei criteri delle regole che hai specificato è soddisfatto, viene usata la regola predefinita:
+
+if ( $USER_OR_GROUP == * ) then $USER_OR_GROUP@$DOMAIN
+
+.Passaggi
+. Nel riquadro di navigazione a sinistra, fai clic su *Generale* > *Regole email di quota*.
+. Inserisci la regola in base ai tuoi criteri.
+. Fai clic su *Validate* per convalidare la sintassi della regola.
++
+Viene visualizzato un messaggio di errore se la sintassi della regola non è corretta. Devi correggere la sintassi e fare nuovamente clic su *Convalida*.
+
+. Fare clic su *Save*.
+. Verifica che l'indirizzo email che hai creato sia visualizzato nella scheda *User and Group Quotas* della pagina dei dettagli *Storage VM / Health*.
+

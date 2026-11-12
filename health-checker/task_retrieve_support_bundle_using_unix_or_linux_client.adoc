@@ -1,0 +1,74 @@
+---
+permalink: health-checker/task_retrieve_support_bundle_using_unix_or_linux_client.html 
+sidebar: sidebar 
+keywords: retrieve, support bundle, unix, linux, client 
+summary: 'Se sei un utente UNIX o Linux, puoi recuperare il pacchetto di supporto dalla tua vApp utilizzando l"interfaccia a riga di comando (CLI) sul tuo server client Linux. Puoi utilizzare SCP o SFTP per recuperare il pacchetto di supporto.' 
+---
+= Recupera il pacchetto di supporto utilizzando un client UNIX o Linux in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se sei un utente UNIX o Linux, puoi recuperare il pacchetto di supporto dalla tua vApp utilizzando l'interfaccia a riga di comando (CLI) sul tuo server client Linux. Puoi utilizzare SCP o SFTP per recuperare il pacchetto di supporto.
+
+.Prima di iniziare
+Devi essere l'utente di manutenzione per eseguire questa attività.
+
+Devi aver generato un pacchetto di supporto usando la console di manutenzione e avere a disposizione il nome del pacchetto di supporto.
+
+.Passaggi
+. Accedi alla CLI tramite Telnet o la console, utilizzando il tuo server client Linux.
+. Accedi alla directory /`support`.
+. Recupera il pacchetto di supporto e copialo nella directory locale utilizzando il seguente comando:
++
+[cols="2*"]
+|===
+| Se stai utilizzando... | Quindi usa il seguente comando... 
+
+
+ a| 
+SCP
+ a| 
+`scp <maintenance-user>@<vApp-name-or-ip>:/support/support_bundle_file_name.7z <destination-directory>`
+
+
+
+ a| 
+SFTP
+ a| 
+`sftp <maintenance-user>@<vApp-name-or-ip>:/support/support_bundle_file_name.7z <destination-directory>`
+
+|===
++
+Il nome del pacchetto di supporto ti viene fornito quando lo generi utilizzando la console di manutenzione.
+
+. Inserisci la password dell'utente di manutenzione.
+
+
+
+
+[[examples]]
+== Esempi
+
+L'esempio seguente utilizza SCP per recuperare il pacchetto di supporto:
+
+[listing]
+----
+
+        `$ scp admin@10.10.12.69:/support/support_bundle_20160216_145359.7z .`
+Password: `<maintenance_user_password>`
+support_bundle_20160216_145359.7z   100%  119MB  11.9MB/s   00:10
+----
+L'esempio seguente utilizza SFTP per recuperare il pacchetto di supporto:
+
+[listing]
+----
+
+        `$ sftp admin@10.10.12.69:/support/support_bundle_20160216_145359.7z .`
+Password: `<maintenance_user_password>`
+Connected to 10.228.212.69.
+Fetching /support/support_bundle_20130216_145359.7z to ./support_bundle_20130216_145359.7z
+/support/support_bundle_20160216_145359.7z
+----

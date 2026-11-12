@@ -1,0 +1,68 @@
+---
+permalink: config/reference_regenerate_https_certificate_dialog_box.html 
+sidebar: sidebar 
+keywords: regenerate, https certificate, dialog, box 
+summary: La finestra di dialogo Rigenera certificato HTTPS consente di personalizzare le informazioni di sicurezza e quindi di generare un nuovo certificato HTTPS con tali informazioni. 
+---
+= Finestra di dialogo Rigenera certificato HTTPS in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La finestra di dialogo Rigenera certificato HTTPS consente di personalizzare le informazioni di sicurezza e quindi di generare un nuovo certificato HTTPS con tali informazioni.
+
+Le informazioni correnti sul certificato sono visualizzate in questa pagina.
+
+Le opzioni "`Regenerate Using Current Certificate Attributes`" e "`Update the Current Certificate Attributes`" ti consentono di rigenerare il certificato con le informazioni correnti oppure di generarne uno con nuove informazioni.
+
+* *Nome comune*
++
+Obbligatorio. Il fully qualified domain name (FQDN) che desideri proteggere.
+
++
+Nelle configurazioni ad alta disponibilità di Unified Manager, usa l'indirizzo IP virtuale.
+
+* *E-mail*
++
+Facoltativo. Un indirizzo e-mail per contattare la tua organizzazione; in genere l'indirizzo e-mail dell'amministratore dei certificati o del reparto IT.
+
+* *Azienda*
++
+Facoltativo. In genere corrisponde alla ragione sociale della tua azienda.
+
+* *Dipartimento*
++
+Facoltativo. Il nome del reparto nella tua azienda.
+
+* *Città*
++
+Facoltativo. La città in cui si trova la tua azienda.
+
+* *Stato*
++
+Facoltativo. Lo stato o la provincia in cui si trova la tua azienda, senza abbreviazioni.
+
+* *Paese*
++
+Facoltativo. Il paese in cui ha sede la tua azienda. In genere si tratta di un codice ISO di due lettere che identifica il paese.
+
+* *Nomi alternativi*
++
+Obbligatorio. domain name aggiuntivi, non primari, che puoi usare per accedere a questo server oltre a localhost o ad altri indirizzi di rete esistenti. Separa ciascun nome alternativo con una virgola.
+
++
+Seleziona la casella di controllo "`Escludi informazioni di identificazione locali (ad es. localhost)`" se vuoi rimuovere le informazioni di identificazione locali dal campo Nomi alternativi del certificato. Quando selezioni questa casella di controllo, nel campo Nomi alternativi viene usato solo quello che inserisci nel campo. Se lo lasci vuoto, il certificato risultante non avrà alcun campo Nomi alternativi.
+
+* *DIMENSIONE DELLA CHIAVE (ALGORITMO DELLA CHIAVE: RSA)*
++
+L'algoritmo della chiave è impostato su RSA. Puoi selezionare una delle seguenti dimensioni della chiave: 2048, 3072 o 4096 bit. La dimensione predefinita della chiave è impostata su 2048 bit.
+
+* *PERIODO DI VALIDITÀ*
++
+Il periodo di validità predefinito è di 397 giorni. Se hai eseguito l'aggiornamento da una versione precedente, la validità del certificato precedente potrebbe non essere cambiata.
+
+
+
+Per ulteriori informazioni, consulta link:../config/task_generate_an_https_security_certificate_ocf.html["Generazione di certificati HTTPS"].

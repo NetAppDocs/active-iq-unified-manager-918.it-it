@@ -1,0 +1,67 @@
+---
+permalink: performance-checker/task_filter_on_object_inventory_performance_pages.html 
+sidebar: sidebar 
+keywords: filter, data, object, inventory, performance, pages 
+summary: 'Puoi filtrare i dati nelle pagine Prestazioni dell"inventario degli oggetti per individuare rapidamente i dati in base a criteri specifici. Puoi usare i filtri per restringere il contenuto delle pagine Prestazioni dell"inventario degli oggetti e mostrare solo i risultati che hai specificato. Questo offre un metodo molto efficiente per visualizzare solo i dati sulle prestazioni che ti interessano.' 
+---
+= Filtra i dati nelle pagine Prestazioni dell'inventario degli oggetti in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi filtrare i dati nelle pagine Prestazioni dell'inventario degli oggetti per individuare rapidamente i dati in base a criteri specifici. Puoi usare i filtri per restringere il contenuto delle pagine Prestazioni dell'inventario degli oggetti e mostrare solo i risultati che hai specificato. Questo offre un metodo molto efficiente per visualizzare solo i dati sulle prestazioni che ti interessano.
+
+Puoi usare il pannello Filtri per personalizzare la vista griglia in base alle tue preferenze. Le opzioni di filtro disponibili dipendono dal tipo di oggetto visualizzato nella griglia. Se al momento sono applicati dei filtri, il numero di filtri applicati viene mostrato a destra del pulsante Filtro.
+
+Sono supportati tre tipi di parametri di filtro.
+
+|===
+| Parametro | Validazione 
+
+
+ a| 
+Stringa (testo)
+ a| 
+Gli operatori sono *contiene*, *inizia con*, *termina con* e *non contiene*.
+
+
+
+ a| 
+Numero
+ a| 
+Gli operatori sono *maggiore di*, *minore di*, *nell'ultimo* e *compreso tra*.
+
+
+
+ a| 
+Enum (testo)
+ a| 
+Gli operatori sono *is* e *is not*.
+
+|===
+I campi Colonna, Operatore e Valore sono obbligatori per ogni filtro; i filtri disponibili riflettono le colonne filtrabili nella pagina corrente. Puoi applicare al massimo quattro filtri. I risultati filtrati si basano sulla combinazione dei parametri di filtro. I risultati filtrati si applicano a tutte le pagine della ricerca filtrata, non solo alla pagina attualmente visualizzata.
+
+Puoi aggiungere filtri utilizzando il pannello Filtri.
+
+. Nella parte superiore della pagina, fai clic sul pulsante *Filtra*. Viene visualizzato il pannello di filtro.
+. Fai clic sul menu a tendina a sinistra e seleziona un oggetto; ad esempio _Cluster_ o un contatore delle prestazioni.
+. Fai clic sul menu a tendina centrale e seleziona l'operatore che desideri utilizzare.
+. Nell'ultimo elenco, seleziona o inserisci un valore per completare il filtro per quell'oggetto.
+. Per aggiungere un altro filtro, fai clic su *+Aggiungi filtro*. Viene visualizzato un altro campo del filtro. Completa questo filtro seguendo la procedura descritta nei passaggi precedenti. Tieni presente che, dopo aver aggiunto il quarto filtro, il pulsante *+Aggiungi filtro* non viene più visualizzato.
+. Fai clic su *Applica filtro*. Le opzioni di filtro vengono applicate alla griglia e il numero di filtri viene visualizzato a destra del pulsante Filtro.
+. Usa il pannello Filtri per rimuovere i singoli filtri facendo clic sull'icona del cestino a destra del filtro da rimuovere.
+. Per rimuovere tutti i filtri, fai clic su *Ripristina* in fondo al pannello dei filtri.
+
+
+
+
+[[filtering-example]]
+== Esempio di filtraggio
+
+L'illustrazione mostra il pannello Filtri con tre filtri. Il pulsante *+Aggiungi filtro* viene visualizzato quando hai meno del numero massimo di quattro filtri.
+
+image::../media/opm_filtering_panel_draft_3.gif[Uno screenshot dell'interfaccia utente che mostra il pannello Filtri con tre filtri.]
+
+Dopo aver cliccato su *Applica filtro*, il pannello Filtri si chiude, applica i filtri e mostra il numero di filtri applicati (image:../media/opm_filters_applied.gif[""]).

@@ -1,0 +1,100 @@
+---
+permalink: events/reference_storage_failover_settings_events.html 
+sidebar: sidebar 
+keywords: storage, failover, settings, events, impact area, availability 
+summary: 'Gli eventi relativi alle impostazioni di failover dello storage (SFO) ti forniscono informazioni sul fatto che il failover dello storage sia disabilitato o non configurato, così puoi monitorare eventuali problemi. Gli eventi sono raggruppati per area di impatto e includono il nome dell"evento e della trap, il livello di impatto, il tipo di origine e la gravità.' 
+---
+= Scopri gli eventi relativi alle impostazioni di failover dello storage in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Gli eventi relativi alle impostazioni di failover dello storage (SFO) ti forniscono informazioni sul fatto che il failover dello storage sia disabilitato o non configurato, così puoi monitorare eventuali problemi. Gli eventi sono raggruppati per area di impatto e includono il nome dell'evento e della trap, il livello di impatto, il tipo di origine e la gravità.
+
+
+
+[[impact-area-availability]]
+== Area di impatto: disponibilità
+
+|===
+| Nome dell'evento (Nome della trap) | Livello di impatto | Tipo di origine | Gravità 
+
+
+ a| 
+Interconnessione di failover dello storage con uno o più collegamenti non attivi(ocumEvtSfoInterconnectOneOrMoreLinksDown)
+ a| 
+Rischio
+ a| 
+Nodo
+ a| 
+Avvertimento
+
+
+
+ a| 
+Failover dello storage disabilitato(ocumEvtSfoSettingsDisabled)
+ a| 
+Rischio
+ a| 
+Nodo
+ a| 
+Errore
+
+
+
+ a| 
+Failover dello storage non configurato(ocumEvtSfoSettingsNotConfigured)
+ a| 
+Rischio
+ a| 
+Nodo
+ a| 
+Errore
+
+
+
+ a| 
+Stato del failover dello storage - Acquisizione(ocumEvtSfoStateTakeover)
+ a| 
+Rischio
+ a| 
+Nodo
+ a| 
+Avvertimento
+
+
+
+ a| 
+Stato del failover dello storage - restituzione parziale(ocumEvtSfoStatePartialGiveback)
+ a| 
+Rischio
+ a| 
+Nodo
+ a| 
+Errore
+
+
+
+ a| 
+Stato del nodo di failover dello storage non disponibile(ocumEvtSfoNodeStatusDown)
+ a| 
+Rischio
+ a| 
+Nodo
+ a| 
+Errore
+
+
+
+ a| 
+Impossibile eseguire il takeover del failover dello storage(ocumEvtSfoTakeoverNotPossible)
+ a| 
+Rischio
+ a| 
+Nodo
+ a| 
+Errore
+
+|===

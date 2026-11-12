@@ -1,0 +1,70 @@
+---
+permalink: performance-checker/concept_components_of_performance_explorer_page.html 
+sidebar: sidebar 
+keywords: components, performance, explorer, page 
+summary: 'La pagina Performance Explorer ti consente di confrontare le prestazioni di oggetti simili in un cluster, ad esempio tutti i volumi in un cluster. Questo è utile per risolvere i problemi relativi alle prestazioni e ottimizzare le prestazioni degli oggetti. Puoi anche confrontare gli oggetti con l"oggetto root, che è la baseline rispetto alla quale vengono effettuati i confronti con gli altri oggetti.' 
+---
+= Esamina la pagina Performance Explorer in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La pagina Esplora prestazioni ti consente di confrontare le prestazioni di oggetti simili in un cluster, ad esempio tutti i volumi in un cluster. Questa funzionalità è utile per risolvere i problemi relativi alle prestazioni e ottimizzare le prestazioni degli oggetti. Puoi anche confrontare gli oggetti con l'oggetto root, che rappresenta il punto di riferimento rispetto al quale vengono effettuati i confronti con gli altri oggetti.
+
+Puoi fare clic sul pulsante *Passa alla visualizzazione Integrità* per visualizzare la pagina dei dettagli di Integrità per questo oggetto. In alcuni casi puoi ottenere informazioni importanti sulle impostazioni di configurazione dello storage per questo oggetto, che possono esserti utili per risolvere un problema.
+
+La pagina Performance Explorer visualizza un elenco di oggetti del cluster e i relativi dati sulle prestazioni. Questa pagina mostra tutti gli oggetti del cluster dello stesso tipo, ad esempio i volumi e le relative statistiche sulle prestazioni specifiche dell'oggetto, in formato tabellare. Questa vista offre una panoramica efficiente delle prestazioni degli oggetti del cluster.
+
+[NOTE]
+====
+Se in una qualsiasi cella della tabella compare "`N/A`", significa che non è disponibile un valore per quel contatore perché al momento non è in corso alcuna operazione di I/O su quell'oggetto.
+
+====
+La pagina Performance Explorer contiene i seguenti componenti:
+
+* *Intervallo di tempo*
++
+Consente di selezionare un intervallo di tempo per i dati dell'oggetto.
+
++
+Puoi scegliere un intervallo predefinito oppure specificare un intervallo di tempo personalizzato.
+
+* *Visualizza e confronta*
++
+Ti consente di selezionare quale tipo di oggetto correlato visualizzare nella griglia.
+
++
+Le opzioni disponibili dipendono dal tipo di oggetto principale e dai dati disponibili. Puoi fare clic sul menu a discesa Visualizza e confronta per selezionare un tipo di oggetto. Il tipo di oggetto selezionato viene visualizzato nell'elenco.
+
+* *Filtraggio*
++
+Ti consente di limitare la quantità di dati che ricevi, in base alle tue preferenze.
+
++
+Puoi creare filtri da applicare ai dati dell'oggetto, ad esempio IOPS superiori a 4. Puoi aggiungere fino a quattro filtri contemporaneamente.
+
+* *Confronto*
++
+Visualizza un elenco degli oggetti che hai selezionato per il confronto con l'oggetto radice.
+
++
+I dati degli oggetti nel riquadro Confronto vengono visualizzati nei grafici dei contatori.
+
+* *Visualizza le statistiche in*
++
+Per volumi e LUN, puoi selezionare se visualizzare le statistiche dopo ogni ciclo di raccolta (impostazione predefinita: 5 minuti) oppure come media oraria. Questa funzionalità ti consente di visualizzare il grafico della latenza a supporto del programma NetApp "Performance Guarantee".
+
+* *Grafici dei contatori*
++
+Visualizza i dati grafici per ciascuna categoria di prestazioni dell'oggetto.
+
++
+In genere, per impostazione predefinita, vedi solo tre o quattro grafici. Il componente "Scegli grafici" ti consente di visualizzare grafici aggiuntivi o di nascondere grafici specifici. Puoi anche scegliere se mostrare o nascondere la cronologia degli eventi.
+
+* *Cronologia degli eventi*
++
+Visualizza gli eventi di prestazioni e stato di integrità che si verificano lungo la timeline selezionata nel componente Intervallo di tempo.
+
+

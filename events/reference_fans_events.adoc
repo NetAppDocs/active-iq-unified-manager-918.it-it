@@ -1,0 +1,34 @@
+---
+permalink: events/reference_fans_events.html 
+sidebar: sidebar 
+keywords: fans, events, impact, area, availability 
+summary: 'Gli eventi relativi alle ventole ti forniscono informazioni sullo stato delle ventole sui nodi del data center, così puoi monitorare potenziali problemi. Gli eventi sono raggruppati per area di impatto e includono il nome dell"evento e del trap, il livello di impatto, il tipo di origine e la gravità.' 
+---
+= Scopri gli eventi delle ventole in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Gli eventi relativi alle ventole ti forniscono informazioni sullo stato delle ventole sui nodi del data center, così puoi monitorare potenziali problemi. Gli eventi sono raggruppati per area di impatto e includono il nome dell'evento e del trap, il livello di impatto, il tipo di origine e la gravità.
+
+
+
+[[impact-area-availability]]
+== Area di impatto: disponibilità
+
+|===
+| Nome dell'evento (Nome della trap) | Livello di impatto | Tipo di origine | Gravità 
+
+
+ a| 
+Una o più ventole guaste(ocumEvtFansOneOrMoreFailed)
+ a| 
+Incidente
+ a| 
+Nodo
+ a| 
+Critico
+
+|===

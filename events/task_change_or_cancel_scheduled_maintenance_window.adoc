@@ -1,0 +1,60 @@
+---
+permalink: events/task_change_or_cancel_scheduled_maintenance_window.html 
+sidebar: sidebar 
+keywords: change, cancel, scheduled, maintenance, window 
+summary: 'Se hai configurato una finestra di manutenzione di Unified Manager per il futuro, puoi modificarne l"orario di inizio e di fine oppure annullarla.' 
+---
+= Modifica o annulla una finestra di manutenzione programmata in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se hai configurato una finestra di manutenzione di Unified Manager per il futuro, puoi modificarne l'orario di inizio e di fine oppure annullarla.
+
+.Prima di iniziare
+Devi disporre del ruolo di Amministratore dell'applicazione o di Amministratore dello storage.
+
+Annullare una finestra di manutenzione attualmente in esecuzione è utile se hai completato la manutenzione del cluster prima dell'ora di fine programmata della finestra di manutenzione e vuoi ricominciare a ricevere eventi e avvisi dal cluster.
+
+.Passaggi
+. Nel riquadro di navigazione a sinistra, fai clic su *Gestione dello storage* > *Configurazione del cluster*.
+. Nella colonna *Modalità di manutenzione* per il cluster:
++
+|===
+| Se vuoi... | Esegui questo passaggio... 
+
+
+ a| 
+Modifica l'intervallo di tempo per una finestra di manutenzione pianificata
+ a| 
+.. Fai clic sul testo "Programmato" accanto al pulsante del cursore.
+.. Modifica la data e l'ora di inizio e/o di fine e fai clic su *Applica*.
+
+
+
+
+ a| 
+Estendere la durata di una finestra di manutenzione attiva
+ a| 
+.. Fai clic sul testo "Active" accanto al pulsante del cursore.
+.. Modifica la data e l'ora di fine e fai clic su *Apply*.
+
+
+
+
+ a| 
+Annulla una finestra di manutenzione pianificata
+ a| 
+Seleziona il pulsante di scorrimento e spostalo verso sinistra.
+
+
+
+ a| 
+Annulla una finestra di manutenzione attiva
+ a| 
+Seleziona il pulsante di scorrimento e spostalo verso sinistra.
+
+|===
+

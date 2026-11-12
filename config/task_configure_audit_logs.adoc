@@ -1,0 +1,24 @@
+---
+permalink: config/task_configure_audit_logs.html 
+sidebar: sidebar 
+keywords: configure, audit logs 
+summary: Puoi usare il pulsante Configure nella sezione Audit Logs per configurare i criteri di rotazione per i file di Audit Log e anche per abilitare la registrazione remota per gli Audit Logs. 
+---
+= Configura i registri di controllo di Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi usare il pulsante *Configure* nella sezione Audit Logs per configurare i criteri di rotazione per i file Audit Log e anche per abilitare la registrazione remota per gli Audit Logs.
+
+Puoi impostare i valori di *MAX FILE SIZE* e *AUDIT LOG RETENTION DAYS* in base alla quantità e alla frequenza dei dati che vuoi archiviare nel sistema. Il valore nel campo *TOTAL AUDIT LOG SIZE* rappresenta la dimensione totale dei dati dell'audit log presenti nel sistema. La policy di rollover è determinata dai valori nei campi *AUDIT LOG RETENTION DAYS*, *MAX FILE SIZE* e *TOTAL AUDIT LOG SIZE*. Quando la dimensione del backup dell'audit log raggiunge il valore configurato in *TOTAL AUDIT LOG SIZE*, il file archiviato per primo viene eliminato. Questo significa che il file meno recente viene eliminato. Tuttavia, la voce del file continua a essere disponibile nel database ed è contrassegnata come "`Rollover Delete`". Il valore di *AUDIT LOG RETENTION DAYS* indica il numero di giorni per cui i file dell'audit log vengono conservati. Qualsiasi file più vecchio del valore impostato in questo campo viene sottoposto a rollover.
+
+.Passaggi
+. Fai clic su *Registri di controllo* > > *Configura*.
+. Inserisci i valori in *DIMENSIONE MASSIMA DEL FILE*, *DIMENSIONE TOTALE DEL LOG DI AUDIT* e *GIORNI DI CONSERVAZIONE DEL LOG DI AUDIT*.
++
+Per abilitare la registrazione remota, seleziona *Abilita registrazione remota*.
+
+

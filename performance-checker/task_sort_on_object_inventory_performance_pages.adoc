@@ -1,0 +1,23 @@
+---
+permalink: performance-checker/task_sort_on_object_inventory_performance_pages.html 
+sidebar: sidebar 
+keywords: sort, object, inventory, performance, pages 
+summary: 'Puoi ordinare tutti i dati nelle pagine Prestazioni dell"inventario degli oggetti in base a qualsiasi colonna, in ordine crescente o decrescente. In questo modo puoi individuare rapidamente i dati dell"inventario degli oggetti, il che è utile quando analizzi le prestazioni o inizi una procedura di risoluzione dei problemi.' 
+---
+= Ordina i dati nelle pagine Prestazioni dell'inventario degli oggetti in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi ordinare tutti i dati nelle pagine Prestazioni dell'inventario degli oggetti in base a qualsiasi colonna, in ordine crescente o decrescente. In questo modo puoi individuare rapidamente i dati dell'inventario degli oggetti, il che è utile quando analizzi le prestazioni o inizi una procedura di risoluzione dei problemi.
+
+La colonna selezionata per l'ordinamento è indicata dal nome dell'intestazione di colonna evidenziato e da un'icona a forma di freccia che indica la direzione di ordinamento a destra del nome. Una freccia verso l'alto indica un ordinamento crescente; una freccia verso il basso indica un ordinamento decrescente. L'ordinamento predefinito è in base a *Status* (criticità dell'evento) in ordine decrescente, con gli eventi di performance più critici elencati per primi.
+
+.Passaggio
+. Puoi fare clic sul nome di una colonna per alternare l'ordinamento della colonna in ordine crescente o decrescente.
++
+Il contenuto della pagina Prestazioni dell'inventario degli oggetti è ordinato in ordine crescente o decrescente, in base alla colonna selezionata.
+
+

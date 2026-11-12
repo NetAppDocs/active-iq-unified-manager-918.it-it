@@ -1,0 +1,47 @@
+---
+permalink: performance-checker/task_display_information_about_performance_event.html 
+sidebar: sidebar 
+keywords: display, information, performance, events 
+summary: Puoi usare la pagina Inventario di gestione degli eventi per visualizzare un elenco di tutti gli eventi delle prestazioni sui cluster monitorati da Unified Manager. Visualizzando queste informazioni, puoi individuare gli eventi più critici e quindi analizzare i dettagli per determinarne la causa. 
+---
+= Visualizza le informazioni sugli eventi relativi alle prestazioni in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi usare la pagina Inventario di gestione degli eventi per visualizzare un elenco di tutti gli eventi delle prestazioni sui cluster monitorati da Unified Manager. Visualizzando queste informazioni, puoi individuare gli eventi più critici e quindi analizzare i dettagli per determinarne la causa.
+
+.Prima di iniziare
+* Devi disporre del ruolo di Operatore, Amministratore di applicazioni o Amministratore di archiviazione.
+
+
+L'elenco degli eventi è ordinato in base all'ora di rilevamento, con gli eventi più recenti elencati per primi. Puoi fare clic sull'intestazione di una colonna per ordinare gli eventi in base a quella colonna. Ad esempio, puoi ordinare in base alla colonna Stato per visualizzare gli eventi in base alla gravità. Se stai cercando un evento specifico o un tipo specifico di evento, puoi utilizzare i meccanismi di filtro e ricerca per affinare l'elenco degli eventi visualizzati.
+
+In questa pagina trovi gli eventi provenienti da tutte le fonti:
+
+* Criterio di soglia delle prestazioni definito dall'utente
+* Politica di soglia delle prestazioni definita dal sistema
+* Soglia di prestazioni dinamica
+
+
+La colonna "Tipo di evento" elenca la fonte dell'evento. Puoi selezionare un evento per visualizzarne i dettagli nella pagina "Dettagli evento".
+
+.Passaggi
+. Nel riquadro di navigazione a sinistra, fai clic su *Event Management*.
+. Dal menu Visualizza, seleziona *Eventi di prestazione attivi*.
++
+La pagina visualizza tutti gli eventi di prestazione Nuovi e Confermati generati negli ultimi 7 giorni.
+
+. Individua l'evento che desideri analizzare e fai clic sul nome dell'evento.
++
+Si apre la pagina dei dettagli dell'evento.
+
++
+[NOTE]
+====
+Puoi anche visualizzare la pagina dei dettagli di un evento facendo clic sul collegamento del nome dell'evento dalla pagina Performance Explorer e da un'e-mail di avviso.
+
+====
+

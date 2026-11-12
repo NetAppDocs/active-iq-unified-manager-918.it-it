@@ -1,0 +1,44 @@
+---
+permalink: reporting/task_create_report_volume_relationships_source_of_failure.html 
+sidebar: sidebar 
+keywords: create, report, group, volume, relationships, source, failure 
+summary: Puoi creare un report che raggruppa i volumi in base al motivo per cui la relazione si trova in uno stato non integro. 
+---
+= Crea un report per raggruppare le relazioni di volume in base alla causa del guasto in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi creare un report che raggruppa i volumi in base al motivo per cui la relazione si trova in uno stato non integro.
+
+.Prima di iniziare
+* Devi disporre del ruolo di Amministratore dell'applicazione o di Amministratore dello storage.
+
+
+Segui questi passaggi per creare una vista personalizzata che raggruppi i volumi in base all'origine dell'errore, quindi pianifica la generazione di un report per tale vista.
+
+.Passaggi
+. Nel riquadro di navigazione a sinistra, fai clic su *Archiviazione* > *Volumi*.
+. Nel menu Visualizza, seleziona *Relazione* > *Tutte le relazioni*.
+. Seleziona *Mostra/Nascondi* per assicurarti che nella vista siano visualizzate le colonne "`Relationship Health`" e "`Unhealthy Reason`".
++
+Aggiungi o rimuovi altre colonne per creare una visualizzazione utile al tuo report.
+
+. Trascina le colonne "`Relationship Health`" e "`Unhealthy Reason`" vicino alla colonna "`State`".
+. Fai clic sull'icona del filtro, aggiungi il seguente filtro e poi fai clic su *Applica filtro*:
++
+** Lo stato di integrità della relazione è negativo
+
+
+. Fai clic sull'intestazione della colonna "`Motivo di non integrità`" per raggruppare le relazioni del volume in base all'origine dell'errore.
+. Salva la vista con un nome specifico che rifletta ciò che mostra, ad esempio "`Vol relationships by failure`".
+. Nella pagina dell'inventario, fai clic sul pulsante *Report programmati*.
+. Inserisci un nome per la pianificazione del report e completa gli altri campi del report, quindi fai clic sul segno di spunta (image:../media/blue_check.gif[""]) alla fine della riga.
++
+Il report viene inviato immediatamente a scopo di test. Successivamente, il report viene generato e inviato via email ai destinatari indicati con la frequenza specificata.
+
+
+
+In base ai risultati riportati nel report, puoi analizzare l'origine e l'impatto di ciascun tipo di guasto.

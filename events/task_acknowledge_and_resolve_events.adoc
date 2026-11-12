@@ -1,0 +1,61 @@
+---
+permalink: events/task_acknowledge_and_resolve_events.html 
+sidebar: sidebar 
+keywords: acknowledge, resolve, events 
+summary: 'Prima di iniziare a lavorare sul problema che ha generato l"evento, dovresti confermarne la ricezione in modo da non continuare a ricevere notifiche di avviso ripetute. Dopo aver intrapreso un"azione correttiva per un determinato evento, dovresti contrassegnarlo come risolto.' 
+---
+= Riconosci e risolvi gli eventi in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Prima di iniziare a lavorare sul problema che ha generato l'evento, dovresti confermarne la ricezione in modo da non continuare a ricevere notifiche di avviso ripetute. Dopo aver intrapreso un'azione correttiva per un determinato evento, dovresti contrassegnarlo come risolto.
+
+.Prima di iniziare
+Devi disporre del ruolo di Operatore, Amministratore di applicazioni o Amministratore di archiviazione.
+
+Puoi confermare e risolvere più eventi contemporaneamente.
+
+[NOTE]
+====
+Non puoi confermare gli eventi Information.
+
+====
+.Passaggi
+. Nel riquadro di navigazione a sinistra, fai clic su *Event Management*.
+. Dall'elenco degli eventi, esegui le seguenti azioni per riconoscere gli eventi:
++
+|===
+| Se vuoi... | Fai così... 
+
+
+ a| 
+Riconoscere e contrassegnare un singolo evento come risolto
+ a| 
+.. Fai clic sul nome dell'evento.
+.. Dalla pagina dei dettagli dell'evento, determina la causa dell'evento.
+.. Fai clic su *Acknowledge*.
+.. Adotta le opportune misure correttive.
+.. Fai clic su *Segna come risolto*.
+
+
+
+
+ a| 
+Riconosci e contrassegna più eventi come risolti
+ a| 
+.. Determina la causa degli eventi consultando la pagina dei dettagli dell'evento corrispondente.
+.. Seleziona gli eventi.
+.. Fai clic su *Acknowledge*.
+.. Intraprendi le opportune azioni correttive.
+.. Fai clic su *Segna come risolto*.
+
+
+|===
++
+Dopo aver contrassegnato l'evento come risolto, l'evento viene spostato nell'elenco degli eventi risolti.
+
+. *Facoltativo*: nell'area *Notes and Updates*, aggiungi una nota su come hai gestito l'evento, quindi fai clic su *Post*.
+

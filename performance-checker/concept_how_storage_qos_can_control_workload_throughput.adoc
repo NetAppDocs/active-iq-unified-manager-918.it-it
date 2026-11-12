@@ -1,0 +1,35 @@
+---
+permalink: performance-checker/concept_how_storage_qos_can_control_workload_throughput.html 
+sidebar: sidebar 
+keywords: storage, qos, control, workload, throughput 
+summary: 'Puoi creare un gruppo di criteri Quality of Service (QoS) per controllare il limite di I/O al secondo (IOPS) o di throughput (MB/s) per i carichi di lavoro che contiene. Se i carichi di lavoro si trovano in un gruppo di criteri senza un limite impostato, ad esempio il gruppo di criteri predefinito, oppure se il limite impostato non soddisfa le tue esigenze, puoi aumentare il limite o spostare i carichi di lavoro in un gruppo di criteri nuovo o esistente con il limite desiderato.' 
+---
+= Controlla il throughput del carico di lavoro con la QoS dello storage in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi creare un gruppo di criteri Quality of Service (QoS) per controllare il limite di I/O al secondo (IOPS) o di throughput (MB/s) per i carichi di lavoro che contiene. Se i carichi di lavoro si trovano in un gruppo di criteri senza un limite impostato, ad esempio il gruppo di criteri predefinito, oppure se il limite impostato non soddisfa le tue esigenze, puoi aumentare il limite o spostare i carichi di lavoro in un gruppo di criteri nuovo o esistente con il limite desiderato.
+
+I gruppi di criteri QoS "tradizionali" possono essere assegnati a singoli carichi di lavoro, ad esempio un singolo volume o LUN. In questo caso il carico di lavoro può utilizzare l'intero limite di throughput. I gruppi di criteri QoS possono anche essere assegnati a più carichi di lavoro; in tal caso il limite di throughput è "condiviso" tra i carichi di lavoro. Ad esempio, un limite QoS di 9.000 IOPS assegnato a tre carichi di lavoro impedirebbe al totale degli IOPS di superare 9.000 IOPS.
+
+I gruppi di criteri QoS "`Adaptive`" possono essere assegnati anche a singoli carichi di lavoro o a più carichi di lavoro. Tuttavia, anche quando sono assegnati a più carichi di lavoro, ogni carico di lavoro ottiene il limite di throughput completo invece di condividere il valore di throughput con altri carichi di lavoro. Inoltre, i criteri QoS adattivi regolano automaticamente l'impostazione del throughput in base alle dimensioni del volume, per ciascun carico di lavoro, mantenendo così il rapporto tra IOPS e terabyte al variare delle dimensioni del volume. Ad esempio, se il picco è impostato su 5.000 IOPS/TB in un criterio QoS adattivo, un volume da 10 TB avrà un throughput massimo di 50.000 IOPS. Se il volume viene ridimensionato successivamente a 20 TB, il QoS adattivo regola il massimo a 100.000 IOPS.
+
+A partire da ONTAP 9.5 puoi includere la dimensione del blocco nella definizione di una policy QoS adattiva. Questo converte di fatto la policy da una soglia IOPS/TB a una soglia MB/s, utile nei casi in cui i carichi di lavoro utilizzano blocchi di dimensioni molto grandi e, di conseguenza, una percentuale elevata del throughput.
+
+Per le policy QoS di gruppo condivise, quando gli IOPS o i MB/s di tutti i carichi di lavoro in un gruppo di policy superano il limite impostato, il gruppo di policy rallenta i carichi di lavoro per limitarne l'attività, il che può ridurre le prestazioni di tutti i carichi di lavoro nel gruppo di policy. Se la limitazione del gruppo di policy genera un evento di prestazioni dinamico, la descrizione dell'evento visualizza il nome del gruppo di policy coinvolto.
+
+Nella vista Prestazioni: Tutti i volumi, puoi ordinare i volumi interessati in base a IOPS e MB/s per vedere quali carichi di lavoro hanno l'utilizzo più elevato e potrebbero aver contribuito all'evento. Nella pagina Performance/Volumes Explorer, puoi selezionare altri volumi o LUN sul volume per confrontarli con l'utilizzo del throughput del carico di lavoro interessato in IOPS o MB/s.
+
+Assegnando i carichi di lavoro che utilizzano eccessivamente le risorse del nodo a un gruppo di criteri più restrittivo, il gruppo di criteri limita l'attività dei carichi di lavoro, riducendo così l'utilizzo delle risorse su quel nodo. Tuttavia, se vuoi che il carico di lavoro possa utilizzare una maggiore quantità di risorse del nodo, puoi aumentare il valore del gruppo di criteri.
+
+Puoi utilizzare System Manager, i comandi ONTAP o Unified Manager Performance Service Levels per gestire i gruppi di criteri, incluse le seguenti attività:
+
+* Creazione di un gruppo di policy
+* Aggiunta o rimozione di carichi di lavoro in un gruppo di criteri
+* Spostamento di un carico di lavoro tra gruppi di policy
+* Modifica del limite di throughput di un gruppo di criteri
+* Spostamento di un carico di lavoro su un aggregato e/o nodo diverso
+

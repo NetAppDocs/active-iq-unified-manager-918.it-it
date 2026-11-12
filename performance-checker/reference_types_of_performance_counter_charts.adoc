@@ -1,0 +1,138 @@
+---
+permalink: performance-checker/reference_types_of_performance_counter_charts.html 
+sidebar: sidebar 
+keywords: types, performance, counter, charts 
+summary: 'Sono disponibili grafici standard delle prestazioni che mostrano i valori dei contatori per l"oggetto di storage selezionato. Ciascuno dei grafici dei contatori Breakdown mostra i valori totali suddivisi in categorie di lettura, scrittura e altre. Inoltre, alcuni grafici dei contatori Breakdown mostrano ulteriori dettagli quando il grafico viene visualizzato nella vista Zoom.' 
+---
+= Comprendi le tipologie di grafici dei contatori di performance in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sono disponibili grafici standard delle prestazioni che mostrano i valori dei contatori per l'oggetto di storage selezionato. Ciascuno dei grafici dei contatori Breakdown mostra i valori totali suddivisi in categorie di lettura, scrittura e altre. Inoltre, alcuni grafici dei contatori Breakdown mostrano ulteriori dettagli quando il grafico viene visualizzato nella vista Zoom.
+
+La tabella seguente mostra i grafici dei contatori di prestazioni disponibili.
+
+|===
+| Grafici disponibili | Descrizione del grafico 
+
+
+ a| 
+Eventi
+ a| 
+Visualizza eventi critici, di errore, di avviso e informativi in correlazione con i grafici statistici per l'oggetto radice. Gli eventi relativi allo stato di salute vengono visualizzati in aggiunta agli eventi relativi alle prestazioni per fornire un quadro completo dei motivi per cui le prestazioni potrebbero essere influenzate.
+
+
+
+ a| 
+Latenza - Totale
+ a| 
+Numero di millisecondi necessari per rispondere alle richieste dell'applicazione. Tieni presente che i valori medi di latenza sono ponderati in base alle operazioni di I/O.
+
+
+
+ a| 
+Latenza - Scomposizione
+ a| 
+Le stesse informazioni visualizzate in Latenza totale, ma con i dati sulle prestazioni suddivisi in latenza di lettura, scrittura e altre latenze. Questa opzione del grafico si applica solo quando l'oggetto selezionato è un SVM, un nodo, un aggregato, un volume, un LUN o un namespace.
+
+
+
+ a| 
+Latenza - Componenti del cluster
+ a| 
+Le stesse informazioni visualizzate in Latenza totale, ma con i dati sulle prestazioni suddivisi in latenza per componente del cluster. Questa opzione del grafico si applica solo quando l'oggetto selezionato è un volume.
+
+
+
+ a| 
+IOPS - Totale
+ a| 
+Numero di operazioni di input/output elaborate al secondo. Quando viene visualizzato per un nodo, selezionando "`Total`" vengono visualizzati gli IOPS per i dati che transitano attraverso questo nodo e che possono risiedere sul nodo locale o remoto, mentre selezionando "`Total (Local)`" vengono visualizzati gli IOPS per i dati che risiedono solo nel nodo corrente.
+
+
+
+ a| 
+IOPS - Ripartizione
+ a| 
+Le stesse informazioni visualizzate in IOPS totali, ma con i dati sulle prestazioni suddivisi in IOPS di lettura, scrittura e altri. Questa opzione del grafico si applica solo quando l'oggetto selezionato è un SVM, un nodo, un aggregato, un volume, un LUN o un namespace.
+
+Quando viene visualizzato in modalità Zoom, il grafico dei volumi mostra i valori minimi e massimi di throughput QoS, se configurati in ONTAP.
+
+Quando viene visualizzato per un nodo, selezionando "`Breakdown`" viene visualizzato il dettaglio degli IOPS per i dati che transitano attraverso questo nodo e che possono risiedere sul nodo locale o remoto, mentre selezionando "`Breakdown (Local)`" viene visualizzato il dettaglio degli IOPS per i dati che risiedono solo sul nodo corrente.
+
+
+
+ a| 
+IOPS - Protocolli
+ a| 
+Le stesse informazioni visualizzate in IOPS Total, ma i dati sulle prestazioni sono separati in grafici individuali per il traffico dei protocolli CIFS, NFS, FCP, NVMe e iSCSI. Questa opzione del grafico si applica solo quando l'oggetto selezionato è un SVM.
+
+
+
+ a| 
+IOPS/TB - Totale
+ a| 
+Numero di operazioni di input/output elaborate al secondo in base allo spazio totale utilizzato dal carico di lavoro, in terabyte. Chiamato anche densità I/O, questo contatore misura quante prestazioni possono essere fornite da una determinata quantità di capacità di archiviazione. Quando viene visualizzato nella vista Zoom, il grafico dei volumi mostra i valori di throughput QoS previsti e di picco, se configurati in ONTAP.
+
+Questa opzione del grafico si applica solo quando l'oggetto selezionato è un volume.
+
+
+
+ a| 
+MB/s - Totale
+ a| 
+Numero di megabyte di dati trasferiti da e verso l'oggetto al secondo.
+
+
+
+ a| 
+MB/s - Suddivisione
+ a| 
+Le stesse informazioni visualizzate nel grafico MB/s, ma con i dati di throughput separati in letture del disco, letture della Flash Cache, scritture e altro. Quando viene visualizzato nella vista Zoom, il grafico dei volumi mostra i valori massimi di throughput QoS, se configurati in ONTAP.
+
+Questa opzione del grafico si applica solo quando l'oggetto selezionato è un SVM, un nodo, un aggregato, un volume, un LUN o un namespace.
+
+[NOTE]
+====
+I dati di Flash Cache vengono visualizzati solo per i nodi e solo se nel nodo è installato un modulo Flash Cache.
+
+====
+
+
+ a| 
+Capacità prestazionale utilizzata - totale
+ a| 
+Percentuale della capacità prestazionale utilizzata dal nodo o dall'aggregato.
+
+
+
+ a| 
+Capacità prestazionale utilizzata - Dettaglio
+ a| 
+Capacità prestazionale utilizzata, con dati separati in protocolli utente e processi di sistema in background. Inoltre, viene mostrata la quantità di capacità prestazionale libera.
+
+
+
+ a| 
+IOPS disponibili - Totale
+ a| 
+Numero di operazioni di input/output al secondo attualmente disponibili (libere) su questo oggetto. Questo numero si ottiene sottraendo le IOPS attualmente utilizzate dal totale delle IOPS che Unified Manager calcola che l'oggetto possa eseguire. Questa opzione del grafico si applica solo quando l'oggetto selezionato è un nodo o un aggregato.
+
+
+
+ a| 
+Utilizzo - Totale
+ a| 
+Percentuale di risorse disponibili dell'oggetto in uso. L'utilizzo indica l'utilizzo del nodo per i nodi, l'utilizzo del disco per gli aggregati e l'utilizzo della larghezza di banda per le porte. Questa opzione del grafico si applica solo quando l'oggetto selezionato è un nodo, un aggregato o una porta.
+
+
+
+ a| 
+Rapporto di cache miss - Totale
+ a| 
+Percentuale di richieste di lettura provenienti da applicazioni client che vengono restituite dal disco anziché dalla cache. Questa opzione del grafico si applica solo quando l'oggetto selezionato è un volume.
+
+|===

@@ -1,0 +1,63 @@
+---
+permalink: performance-checker/task_respond_to_dynamic_performance_event.html 
+sidebar: sidebar 
+keywords: dynamic, performance, qos, policy, group, throttling 
+summary: 'Puoi usare Unified Manager per analizzare un evento di prestazioni causato da un gruppo di criteri Quality of Service (QoS) che limita il throughput del carico di lavoro (MB/s). La limitazione ha aumentato i tempi di risposta (latenza) dei carichi di lavoro dei volumi nel gruppo di criteri. Puoi usare le informazioni sull"evento per determinare se sono necessari nuovi limiti per i gruppi di criteri per arrestare la limitazione.' 
+---
+= Rispondi a un evento di limitazione dinamica della QoS in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi usare Unified Manager per analizzare un evento di prestazioni causato da un gruppo di criteri Quality of Service (QoS) che limita il throughput del carico di lavoro (MB/s). La limitazione ha aumentato i tempi di risposta (latenza) dei carichi di lavoro dei volumi nel gruppo di criteri. Puoi usare le informazioni sull'evento per determinare se sono necessari nuovi limiti per i gruppi di criteri per arrestare la limitazione.
+
+.Prima di iniziare
+* Devi disporre del ruolo di Operatore, Amministratore di applicazioni o Amministratore di archiviazione.
+* Devono esserci eventi delle prestazioni nuovi, confermati o obsoleti.
+
+
+.Passaggi
+. Visualizza la pagina *Dettagli dell'evento* per vedere le informazioni sull'evento.
+. Leggi la *Descrizione*, che mostra il nome dei carichi di lavoro interessati dalla limitazione.
++
+[NOTE]
+====
+La descrizione può mostrare lo stesso carico di lavoro sia per la vittima che per l'aggressore, perché la limitazione rende il carico di lavoro vittima di se stesso.
+
+====
+. Annota il nome del volume, utilizzando un'applicazione come un editor di testo.
++
+Puoi cercare il volume per nome per individuarlo in seguito.
+
+. Nei grafici di Latenza del carico di lavoro e Utilizzo del carico di lavoro, seleziona *Bully Workloads*.
+. Passa il cursore sui grafici per visualizzare i principali carichi di lavoro definiti dall'utente che influiscono sul gruppo di criteri.
++
+Il carico di lavoro in cima all'elenco presenta la deviazione più elevata e ha causato la limitazione delle prestazioni. L'attività rappresenta la % del limite del gruppo di criteri utilizzato da ciascun carico di lavoro.
+
+. Nell'area *Azioni suggerite*, fai clic sul pulsante *Analizza carico di lavoro* per il carico di lavoro in alto.
+. Nella pagina Analisi del carico di lavoro, imposta il grafico Latenza per visualizzare tutti i componenti del cluster e il grafico Throughput per visualizzare la ripartizione.
++
+I grafici di ripartizione vengono mostrati sotto il grafico della latenza e quello degli IOPS.
+
+. Confronta i limiti QoS nel grafico *Latenza* per vedere in che misura la limitazione della velocità ha influito sulla latenza al momento dell'evento.
++
+Il gruppo di criteri QoS ha un throughput massimo di 1.000 operazioni al secondo (op/sec), che i carichi di lavoro al suo interno non possono superare complessivamente. Al momento dell'evento, i carichi di lavoro nel gruppo di criteri avevano un throughput combinato superiore a 1.200 op/sec, causando la limitazione dell'attività del gruppo di criteri a 1.000 op/sec.
+
+. Confronta i valori di *Latenza letture/scritture* con i valori di *Letture/scritture/altro*.
++
+Entrambi i grafici mostrano un numero elevato di richieste di lettura con latenza elevata, mentre il numero di richieste e la latenza per le richieste di scrittura sono bassi. Questi valori ti aiutano a determinare se un throughput elevato o un numero elevato di operazioni ha aumentato la latenza. Puoi usare questi valori per decidere se impostare un limite del gruppo di criteri sul throughput o sulle operazioni.
+
+. Usa ONTAP System Manager per aumentare il limite corrente del gruppo di criteri a 1.300 op/sec.
+. Dopo un giorno, torna a Unified Manager e inserisci il carico di lavoro registrato al passaggio 3 nella pagina *Analisi del carico di lavoro*.
+. Seleziona il grafico di ripartizione del throughput.
++
+Viene visualizzato il grafico Letture/scritture/altro.
+
+. Nella parte superiore della pagina, posiziona il cursore sull'icona dell'evento di modifica (image:../media/opm_change_icon.gif["Cambia l'icona dell'evento"]) per la modifica del limite del gruppo di criteri.
+. Confronta il grafico *Letture/scritture/altro* con il grafico *Latenza*.
++
+Le richieste di lettura e scrittura sono le stesse, ma il throttling è terminato e la latenza è diminuita.
+
+

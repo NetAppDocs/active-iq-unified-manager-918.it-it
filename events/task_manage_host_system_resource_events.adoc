@@ -1,0 +1,42 @@
+---
+permalink: events/task_manage_host_system_resource_events.html 
+sidebar: sidebar 
+keywords: manage, host, system, resource, events 
+summary: 'Unified Manager include un servizio che monitora i problemi relativi alle risorse sul sistema host in cui Unified Manager è installato. Problemi come la mancanza di spazio su disco o la mancanza di memoria sul sistema host possono attivare eventi della stazione di gestione, visualizzati come messaggi a banner nella parte superiore dell"interfaccia utente.' 
+---
+= Gestisci gli eventi delle risorse del sistema host in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager include un servizio che monitora i problemi relativi alle risorse sul sistema host in cui Unified Manager è installato. Problemi come la mancanza di spazio su disco o la mancanza di memoria sul sistema host possono attivare eventi della stazione di gestione, visualizzati come messaggi a banner nella parte superiore dell'interfaccia utente.
+
+Gli eventi della stazione di gestione indicano un problema con il sistema host su cui è installato Unified Manager. Esempi di problemi della stazione di gestione includono spazio su disco insufficiente sul sistema host; la mancata esecuzione da parte di Unified Manager di un normale ciclo di raccolta di dati; e il mancato o ritardato completamento dell'analisi delle statistiche perché è stato avviato il successivo polling di raccolta.
+
+A differenza di tutti gli altri messaggi di evento di Unified Manager, questi specifici eventi di avviso e critici della stazione di gestione vengono visualizzati come messaggi banner.
+
+.Passaggio
+. Per visualizzare le informazioni sugli eventi della stazione di gestione, esegui queste operazioni:
++
+|===
+| Se vuoi... | Fai così... 
+
+
+ a| 
+Visualizza i dettagli dell'evento
+ a| 
+Fai clic sul banner dell'evento per visualizzare la pagina dei dettagli dell'evento, che include le soluzioni suggerite per il problema.
+
+
+
+ a| 
+Visualizza tutti gli eventi della stazione di gestione
+ a| 
+.. Nel riquadro di navigazione a sinistra, fai clic su *Event Management*.
+.. Nel riquadro Filters della pagina di inventario di Event Management, fai clic sulla casella per Management Station nell'elenco Source Type.
+
+
+|===
+

@@ -1,0 +1,28 @@
+---
+permalink: health-checker/task_view_all_security_events.html 
+sidebar: sidebar 
+keywords: view, active, security events 
+summary: Puoi visualizzare tutti gli eventi di sicurezza attivi e assegnarli a un utente in grado di risolvere il problema. Inoltre, se non vuoi ricevere determinati eventi di sicurezza, questo elenco può aiutarti a identificare quelli che vuoi disabilitare. 
+---
+= Visualizza tutti gli eventi di sicurezza attivi in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi visualizzare tutti gli eventi di sicurezza attivi e assegnarli a un utente in grado di risolvere il problema. Inoltre, se non vuoi ricevere determinati eventi di sicurezza, questo elenco può aiutarti a identificare quelli che vuoi disabilitare.
+
+.Prima di iniziare
+Devi disporre del ruolo di Operatore, Amministratore di applicazioni o Amministratore di archiviazione.
+
+.Passaggi
+. Nel riquadro di navigazione a sinistra, fai clic su *Event Management*.
++
+Per impostazione predefinita, nella pagina dell'inventario di Event Management vengono mostrati gli eventi nuovi e confermati.
+
+. Dal menu Visualizza, seleziona *Eventi di sicurezza attivi*.
++
+La pagina visualizza tutti gli eventi di sicurezza nuovi e riconosciuti generati negli ultimi 7 giorni.
+
+

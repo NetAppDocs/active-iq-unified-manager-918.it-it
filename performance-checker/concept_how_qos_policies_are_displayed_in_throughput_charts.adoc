@@ -1,0 +1,64 @@
+---
+permalink: performance-checker/concept_how_qos_policies_are_displayed_in_throughput_charts.html 
+sidebar: sidebar 
+keywords: different, types, qos, policies, display, throughput, charts 
+summary: 'Puoi visualizzare le impostazioni dei criteri di qualità del servizio (QoS) definiti da ONTAP e applicati a un volume o a una LUN nei grafici IOPS, IOPS/TB e MB/s di Performance Explorer e Workload Analysis. Le informazioni visualizzate nei grafici variano a seconda del tipo di criterio QoS applicato al carico di lavoro.' 
+---
+= Visualizza le policy QoS nei grafici di throughput con Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi visualizzare le impostazioni dei criteri di qualità del servizio (QoS) definiti da ONTAP e applicati a un volume o a una LUN nei grafici IOPS, IOPS/TB e MB/s di Performance Explorer e Workload Analysis. Le informazioni visualizzate nei grafici variano a seconda del tipo di criterio QoS applicato al carico di lavoro.
+
+Un'impostazione di throughput massimo (o "`peak`") definisce il throughput massimo che il carico di lavoro può consumare, limitando così l'impatto sui carichi di lavoro concorrenti per le risorse di sistema. Un'impostazione di throughput minimo (o "`expected`") definisce il throughput minimo che deve essere disponibile per il carico di lavoro, in modo che un carico di lavoro critico soddisfi gli obiettivi minimi di throughput indipendentemente dalla domanda dei carichi di lavoro concorrenti.
+
+Le policy QoS condivise e non condivise per IOPS e MB/s utilizzano i termini "`minimum`" e "`maximum`" per definire il limite inferiore e superiore. Le policy QoS adattive per IOPS/TB, introdotte in ONTAP 9.3, utilizzano i termini "`expected`" e "`peak`" per definire il limite inferiore e superiore.
+
+Sebbene ONTAP ti consenta di creare questi due tipi di criteri QoS, a seconda di come vengono applicati ai carichi di lavoro, esistono tre modi in cui il criterio QoS verrà visualizzato nei grafici delle prestazioni.
+
+|===
+| Tipo di policy | Funzionalità | Indicatore nell'interfaccia di Unified Manager 
+
+
+ a| 
+Criterio QoS condiviso assegnato a un singolo carico di lavoro, oppure criterio QoS non condiviso assegnato a un singolo carico di lavoro o a più carichi di lavoro
+ a| 
+Ogni carico di lavoro può utilizzare l'impostazione di throughput specificata
+ a| 
+Visualizza "`(QoS)`"
+
+
+
+ a| 
+Criterio QoS condiviso assegnato a più carichi di lavoro
+ a| 
+Tutti i carichi di lavoro condividono l'impostazione di throughput specificata
+ a| 
+Visualizza "`(QoS Shared)`"
+
+
+
+ a| 
+Criterio QoS adattivo assegnato a un singolo carico di lavoro o a più carichi di lavoro
+ a| 
+Ogni carico di lavoro può utilizzare l'impostazione di throughput specificata
+ a| 
+Visualizza "`(QoS Adaptive)`"
+
+|===
+La figura seguente mostra un esempio di come vengono visualizzate le tre opzioni nei grafici dei contatori.
+
+image::../media/3_qos_policy_charts.gif[Uno screenshot dell'interfaccia utente che mostra un esempio di come vengono mostrate le tre opzioni nei grafici a contatore.]
+
+Quando una normale policy QoS definita in IOPS compare nel grafico IOPS/TB per un carico di lavoro, ONTAP converte il valore IOPS in un valore IOPS/TB e Unified Manager visualizza tale policy nel grafico IOPS/TB insieme al testo "`QoS, defined in IOPS`".
+
+Quando una policy QoS adattiva definita in IOPS/TB appare nel grafico IOPS per un workload, ONTAP converte il valore IOPS/TB in un valore IOPS e Unified Manager visualizza tale policy nel grafico IOPS insieme al testo "`QoS Adaptive - Used, defined in IOPS/TB`" o "`QoS Adaptive - Allocated, defined in IOPS/TB`" a seconda di come è configurata l'impostazione di allocazione del picco IOPS. Quando l'impostazione di allocazione è impostata su "`allocated-space`", il picco IOPS viene calcolato in base alla dimensione del volume. Quando l'impostazione di allocazione è impostata su "`used-space`", il picco IOPS viene calcolato in base alla quantità di dati memorizzati nel volume, tenendo conto delle efficienze dello storage.
+
+[NOTE]
+====
+Il grafico IOPS/TB visualizza i dati sulle prestazioni solo quando la capacità logica utilizzata dal volume è maggiore o uguale a 128 GB. Nel grafico vengono visualizzate delle interruzioni quando la capacità utilizzata scende al di sotto di 128 GB durante l'intervallo di tempo selezionato.
+
+====

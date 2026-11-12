@@ -1,0 +1,27 @@
+---
+permalink: config/task_disable_nested_groups_from_remote_authentication.html 
+sidebar: sidebar 
+keywords: disable, nested groups, remote, authentication 
+summary: 'Se hai abilitato l"autenticazione remota, puoi disabilitare l"autenticazione dei gruppi nidificati in modo che solo i singoli utenti, e non i membri dei gruppi, possano autenticarsi in remoto a Unified Manager. Puoi disabilitare i gruppi nidificati quando vuoi migliorare i tempi di risposta dell"autenticazione di Active Directory.' 
+---
+= Disabilita i gruppi nidificati dall'autenticazione remota in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se hai abilitato l'autenticazione remota, puoi disabilitare l'autenticazione dei gruppi nidificati in modo che solo i singoli utenti, e non i membri dei gruppi, possano autenticarsi in remoto a Unified Manager. Puoi disabilitare i gruppi nidificati quando vuoi migliorare i tempi di risposta dell'autenticazione di Active Directory.
+
+.Prima di iniziare
+* Devi avere il ruolo di Amministratore dell'applicazione.
+* La disabilitazione dei gruppi nidificati si applica solo quando utilizzi Active Directory.
+
+
+Disabilitare il supporto per i gruppi nidificati in Unified Manager potrebbe ridurre il tempo di autenticazione. Se il supporto per i gruppi nidificati è disabilitato e aggiungi un gruppo remoto a Unified Manager, i singoli utenti devono essere membri del gruppo remoto per autenticarsi in Unified Manager.
+
+.Passaggi
+. Nel riquadro di navigazione a sinistra, fai clic su *Generale* > *Autenticazione remota*.
+. Seleziona la casella *Disabilita la ricerca di gruppi nidificati*.
+. Fare clic su *Save*.
+

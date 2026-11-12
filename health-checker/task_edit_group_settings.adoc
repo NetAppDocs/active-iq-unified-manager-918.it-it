@@ -1,0 +1,26 @@
+---
+permalink: health-checker/task_edit_group_settings.html 
+sidebar: sidebar 
+keywords: edit, groups 
+summary: Puoi modificare il nome e la descrizione di un gruppo che hai creato in Unified Manager. 
+---
+= Modifica i gruppi in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi modificare il nome e la descrizione di un gruppo che hai creato in Unified Manager.
+
+.Prima di iniziare
+Devi disporre del ruolo di Amministratore dell'applicazione o di Amministratore dello storage.
+
+Quando modifichi un gruppo per aggiornarne il nome, devi specificare un nome univoco; non puoi utilizzare un nome di gruppo già esistente.
+
+.Passaggi
+. Nel riquadro di navigazione a sinistra, fai clic su *Gestione dello storage* > *Gruppi*.
+. Nella scheda *Gruppi*, seleziona il gruppo che vuoi modificare, quindi fai clic su *Modifica*.
+. Nella finestra di dialogo *Modifica gruppo*, modifica il nome, la descrizione o entrambi per il gruppo.
+. Fare clic su *Save*.
+

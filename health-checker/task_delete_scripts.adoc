@@ -1,0 +1,25 @@
+---
+permalink: health-checker/task_delete_scripts.html 
+sidebar: sidebar 
+keywords: delete, scripts 
+summary: Puoi eliminare uno script da Unified Manager quando lo script non è più necessario o valido. 
+---
+= Elimina gli script in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi eliminare uno script da Unified Manager quando lo script non è più necessario o valido.
+
+.Prima di iniziare
+* Devi disporre del ruolo di Amministratore dell'applicazione o di Amministratore dello storage.
+* Lo script non deve essere associato a un avviso.
+
+
+.Passaggi
+. Nel riquadro di navigazione a sinistra, fai clic su *Storage Management* > *Scripts*.
+. Nella pagina *Script*, seleziona lo script che vuoi eliminare, quindi fai clic su *Elimina*.
+. Nella finestra di dialogo *Avviso*, conferma l'eliminazione facendo clic su *Sì*.
+

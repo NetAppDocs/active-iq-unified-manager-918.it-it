@@ -1,0 +1,35 @@
+---
+permalink: performance-checker/concept_search_for_storage_objects.html 
+sidebar: sidebar 
+keywords: search, storage, objects 
+summary: 'Per accedere rapidamente a un oggetto specifico, puoi utilizzare il campo "Cerca in tutti gli oggetti di archiviazione" nella parte superiore della barra dei menu. Questo metodo di ricerca globale in tutti gli oggetti ti consente di individuare rapidamente oggetti specifici in base al tipo. I risultati della ricerca sono ordinati per tipo di oggetto di archiviazione e puoi filtrarli utilizzando il menu a discesa. Una ricerca valida deve contenere almeno tre caratteri.' 
+---
+= Cerca oggetti storage in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Per accedere rapidamente a un oggetto specifico, puoi utilizzare il campo *Cerca in tutti gli oggetti di archiviazione* nella parte superiore della barra dei menu. Questo metodo di ricerca globale in tutti gli oggetti ti consente di individuare rapidamente oggetti specifici in base al tipo. I risultati della ricerca sono ordinati per tipo di oggetto di archiviazione e puoi filtrarli utilizzando il menu a discesa. Una ricerca valida deve contenere almeno tre caratteri.
+
+La ricerca globale visualizza il numero totale di risultati, ma sono accessibili solo i primi 25 risultati di ricerca. Per questo motivo, la funzionalità di ricerca globale può essere considerata uno strumento rapido per trovare elementi specifici se conosci già gli elementi che vuoi individuare velocemente. Per ottenere i risultati di ricerca completi, puoi usare la ricerca nelle pagine dell'inventario degli oggetti e la relativa funzionalità di filtro.
+
+Puoi fare clic sul menu a discesa e selezionare *Tutti* per eseguire contemporaneamente la ricerca in tutti gli oggetti e gli eventi. In alternativa, puoi fare clic sul menu a discesa per specificare il tipo di oggetto. Digita almeno tre caratteri del nome dell'oggetto o dell'evento nel campo *Cerca in tutti gli oggetti di storage* e quindi premi *Invio* per visualizzare i risultati della ricerca, ad esempio:
+
+* Cluster: nomi dei cluster
+* Nodi: nomi dei nodi
+* Aggregati: nomi degli aggregati
+* SVM: nomi delle SVM
+* Volumi: nomi dei volumi
+* LUNs: percorsi LUN
+
+
+image::../media/opm_search_field_jpg.gif[Campo di ricerca in Unified Manager]
+
+[NOTE]
+====
+Non puoi cercare i LIF e le porte nella barra di ricerca globale.
+
+====
+In questo esempio, nel menu a tendina hai selezionato il tipo di oggetto Volume. Digitando "`vol`" nel campo *Cerca tutti gli oggetti di archiviazione* viene visualizzato un elenco di tutti i volumi i cui nomi contengono questi caratteri. Per le ricerche di oggetti, puoi fare clic su qualsiasi risultato della ricerca per accedere alla pagina Performance Explorer di quell'oggetto. Per le ricerche di eventi, facendo clic su un elemento nei risultati della ricerca accedi alla pagina Event Details.

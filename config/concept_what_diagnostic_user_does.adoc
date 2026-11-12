@@ -1,0 +1,16 @@
+---
+permalink: config/concept_what_diagnostic_user_does.html 
+sidebar: sidebar 
+keywords: diagnostic, user, capabilities 
+summary: 'Lo scopo dell"accesso diagnostico è consentire al supporto tecnico di assisterti nella risoluzione dei problemi e dovresti usarlo solo quando te lo indica il supporto tecnico.' 
+---
+= Funzionalità utente di diagnostica in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Lo scopo dell'accesso diagnostico è consentire al supporto tecnico di assisterti nella risoluzione dei problemi e dovresti usarlo solo quando te lo indica il supporto tecnico.
+
+L'utente con privilegi di diagnostica può eseguire comandi a livello di sistema operativo su indicazione del supporto tecnico, per la risoluzione dei problemi.

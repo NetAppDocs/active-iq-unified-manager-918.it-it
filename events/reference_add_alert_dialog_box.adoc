@@ -1,0 +1,135 @@
+---
+permalink: events/reference_add_alert_dialog_box.html 
+sidebar: sidebar 
+keywords: add, alert, dialog, box, name, resources, events, actions, command buttons 
+summary: 'Puoi creare avvisi per ricevere notifiche quando viene generato un determinato evento, in modo da poter risolvere rapidamente il problema e ridurre al minimo l"impatto sul tuo ambiente. Puoi creare avvisi per una singola risorsa o per un insieme di risorse, e per eventi di un particolare tipo di severità. Puoi anche specificare il metodo di notifica e la frequenza degli avvisi.' 
+---
+= Scopri la finestra di dialogo Aggiungi avviso in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi creare avvisi per ricevere notifiche quando viene generato un determinato evento, in modo da poter risolvere rapidamente il problema e ridurre al minimo l'impatto sul tuo ambiente. Puoi creare avvisi per una singola risorsa o per un insieme di risorse, e per eventi di un particolare tipo di severità. Puoi anche specificare il metodo di notifica e la frequenza degli avvisi.
+
+Devi disporre del ruolo di Amministratore dell'applicazione o di Amministratore dello storage.
+
+
+
+[[name]]
+== Nome
+
+In quest'area puoi specificare un nome e una descrizione per l'avviso:
+
+* *Nome dell'allerta*
++
+Ti consente di specificare un nome per l'avviso.
+
+* *Descrizione dell'avviso*
++
+Ti consente di specificare una descrizione per l'avviso.
+
+
+
+
+
+[[resources]]
+== Risorse
+
+Quest'area ti consente di selezionare una singola risorsa o di raggruppare le risorse in base a una regola dinamica per cui vuoi attivare l'avviso. Una _regola dinamica_ è l'insieme di risorse filtrate in base alla stringa di testo che specifichi. Puoi cercare le risorse selezionando un tipo di risorsa dall'elenco a discesa oppure specificando il nome esatto della risorsa per visualizzare una risorsa specifica.
+
+Se crei un avviso da una qualsiasi delle pagine dei dettagli di un oggetto di archiviazione, l'oggetto di archiviazione viene incluso automaticamente nell'avviso.
+
+* *Includi*
++
+Ti consente di includere le risorse per le quali desideri attivare gli avvisi. Puoi specificare una stringa di testo per raggruppare le risorse che corrispondono alla stringa e selezionare questo gruppo da includere nell'avviso. Ad esempio, puoi raggruppare tutti i volumi il cui nome contiene la stringa "abc".
+
+* *Escludi*
++
+Ti consente di escludere le risorse per cui non vuoi attivare avvisi. Ad esempio, puoi escludere tutti i volumi il cui nome contiene la stringa "xyz".
+
++
+La scheda Escludi viene visualizzata solo quando selezioni tutte le risorse di un particolare tipo di risorsa: ad esempio, +<<All Volumes>> o <<All Volumes whose name contains 'xyz'>>+.
+
++
+Se una risorsa soddisfa sia le regole di inclusione che quelle di esclusione specificate, la regola di esclusione ha la precedenza su quella di inclusione e l'avviso non viene generato per l'evento.
+
+
+
+
+
+[[events]]
+== Eventi
+
+In quest'area puoi selezionare gli eventi per i quali vuoi creare gli avvisi. Puoi creare avvisi per gli eventi in base a uno specifico livello di gravità o per un insieme di eventi.
+
+Per selezionare più di un evento, tieni premuto il tasto Ctrl mentre effettui le selezioni.
+
+* *Gravità dell'evento*
++
+Ti consente di selezionare gli eventi in base al tipo di severità, che può essere Critico, Errore o Avviso.
+
+* *Il nome dell'evento contiene*
++
+Consente di selezionare gli eventi il cui nome contiene caratteri specifici.
+
+
+
+
+
+[[actions]]
+== Azioni
+
+In quest'area puoi specificare gli utenti che vuoi notificare quando viene attivato un avviso. Puoi anche specificare il metodo di notifica e la frequenza di notifica.
+
+* *Avvisa questi utenti*
++
+Ti consente di specificare l'indirizzo email o il nome utente dell'utente che riceverà le notifiche.
+
++
+Se modifichi l'indirizzo email specificato per l'utente e riapri l'avviso per modificarlo, il campo Nome appare vuoto perché l'indirizzo email modificato non è più associato all'utente selezionato in precedenza. Inoltre, se modifichi l'indirizzo email dell'utente selezionato dalla pagina Utenti, l'indirizzo email modificato non viene aggiornato per l'utente selezionato.
+
+* *Frequenza delle notifiche*
++
+Ti consente di specificare la frequenza con cui il server di gestione invia le notifiche finché l'evento non viene riconosciuto, risolto o spostato nello stato obsoleto.
+
++
+Puoi scegliere i seguenti metodi di notifica:
+
++
+** Notifica solo una volta
+** Invia notifiche alla frequenza specificata
+** Invia notifiche a una frequenza specificata entro l'intervallo di tempo specificato
+
+
+* *Emissione di trap SNMP*
++
+Selezionando questa casella, puoi specificare se le trap SNMP devono essere inviate all'host SNMP configurato a livello globale.
+
+* *Esegui script*
++
+Ti consente di aggiungere il tuo script personalizzato all'avviso. Questo script viene eseguito quando viene generato un avviso.
+
++
+[NOTE]
+====
+Se non vedi questa funzionalità disponibile nell'interfaccia utente, è perché la funzionalità è stata disabilitata dal tuo amministratore. Se necessario, puoi abilitare questa funzionalità da *Storage Management* > *Feature Settings*.
+
+====
+
+
+
+
+[[command-buttons]]
+== Pulsanti di comando
+
+* *Salva*
++
+Crea un avviso e chiude la finestra di dialogo.
+
+* *Annulla*
++
+Annulla le modifiche e chiude la finestra di dialogo.
+
+

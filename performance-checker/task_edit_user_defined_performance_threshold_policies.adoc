@@ -1,0 +1,38 @@
+---
+permalink: performance-checker/task_edit_user_defined_performance_threshold_policies.html 
+sidebar: sidebar 
+keywords: edit, user-defined, performance, threshold, policies 
+summary: Puoi modificare le impostazioni di soglia per i criteri di soglia delle prestazioni esistenti. Questo può essere utile se riscontri troppi o troppo pochi avvisi per determinate condizioni di soglia. 
+---
+= Modifica le policy di soglia delle prestazioni definite dall'utente in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi modificare le impostazioni di soglia per i criteri di soglia delle prestazioni esistenti. Questo può essere utile se riscontri troppi o troppo pochi avvisi per determinate condizioni di soglia.
+
+.Prima di iniziare
+Devi avere il ruolo di Amministratore dell'applicazione.
+
+Non puoi modificare il nome del criterio o il tipo di oggetto di archiviazione monitorato per i criteri di soglia esistenti.
+
+.Passaggi
+. Nel riquadro di navigazione a sinistra, seleziona *Soglie evento* > *Prestazioni*.
++
+Viene visualizzata la pagina Soglie di prestazione.
+
+. Seleziona la policy di soglia che desideri modificare e fai clic su *Modifica*.
++
+Compare la pagina Modifica policy di soglia delle prestazioni.
+
+. Apporta le modifiche alla policy di soglia e fai clic su *Salva*.
++
+Tornerai alla pagina delle soglie di prestazione.
+
+
+
+Una volta salvate, le modifiche vengono aggiornate immediatamente su tutti gli oggetti di storage che utilizzano il criterio.
+
+A seconda del tipo di modifiche che hai apportato al criterio, potresti voler rivedere le impostazioni degli avvisi configurate per gli oggetti che utilizzano il criterio nella pagina Alert Setup.

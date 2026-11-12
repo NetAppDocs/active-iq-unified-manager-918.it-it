@@ -1,0 +1,39 @@
+---
+permalink: config/task_change_identity_provider_idp_used_for_saml_authentication.html 
+sidebar: sidebar 
+keywords: change, identity, provider, used, saml, authentication 
+summary: 'Puoi modificare il provider di identità (IdP) che Unified Manager utilizza per autenticare gli utenti remoti.' 
+---
+= Cambia il provider di identità per l'autenticazione SAML in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi modificare il provider di identità (IdP) che Unified Manager utilizza per autenticare gli utenti remoti.
+
+.Prima di iniziare
+* Devi disporre dell'URL dell'IdP e dei metadati.
+* Devi avere accesso all'IdP.
+
+
+Il nuovo IdP può essere configurato prima o dopo la configurazione di Unified Manager.
+
+.Passaggi
+. Nel riquadro di navigazione a sinistra, fai clic su *Generale* > *Autenticazione SAML*.
+. Inserisci il nuovo URI dell'IdP e i metadati dell'IdP necessari per connettere il server Unified Manager all'IdP.
++
+Se l'IdP è accessibile direttamente dal server Unified Manager, dopo aver inserito l'URL dell'IdP, puoi fare clic sul pulsante *Recupera metadati IdP* per compilare automaticamente il campo Metadati IdP.
+
+. Copia l'URI dei metadati di Unified Manager oppure salva i metadati in un file di testo XML.
+. Fai clic su *Salva configurazione*.
++
+Viene visualizzata una finestra di messaggio per confermare che vuoi modificare la configurazione.
+
+. Fare clic su *OK*.
+
+
+Accedi al nuovo IdP e inserisci l'URI del server Unified Manager e i metadati per completare la configurazione.
+
+La prossima volta che gli utenti remoti autorizzati tenteranno di accedere all'interfaccia grafica di Unified Manager, inseriranno le proprie credenziali nella nuova pagina di accesso di IdP anziché nella vecchia pagina di accesso di IdP.

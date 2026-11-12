@@ -1,0 +1,412 @@
+---
+permalink: events/reference_lun_events.html 
+sidebar: sidebar 
+keywords: lun, events, impact area, availability, capacity, configuration, performance 
+summary: 'Gli eventi LUN forniscono informazioni sullo stato dei LUN, consentendoti di monitorare potenziali problemi. Gli eventi sono raggruppati per area di impatto e includono il nome dell"evento e della trap, il livello di impatto, il tipo di origine e la gravità.' 
+---
+= Scopri gli eventi LUN in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Gli eventi LUN forniscono informazioni sullo stato dei LUN, consentendoti di monitorare potenziali problemi. Gli eventi sono raggruppati per area di impatto e includono il nome dell'evento e della trap, il livello di impatto, il tipo di origine e la gravità.
+
+
+
+[[impact-area-availability]]
+== Area di impatto: disponibilità
+
+Un asterisco (*) identifica gli eventi EMS che sono stati convertiti in eventi di Unified Manager.
+
+|===
+| Nome dell'evento (Nome della trap) | Livello di impatto | Tipo di origine | Gravità 
+
+
+ a| 
+LUN offline(ocumEvtLunOffline)
+ a| 
+Incidente
+ a| 
+LUN
+ a| 
+Critico
+
+
+
+ a| 
+LUN distrutta *(lunDestroy)
+ a| 
+Evento
+ a| 
+LUN
+ a| 
+Informazioni
+
+
+
+ a| 
+LUN mappata con sistema operativo non supportato in igroup(igroupUnsupportedOsType)
+ a| 
+Incidente
+ a| 
+LUN
+ a| 
+Avvertimento
+
+
+
+ a| 
+Percorso attivo singolo per accedere alla LUN(ocumEvtLunSingleActivePath)
+ a| 
+Rischio
+ a| 
+LUN
+ a| 
+Avvertimento
+
+
+
+ a| 
+Nessun percorso attivo per accedere alla LUN(ocumEvtLunNotReachable)
+ a| 
+Incidente
+ a| 
+LUN
+ a| 
+Critico
+
+
+
+ a| 
+Nessun percorso ottimizzato per accedere alla LUN(ocumEvtLunOptimizedPathInactive)
+ a| 
+Rischio
+ a| 
+LUN
+ a| 
+Avvertimento
+
+
+
+ a| 
+Nessun percorso per accedere alla LUN dal partner HA(ocumEvtLunHaPathInactive)
+ a| 
+Rischio
+ a| 
+LUN
+ a| 
+Avvertimento
+
+
+
+ a| 
+Nessun percorso per accedere alla LUN da un nodo in una coppia HA(ocumEvtLunNodePathStatusDown)
+ a| 
+Rischio
+ a| 
+LUN
+ a| 
+Errore
+
+|===
+
+
+[[impact-area-capacity]]
+== Area di impatto: capacità
+
+|===
+| Nome dell'evento (Nome della trap) | Livello di impatto | Tipo di origine | Gravità 
+
+
+ a| 
+Spazio insufficiente per la copia Snapshot della LUN (ocumEvtLunSnapshotNotPossible)
+ a| 
+Rischio
+ a| 
+Volume
+ a| 
+Avvertimento
+
+|===
+
+
+[[impact-area-configuration]]
+== Area di impatto: configurazione
+
+|===
+| Nome dell'evento (Nome della trap) | Livello di impatto | Tipo di origine | Gravità 
+
+
+ a| 
+LUN mappata con sistema operativo non supportato in igroup(igroupUnsupportedOsType)
+ a| 
+Rischio
+ a| 
+LUN
+ a| 
+Avvertimento
+
+|===
+
+
+[[impact-area-performance]]
+== Area di impatto: performance
+
+|===
+| Nome dell'evento (Nome della trap) | Livello di impatto | Tipo di origine | Gravità 
+
+
+ a| 
+Soglia critica degli IOPS della LUN superata(ocumLunIopsIncident)
+ a| 
+Incidente
+ a| 
+LUN
+ a| 
+Critico
+
+
+
+ a| 
+Soglia di avviso IOPS LUN superata(ocumLunIopsWarning)
+ a| 
+Rischio
+ a| 
+LUN
+ a| 
+Avvertimento
+
+
+
+ a| 
+Soglia critica LUN MB/s superata(ocumLunMbpsIncident)
+ a| 
+Incidente
+ a| 
+LUN
+ a| 
+Critico
+
+
+
+ a| 
+Soglia di avviso LUN MB/s superata(ocumLunMbpsWarning)
+ a| 
+Rischio
+ a| 
+LUN
+ a| 
+Avvertimento
+
+
+
+ a| 
+Latenza LUN ms/op Soglia critica superata(ocumLunLatencyIncident)
+ a| 
+Incidente
+ a| 
+LUN
+ a| 
+Critico
+
+
+
+ a| 
+Soglia di avviso della latenza LUN ms/op superata(ocumLunLatencyWarning)
+ a| 
+Rischio
+ a| 
+LUN
+ a| 
+Avvertimento
+
+
+
+ a| 
+Soglia critica di latenza LUN e IOPS superata(ocumLunLatencyIopsIncident)
+ a| 
+Incidente
+ a| 
+LUN
+ a| 
+Critico
+
+
+
+ a| 
+Soglia di avviso di latenza LUN e IOPS superata(ocumLunLatencyIopsWarning)
+ a| 
+Rischio
+ a| 
+LUN
+ a| 
+Avvertimento
+
+
+
+ a| 
+Superata la soglia critica di latenza LUN e MB/s (ocumLunLatencyMbpsIncident)
+ a| 
+Incidente
+ a| 
+LUN
+ a| 
+Critico
+
+
+
+ a| 
+Superata la soglia di avviso di latenza LUN e MB/s(ocumLunLatencyMbpsWarning)
+ a| 
+Rischio
+ a| 
+LUN
+ a| 
+Avvertimento
+
+
+
+ a| 
+Latenza LUN e capacità di prestazioni dell'aggregato utilizzata soglia critica superata(ocumLunLatencyAggregatePerfCapacityUsedIncident)
+ a| 
+Incidente
+ a| 
+LUN
+ a| 
+Critico
+
+
+
+ a| 
+Superata la soglia di avviso per la latenza LUN e la capacità delle prestazioni dell'aggregato utilizzata(ocumLunLatencyAggregatePerfCapacityUsedWarning)
+ a| 
+Rischio
+ a| 
+LUN
+ a| 
+Avvertimento
+
+
+
+ a| 
+Superata la soglia critica di latenza LUN e utilizzo dell'aggregato(ocumLunLatencyAggregateUtilizationIncident)
+ a| 
+Incidente
+ a| 
+LUN
+ a| 
+Critico
+
+
+
+ a| 
+Superata la soglia di avviso di latenza LUN e di utilizzo dell'aggregato(ocumLunLatencyAggregateUtilizationWarning)
+ a| 
+Rischio
+ a| 
+LUN
+ a| 
+Avvertimento
+
+
+
+ a| 
+Latenza LUN e capacità di prestazione del nodo utilizzata: superata la soglia critica(ocumLunLatencyNodePerfCapacityUsedIncident)
+ a| 
+Incidente
+ a| 
+LUN
+ a| 
+Critico
+
+
+
+ a| 
+Superata la soglia di avviso della latenza LUN e della capacità delle prestazioni del nodo utilizzata(ocumLunLatencyNodePerfCapacityUsedWarning)
+ a| 
+Rischio
+ a| 
+LUN
+ a| 
+Avvertimento
+
+
+
+ a| 
+Latenza LUN e capacità di prestazioni del nodo utilizzata - Soglia critica di takeover superata(ocumLunLatencyAggregatePerfCapacityUsedTakeoverIncident)
+ a| 
+Incidente
+ a| 
+LUN
+ a| 
+Critico
+
+
+
+ a| 
+Latenza LUN e capacità di prestazioni del nodo utilizzata - Soglia di avviso per il takeover superata(ocumLunLatencyAggregatePerfCapacityUsedTakeoverWarning)
+ a| 
+Rischio
+ a| 
+LUN
+ a| 
+Avvertimento
+
+
+
+ a| 
+Soglia critica di latenza LUN e utilizzo del nodo superata(ocumLunLatencyNodeUtilizationIncident)
+ a| 
+Incidente
+ a| 
+LUN
+ a| 
+Critico
+
+
+
+ a| 
+Superata la soglia di avviso per latenza LUN e utilizzo del nodo(ocumLunLatencyNodeUtilizationWarning)
+ a| 
+Rischio
+ a| 
+LUN
+ a| 
+Avvertimento
+
+
+
+ a| 
+Superata la soglia di avviso QoS LUN Max IOPS (ocumQosLunMaxIopsWarning)
+ a| 
+Rischio
+ a| 
+LUN
+ a| 
+Avvertimento
+
+
+
+ a| 
+Superata la soglia di avviso QoS LUN Max MB/s (ocumQosLunMaxMbpsWarning)
+ a| 
+Rischio
+ a| 
+LUN
+ a| 
+Avvertimento
+
+
+
+ a| 
+Superata la soglia di latenza della LUN del carico di lavoro come definita dalla policy del livello di servizio delle prestazioni(ocumConformanceLatencyWarning)
+ a| 
+Rischio
+ a| 
+LUN
+ a| 
+Avvertimento
+
+|===

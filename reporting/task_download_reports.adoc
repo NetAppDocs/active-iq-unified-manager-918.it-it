@@ -1,0 +1,44 @@
+---
+permalink: reporting/task_download_reports.html 
+sidebar: sidebar 
+keywords: download, reports 
+summary: 'Puoi scaricare i report e salvare i dati su un"unità locale o di rete come file CSV (valori separati da virgola), file Microsoft Excel (.XLSX) o file PDF. Puoi aprire i file CSV e XLSX con applicazioni per fogli di calcolo, come Microsoft Excel, e i file PDF con lettori come Adobe Acrobat.' 
+---
+= Scarica i report in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi scaricare i report e salvare i dati su un'unità locale o di rete come file CSV (valori separati da virgola), file Microsoft Excel (.XLSX) o file PDF. Puoi aprire i file CSV e XLSX con applicazioni per fogli di calcolo, come Microsoft Excel, e i file PDF con lettori come Adobe Acrobat.
+
+.Passaggi
+. Fai clic sul pulsante *Report* per scaricare il report in uno dei seguenti formati:
++
+[cols="2*"]
+|===
+| Scegli | A... 
+
+
+ a| 
+Scarica CSV
+ a| 
+Salva il report come file di valori separati da virgole (CSV).
+
+
+
+ a| 
+Scarica PDF
+ a| 
+Salva il report come file .pdf.
+
+
+
+ a| 
+Scarica Excel
+ a| 
+Salva il report come file Microsoft Excel (XLSX).
+
+|===
+

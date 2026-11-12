@@ -1,0 +1,130 @@
+---
+permalink: events/reference_port_events.html 
+sidebar: sidebar 
+keywords: port, events, impact area, availability, performance 
+summary: Gli eventi delle porte ti forniscono informazioni sullo stato delle porte del cluster, consentendoti di monitorare eventuali modifiche o problemi della porta, ad esempio se la porta è inattiva. 
+---
+= Scopri gli eventi delle porte in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Gli eventi delle porte ti forniscono informazioni sullo stato delle porte del cluster, consentendoti di monitorare eventuali modifiche o problemi della porta, ad esempio se la porta è inattiva.
+
+
+
+[[impact-area-availability]]
+== Area di impatto: disponibilità
+
+|===
+| Nome dell'evento (Nome della trap) | Livello di impatto | Tipo di origine | Gravità 
+
+
+ a| 
+Stato della porta non disponibile(ocumEvtPortStatusDown)
+ a| 
+Incidente
+ a| 
+Nodo
+ a| 
+Critico
+
+|===
+
+
+[[impact-area-performance]]
+== Area di impatto: performance
+
+|===
+| Nome dell'evento (Nome della trap) | Livello di impatto | Tipo di origine | Gravità 
+
+
+ a| 
+Superata la soglia critica della porta di rete MB/s(ocumNetworkPortMbpsIncident)
+ a| 
+Incidente
+ a| 
+Porta
+ a| 
+Critico
+
+
+
+ a| 
+Superata la soglia di avviso MB/s della porta di rete(ocumNetworkPortMbpsWarning)
+ a| 
+Rischio
+ a| 
+Porta
+ a| 
+Avvertimento
+
+
+
+ a| 
+Superata la soglia critica della porta FCP in MB/s(ocumFcpPortMbpsIncident)
+ a| 
+Incidente
+ a| 
+Porta
+ a| 
+Critico
+
+
+
+ a| 
+Superata la soglia di avviso MB/s della porta FCP(ocumFcpPortMbpsWarning)
+ a| 
+Rischio
+ a| 
+Porta
+ a| 
+Avvertimento
+
+
+
+ a| 
+Superata la soglia critica di utilizzo delle porte di rete(ocumNetworkPortUtilizationIncident)
+ a| 
+Incidente
+ a| 
+Porta
+ a| 
+Critico
+
+
+
+ a| 
+Superata la soglia di avviso di utilizzo della porta di rete(ocumNetworkPortUtilizationWarning)
+ a| 
+Rischio
+ a| 
+Porta
+ a| 
+Avvertimento
+
+
+
+ a| 
+Superata la soglia critica di utilizzo della porta FCP(ocumFcpPortUtilizationIncident)
+ a| 
+Incidente
+ a| 
+Porta
+ a| 
+Critico
+
+
+
+ a| 
+Superata la soglia di avviso di utilizzo della porta FCP(ocumFcpPortUtilizationWarning)
+ a| 
+Rischio
+ a| 
+Porta
+ a| 
+Avvertimento
+
+|===

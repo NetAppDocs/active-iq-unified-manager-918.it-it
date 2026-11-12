@@ -1,0 +1,37 @@
+---
+permalink: performance-checker/task_view_performance_capacity_counter_charts_to_identify_issues.html 
+sidebar: sidebar 
+keywords: view, performance, capacity, counter charts, identify, issues 
+summary: 'Nella pagina Performance Explorer puoi visualizzare i grafici dell"utilizzo della capacità prestazionale per nodi e aggregati. In questo modo puoi visualizzare dati dettagliati sulla capacità prestazionale per i nodi e gli aggregati selezionati in un intervallo di tempo specifico.' 
+---
+= Visualizza i grafici dei contatori di capacità delle prestazioni in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Nella pagina Performance Explorer puoi visualizzare i grafici dell'utilizzo della capacità prestazionale per nodi e aggregati. In questo modo puoi visualizzare dati dettagliati sulla capacità prestazionale per i nodi e gli aggregati selezionati in un intervallo di tempo specifico.
+
+Il grafico a contatore standard visualizza i valori della capacità prestazionale utilizzata per i nodi o gli aggregati selezionati. Il grafico a contatore della suddivisione visualizza i valori totali della capacità prestazionale per l'oggetto radice, separati in base all'utilizzo dei protocolli utente rispetto ai processi di sistema in background. Inoltre, mostra anche la quantità di capacità prestazionale libera.
+
+[NOTE]
+====
+Poiché alcune attività in background associate alla gestione del sistema e dei dati vengono identificate come carichi di lavoro utente e classificate come protocolli utente, la percentuale dei protocolli utente potrebbe apparire artificialmente elevata quando questi processi sono in esecuzione. Questi processi in genere vengono eseguiti intorno a mezzanotte, quando l'utilizzo del cluster è basso. Se noti un picco nell'attività dei protocolli utente intorno a mezzanotte, verifica se i processi di backup del cluster o altre attività in background sono configurati per essere eseguiti a quell'ora.
+
+====
+.Passaggi
+. Seleziona la scheda *Explorer* da una pagina *Landing* di un nodo o di un aggregato.
+. Nel riquadro *Counter Charts*, fai clic su *Choose charts*, quindi seleziona il grafico *Perf. Capacity Used*.
+. Scorri verso il basso finché non riesci a visualizzare il grafico.
++
+I colori del grafico standard indicano quando l'oggetto si trova nell'intervallo ottimale (giallo), quando è sottoutilizzato (verde) e quando è sovrautilizzato (rosso). Il grafico di dettaglio mostra informazioni dettagliate sulla capacità prestazionale solo per l'oggetto root.
+
++
+image::../media/headroom_counter_charts.gif[Uno screenshot dell'interfaccia utente che mostra il grafico di ripartizione con la capacità delle prestazioni dettagliata solo per l'oggetto root.]
+
+. Se vuoi visualizzare uno dei grafici in formato a dimensioni complete, fai clic su *Zoom View*.
++
+In questo modo puoi aprire più grafici dei contatori in finestre separate per confrontare i valori di capacità delle prestazioni utilizzata con i valori di IOPS o MBps nello stesso intervallo di tempo.
+
+

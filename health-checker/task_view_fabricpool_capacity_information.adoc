@@ -1,0 +1,74 @@
+---
+permalink: health-checker/task_view_fabricpool_capacity_information.html 
+sidebar: sidebar 
+keywords: view, fabricPool, cloud tier, mirror tier, capacity, information 
+summary: Puoi visualizzare le informazioni sulla capacità di FabricPool per cluster, aggregati e volumi nelle pagine di inventario e dei dettagli di capacità e prestazioni di questi oggetti. Queste pagine mostrano anche le informazioni di mirroring di FabricPool quando è stato configurato un livello mirror. 
+---
+= Visualizza le informazioni sulla capacità di FabricPool in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi visualizzare le informazioni sulla capacità di FabricPool per cluster, aggregati e volumi nelle pagine di inventario e dei dettagli di capacità e prestazioni di questi oggetti. Queste pagine mostrano anche le informazioni di mirroring di FabricPool quando è stato configurato un livello mirror.
+
+Queste pagine mostrano informazioni come la capacità disponibile sul livello di performance locale e sul livello cloud, quanta capacità viene utilizzata in entrambi i livelli, quali aggregati sono collegati a un livello cloud e quali volumi implementano le funzionalità FabricPool spostando determinate informazioni sul livello cloud.
+
+Quando un livello cloud viene replicato in un altro cloud provider (il "`mirror tier`"), entrambi i livelli cloud vengono visualizzati nella pagina dei dettagli Aggregate / Health.
+
+.Passaggi
+. Esegui una delle seguenti operazioni:
++
+[cols="2*"]
+|===
+| Per visualizzare le informazioni sulla capacità di... | Fai così... 
+
+
+ a| 
+Cluster
+ a| 
+.. Nella vista Capacità: Tutti i cluster, fai clic su un cluster.
+.. Nella pagina Dettagli cluster/Stato di salute, fai clic sulla scheda *Configurazione*.
++
+Il display mostra i nomi di tutti i tier cloud a cui questo cluster è connesso.
+
+
+
+
+
+ a| 
+Aggregati
+ a| 
+.. Nella vista Capacità: Tutti gli aggregati, fai clic su un aggregato in cui il campo Tipo indica "`SSD (FabricPool)`" o "`HDD (FabricPool)`".
+.. Nella pagina dei dettagli Aggregate / Health, fai clic sulla scheda *Capacity*.
++
+Il display mostra la capacità totale utilizzata nel livello cloud.
+
+.. Fai clic sulla scheda *Disk Information*.
++
+Il display mostra il nome del livello cloud e la capacità utilizzata.
+
+.. Fai clic sulla scheda *Configurazione*.
++
+Il display mostra il nome del livello cloud e altre informazioni dettagliate sul livello cloud.
+
+
+
+
+
+ a| 
+Volumi
+ a| 
+.. Nella vista Capacity: All Volumes, fai clic su un volume in cui nel campo "`Tiering Policy`" compare il nome di una policy.
+.. Nella pagina Dettagli volume/stato di salute, fai clic sulla scheda *Configurazione*.
++
+Il display mostra il nome della FabricPool policy di tiering assegnata al volume.
+
+
+
+|===
+. Nella pagina *Analisi del carico di lavoro* puoi selezionare "`Cloud Tier View`" nell'area *Capacity Trend* per visualizzare la capacità utilizzata nel Performance Tier locale e nel Cloud Tier nel corso del mese precedente.
+
+
+Per ulteriori informazioni sugli aggregati FabricPool, vedi https://docs.netapp.com/us-en/ontap/disks-aggregates/index.html["Panoramica di dischi e aggregati"].

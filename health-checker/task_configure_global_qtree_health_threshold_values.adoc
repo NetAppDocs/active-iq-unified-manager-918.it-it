@@ -1,0 +1,27 @@
+---
+permalink: health-checker/task_configure_global_qtree_health_threshold_values.html 
+sidebar: sidebar 
+keywords: configure, global, qtree, health, threshold values 
+summary: Puoi configurare i valori globali della soglia di integrità per tutti i qtree per tenere traccia di eventuali superamenti della soglia. Per i superamenti della soglia di integrità vengono generati eventi appropriati e puoi adottare misure preventive in base a questi eventi. Puoi configurare i valori globali in base alle impostazioni delle best practice per le soglie che si applicano a tutti i qtree monitorati. 
+---
+= Configura i valori globali della soglia di salute di qtree in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi configurare i valori globali della soglia di integrità per tutti i qtree per tenere traccia di eventuali superamenti della soglia. Per i superamenti della soglia di integrità vengono generati eventi appropriati e puoi adottare misure preventive in base a questi eventi. Puoi configurare i valori globali in base alle impostazioni delle best practice per le soglie che si applicano a tutti i qtree monitorati.
+
+.Prima di iniziare
+Devi disporre del ruolo di Amministratore dell'applicazione o di Amministratore dello storage.
+
+Le opzioni di soglia hanno valori predefiniti per un monitoraggio migliore, tuttavia puoi modificarli in base ai requisiti del tuo ambiente.
+
+Gli eventi vengono generati per un qtree solo quando sul qtree è stata impostata una quota Qtree o una quota predefinita. Gli eventi non vengono generati se lo spazio definito in una quota utente o in una quota di gruppo ha superato la soglia.
+
+.Passaggi
+. Nel riquadro di navigazione a sinistra, fai clic su *Soglie evento* > *Qtree*.
+. Configura i valori di soglia della capacità appropriati.
+. Fare clic su *Save*.
+

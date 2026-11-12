@@ -1,0 +1,33 @@
+---
+permalink: health-checker/task_view_list_of_snapshot_copies.html 
+sidebar: sidebar 
+keywords: view, list, Snapshot copies 
+summary: 'Puoi visualizzare l"elenco delle copie Snapshot per un volume selezionato. Puoi usare l"elenco delle copie Snapshot per calcolare la quantità di spazio su disco che puoi recuperare se elimini una o più copie Snapshot e, se necessario, puoi eliminare le copie Snapshot.' 
+---
+= Visualizza l'elenco delle copie Snapshot in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi visualizzare l'elenco delle copie Snapshot per un volume selezionato. Puoi usare l'elenco delle copie Snapshot per calcolare la quantità di spazio su disco che puoi recuperare se elimini una o più copie Snapshot e, se necessario, puoi eliminare le copie Snapshot.
+
+.Prima di iniziare
+* Devi disporre del ruolo di Operatore, Amministratore di applicazioni o Amministratore di archiviazione.
+* Il volume contenente le copie Snapshot deve essere online.
+
+
+.Passaggi
+. Nel riquadro di navigazione a sinistra, fai clic su *Archiviazione* > *Volumi*.
+. Nella vista *Stato di salute: Tutti i volumi*, seleziona il volume che contiene le copie Snapshot che desideri visualizzare.
+. Nella pagina dei dettagli *Volume / Integrità*, fai clic sulla scheda *Capacità*.
+. Nel riquadro *Details* della scheda *Capacity*, nella sezione Other Details, fai clic sul collegamento accanto a *Snapshot Copies*.
++
+Il numero di copie Snapshot è un collegamento che visualizza l'elenco delle copie Snapshot.
+
+
+
+*Informazioni correlate*
+
+link:../health-checker/reference_health_volume_details_page.html["Pagina Salute/Volumi"]

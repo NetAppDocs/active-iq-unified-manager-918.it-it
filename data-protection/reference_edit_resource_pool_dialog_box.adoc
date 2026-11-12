@@ -1,0 +1,48 @@
+---
+permalink: data-protection/reference_edit_resource_pool_dialog_box.html 
+sidebar: sidebar 
+keywords: edit, resource pool, dialog box 
+summary: Puoi usare la finestra di dialogo Modifica pool di risorse per cambiare il nome e la descrizione di un pool di risorse esistente. Ad esempio, se il nome e la descrizione originali non sono accurati o sono errati, puoi modificarli per renderli più precisi. 
+---
+= Usa la finestra di dialogo Modifica pool di risorse in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi usare la finestra di dialogo Modifica pool di risorse per cambiare il nome e la descrizione di un pool di risorse esistente. Ad esempio, se il nome e la descrizione originali non sono accurati o sono errati, puoi modificarli per renderli più precisi.
+
+
+
+[[text-boxes]]
+== Caselle di testo
+
+Le caselle di testo ti consentono di modificare le seguenti informazioni per il pool di risorse selezionato:
+
+* *Nome del pool di risorse*
++
+Ti consente di inserire un nuovo nome.
+
+* *Descrizione*
++
+Ti consente di inserire una nuova descrizione.
+
+
+
+
+
+[[command-buttons]]
+== Pulsanti di comando
+
+I pulsanti di comando consentono di eseguire le seguenti operazioni:
+
+* *Salva*
++
+Salva le modifiche al nome e alla descrizione del pool di risorse.
+
+* *Annulla*
++
+Annulla le modifiche e chiude la finestra di dialogo Modifica pool di risorse.
+
+

@@ -1,0 +1,38 @@
+---
+permalink: performance-checker/reference_performance_dashboard_cluster_banner_messages.html 
+sidebar: sidebar 
+keywords: performance, banner, messages, descriptions 
+summary: 'Unified Manager potrebbe visualizzare messaggi banner nella pagina Notifiche (tramite l"icona a forma di campana) per avvisarti di problemi di stato relativi a un cluster specifico.' 
+---
+= Interpreta i messaggi dei banner delle performance in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager potrebbe visualizzare messaggi banner nella pagina Notifiche (tramite l'icona a forma di campana) per avvisarti di problemi di stato relativi a un cluster specifico.
+
+|===
+| Messaggio del banner | Descrizione | Risoluzione 
+
+
+ a| 
+`No performance data is being collected from cluster _cluster_name_. Restart Unified Manager to correct this issue.`
+ a| 
+Il servizio di raccolta dati di Unified Manager si è arrestato e non vengono raccolti dati sulle prestazioni da alcun cluster.
+ a| 
+Riavvia Unified Manager per risolvere il problema. Se il problema persiste, contatta il supporto tecnico.
+
+
+
+ a| 
+`More than x hour(s) of historical data is being collected from cluster _cluster_name_. Current data collections will start after all historical data is collected.`
+ a| 
+È attualmente in corso un ciclo di raccolta della continuità dei dati per recuperare i dati sulle prestazioni al di fuori del ciclo di raccolta delle prestazioni del cluster in real-time.
+ a| 
+Non è richiesta alcuna azione. I dati sulle prestazioni correnti verranno raccolti al termine del ciclo di raccolta della continuità dei dati.
+
+Un ciclo di raccolta della continuità dei dati viene eseguito quando viene aggiunto un nuovo cluster o quando Unified Manager non è stato in grado di raccogliere i dati sulle prestazioni correnti per qualche motivo.
+
+|===

@@ -1,0 +1,78 @@
+---
+permalink: config/task_enable_and_disable_policy_based_storage_management.html 
+sidebar: sidebar 
+keywords: provisioning, performance service levels, storage management, enable, disable, policy-based 
+summary: 'A partire da Unified Manager 9.7, puoi eseguire il provisioning dei carichi di lavoro dello storage (volumi e LUN) sui cluster ONTAP e gestire questi carichi di lavoro in base ai livelli di servizio delle prestazioni assegnati. Questa funzionalità è simile alla creazione di carichi di lavoro in ONTAP System Manager e all"associazione di policy QoS, ma se la applichi tramite Unified Manager puoi eseguire il provisioning e gestire i carichi di lavoro in tutti i cluster monitorati dalla tua istanza di Unified Manager.' 
+---
+= Abilita e disabilita la gestione dello storage basata su policy in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A partire da Unified Manager 9.7, puoi eseguire il provisioning dei carichi di lavoro dello storage (volumi e LUN) sui cluster ONTAP e gestire questi carichi di lavoro in base ai livelli di servizio delle prestazioni assegnati. Questa funzionalità è simile alla creazione di carichi di lavoro in ONTAP System Manager e all'associazione di policy QoS, ma se la applichi tramite Unified Manager puoi eseguire il provisioning e gestire i carichi di lavoro in tutti i cluster monitorati dalla tua istanza di Unified Manager.
+
+Devi avere il ruolo di Amministratore dell'applicazione.
+
+Questa opzione è abilitata per impostazione predefinita, ma puoi disabilitarla se non vuoi eseguire il provisioning e gestire i carichi di lavoro tramite Unified Manager.
+
+Quando attivata, questa opzione fornisce molti nuovi elementi nell'interfaccia utente:
+
+[cols="2*"]
+|===
+| Nuovi contenuti | Posizione 
+
+
+ a| 
+Una pagina per il provisioning di nuovi carichi di lavoro
+ a| 
+Disponibile da *Attività comuni* > *Provisioning*
+
+
+
+ a| 
+Una pagina per creare policy dei livelli di servizio delle prestazioni
+ a| 
+Disponibile in *Impostazioni* > *Policy* > *Livelli di servizio delle prestazioni*
+
+
+
+ a| 
+Una pagina per creare criteri di efficienza dello storage per le prestazioni
+ a| 
+Disponibile in *Impostazioni* > *Criteri* > *Efficienza di archiviazione*
+
+
+
+ a| 
+Pannelli che descrivono le prestazioni correnti del workload e gli IOPS del workload
+ a| 
+Disponibile dalla Dashboard
+
+|===
+Per ulteriori informazioni su queste pagine e su questa funzionalità, consulta la guida online nel prodotto.
+
+.Passaggi
+. Nel riquadro di navigazione a sinistra, fai clic su *Generale* > *Impostazioni funzionalità*.
+. Nella pagina *Impostazioni funzionalità*, abilita o disabilita la gestione dello storage basata su policy scegliendo una delle seguenti opzioni:
++
+[cols="2*"]
+|===
+| Se vuoi... | Poi fai così... 
+
+
+ a| 
+Disabilita la gestione dello storage basata su policy
+ a| 
+Nel pannello *Gestione dello storage basata su policy*, sposta il cursore verso sinistra.
+
+
+
+ a| 
+Abilita la gestione dello storage basata su policy
+ a| 
+Nel pannello *Gestione dello storage basata su policy*, sposta il cursore verso destra.
+
+|===
+

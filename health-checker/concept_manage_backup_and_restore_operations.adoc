@@ -1,0 +1,59 @@
+---
+permalink: health-checker/concept_manage_backup_and_restore_operations.html 
+sidebar: sidebar 
+keywords: backup, types, manage, restore, operations 
+summary: 'Puoi creare backup di Active IQ Unified Manager e utilizzare la funzionalità di ripristino per ripristinare il backup sullo stesso sistema (locale) o su un nuovo sistema (remoto) in caso di guasto del sistema o perdita di dati.' 
+---
+= Gestisci le operazioni di backup e ripristino in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi creare backup di Active IQ Unified Manager e utilizzare la funzionalità di ripristino per ripristinare il backup sullo stesso sistema (locale) o su un nuovo sistema (remoto) in caso di guasto del sistema o perdita di dati.
+
+Esistono tre metodi di backup e ripristino, a seconda del sistema operativo su cui hai installato Unified Manager e del numero di cluster e nodi gestiti:
+
+[cols="3*"]
+|===
+| Sistema operativo | Dimensioni dell'implementazione | Metodo di backup consigliato 
+
+
+ a| 
+VMware vSphere
+ a| 
+Qualunque
+ a| 
+Snapshot VMware dell'appliance virtuale Unified Manager
+
+
+
+.2+| Red Hat Enterprise Linux  a| 
+Piccolo
+ a| 
+dump del database MySQL di Unified Manager
+
+
+
+ a| 
+Grande
+ a| 
+NetApp Snapshot del database Unified Manager
+
+
+
+.2+| Microsoft Windows  a| 
+Piccolo
+ a| 
+dump del database MySQL di Unified Manager
+
+
+
+ a| 
+Grande
+ a| 
+NetApp Snapshot del database Unified Manager con protocollo iSCSI
+
+|===
+Questi diversi metodi sono descritti nelle sezioni seguenti.

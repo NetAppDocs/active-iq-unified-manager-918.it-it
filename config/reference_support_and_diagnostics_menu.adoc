@@ -1,0 +1,29 @@
+---
+permalink: config/reference_support_and_diagnostics_menu.html 
+sidebar: sidebar 
+keywords: support and diagnostics, menu 
+summary: Il menu Supporto e diagnostica ti consente di generare un pacchetto di supporto che puoi inviare al supporto tecnico per ottenere aiuto nella risoluzione dei problemi. 
+---
+= Usa il menu Supporto e diagnostica in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Il menu Supporto e diagnostica ti consente di generare un pacchetto di supporto che puoi inviare al supporto tecnico per ottenere aiuto nella risoluzione dei problemi.
+
+Sono disponibili le seguenti opzioni di menu:
+
+* *Genera il Light Support Bundle*
++
+Ti consente di creare un pacchetto di supporto leggero che contiene solo 30 giorni di log e record del database di configurazione -- esclude i dati sulle prestazioni, i file di registrazione dell'acquisizione e il dump dell'heap del server.
+
+* *Genera bundle di supporto*
++
+Ti consente di creare un pacchetto di supporto completo (file 7-Zip) contenente informazioni diagnostiche nella home directory dell'utente diagnostico. Se il tuo sistema è connesso a Internet, puoi anche caricare il pacchetto di supporto su NetApp.
+
++
+Il file include informazioni generate da un messaggio AutoSupport, il contenuto del database di Unified Manager, dati dettagliati sugli elementi interni del server di Unified Manager e log di livello verboso che normalmente non sono inclusi nei messaggi AutoSupport o nel pacchetto di supporto semplificato.
+
+

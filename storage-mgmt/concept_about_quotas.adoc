@@ -1,0 +1,14 @@
+---
+permalink: storage-mgmt/concept_about_quotas.html 
+sidebar: sidebar 
+keywords: about, quotas 
+summary: Le quote ti consentono di limitare o monitorare lo spazio su disco e il numero di file utilizzati da un utente, un gruppo o un qtree. Specifichi le quote usando il file /etc/quotas. Le quote si applicano a un volume specifico o a un qtree. 
+---
+= Scopri le quote in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le quote consentono di limitare o monitorare lo spazio su disco e il numero di file utilizzati da un utente, un gruppo o un qtree. Specifichi le quote utilizzando il file  `/etc/quotas`. Le quote vengono applicate a un volume o a un qtree.

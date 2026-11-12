@@ -1,0 +1,34 @@
+---
+permalink: performance-checker/concept_add_disks_and_reallocate_data.html 
+sidebar: sidebar 
+keywords: add, disks, reallocate, data 
+summary: Puoi aggiungere dischi a un aggregate per aumentarne la capacità di storage e le prestazioni. Dopo aver aggiunto i dischi, noterai un miglioramento delle prestazioni di lettura solo dopo aver riallocato i dati sui dischi aggiunti. 
+---
+= Scopri come l'aggiunta di dischi influisce sulla riallocazione dei dati in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi aggiungere dischi a un aggregate per aumentarne la capacità di storage e le prestazioni. Dopo aver aggiunto i dischi, noterai un miglioramento delle prestazioni di lettura solo dopo aver riallocato i dati sui dischi aggiunti.
+
+Puoi utilizzare queste istruzioni quando Unified Manager ha ricevuto eventi di aggregato attivati da soglie dinamiche o da soglie delle prestazioni definite dal sistema:
+
+* Quando ricevi un evento di soglia dinamica, nella pagina Dettagli evento, l'icona del componente del cluster che rappresenta l'aggregato conteso viene evidenziata in rosso.
++
+Sotto l'icona, tra parentesi, è riportato il nome dell'aggregato, che identifica l'aggregato a cui puoi aggiungere dischi.
+
+* Quando ricevi un evento di soglia definito dal sistema, nella pagina Dettagli evento il testo della descrizione dell'evento elenca il nome dell'aggregato che presenta il problema.
++
+Puoi aggiungere dischi e riallocare i dati su questo aggregate.
+
+
+
+I dischi che aggiungi all'aggregato devono già esistere nel cluster. Se il cluster non ha dischi extra disponibili, potresti dover contattare il tuo amministratore o acquistare altri dischi. Puoi usare ONTAP System Manager o i comandi ONTAP per aggiungere dischi a un aggregato.
+
+[NOTE]
+====
+Dovresti riallocare i dati solo quando utilizzi aggregati HDD e Flash Pool. Non riallocare i dati su aggregati SSD o FabricPool.
+
+====

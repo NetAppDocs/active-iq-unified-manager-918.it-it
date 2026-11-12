@@ -1,0 +1,43 @@
+---
+permalink: api-automation/concept_events_workflows.html 
+sidebar: sidebar 
+keywords: determine, issues, storage, objects, events 
+summary: Quando un oggetto di archiviazione nel tuo data center supera una determinata soglia, ricevi una notifica relativa a tale evento. Utilizzando questa notifica, puoi analizzare il problema e intraprendere azioni correttive tramite le API degli eventi. 
+---
+= Individua i problemi relativi agli oggetti di archiviazione utilizzando le API degli eventi di Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Quando un oggetto di storage nel tuo data center supera una determinata soglia, ricevi una notifica relativa a quell'evento. Utilizzando questa notifica, puoi analizzare il problema e intraprendere azioni correttive tramite le `events` API.
+
+Questo flusso di lavoro prende come esempio un volume come oggetto risorsa. Puoi utilizzare le  `events` API per recuperare l'elenco degli eventi relativi a un volume, analizzare i problemi critici per quel volume e quindi intraprendere azioni correttive per risolvere il problema.
+
+image::../media/handling_event_related_issues_of_a_storage_object_flowchart.gif[Un diagramma di flusso che mostra l'analisi degli eventi di volume dall'elenco degli eventi fino all'azione correttiva fino alla fine]
+
+Segui questi passaggi per individuare i problemi presenti nel tuo volume prima di intraprendere azioni correttive.
+
+.Passaggi
+. Analizza le notifiche degli eventi critici di Active IQ Unified Manager per i volumi presenti nel tuo data center.
+. Interroga tutti gli eventi relativi ai volumi utilizzando i seguenti parametri nell'API /management-server/events:
+`"*resource_type": "volume*"`
+`"*severity": "critical*"`
++
+[cols="3*"]
+|===
+| Categoria | Verbo HTTP | Percorso 
+
+
+ a| 
+server di gestione
+ a| 
+GET
+ a| 
+/management-server/events
+
+|===
+. Visualizza l'output e analizza i problemi nei volumi specifici.
+. Esegui le azioni necessarie utilizzando le API REST o l'interfaccia utente web di Unified Manager per risolvere i problemi.
+

@@ -1,0 +1,31 @@
+---
+permalink: data-protection/task_retry_failed_protection_job.html 
+sidebar: sidebar 
+keywords: retry, failed, protection job 
+summary: 'Dopo aver adottato le misure necessarie per correggere un"attività di protezione non riuscita, puoi usare Retry per eseguire di nuovo l"attività. Se riprovi un"attività, viene creata una nuova attività usando l"ID attività originale.' 
+---
+= Riprova un'operazione di protezione non riuscita in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dopo aver adottato le misure necessarie per correggere un'attività di protezione non riuscita, puoi usare *Riprova* per eseguire di nuovo l'attività. Riprovare un'attività crea una nuova attività usando l'ID dell'attività originale.
+
+.Prima di iniziare
+Devi disporre del ruolo di Amministratore dell'applicazione o di Amministratore dello storage.
+
+Puoi riprovare un solo job non riuscito alla volta. Se selezioni più di un job, il pulsante *Riprova* si disattiva. Puoi riprovare solo i job di tipo Protection Configuration e Protection Relationship Operation.
+
+.Passaggi
+. Nel riquadro di navigazione a sinistra, fai clic su *Protezione* > *Lavori*.
+. Dall'elenco dei processi, seleziona un singolo processo non riuscito di tipo Configurazione protezione o Operazione relazione di protezione.
++
+Il pulsante *Riprova* è abilitato.
+
+. Fai clic su *Riprova*.
++
+Il processo è stato riavviato.
+
+

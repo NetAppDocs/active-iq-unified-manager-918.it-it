@@ -1,0 +1,30 @@
+---
+permalink: health-checker/task_edit_group_rules.html 
+sidebar: sidebar 
+keywords: edit, group rules 
+summary: 'Puoi modificare le regole di gruppo per cambiare i gruppi di condizioni e le condizioni all"interno di un gruppo di condizioni, nonché per aggiungere o rimuovere oggetti di storage da un gruppo specifico o in un gruppo specifico.' 
+---
+= Modifica le regole di gruppo in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi modificare le regole di gruppo per cambiare i gruppi di condizioni e le condizioni all'interno di un gruppo di condizioni, nonché per aggiungere o rimuovere oggetti di storage da un gruppo specifico o in un gruppo specifico.
+
+.Prima di iniziare
+Devi disporre del ruolo di Amministratore dell'applicazione o di Amministratore dello storage.
+
+.Passaggi
+. Nel riquadro di navigazione a sinistra, fai clic su *Gestione dello storage* > *Gruppi*.
+. Nella scheda *Regole di gruppo*, seleziona la regola di gruppo che vuoi modificare, quindi fai clic su *Modifica*.
+. Nella finestra di dialogo *Modifica regola di gruppo*, modifica il nome della regola di gruppo, il nome del gruppo associato, i gruppi di condizioni e le condizioni secondo necessità.
++
+[NOTE]
+====
+Non puoi modificare il tipo di oggetto di destinazione per una regola di gruppo.
+
+====
+. Fare clic su *Save*.
+

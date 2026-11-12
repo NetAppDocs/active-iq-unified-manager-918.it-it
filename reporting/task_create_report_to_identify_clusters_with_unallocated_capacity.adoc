@@ -1,0 +1,42 @@
+---
+permalink: reporting/task_create_report_to_identify_clusters_with_unallocated_capacity.html 
+sidebar: sidebar 
+keywords: clusters, unallocated, LUN, capacity, indentify, additional, workloads 
+summary: Puoi creare un report per individuare i cluster con la maggiore capacità LUN non allocata, superiore a 0,5 TB, per identificare dove puoi aggiungere ulteriori carichi di lavoro. 
+---
+= Identifica i cluster con capacità LUN non allocata in Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi creare un report per individuare i cluster con la maggiore capacità LUN non allocata, superiore a 0,5 TB, per identificare dove puoi aggiungere ulteriori carichi di lavoro.
+
+.Prima di iniziare
+* Devi disporre del ruolo di Amministratore dell'applicazione o di Amministratore dello storage.
+
+
+Segui questi passaggi per creare una vista personalizzata che mostri i cluster con la maggiore capacità LUN non allocata, quindi pianifica la generazione di un report per tale vista.
+
+.Passaggi
+. Nel riquadro di navigazione a sinistra, fai clic su *Archiviazione* > *Cluster*.
+. Nel menu Visualizza, seleziona *Capacità* > *Tutti i cluster*.
+. Seleziona *Mostra/Nascondi* per rimuovere le colonne che non vuoi nel report.
+. Trascina la colonna "`Capacità LUN non allocata`" vicino alla colonna "`Coppia HA`".
+. Fai clic sull'icona del filtro, aggiungi il seguente filtro e poi fai clic su *Applica filtro*:
++
+** Capacità LUN non allocata superiore a 0,5 TB
+
+
+. Fai clic sulla parte superiore della colonna "`Unallocated LUN Capacity`" per ordinare i risultati in base alla quantità maggiore di capacità LUN non allocata.
+. Salva la vista con un nome specifico che ne rifletta il contenuto, ad esempio "`Massima capacità LUN non allocata`" e fai clic sul segno di spunta (image:../media/blue_check.gif[""]).
+. Nella pagina dell'inventario, fai clic sul pulsante *Report programmati*.
+. Fai clic su *Aggiungi pianificazione* per aggiungere una nuova riga alla pagina Pianificazioni report, in modo da poter definire le caratteristiche della pianificazione per il nuovo report.
+. Inserisci un nome per la pianificazione del report e completa gli altri campi del report, quindi fai clic sul segno di spunta (image:../media/blue_check.gif[""]) alla fine della riga.
++
+Il report viene inviato immediatamente a scopo di test. Successivamente, il report viene generato e inviato via email ai destinatari indicati con la frequenza specificata.
+
+
+
+In base ai risultati riportati nel report, potresti voler utilizzare la capacità LUN non allocata del cluster.
